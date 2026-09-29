@@ -6,7 +6,7 @@ Bản sao đã gỡ nhãn đánh dấu triển khai, giữ 8 tab và nội dung 
 
 | Tab | Nội dung chính |
 | --- | --- |
-| Tổng quan | Kết luận, KPI, trạng thái dữ liệu, doanh số và dư nợ theo ngày, cảnh báo và việc nên làm |
+| Tổng quan | Kết luận, KPI, doanh số và dư nợ theo ngày, cảnh báo và việc nên làm |
 | Doanh số | GTGD, phí net, hoa hồng dự tính, xếp hạng CTV/TVĐT/KH, bảng theo cây môi giới, danh sách KH |
 | Dư nợ & Món vay | Dư nợ, giải ngân, thu nợ, lãi phí, cơ cấu nợ, danh sách KH/TK và món vay |
 | KH hiện hữu | Quy mô KH/TK, active/ngủ đông, NAV, phân bổ, danh sách chăm sóc |
@@ -34,7 +34,8 @@ Không cần cài dependency hay chạy build. Khi import repo vào Vercel, dùn
 - Gỡ chú giải và nhãn đánh dấu triển khai ở cả 8 tab, gồm các biến thể viết tắt và nhãn của màn v1.2.
 - Gỡ dải tiêu đề nền đen giới thiệu wireframe/phiên bản ở cả 8 tab.
 - Bỏ khoảng đệm/CSS chỉ dành cho các nhãn đã gỡ.
-- Giữ số liệu, biểu đồ, bảng, cảnh báo nghiệp vụ, ghi chú đối chiếu, trạng thái dữ liệu và điều hướng.
+- Gỡ toàn bộ chú thích giải nghĩa, ghi chú triển khai, khối đối chiếu bản test và khối minh họa trạng thái KPI trên giao diện.
+- Giữ các KPI nghiệp vụ, biểu đồ, bảng, cảnh báo, hành động và điều hướng; giữ tên chuỗi dữ liệu để đọc biểu đồ.
 - Giữ lịch sử commit gốc; không sửa repo hay deployment Vercel gốc.
 
 Đây là wireframe với dữ liệu minh họa nhúng trong HTML. Chuyển tab, deep link và bàn phím hoạt động; bộ lọc, tìm kiếm, phân trang và các thao tác nghiệp vụ chưa được lập trình. Tab v1.2 cuối cùng dùng phạm vi/ngày/số liệu khác 7 tab v2 đầu tiên.

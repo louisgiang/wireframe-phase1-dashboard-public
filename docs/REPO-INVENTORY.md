@@ -131,3 +131,5 @@ Tab v1.2 cuối: Tổng → TT MG Hà Nội 1 → Phòng MG 3 → Nguyễn Văn 
 Toàn bộ bảng, SVG, giá trị KPI, nút tab và script đã được đối chiếu trực tiếp với commit nguồn để bảo đảm không thay đổi.
 
 Cập nhật tiếp theo: gỡ toàn bộ 8 dải tiêu đề nền đen giới thiệu wireframe/phiên bản cùng CSS dành riêng cho chúng. Các phần nội dung nghiệp vụ bên dưới được giữ nguyên.
+
+Cập nhật làm sạch nội dung: gỡ các dòng giải nghĩa, ghi chú triển khai/công thức/nguồn, lý do kèm mã rule, 7 khối đối chiếu bản test và toàn bộ khối minh họa 4 trạng thái KPI. Footer bảng chỉ giữ số lượng và kích thước trang. Các bảng dữ liệu, biểu đồ, KPI nghiệp vụ, cảnh báo, hành động và 8 tab vẫn được giữ. Phần kiểm kê phía trên mô tả repo nguồn trước chỉnh sửa; `SCREEN-CONTENT.md` phản ánh nội dung giao diện hiện tại.

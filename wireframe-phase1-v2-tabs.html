@@ -57,7 +57,6 @@
   .sec .n{font-size:11px;font-weight:800;border:1.5px solid var(--line);width:20px;height:20px;
     display:flex;align-items:center;justify-content:center;border-radius:50%;flex:none}
   .sec h2{font-size:15px;font-weight:800;margin:0}
-  .sec .q{color:var(--faint);font-size:11px;font-style:italic}
 
   /* ============ 0 · VERDICT STRIP (new) ============ */
   .verdict{
@@ -104,6 +103,7 @@
   .biz .stat .sl{font-size:11px;color:var(--mut)}
   .biz .stat .sv{font-size:17px;font-weight:800;margin-top:5px}
   .chart{position:relative;border:1.5px solid var(--line);padding:12px 14px}
+  .chart-key{font-size:10px;color:var(--mut);margin:6px 0 10px}
   .chart .ct{font-size:12px;font-weight:700;display:flex;justify-content:space-between;align-items:center}
   .chart .leg{font-size:10px;color:var(--mut);font-weight:400;display:flex;gap:12px}
   .chart .leg span{display:inline-flex;align-items:center;gap:4px}
@@ -143,9 +143,6 @@
   .more{border:1.5px dashed #bbb;padding:9px 14px;font-size:11px;color:var(--mut);
     margin-top:12px;display:flex;justify-content:space-between;align-items:center}
 
-  .caption{font-size:10px;color:var(--faint);margin-top:5px;font-style:italic}
-
-
   /* ================= v1.2 · bổ sung ================= */
 
   /* thanh ngữ cảnh: phạm vi · kỳ · ngày dữ liệu */
@@ -164,18 +161,8 @@
   .dot{width:9px;height:9px;border-radius:50%;border:1.5px solid #111;display:inline-block;flex:none}
   .dot.full{background:#111}
   .dot.half{background:linear-gradient(90deg,#111 50%,#fff 50%)}
-  .ctx-note{font-size:10px;color:var(--faint);font-style:italic;padding:5px 24px 0}
 
-  /* trạng thái thẻ chỉ tiêu */
-  .states{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;position:relative;
-    border:1.5px dashed #bbb;padding:12px;margin-top:12px}
-  .states .kpi{min-height:88px}
-  .kpi .flag{font-size:9.5px;border:1px dashed #888;padding:2px 6px;display:inline-block;margin-top:9px;color:var(--mut)}
   .kpi.muted .big{color:var(--faint)}
-  .st-t{position:absolute;top:-8px;left:10px;background:#fff;padding:0 6px;font-size:10px;font-weight:700}
-
-  /* lý do khuyến nghị */
-  .why{display:block;font-size:10px;color:var(--mut);margin-top:3px;padding-left:7px;border-left:2px solid #999;line-height:1.4}
 
   /* bộ lọc + bảng dùng chung */
   .fbar{position:relative;border:1.5px solid var(--line);border-bottom:none;padding:9px 12px;
@@ -198,7 +185,6 @@
   .pill.b{background:#111;border-color:#111;color:#fff}
   .tfoot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;padding:7px 10px;
     font-size:10px;color:var(--mut);border-top:1px solid #ddd}
-  .from-cta{border:1.5px solid var(--line);border-bottom:none;padding:7px 12px;font-size:10.5px;background:var(--fill)}
 
   /* phễu chuyển đổi */
   .funnel{position:relative;border:1.5px solid var(--line);padding:14px 16px}
@@ -213,10 +199,9 @@
   .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
   .box{position:relative;border:1.5px solid var(--line);padding:12px 14px}
   .box .ct{font-size:12px;font-weight:700;margin-bottom:10px}
-  .warn{border:1.5px dashed #888;padding:7px 11px;font-size:10.5px;color:var(--mut);margin-top:10px}
-  .warn b{color:var(--ink)}
+
   @media(max-width:820px){
-    .states,.grid2{grid-template-columns:1fr 1fr}
+    .grid2{grid-template-columns:1fr 1fr}
     .fstep{grid-template-columns:90px 1fr}
     .fstep .fr{grid-column:2}
   }
@@ -231,7 +216,7 @@
     .row{grid-template-columns:16px 90px 1fr 48px}
   }
 
-  /* ================= v2 · nền bản test ================= */
+  /* ================= dashboard ================= */
   .thead{position:relative;display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;padding:10px 24px;
     border-bottom:1px solid #ccc;background:var(--fill2);font-size:11.5px}
   .thead .lbl{color:var(--mut);font-size:10.5px;margin-right:5px}
@@ -241,11 +226,10 @@
   .dd-open .on{background:#111;color:#fff;font-weight:700}
   .dd-open .l2{padding-left:22px}.dd-open .l3{padding-left:34px}
   .hdr-wrap{display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap;padding:0 24px 4px}
-  .hdr-wrap .caption{max-width:560px}
   .banner{position:relative;border:1.5px solid var(--line);background:var(--fill);padding:9px 14px;font-size:11.5px;
     display:flex;align-items:center;gap:12px;margin-bottom:14px}
   .banner .push{margin-left:auto}
-  .fx{font-size:10px;color:var(--faint);margin-top:6px}
+
   .kpi .sub2{font-size:11px;color:var(--mut);margin-top:3px}
   .g6{grid-template-columns:repeat(6,1fr) !important}
   .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
@@ -257,10 +241,10 @@
   .ann b{display:block;font-size:10px}
   .tgl{display:inline-flex;border:1.5px solid var(--line);font-size:10.5px;font-weight:400;background:#fff}
   .tgl span{padding:2px 9px}.tgl .on{background:#111;color:#fff;font-weight:700}
-  /* điểm sáng / cần lưu ý kiểu bản test */
+  /* điểm sáng / cần lưu ý */
   .pt{position:relative;border:1.5px solid var(--line);padding:12px 14px}
   .pt h4{margin:0 0 2px;font-size:12.5px;font-weight:800;display:flex;justify-content:space-between;align-items:baseline}
-  .pt h4 small{font-weight:400;font-size:10px;color:var(--faint)}
+
   .pi{display:grid;grid-template-columns:24px 1fr auto;gap:10px;align-items:center;padding:9px 0;border-top:1px dashed #ddd}
   .pi:first-of-type{border-top:none}
   .pi .ic{width:22px;height:22px;border:1.5px solid #111;display:grid;place-items:center;font-size:11px;font-weight:800}
@@ -299,13 +283,8 @@
   .hm th:first-child,.hm td:first-child{text-align:left}
   .hm td{padding:7px 6px;text-align:center;border:1px solid #fff}
   .q1{background:#111;color:#fff;font-weight:700}.q2{background:#666;color:#fff}.q3{background:#bbb}.q4{background:#eee}
-  /* đối chiếu bản test */
   .stack{grid-template-columns:170px 1fr 70px !important}
-  .drop{position:relative;border:2px solid #111;margin-top:22px;padding:12px 16px;background:#fff}
-  .drop h5{margin:0 0 8px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.4px}
-  .drop ul{margin:0;padding-left:18px}
-  .drop li{font-size:11px;line-height:1.5;margin-bottom:4px}
-  .drop li b{font-weight:700}
+
   @media(max-width:820px){.g6{grid-template-columns:repeat(2,1fr) !important}.g3,.g2,.stat3{grid-template-columns:1fr}}
 
   /* Interactive navigation — all original screen content is preserved. */
@@ -313,7 +292,7 @@
   .app-head{max-width:1200px;margin:24px auto 0;padding:18px 22px;background:#fff;border:2px solid #111;border-bottom:0}
   .app-eyebrow{font-size:10px;letter-spacing:1.2px;text-transform:uppercase;color:#666;margin-bottom:5px}
   .app-title{font-size:23px;letter-spacing:-.5px;margin:0;font-weight:800}
-  .app-description{font-size:12px;color:#666;margin:5px 0 0}
+
   .app-nav{position:sticky;top:0;z-index:100;max-width:1200px;margin:0 auto;background:#fff;border:2px solid #111;box-shadow:0 3px 0 #0000000a}
   .app-tablist{display:flex;overflow-x:auto;scrollbar-width:thin;overscroll-behavior-x:contain}
   .app-tab{font:inherit;font-size:12px;line-height:1.4;font-weight:600;flex:1 0 auto;padding:14px 17px;color:#666;background:#fff;border:0;border-right:1px solid #ddd;white-space:nowrap;cursor:pointer;min-height:46px}
@@ -340,9 +319,9 @@
     .hdr-wrap{padding:0 12px 4px;gap:6px}
     .dd-open{margin-left:0;margin-right:0}
     .kpis{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
-    .states{grid-template-columns:1fr 1fr}
+
     .sec{flex-wrap:wrap;gap:7px}
-    .sec .q{flex-basis:100%}
+
     .tl.wide .r{grid-template-columns:16px minmax(0,1fr) 45px 60px}
     .tl.wide .r>span:nth-child(2){overflow-wrap:anywhere}
     .stack{grid-template-columns:110px minmax(0,1fr) 64px !important}
@@ -356,7 +335,6 @@
     .page,.page[hidden]{display:block !important;margin:0 0 20px;break-before:page}
     .page:first-of-type{break-before:auto}
   }
-
 
   #doanh-so-phi-hoa-hong .merged-subtitle{font-size:12px;font-weight:800;margin:16px 0 9px}
   #doanh-so-phi-hoa-hong .merged-kpis{grid-template-columns:repeat(4,minmax(0,1fr))}
@@ -375,13 +353,13 @@
 <header class="app-head">
   <div class="app-eyebrow">Wireframe · Phase 1 · v2</div>
   <h1 class="app-title">Dashboard kinh doanh</h1>
-  <p class="app-description">Chọn tab để xem từng phần. Nội dung và số liệu minh họa được giữ từ bản gốc.</p>
+
 </header>
 <nav class="app-nav" aria-label="Các phần của dashboard">
   <div class="app-tablist" role="tablist" aria-label="Nội dung chính">
     <button type="button" class="app-tab" id="tab-tong-quan" role="tab" aria-controls="tong-quan" aria-selected="true" tabindex="0">Tổng quan</button>
     <button type="button" class="app-tab" id="tab-doanh-so" role="tab" aria-controls="doanh-so" aria-selected="false" tabindex="-1">Doanh số</button>
-    
+
     <button type="button" class="app-tab" id="tab-du-no-mon-vay" role="tab" aria-controls="du-no-mon-vay" aria-selected="false" tabindex="-1">Dư nợ &amp; Món vay</button>
     <button type="button" class="app-tab" id="tab-kh-hien-huu" role="tab" aria-controls="kh-hien-huu" aria-selected="false" tabindex="-1">KH hiện hữu</button>
     <button type="button" class="app-tab" id="tab-mo-moi" role="tab" aria-controls="mo-moi" aria-selected="false" tabindex="-1">Mở mới</button>
@@ -392,7 +370,6 @@
   <div class="app-meta"><span id="screen-status" role="status" aria-live="polite">Đang xem: <strong>Tổng quan</strong> · 1 / 8</span><span>8 màn nội dung · Vuốt thanh tab để xem thêm trên điện thoại</span></div>
 </nav>
 
-
 <!-- ==================== TỔNG QUAN ==================== -->
 <div class="page" id="tong-quan" role="tabpanel" aria-labelledby="tab-tong-quan" tabindex="0">
   <div class="thead">
@@ -402,65 +379,60 @@
     <span class="dstat push"><i class="dot full"></i>Dữ liệu đến&nbsp;<b>27/09</b>&nbsp;· cập nhật 28/09 14:21</span>
   </div>
 <div class="body">
-<div class="sec"><span class="n">0</span><h2>Kết luận</h2><span class="q">— đọc đầu tiên — ghép từ các số bên dưới, không cần nguồn mới</span></div>
+<div class="sec"><span class="n">0</span><h2>Kết luận</h2></div>
     <div class="verdict">
       <div><div class="v-k">Tiến độ GTGD CP</div><div class="v-lead">29,3% <span class="u">KPI tháng</span></div><div class="v-line">Cần thêm <span class="v-strong">56,6 tỷ</span> để đạt 80 tỷ.</div></div>
       <div><div class="v-k">Cảnh báo</div><div class="v-line" style="margin-top:0"><span class="v-strong">278/692 TK</span> ngủ đông (40,2%).</div><div class="v-line">Phí net CP giảm 18% so kỳ trước.</div></div>
       <div><div class="v-k">Việc nên làm</div><div class="v-line" style="margin-top:0">→ Kích hoạt 278 TK ngủ đông.</div><div class="v-line">→ Chăm 3 KH vừa nộp ròng 13,57 tỷ.</div></div>
     </div>
-    <div class="sec"><span class="n">1</span><h2>Chỉ tiêu chính</h2><span class="q">— kỳ 09/2026 · so với kỳ liền trước (nhãn giữ theo bản test)</span></div>
+    <div class="sec"><span class="n">1</span><h2>Chỉ tiêu chính</h2></div>
     <div class="kpis" style="grid-template-columns:repeat(5,1fr)">
       <div class="kpi"><div class="lab">Doanh số CP (GTGD)</div><div class="big">23,4<span style="font-size:12px;color:#666;font-weight:400"> / 80 tỷ</span></div><div class="prog"><i style="width:29.3%"></i></div><div class="pct"><b>29,3%</b> KPI</div></div>
       <div class="kpi"><div class="lab">Phí net CP</div><div class="big">20,4<span style="font-size:12px;color:#666;font-weight:400"> / 51,6 tr</span></div><div class="prog"><i style="width:39.5%"></i></div><div class="pct"><b>39,5%</b> KPI</div></div>
       <div class="kpi"><div class="lab">Dư nợ</div><div class="big">2,34<span style="font-size:12px;color:#666;font-weight:400"> / 5 tỷ</span></div><div class="prog"><i style="width:46.8%"></i></div><div class="pct"><b>46,8%</b> KPI</div></div>
       <div class="kpi"><div class="lab">Mở mới</div><div class="big">38<span style="font-size:12px;color:#666;font-weight:400"> TK</span></div><div class="prog"><i style="width:76%"></i></div><div class="pct"><b>76%</b> KPI · 11 Active</div></div>
-      <div class="kpi"><div class="lab">Hoa hồng dự tính</div><div class="big">13,7<span style="font-size:12px;color:#666;font-weight:400"> tr</span></div><div class="pct">— phí net CP × tỷ lệ HH</div><div class="fx">Bản test chưa có ở tab nào → kiểm nguồn & công thức (PT07)</div></div>
+      <div class="kpi"><div class="lab">Hoa hồng dự tính</div><div class="big">13,7<span style="font-size:12px;color:#666;font-weight:400"> tr</span></div></div>
     </div>
-    <div class="states"><span class="st-t">Trạng thái thẻ của bản test — giữ nguyên</span>
-      <div class="kpi"><div class="lab">Khi đã có KPI</div><div class="big">23,4<span style="font-size:12px;color:#666;font-weight:400"> / 80 tỷ</span></div><div class="prog"><i style="width:29.3%"></i></div><div class="pct"><b>29,3%</b> KPI</div></div>
-      <div class="kpi"><div class="lab">Khi chưa có KPI</div><div class="big">23,4 tỷ</div><div class="prog"><i style="width:0"></i></div><div class="pct">KPI chưa đặt</div></div>
-      <div class="kpi muted"><div class="lab">Khi chưa có dữ liệu</div><div class="big">—</div><div class="prog"><i style="width:0"></i></div><div class="pct">chưa đồng bộ</div></div>
-      <div class="kpi muted"><div class="lab">Khi dữ liệu thiếu ngày</div><div class="big">20,4 tr</div><span class="flag"><i class="dot half" style="width:7px;height:7px"></i> thiếu 3 ngày — xem dải báo</span></div>
-    </div>
-    <p class="caption">Ba trạng thái đầu có sẵn trên bản test (thanh tiến độ rỗng + "KPI chưa đặt" / "chưa đồng bộ"). Trạng thái thứ tư là làm thêm, nối thẻ với dải báo thiếu dữ liệu. Sửa ở 4 thẻ chính: thêm số KPI và % đạt khi đã đặt KPI (bản test hiện chỉ có dòng "KPI chưa đặt").</p>
+
+
     <div class="stat3">
-      <div class="kpi"><div class="lab">Tỷ lệ phí bình quân</div><div class="big">0,09<span style="font-size:12px;color:#666;font-weight:400"> %</span></div><div class="fx">phí net CP / GTGD</div></div>
-      <div class="kpi"><div class="lab">Lãi suất vay bình quân</div><div class="big">12,9<span style="font-size:12px;color:#666;font-weight:400"> %/năm</span></div><div class="fx">gia quyền theo dư nợ</div></div>
-      <div class="kpi"><div class="lab">Doanh số Trái phiếu</div><div class="big">109,95<span style="font-size:12px;color:#666;font-weight:400"> tr</span></div><div class="fx">thống kê độc lập CP</div></div>
+      <div class="kpi"><div class="lab">Tỷ lệ phí bình quân</div><div class="big">0,09<span style="font-size:12px;color:#666;font-weight:400"> %</span></div></div>
+      <div class="kpi"><div class="lab">Lãi suất vay bình quân</div><div class="big">12,9<span style="font-size:12px;color:#666;font-weight:400"> %/năm</span></div></div>
+      <div class="kpi"><div class="lab">Doanh số Trái phiếu</div><div class="big">109,95<span style="font-size:12px;color:#666;font-weight:400"> tr</span></div></div>
     </div>
-    <div class="more" style="position:relative"><b style="color:#111">▸ Cơ cấu theo nhóm KH</b> (Block Deal · HNW · UHNW · HVT · Active) — thu gọn, chờ bộ định lượng phân khúc (PT03)<span>mở rộng ▾</span></div>
-    <p class="caption">Khối cơ cấu 5 biểu đồ tròn của mockup gốc: bản test chưa có, tức là chưa có dữ liệu phân khúc. Giữ chỗ ở dạng thu gọn, bật khi A4 chốt ngưỡng phân khúc.</p>
-    <div class="sec"><span class="n">2</span><h2>Tình hình kinh doanh</h2><span class="q">— lũy kế theo ngày, so cùng ngày kỳ trước</span></div>
+    <div class="more" style="position:relative"><b style="color:#111">▸ Cơ cấu theo nhóm KH</b> (Block Deal · HNW · UHNW · HVT · Active)<span>mở rộng ▾</span></div>
+
+    <div class="sec"><span class="n">2</span><h2>Tình hình kinh doanh</h2></div>
     <div class="g2">
       <div class="chart">
-        <div class="ct">Doanh số CP lũy kế theo ngày <span class="leg"><span><i class="d" style="background:#bbb"></i>Kỳ trước</span><span><i class="d" style="background:#111"></i>Kỳ đang xem</span></span></div><div class="fx" style="margin-top:2px">09/2026 (đến 27/09) vs 08/2026</div>
+        <div class="ct">Doanh số CP lũy kế theo ngày <span class="leg"><span><i class="d" style="background:#bbb"></i>Kỳ trước</span><span><i class="d" style="background:#111"></i>Kỳ đang xem</span></span></div>
         <div class="plot"><svg viewBox="0 0 300 150" preserveAspectRatio="none"><polyline points="0,145 30,138 60,118 90,95 120,88 150,80 180,62 210,50 240,40 270,30 300,28" fill="none" stroke="#bbb" stroke-width="2" stroke-dasharray="4 3"/>
           <polyline points="0,146 30,140 60,125 90,110 120,100 150,92 180,84 210,76 240,70" fill="none" stroke="#111" stroke-width="2.5"/></svg><span class="ann" style="left:74%;top:42%"><b>23,4 tỷ</b>Đến 27/09</span><span class="ann" style="left:60%;top:12%"><b>28,9 tỷ</b>Cùng ngày 27</span><span class="ann" style="left:84%;top:-6%"><b>31,2 tỷ</b>Cuối 08/2026</span></div>
       </div>
       <div class="chart">
-        <div class="ct">Dư nợ tổng theo ngày <span class="leg"><span><i class="d" style="background:#bbb"></i>Kỳ trước</span><span><i class="d" style="background:#111"></i>Kỳ đang xem</span></span></div><div class="fx" style="margin-top:2px">09/2026 (đến 27/09) vs 08/2026 · số dư cuối ngày</div>
+        <div class="ct">Dư nợ tổng theo ngày <span class="leg"><span><i class="d" style="background:#bbb"></i>Kỳ trước</span><span><i class="d" style="background:#111"></i>Kỳ đang xem</span></span></div>
         <div class="plot"><svg viewBox="0 0 300 150" preserveAspectRatio="none"><polyline points="0,90 30,88 60,84 90,80 120,76 150,72 180,70 210,66 240,62 270,60 300,58" fill="none" stroke="#bbb" stroke-width="2" stroke-dasharray="4 3"/>
           <polyline points="0,96 30,94 60,92 90,88 120,86 150,80 180,78 210,74 240,70" fill="none" stroke="#111" stroke-width="2.5"/></svg><span class="ann" style="left:74%;top:30%"><b>2,34 tỷ</b>Đến 27/09</span><span class="ann" style="left:74%;top:2%"><b>2,51 tỷ</b>Cùng ngày 27</span></div>
       </div>
     </div>
-    <p class="caption">Giữ nguyên 2 biểu đồ và cách chú thích "Đến 27/09 · Cùng ngày 27 · Cuối tháng trước" của bản test — so cùng ngày công bằng hơn so cả tháng. Sửa duy nhất: biểu đồ dư nợ ghi rõ là số dư, không phải lũy kế.</p>
-    <div class="sec"><span class="n">3</span><h2>Điểm sáng · Cần lưu ý · Việc nên làm</h2><span class="q">— hai cột đầu theo mẫu bản test, cột thứ ba làm thêm</span></div>
+
+    <div class="sec"><span class="n">3</span><h2>Điểm sáng · Cần lưu ý · Việc nên làm</h2></div>
     <div class="g3">
-      <div class="pt hl"><h4>Điểm sáng trong kỳ <small>kết quả đã đạt</small></h4>
-        <div class="pi"><span class="ic">↻</span><div class="t"><b>Vòng quay trên tài sản CP</b><div>GTGD CP 23,4 tỷ / Tài sản CP 58,5 tỷ · số liệu KH lúc 28/09 14:21</div></div><div class="v">0,4×<svg width="70" height="20" viewBox="0 0 70 20"><polyline points="0,18 12,16 24,15 36,11 48,9 60,6 70,3" fill="none" stroke="#111" stroke-width="1.5"/></svg></div></div>
-        <div class="pi"><span class="ic">✓</span><div class="t"><b>Không có dư nợ quá hạn</b><div>Vay quá hạn / tổng dư nợ · số liệu lúc 28/09 14:21</div></div><div class="v">0%</div></div>
+      <div class="pt hl"><h4>Điểm sáng trong kỳ </h4>
+        <div class="pi"><span class="ic">↻</span><div class="t"><b>Vòng quay trên tài sản CP</b></div><div class="v">0,4×<svg width="70" height="20" viewBox="0 0 70 20"><polyline points="0,18 12,16 24,15 36,11 48,9 60,6 70,3" fill="none" stroke="#111" stroke-width="1.5"/></svg></div></div>
+        <div class="pi"><span class="ic">✓</span><div class="t"><b>Không có dư nợ quá hạn</b></div><div class="v">0%</div></div>
       </div>
-      <div class="pt al"><h4>Cần lưu ý <small>điểm chưa tốt cần cải thiện</small></h4>
-        <div class="pi"><span class="ic">!</span><div class="t"><b>Khách hàng inactive</b><div>278/692 TK (NAV thấp &amp; không GD 3 tháng) · số liệu KH lúc 28/09 14:21</div></div><div class="v">40,2%<div class="mdonut" style="--p:40%"></div></div></div>
-        <div class="pi"><span class="ic">!</span><div class="t"><b>Phí net CP so kỳ trước</b><div>20,4 tr so với 24,9 tr cùng ngày 27 tháng 08</div></div><div class="v">−18%</div></div>
+      <div class="pt al"><h4>Cần lưu ý </h4>
+        <div class="pi"><span class="ic">!</span><div class="t"><b>Khách hàng inactive</b></div><div class="v">40,2%<div class="mdonut" style="--p:40%"></div></div></div>
+        <div class="pi"><span class="ic">!</span><div class="t"><b>Phí net CP so kỳ trước</b></div><div class="v">−18%</div></div>
       </div>
-      <div class="pt do"><h4>Việc nên làm <small>mỗi việc mở đúng danh sách</small></h4>
-        <div class="pi"><span class="ic">→</span><div class="t"><b>Kích hoạt TK ngủ đông</b><div>Vì sao: 278 TK khớp rule R-KD-012 (NAV thấp &amp; không GD ≥ 90 ngày) · dữ liệu 27/09</div><span class="cta">Mở 278 TK · tab KH hiện hữu →</span></div><div class="v">278</div></div>
-        <div class="pi"><span class="ic">→</span><div class="t"><b>Chăm KH vừa nộp ròng lớn</b><div>Vì sao: 3 KH nộp ròng 13,57 tỷ ngày 27/09, chưa giao dịch · rule R-DT-002</div><span class="cta">Mở 3 KH · tab Nộp rút →</span></div><div class="v">3</div></div>
+      <div class="pt do"><h4>Việc nên làm </h4>
+        <div class="pi"><span class="ic">→</span><div class="t"><b>Kích hoạt TK ngủ đông</b><span class="cta">Mở 278 TK · tab KH hiện hữu →</span></div><div class="v">278</div></div>
+        <div class="pi"><span class="ic">→</span><div class="t"><b>Chăm KH vừa nộp ròng lớn</b><span class="cta">Mở 3 KH · tab Nộp rút →</span></div><div class="v">3</div></div>
       </div>
     </div>
-    <p class="caption">Điểm sáng / Cần lưu ý giữ đúng mẫu bản test: một chỉ số, một giá trị lớn, công thức và giờ số liệu, kèm biểu đồ nhỏ — dễ đối soát hơn dạng câu của wireframe cũ. Cột "Việc nên làm" là phần làm thêm: bản test mới báo, chưa dẫn người dùng đi làm. Số ở kết luận, cảnh báo, việc nên làm và danh sách đích phải bằng nhau.</p>
-    <div class="drop"><h5>Đối chiếu với bản test</h5><ul><li><b>Không bỏ khối nào của bản test.</b></li><li><b>Chuyển:</b> Top 10 KH nộp / rút ròng không đặt lại ở Tổng quan (mockup gốc có) mà để ở tab Nộp rút như bản test, tránh một bảng xuất hiện hai nơi. Tổng quan dẫn sang qua "Việc nên làm".</li><li><b>Làm thêm:</b> Kết luận; thẻ Hoa hồng dự tính; số KPI và % đạt trên thẻ; trạng thái thẻ "thiếu ngày"; cột Việc nên làm; khối cơ cấu nhóm KH (thu gọn, chờ phân khúc).</li><li><b>Tab mới ✚ KH hiện hữu</b> được thêm vào thanh tab. <b>Đặt KPI · Hiệu suất KPI · Cấu hình phòng ban</b> (chữ nghiêng) chưa đánh giá trong đợt này: có thể trùng phase 2 (M09–M11) và phân quyền / portal (M01, M18).</li></ul></div>
+
+
   </div>
 </div>
 
@@ -472,11 +444,11 @@
     <span><span class="lbl">Phạm vi</span><span class="sel">Toàn nhánh ▾</span></span>
     <span class="dstat push"><i class="dot full"></i>Dữ liệu đến&nbsp;<b>27/09</b>&nbsp;· cập nhật 28/09 14:21</span>
   </div>
-  
+
   <div class="body">
     <div style="display:flex;gap:10px;align-items:center;margin-bottom:6px;position:relative">
       <span class="tgl"><span class="on">Net CHUẨN</span><span>Net THỰC THU</span></span>
-      <span class="caption" style="margin:0">Giữ từ bản test, sửa: đưa nút lên đầu tab để thẻ, biểu đồ và bảng cùng đổi theo. định nghĩa hai số và số nào dùng tính KPI / hoa hồng.</span>
+
     </div>
     <div class="sec"><span class="n">0</span><h2>Kết luận</h2></div>
     <div class="verdict">
@@ -487,22 +459,22 @@
     <div class="sec"><span class="n">1</span><h2>Chỉ tiêu doanh số &amp; phí</h2></div>
     <div class="kpis" style="grid-template-columns:repeat(6,1fr)">
       <div class="kpi"><div class="lab">Phí net CP chuẩn</div><div class="big">20,4<span style="font-size:12px;color:#666;font-weight:400"> / 51,6 tr</span></div><div class="prog"><i style="width:39.5%"></i></div><div class="pct"><b>39,5%</b> KPI</div></div>
-      <div class="kpi"><div class="lab">Chênh lệch phí CP</div><div class="big">0</div><span class="flag">giải thích trên màn</span><div class="fx">biên UPCOM</div></div>
+      <div class="kpi"><div class="lab">Chênh lệch phí CP</div><div class="big">0</div></div>
       <div class="kpi"><div class="lab">GTGD CP</div><div class="big">23,4<span style="font-size:12px;color:#666;font-weight:400"> / 80 tỷ</span></div><div class="prog"><i style="width:29.3%"></i></div><div class="pct"><b>29,3%</b> KPI</div></div>
-      <div class="kpi"><div class="lab">GTGD TP</div><div class="big">109,95<span style="font-size:12px;color:#666;font-weight:400"> tr</span></div><div class="fx">không quy đổi với CP</div></div>
+      <div class="kpi"><div class="lab">GTGD TP</div><div class="big">109,95<span style="font-size:12px;color:#666;font-weight:400"> tr</span></div></div>
       <div class="kpi"><div class="lab">Số KH GD CP</div><div class="big">42<span style="font-size:12px;color:#666;font-weight:400"> KH</span></div><div class="sub2">318 lệnh</div></div>
-      <div class="kpi"><div class="lab">Hoa hồng dự tính</div><div class="big">13,7<span style="font-size:12px;color:#666;font-weight:400"> tr</span></div><div class="pct">— theo Net đang chọn</div><div class="fx">chưa có trên bản test</div></div>
+      <div class="kpi"><div class="lab">Hoa hồng dự tính</div><div class="big">13,7<span style="font-size:12px;color:#666;font-weight:400"> tr</span></div></div>
     </div>
-    <p class="caption">Sáu thẻ: năm thẻ giữ từ bản test (thêm KPI và số lệnh), một thẻ Hoa hồng dự tính làm thêm vì tab này gộp luôn tab "Phí net &amp; hoa hồng" của đề bài v1.2.</p>
+
     <div class="sec"><span class="n">2</span><h2>Diễn biến</h2></div>
     <div class="biz" style="grid-template-columns:1fr">
       <div class="chart">
         <div class="ct">Xu hướng theo ngày <span class="leg"><span><i class="d" style="background:#111"></i>Phí net CP</span><span class="sel" style="font-weight:400;margin-left:8px">Chỉ tiêu: Phí net CP ▾</span></span></div>
         <div class="plot"><svg viewBox="0 0 300 150" preserveAspectRatio="none">
-          <polyline points="0,120 40,90 80,60 120,40 160,95 200,140 240,80 280,110 300,138" fill="none" stroke="#111" stroke-width="2.5"/></svg></div><div class="caption">Giữ biểu đồ phí net CP theo ngày của bản test; sửa: thêm ô chọn chỉ tiêu (Phí net CP / GTGD CP) để một biểu đồ phục vụ cả hai, thay vì vẽ thêm biểu đồ GTGD từng ngày như wireframe cũ.</div>
+          <polyline points="0,120 40,90 80,60 120,40 160,95 200,140 240,80 280,110 300,138" fill="none" stroke="#111" stroke-width="2.5"/></svg></div>
       </div>
     </div>
-    <div class="sec"><span class="n">3</span><h2>Xếp hạng</h2><span class="q">— giữ ba khối của bản test</span></div>
+    <div class="sec"><span class="n">3</span><h2>Xếp hạng</h2></div>
     <div class="g3">
       <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Top CTV theo phí net CP</div>
         <div class="tl"><div class="r"><span class="rk">1</span><span>Nguyễn Thị Phong</span><span class="b"><i style="width:100%"></i></span><span class="v">6,2 tr</span></div><div class="r"><span class="rk">2</span><span>Hoàng Văn Nam</span><span class="b"><i style="width:48%"></i></span><span class="v">3,0 tr</span></div><div class="r"><span class="rk">3</span><span>Mai Thu Trang</span><span class="b"><i style="width:22%"></i></span><span class="v">1,4 tr</span></div></div>
@@ -514,31 +486,29 @@
         <div class="tl"><div class="r"><span class="rk">1</span><span>Triệu Hạnh Hiền</span><span class="b"><i style="width:100%"></i></span><span class="v">4,2 tr</span></div><div class="r"><span class="rk">2</span><span>Phạm Thị Vân</span><span class="b"><i style="width:55%"></i></span><span class="v">2,3 tr</span></div><div class="r"><span class="rk">3</span><span>Vũ Thị Hằng</span><span class="b"><i style="width:33%"></i></span><span class="v">1,4 tr</span></div></div>
       </div>
     </div>
-    <p class="caption">Khi Phạm vi là một TVĐT: chỉ hiện Top KH (và Top CTV của chính TVĐT đó); ẩn Top TVĐT / phòng để không lộ số của đồng nghiệp — cách hiển thị này cần chốt cùng quyền xem ở tab So sánh.</p>
-    <div class="sec"><span class="n">4</span><h2>Bảng doanh số cổ phiếu theo cây môi giới</h2><span class="q">— màn chính của quản lý</span></div>
+
+    <div class="sec"><span class="n">4</span><h2>Bảng doanh số cổ phiếu theo cây môi giới</h2></div>
     <div class="tbl"><table class="wt"><thead><tr><th class="">Môi giới / đơn vị</th><th class="n">Số KH CP</th><th class="n">Số lệnh CP</th><th class="n">GTGD CP</th><th class="n">Tổng phí CP</th><th class="n">Phí sàn CP</th><th class="n">Chênh lệch</th><th class="n">Phí net CP</th><th class="n">HH dự tính</th><th class="n">Chỉ tiêu</th><th class="n">% đạt</th></tr></thead><tbody><tr><td class="">Trần Phương Anh (1268)</td><td class="n">18</td><td class="n">131</td><td class="n">10,2 tỷ</td><td class="n">10,8 tr</td><td class="n">1,7 tr</td><td class="n">0</td><td class="n">9,1 tr</td><td class="n">6,1 tr</td><td class="n">18,0 tr</td><td class="n">50,6%</td></tr><tr><td class="">Nguyễn Văn Bình (1271)</td><td class="n">12</td><td class="n">92</td><td class="n">6,5 tỷ</td><td class="n">6,6 tr</td><td class="n">1,0 tr</td><td class="n">0</td><td class="n">5,6 tr</td><td class="n">3,8 tr</td><td class="n">14,0 tr</td><td class="n">40,0%</td></tr><tr><td class="">Lê Thu Hà (1284)</td><td class="n">8</td><td class="n">64</td><td class="n">4,5 tỷ</td><td class="n">4,5 tr</td><td class="n">0,7 tr</td><td class="n">0</td><td class="n">3,8 tr</td><td class="n">2,5 tr</td><td class="n">12,0 tr</td><td class="n">31,7%</td></tr><tr><td class="">Đỗ Minh Quân (1290)</td><td class="n">4</td><td class="n">31</td><td class="n">2,2 tỷ</td><td class="n">2,2 tr</td><td class="n">0,3 tr</td><td class="n">0</td><td class="n">1,9 tr</td><td class="n">1,3 tr</td><td class="n">7,6 tr</td><td class="n">25,0%</td></tr><tr class="picked"><td class=""><b>TỔNG CỘNG</b></td><td class="n"><b>42</b></td><td class="n"><b>318</b></td><td class="n"><b>23,4 tỷ</b></td><td class="n"><b>24,1 tr</b></td><td class="n"><b>3,7 tr</b></td><td class="n"><b>0</b></td><td class="n"><b>20,4 tr</b></td><td class="n"><b>13,7 tr</b></td><td class="n"><b>51,6 tr</b></td><td class="n"><b>39,5%</b></td></tr></tbody></table>
-      <div class="tfoot"><span>Giữ nguyên bảng của bản test · sửa: bấm một dòng → danh sách KH của đơn vị đó (mục 5); thêm cột HH dự tính</span><span>Sắp xếp theo mọi cột · 20 dòng/trang · bấm dòng mở hồ sơ KH hiện có</span></div>
+      <div class="tfoot"><span>20 dòng/trang</span></div>
     </div>
-    <div class="sec"><span class="n">5</span><h2>Danh sách theo khách hàng</h2><span class="q">— TVĐT cần đủ danh sách để chăm sóc, không chỉ Top</span></div>
+    <div class="sec"><span class="n">5</span><h2>Danh sách theo khách hàng</h2></div>
     <div class="fbar">
       <span class="gl">Lọc</span><span class="chip">Sàn ▾</span><span class="chip">Mua / bán ▾</span><span class="chip on">Ngừng GD kỳ này</span><span class="chip">Khoảng phí net ▾</span>
       <span class="search push">Tìm mã / tên KH, số TK…</span>
     </div>
     <div class="tbl"><table class="wt"><thead><tr><th class="">Mã KH</th><th class="">Tên KH</th><th class="">Số lệnh</th><th class="n">GTGD CP</th><th class="n">Tổng phí</th><th class="n">Phí sàn</th><th class="n">Phí net</th><th class="n">HH dự tính</th><th class="">GD gần nhất</th><th class="opt">TVĐT</th></tr></thead><tbody><tr><td class="">KH0017</td><td class="">Phạm Thị Vân</td><td class="">0</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="">28/08/2026</td><td class="opt">Trần Phương Anh</td></tr><tr><td class="">KH0105</td><td class="">Hoàng Minh Tâm</td><td class="">0</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="">26/08/2026</td><td class="opt">Nguyễn Văn Bình</td></tr><tr><td class="">KH0290</td><td class="">Đặng Minh Khoa</td><td class="">0</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="">21/08/2026</td><td class="opt">Lê Thu Hà</td></tr></tbody></table>
-      <div class="tfoot"><span>4 KH khớp · tách GTGD mua / bán: cần kiểm nguồn</span><span>Sắp xếp theo mọi cột · 20 dòng/trang · bấm dòng mở hồ sơ KH hiện có</span></div>
+      <div class="tfoot"><span>4 KH khớp</span><span>20 dòng/trang</span></div>
     </div>
     <div class="insights">
       <div class="ins hl"><h4>Điểm sáng</h4><ul><li>Top 3 KH chiếm 39% phí net CP.</li></ul></div>
       <div class="ins al"><h4>Cần lưu ý</h4><ul><li>Phí net CP giảm 18% so cùng ngày kỳ trước.</li><li>4 KH đóng góp lớn tháng 08 chưa GD tháng 09.</li></ul></div>
-      <div class="ins rec"><h4>Việc nên làm</h4><ul><li>Mở KH đóng góp lớn đang ngừng.<span class="why">Vì sao: thuộc Top 10 phí net tháng 08, tháng 09 = 0 · rule R-KD-042</span><span class="cta">Lọc 4 KH →</span></li></ul></div>
+      <div class="ins rec"><h4>Việc nên làm</h4><ul><li>Mở KH đóng góp lớn đang ngừng.<span class="cta">Lọc 4 KH →</span></li></ul></div>
     </div>
-    <div class="drop"><h5>Đối chiếu với bản test</h5><ul><li><b>Bỏ thẻ "Dư nợ"</b> trong tab này: trùng thẻ ở Tổng quan và cả tab Dư nợ; tab Doanh số chỉ nói về giao dịch và phí.</li><li><b>Giữ ở tab So sánh như bản test:</b> Ranking mã cổ phiếu và Phí net CP theo nhánh 9 tháng — không kéo sang đây.</li><li><b>Gộp tab "Phí net &amp; hoa hồng" của đề bài v1.2 vào đây</b> theo cách bản test: phí đi ra cùng dữ liệu lệnh khớp với GTGD. Hoa hồng thêm dưới dạng một thẻ và một cột, chờ kiểm nguồn.</li><li><b>Làm thêm:</b> Kết luận; KPI trên thẻ; số lệnh; hoa hồng dự tính; danh sách theo KH; khối Điểm sáng / Cần lưu ý / Việc nên làm; bấm dòng bảng cây để xuống danh sách KH.</li></ul></div>
+
   </div>
 </div>
 
 <!-- ==================== DƯ NỢ & MÓN VAY ==================== -->
-
-
 
 <div class="page" id="du-no-mon-vay" role="tabpanel" aria-labelledby="tab-du-no-mon-vay" tabindex="0" hidden>
   <div class="thead">
@@ -547,7 +517,7 @@
     <span><span class="lbl">Phạm vi</span><span class="sel">Toàn nhánh ▾</span></span>
     <span class="dstat push"><i class="dot full"></i>Dữ liệu đến&nbsp;<b>27/09</b>&nbsp;· cập nhật 28/09 14:21</span>
   </div>
-  
+
   <div class="body">
     <div class="sec"><span class="n">0</span><h2>Kết luận</h2></div>
     <div class="verdict">
@@ -560,11 +530,11 @@
       <div class="kpi"><div class="lab">Tổng dư nợ</div><div class="big">2,34<span style="font-size:12px;color:#666;font-weight:400"> / 5 tỷ</span></div><div class="sub2">31 KH có dư nợ</div><div class="prog"><i style="width:46.8%"></i></div><div class="pct"><b>46,8%</b> KPI</div></div>
       <div class="kpi"><div class="lab">Giải ngân trong kỳ</div><div class="big">1,20<span style="font-size:12px;color:#666;font-weight:400"> tỷ</span></div></div>
       <div class="kpi"><div class="lab">Thu nợ gốc trong kỳ</div><div class="big">0,85<span style="font-size:12px;color:#666;font-weight:400"> tỷ</span></div></div>
-      <div class="kpi"><div class="lab">Giải ngân ròng</div><div class="big">+0,35<span style="font-size:12px;color:#666;font-weight:400"> tỷ</span></div><div class="fx">giải ngân − thu nợ gốc</div></div>
+      <div class="kpi"><div class="lab">Giải ngân ròng</div><div class="big">+0,35<span style="font-size:12px;color:#666;font-weight:400"> tỷ</span></div></div>
       <div class="kpi"><div class="lab">Lãi + phí dồn tích</div><div class="big">18,6<span style="font-size:12px;color:#666;font-weight:400"> tr</span></div></div>
-      <div class="kpi"><div class="lab">Vay quá hạn</div><div class="big">0</div><div class="fx">rủi ro</div></div>
+      <div class="kpi"><div class="lab">Vay quá hạn</div><div class="big">0</div></div>
     </div>
-    <p class="caption">Sáu thẻ giữ nguyên bản test — bản test xác nhận đã có dữ liệu giải ngân, thu nợ, lãi phí dồn tích và quá hạn, nên các mục này bỏ nhãn "Cần chốt" của wireframe cũ. Sửa: thêm KPI dư nợ và % đạt. Lãi suất vay bình quân đã có ở Tổng quan nên không lặp lại.</p>
+
     <div class="sec"><span class="n">2</span><h2>Diễn biến &amp; cơ cấu</h2></div>
     <div class="biz" style="grid-template-columns:1fr">
       <div class="chart">
@@ -573,38 +543,39 @@
       </div>
     </div>
     <div class="g2" style="margin-top:12px">
-      <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Tỷ trọng loại nợ</div><div class="fx" style="margin:-6px 0 10px">Cơ cấu dư nợ hiện tại theo nguồn vay</div>
+      <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Tỷ trọng loại nợ</div>
         <div class="hbars"><div class="hb"><span>Margin</span><span class="t"><i style="width:72%"></i></span><span class="v">1,68 tỷ</span></div><div class="hb"><span>Ứng trước</span><span class="t"><i style="width:20%"></i></span><span class="v">0,47 tỷ</span></div><div class="hb"><span>Khác</span><span class="t"><i style="width:8%"></i></span><span class="v">0,19 tỷ</span></div></div>
       </div>
-      <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Tỷ trọng trong hạn / quá hạn</div><div class="fx" style="margin:-6px 0 10px">Cơ cấu dư nợ hiện tại theo tình trạng</div>
+      <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Tỷ trọng trong hạn / quá hạn</div>
         <div class="hbars"><div class="hb"><span>Trong hạn</span><span class="t"><i style="width:100%"></i></span><span class="v">2,34 tỷ</span></div><div class="hb"><span>Quá hạn</span><span class="t"><i style="width:0%"></i></span><span class="v">0</span></div></div>
       </div>
     </div>
     <div style="margin-top:12px">
-      <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Quy mô dư nợ theo đơn vị</div><div class="fx" style="margin:-6px 0 10px">Phân đoạn theo loại nợ: ■ Margin ■ Ứng trước □ Khác · giữ con trỏ xem giá trị</div>
+      <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Quy mô dư nợ theo đơn vị</div><div class="chart-key">■ Margin ■ Ứng trước □ Khác</div>
         <div class="stack"><span>Trần Phương Anh (1268)</span><span class="s" style="width:100%"><i style="width:72%;background:#111"></i><i style="width:20%;background:#888"></i><i style="width:8%;background:#ddd"></i></span><span class="v" style="text-align:right;font-weight:700">1,12 tỷ</span></div><div class="stack"><span>Nguyễn Văn Bình (1271)</span><span class="s" style="width:58%"><i style="width:72%;background:#111"></i><i style="width:20%;background:#888"></i><i style="width:8%;background:#ddd"></i></span><span class="v" style="text-align:right;font-weight:700">0,65 tỷ</span></div><div class="stack"><span>Lê Thu Hà (1284)</span><span class="s" style="width:34%"><i style="width:72%;background:#111"></i><i style="width:20%;background:#888"></i><i style="width:8%;background:#ddd"></i></span><span class="v" style="text-align:right;font-weight:700">0,38 tỷ</span></div><div class="stack"><span>Đỗ Minh Quân (1290)</span><span class="s" style="width:17%"><i style="width:72%;background:#111"></i><i style="width:20%;background:#888"></i><i style="width:8%;background:#ddd"></i></span><span class="v" style="text-align:right;font-weight:700">0,19 tỷ</span></div>
       </div>
     </div>
-    <div class="sec"><span class="n">3</span><h2>Chi tiết</h2><span class="q">— phần làm thêm — bản test chưa có danh sách</span></div>
+    <div class="sec"><span class="n">3</span><h2>Chi tiết</h2></div>
     <div style="margin-bottom:8px"><span class="seg"><span class="on">Tổng hợp theo KH/TK</span><span>Chi tiết món vay</span></span></div>
     <div class="fbar">
       <span class="gl">Lọc</span><span class="chip">Loại nợ ▾</span><span class="chip">Trong hạn / quá hạn ▾</span><span class="chip">Khoảng dư nợ ▾</span><span class="chip on">Lãi + phí dồn tích lớn</span><span class="chip">Đến hạn ≤ 7 ngày </span>
       <span class="search push">Tìm mã / tên KH, số TK…</span>
     </div>
     <div class="tbl"><table class="wt"><thead><tr><th class="">Mã KH</th><th class="">Tên KH</th><th class="">TK</th><th class="">Loại nợ chính</th><th class="n">Dư nợ</th><th class="n">Lãi + phí dồn tích</th><th class="n">Quá hạn</th><th class="">Đến hạn gần nhất</th><th class="opt">TVĐT</th></tr></thead><tbody><tr class="picked"><td class="">KH0001</td><td class="">Triệu Hạnh Hiền</td><td class="">0001C</td><td class="">Margin</td><td class="n">964 tr</td><td class="n">7,2 tr</td><td class="n">0</td><td class="">—</td><td class="opt">Trần Phương Anh</td></tr><tr><td class="">KH0017</td><td class="">Phạm Thị Vân</td><td class="">0017C</td><td class="">Margin</td><td class="n">280 tr</td><td class="n">2,1 tr</td><td class="n">0</td><td class="">—</td><td class="opt">Trần Phương Anh</td></tr><tr><td class="">KH0105</td><td class="">Hoàng Minh Tâm</td><td class="">0105C</td><td class="">Ứng trước</td><td class="n">185 tr</td><td class="n">1,4 tr</td><td class="n">0</td><td class="">—</td><td class="opt">Nguyễn Văn Bình</td></tr></tbody></table>
-      <div class="tfoot"><span>31 KH có dư nợ · cột "Đến hạn gần nhất" để trống cho tới khi xác nhận có dữ liệu</span><span>Sắp xếp theo mọi cột · 20 dòng/trang · bấm dòng mở hồ sơ KH hiện có</span></div>
+      <div class="tfoot"><span>31 KH có dư nợ</span><span>20 dòng/trang</span></div>
     </div>
-    <div class="from-cta" style="margin-top:12px;border-bottom:1.5px solid #111">▾ Món vay của <b>Triệu Hạnh Hiền · TK 0001C</b> (dòng đang chọn) — giữ phạm vi và ngày dữ liệu</div>
+
+    <h3 style="font-size:12px;margin:16px 0 8px">Món vay của Triệu Hạnh Hiền · TK 0001C</h3>
     <div class="tbl"><table class="wt"><thead><tr><th class="">Mã món</th><th class="">Loại nợ</th><th class="">Giải ngân</th><th class="n">Giá trị giải ngân</th><th class="n">Dư nợ còn</th><th class="n">Lãi suất</th><th class="n">Lãi + phí dồn tích</th><th class="">Trạng thái</th></tr></thead><tbody><tr><td class="">MV-24091</td><td class="">Margin</td><td class="">18/06/2026</td><td class="n">300 tr</td><td class="n">300 tr</td><td class="n">12,5%</td><td class="n">2,6 tr</td><td class=""><span class="pill">Trong hạn</span></td></tr><tr><td class="">MV-24133</td><td class="">Margin</td><td class="">20/06/2026</td><td class="n">250 tr</td><td class="n">250 tr</td><td class="n">12,5%</td><td class="n">2,1 tr</td><td class=""><span class="pill">Trong hạn</span></td></tr></tbody></table>
-      <div class="tfoot"><span>12 món · Cần chốt: dữ liệu mức món đã sang SHA chưa (bản test có loại nợ, quá hạn, giải ngân → nhiều khả năng có)</span><span>Sắp xếp theo mọi cột · 20 dòng/trang · bấm dòng mở hồ sơ KH hiện có</span></div>
+      <div class="tfoot"><span>12 món</span><span>20 dòng/trang</span></div>
     </div>
     <div class="insights">
       <div class="ins hl"><h4>Điểm sáng</h4><ul><li>Không có dư nợ quá hạn.</li></ul></div>
       <div class="ins al"><h4>Cần lưu ý</h4><ul><li>61% dư nợ tập trung ở 3 KH.</li></ul></div>
-      <div class="ins rec"><h4>Việc nên làm</h4><ul><li>Nhắc KH có lãi + phí dồn tích lớn.<span class="why">Vì sao: lãi + phí dồn tích ≥ 5 tr · rule R-VAY-005 · dữ liệu 27/09</span><span class="cta">Lọc 3 KH →</span></li></ul></div>
+      <div class="ins rec"><h4>Việc nên làm</h4><ul><li>Nhắc KH có lãi + phí dồn tích lớn.<span class="cta">Lọc 3 KH →</span></li></ul></div>
     </div>
-    <p class="caption">Chỉ xem và liên hệ qua chức năng SHA hiện có — không có thao tác giải ngân, gia hạn, thu nợ.</p>
-    <div class="drop"><h5>Đối chiếu với bản test</h5><ul><li><b>Không bỏ khối nào của bản test.</b></li><li><b>Bỏ khỏi wireframe cũ:</b> biểu đồ "Dư nợ theo ngày" trong tab (đã có ở Tổng quan) và khối "cơ cấu dư nợ theo nhóm KH" (thay bằng Tỷ trọng loại nợ của bản test, vì chưa có dữ liệu phân khúc).</li><li><b>Làm thêm:</b> Kết luận; KPI dư nợ; danh sách KH/TK và chi tiết món vay (bắt buộc theo M07.08 — không có danh sách thì TVĐT không hành động được); Điểm sáng / Cần lưu ý / Việc nên làm.</li><li><b>Còn cần chốt:</b> ngày đến hạn từng món. Bản test không hiện, nên rule "món sắp đến hạn" của wireframe cũ tạm đổi thành rule "lãi + phí dồn tích lớn" dùng dữ liệu đã có.</li></ul></div>
+
+
   </div>
 </div>
 
@@ -616,7 +587,7 @@
     <span><span class="lbl">Phạm vi</span><span class="sel">Toàn nhánh ▾</span></span>
     <span class="dstat push"><i class="dot full"></i>Dữ liệu đến&nbsp;<b>27/09</b>&nbsp;· cập nhật 28/09 14:21</span>
   </div>
-  
+
   <div class="body">
     <div class="sec"><span class="n">0</span><h2>Kết luận</h2></div>
     <div class="verdict">
@@ -624,50 +595,50 @@
       <div><div class="v-k">Cảnh báo</div><div class="v-line" style="margin-top:0">278 TK ngủ đông (40,2%).</div><div class="v-line">23 KH NAV ≥ 10 tỷ không GD &gt; 30 ngày.</div></div>
       <div><div class="v-k">Việc nên làm</div><div class="v-line" style="margin-top:0">→ Kích hoạt 278 TK ngủ đông.</div><div class="v-line">→ Ưu tiên 23 KH NAV lớn đang nằm im.</div></div>
     </div>
-    <div class="sec"><span class="n">1</span><h2>Chỉ tiêu tệp hiện hữu</h2><span class="q">— ghi rõ đang đếm KH hay TK</span></div>
+    <div class="sec"><span class="n">1</span><h2>Chỉ tiêu tệp hiện hữu</h2></div>
     <div class="kpis" style="grid-template-columns:repeat(5,1fr)">
       <div class="kpi"><div class="lab">TK đang quản lý</div><div class="big">692<span style="font-size:12px;color:#666;font-weight:400"> TK</span></div><div class="sub2">500 KH</div></div>
-      <div class="kpi"><div class="lab">KH active</div><div class="big">42<span style="font-size:12px;color:#666;font-weight:400"> KH · 8,4%</span></div><div class="fx">mẫu số: 500 KH · định nghĩa active cần chốt</div></div>
-      <div class="kpi"><div class="lab">TK ngủ đông</div><div class="big">278<span style="font-size:12px;color:#666;font-weight:400"> TK · 40,2%</span></div><div class="fx">NAV thấp &amp; không GD 3 tháng — cùng rule "KH inactive" ở Tổng quan bản test</div></div>
-      <div class="kpi"><div class="lab">Tổng NAV</div><div class="big">283,5<span style="font-size:12px;color:#666;font-weight:400"> tỷ</span></div><div class="fx">số dư ngày 27/09</div></div>
-      <div class="kpi"><div class="lab">NAV so đầu kỳ</div><div class="big">−7,7<span style="font-size:12px;color:#666;font-weight:400"> tỷ · −2,6%</span></div><div class="fx">NAV 01/09: 291,2 tỷ</div></div>
+      <div class="kpi"><div class="lab">KH active</div><div class="big">42<span style="font-size:12px;color:#666;font-weight:400"> KH · 8,4%</span></div></div>
+      <div class="kpi"><div class="lab">TK ngủ đông</div><div class="big">278<span style="font-size:12px;color:#666;font-weight:400"> TK · 40,2%</span></div></div>
+      <div class="kpi"><div class="lab">Tổng NAV</div><div class="big">283,5<span style="font-size:12px;color:#666;font-weight:400"> tỷ</span></div></div>
+      <div class="kpi"><div class="lab">NAV so đầu kỳ</div><div class="big">−7,7<span style="font-size:12px;color:#666;font-weight:400"> tỷ · −2,6%</span></div></div>
     </div>
     <div class="sec"><span class="n">2</span><h2>Diễn biến &amp; phân bổ</h2></div>
     <div class="g2">
       <div class="chart">
         <div class="ct">Tỷ lệ TK ngủ đông theo tháng <span class="leg"><span><i class="d" style="background:#111"></i>01 → 09/2026</span></span></div>
         <div class="plot"><svg viewBox="0 0 300 150" preserveAspectRatio="none">
-          <polyline points="0,110 50,100 100,92 150,80 200,66 250,56 300,48" fill="none" stroke="#111" stroke-width="2.5"/></svg></div><div class="caption">Dùng khoảng tháng ở header; mỗi điểm là tỷ lệ cuối tháng.</div>
+          <polyline points="0,110 50,100 100,92 150,80 200,66 250,56 300,48" fill="none" stroke="#111" stroke-width="2.5"/></svg></div>
       </div>
       <div class="chart">
         <div class="ct">Tổng NAV theo ngày (số dư) <span class="leg"><span><i class="d" style="background:#bbb"></i>Kỳ trước</span><span><i class="d" style="background:#111"></i>Kỳ đang xem</span></span></div>
         <div class="plot"><svg viewBox="0 0 300 150" preserveAspectRatio="none"><polyline points="0,60 60,58 120,56 180,54 240,52 300,50" fill="none" stroke="#bbb" stroke-width="2" stroke-dasharray="4 3"/>
-          <polyline points="0,62 50,64 100,68 150,70 200,72 240,72" fill="none" stroke="#111" stroke-width="2.5"/></svg></div><div class="caption">Số dư cuối ngày — không gắn nhãn lũy kế. NAV giảm chưa chắc là KH rút tiền: chưa tách ảnh hưởng giá.</div>
+          <polyline points="0,62 50,64 100,68 150,70 200,72 240,72" fill="none" stroke="#111" stroke-width="2.5"/></svg></div>
       </div>
     </div>
     <div class="g2" style="margin-top:12px">
-      <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Phân bổ NAV theo bậc</div><div class="fx" style="margin:-6px 0 10px">Dùng lại đúng khối "Phân bổ NAV của TK mở mới" của bản test, áp cho toàn tệp hiện hữu</div>
+      <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Phân bổ NAV theo bậc</div>
         <div class="hbars"><div class="hb"><span>NAV = 0</span><span class="t"><i style="width:30%"></i></span><span class="v">208 TK</span></div><div class="hb"><span>&lt; 10tr</span><span class="t"><i style="width:12%"></i></span><span class="v">84 TK</span></div><div class="hb"><span>10–100tr</span><span class="t"><i style="width:26%"></i></span><span class="v">180 TK</span></div><div class="hb"><span>100tr–1 tỷ</span><span class="t"><i style="width:22%"></i></span><span class="v">152 TK</span></div><div class="hb"><span>≥ 1 tỷ</span><span class="t"><i style="width:10%"></i></span><span class="v">68 TK</span></div></div>
       </div>
-      <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Theo đơn vị</div><div class="fx" style="margin:-6px 0 10px">Tỷ lệ TK ngủ đông theo TVĐT · chỉ hiện khi Phạm vi là nhánh / phòng</div>
+      <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Tỷ lệ TK ngủ đông theo TVĐT</div>
         <div class="hbars"><div class="hb"><span>Trần Phương Anh</span><span class="t"><i style="width:100%"></i></span><span class="v">41% ngủ đông</span></div><div class="hb"><span>Nguyễn Văn Bình</span><span class="t"><i style="width:88%"></i></span><span class="v">36%</span></div><div class="hb"><span>Lê Thu Hà</span><span class="t"><i style="width:72%"></i></span><span class="v">30%</span></div><div class="hb"><span>Đỗ Minh Quân</span><span class="t"><i style="width:55%"></i></span><span class="v">23%</span></div></div>
       </div>
     </div>
-    <div class="sec"><span class="n">3</span><h2>Danh sách KH hiện hữu</h2><span class="q">— màn đích khi bấm "Mở 278 TK" ở Tổng quan</span></div>
-    <div class="from-cta">↳ Mở từ <b>Việc nên làm ở Tổng quan: "Kích hoạt TK ngủ đông" · rule R-KD-012 · dữ liệu 27/09</b> · giữ phạm vi &amp; khoảng tháng · <u>bỏ lọc</u></div>
+    <div class="sec"><span class="n">3</span><h2>Danh sách KH hiện hữu</h2></div>
+
     <div class="fbar">
       <span class="gl">Lọc</span><span class="chip">Active</span><span class="chip on">Ngủ đông ✕</span><span class="chip">Chưa GD ≥ N ngày</span><span class="chip">Bậc NAV ▾</span><span class="chip">NAV giảm &gt; 10%</span>
       <span class="search push">Tìm mã / tên KH, số TK…</span>
     </div>
     <div class="tbl"><table class="wt"><thead><tr><th class="">Mã KH</th><th class="">Tên KH</th><th class="">Số TK</th><th class="">Trạng thái</th><th class="">GD gần nhất</th><th class="n">NAV 01/09</th><th class="n">NAV 27/09</th><th class="n">Chênh lệch</th><th class="n">GTGD kỳ</th><th class="opt">TVĐT</th></tr></thead><tbody><tr><td class="">KH0412</td><td class="">Lê Văn Hòa</td><td class="">1</td><td class=""><span class="pill b">Ngủ đông</span></td><td class="">02/05/2026</td><td class="n">3,4 tr</td><td class="n">3,1 tr</td><td class="n">−0,3 tr</td><td class="n">0</td><td class="opt">Trần Phương Anh</td></tr><tr><td class="">KH0877</td><td class="">Trần Thị Mai</td><td class="">2</td><td class=""><span class="pill b">Ngủ đông</span></td><td class="">18/04/2026</td><td class="n">1,4 tr</td><td class="n">1,4 tr</td><td class="n">0</td><td class="n">0</td><td class="opt">Lê Thu Hà</td></tr><tr><td class="">KH1033</td><td class="">Ngô Quốc Bảo</td><td class="">1</td><td class=""><span class="pill b">Ngủ đông</span></td><td class="">27/05/2026</td><td class="n">9,1 tr</td><td class="n">8,9 tr</td><td class="n">−0,2 tr</td><td class="n">0</td><td class="opt">Nguyễn Văn Bình</td></tr></tbody></table>
-      <div class="tfoot"><span>278 TK khớp — bằng số ở Tổng quan</span><span>Sắp xếp theo mọi cột · 20 dòng/trang · bấm dòng mở hồ sơ KH hiện có</span></div>
+      <div class="tfoot"><span>278 TK khớp</span><span>20 dòng/trang</span></div>
     </div>
     <div class="insights">
       <div class="ins hl"><h4>Điểm sáng</h4><ul><li>31/42 KH active có NAV ≥ 1 tỷ — tệp chất lượng.</li></ul></div>
       <div class="ins al"><h4>Cần lưu ý</h4><ul><li>Tỷ lệ ngủ đông tăng từ 30% lên 40% trong 9 tháng.</li><li>14 KH giảm NAV &gt; 10% trong kỳ.</li></ul></div>
-      <div class="ins rec"><h4>Việc nên làm</h4><ul><li>Chăm KH NAV lớn đang nằm im.<span class="why">Vì sao: NAV ≥ 10 tỷ &amp; không GD &gt; 30 ngày · rule R-KD-009</span><span class="cta">Lọc 23 KH →</span></li><li>Xem KH giảm NAV mạnh.<span class="why">Vì sao: NAV giảm &gt; 10% so đầu kỳ · rule R-KD-031 · đối chiếu tab Nộp rút trước khi kết luận</span><span class="cta">Lọc 14 KH →</span></li></ul></div>
+      <div class="ins rec"><h4>Việc nên làm</h4><ul><li>Chăm KH NAV lớn đang nằm im.<span class="cta">Lọc 23 KH →</span></li><li>Xem KH giảm NAV mạnh.<span class="cta">Lọc 14 KH →</span></li></ul></div>
     </div>
-    <div class="drop"><h5>Đối chiếu với bản test</h5><ul><li><b>Cả tab là làm thêm — bản test chưa có.</b> Lý do thêm: bản test chỉ nhắc KH inactive bằng một con số ở "Cần lưu ý", không có chỗ nào xem và hành động trên tệp khách đang quản lý; đề bài v1.2 yêu cầu tab này (M07.05).</li><li><b>Gộp tab NAV của đề bài v1.2 vào đây</b> (tổng NAV, NAV so đầu kỳ, NAV theo ngày, danh sách chênh lệch NAV) để không phải thêm hai tab mới. Có thể tách lại nếu A4 muốn.</li><li><b>Tận dụng bản test:</b> rule "KH inactive" ở Tổng quan và khối "Phân bổ NAV theo bậc" ở tab Mở mới.</li><li><b>Cần chốt:</b> định nghĩa KH active cho tệp hiện hữu (bản test dùng NAV &gt; 0 cho TK mở mới), cách đếm KH nhiều TK.</li></ul></div>
+
   </div>
 </div>
 
@@ -679,7 +650,7 @@
     <span><span class="lbl">Phạm vi</span><span class="sel">Toàn nhánh ▾</span></span>
     <span class="dstat push"><i class="dot full"></i>Dữ liệu đến&nbsp;<b>27/09</b>&nbsp;· cập nhật 28/09 14:21</span>
   </div>
-  
+
   <div class="body">
     <div class="sec"><span class="n">0</span><h2>Kết luận</h2></div>
     <div class="verdict">
@@ -691,15 +662,15 @@
     <div class="kpis" style="grid-template-columns:repeat(4,1fr)">
       <div class="kpi"><div class="lab">Số TK mở mới</div><div class="big">38<span style="font-size:12px;color:#666;font-weight:400"> / 50 TK</span></div><div class="prog"><i style="width:76%"></i></div><div class="pct"><b>76%</b> KPI</div></div>
       <div class="kpi"><div class="lab">Active (NAV&gt;0)</div><div class="big">11<span style="font-size:12px;color:#666;font-weight:400"> TK</span></div></div>
-      <div class="kpi"><div class="lab">Tỷ lệ active</div><div class="big">28,9<span style="font-size:12px;color:#666;font-weight:400"> %</span></div><div class="fx">mẫu số: 38 TK mở mới</div></div>
+      <div class="kpi"><div class="lab">Tỷ lệ active</div><div class="big">28,9<span style="font-size:12px;color:#666;font-weight:400"> %</span></div></div>
       <div class="kpi"><div class="lab">Tổng NAV</div><div class="big">3,9<span style="font-size:12px;color:#666;font-weight:400"> tỷ</span></div></div>
     </div>
     <div style="height:10px"></div>
     <div class="kpis" style="grid-template-columns:repeat(4,1fr)">
       <div class="kpi"><div class="lab">Tổng tài sản</div><div class="big">4,1<span style="font-size:12px;color:#666;font-weight:400"> tỷ</span></div></div>
-      <div class="kpi"><div class="lab">Tổng dư nợ</div><div class="big">0,2<span style="font-size:12px;color:#666;font-weight:400"> tỷ</span></div><div class="fx">sửa dòng phụ: bản test ghi "NAV b/q" dưới thẻ dư nợ</div></div>
+      <div class="kpi"><div class="lab">Tổng dư nợ</div><div class="big">0,2<span style="font-size:12px;color:#666;font-weight:400"> tỷ</span></div></div>
       <div class="kpi"><div class="lab">Tiền nộp của tệp</div><div class="big">4,2<span style="font-size:12px;color:#666;font-weight:400"> tỷ</span></div><div class="sub2">phí net đóng góp 0,4 tr</div></div>
-      <div class="kpi"><div class="lab">Đã giao dịch</div><div class="big">5<span style="font-size:12px;color:#666;font-weight:400"> TK</span></div><div class="fx">join lệnh khớp — cùng số với vòng tròn "Đã GD" của bản test</div></div>
+      <div class="kpi"><div class="lab">Đã giao dịch</div><div class="big">5<span style="font-size:12px;color:#666;font-weight:400"> TK</span></div></div>
     </div>
     <div class="sec"><span class="n">2</span><h2>Diễn biến &amp; chuyển đổi</h2></div>
     <div class="biz" style="grid-template-columns:1fr">
@@ -714,14 +685,14 @@
         <div class="fstep"><span>Mở mới</span><span class="fb"><i style="width:100%"></i></span><span class="fr"><b>38 TK</b></span></div>
         <div class="fstep"><span>Active (NAV&gt;0)</span><span class="fb"><i style="width:29%"></i></span><span class="fr"><b>11 TK</b> · 28,9% / mở mới</span></div>
         <div class="fstep"><span>Đã giao dịch</span><span class="fb"><i style="width:13%"></i></span><span class="fr"><b>5 TK</b> · 45,5% / active</span></div>
-        <div class="caption">Gộp hai vòng tròn "Tỷ lệ Active / Chưa active" và "Tỷ lệ TK mở mới đã phát sinh GD" của bản test thành một phễu, dùng đúng số của hai khối đó. mẫu số của "đã GD": bản test chia cho toàn bộ TK mới, phễu chia cho TK active.</div>
+
       </div>
-      <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Phân bổ NAV của TK mở mới</div><div class="fx" style="margin:-6px 0 10px">Số TK theo bậc NAV</div>
+      <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Phân bổ NAV của TK mở mới</div>
         <div class="hbars"><div class="hb"><span>NAV = 0</span><span class="t"><i style="width:71%"></i></span><span class="v">27 TK</span></div><div class="hb"><span>&lt; 10tr</span><span class="t"><i style="width:8%"></i></span><span class="v">3 TK</span></div><div class="hb"><span>10–100tr</span><span class="t"><i style="width:11%"></i></span><span class="v">4 TK</span></div><div class="hb"><span>100tr–1 tỷ</span><span class="t"><i style="width:5%"></i></span><span class="v">2 TK</span></div><div class="hb"><span>≥ 1 tỷ</span><span class="t"><i style="width:5%"></i></span><span class="v">2 TK</span></div></div>
       </div>
     </div>
     <div style="margin-top:12px">
-      <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Mở mới theo bộ phận</div><div class="fx" style="margin:-6px 0 10px">Số TK (nhãn = tổng NAV)</div>
+      <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Mở mới theo bộ phận</div>
         <div class="hbars"><div class="hb"><span>Trần Phương Anh</span><span class="t"><i style="width:100%"></i></span><span class="v">15 TK · 1,8 tỷ</span></div><div class="hb"><span>Nguyễn Văn Bình</span><span class="t"><i style="width:67%"></i></span><span class="v">10 TK · 1,2 tỷ</span></div><div class="hb"><span>Lê Thu Hà</span><span class="t"><i style="width:53%"></i></span><span class="v">8 TK · 0,6 tỷ</span></div><div class="hb"><span>Đỗ Minh Quân</span><span class="t"><i style="width:33%"></i></span><span class="v">5 TK · 0,3 tỷ</span></div></div>
       </div>
     </div>
@@ -731,14 +702,14 @@
       <span class="search push">Tìm mã / tên KH, số TK…</span>
     </div>
     <div class="tbl"><table class="wt"><thead><tr><th class="">Khách hàng</th><th class="">Ngày mở</th><th class="n">NAV</th><th class="n">Tài sản</th><th class="n">Dư nợ</th><th class="">Active</th><th class="">Nộp lần đầu</th><th class="">GD lần đầu</th><th class="">Bước</th><th class="opt">TVĐT</th></tr></thead><tbody><tr><td class="">Đỗ Văn Sơn · 069C2201</td><td class="">02/09</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="">—</td><td class="">—</td><td class="">—</td><td class=""><span class="pill b">NAV = 0 · 25 ngày</span></td><td class="opt">Trần Phương Anh</td></tr><tr><td class="">Mai Thu Trang · 069C2207</td><td class="">04/09</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="">—</td><td class="">—</td><td class="">—</td><td class=""><span class="pill b">NAV = 0 · 23 ngày</span></td><td class="opt">Lê Thu Hà</td></tr><tr><td class="">Cao Đức Huy · 069C2215</td><td class="">05/09</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="">—</td><td class="">—</td><td class="">—</td><td class=""><span class="pill b">NAV = 0 · 22 ngày</span></td><td class="opt">Nguyễn Văn Bình</td></tr></tbody></table>
-      <div class="tfoot"><span>27 TK khớp · mặc định sắp theo Tài sản giảm dần (thay khối "Top tài sản" của bản test)</span><span>Sắp xếp theo mọi cột · 20 dòng/trang · bấm dòng mở hồ sơ KH hiện có</span></div>
+      <div class="tfoot"><span>27 TK khớp</span><span>20 dòng/trang</span></div>
     </div>
     <div class="insights">
       <div class="ins hl"><h4>Điểm sáng</h4><ul><li>2 TK mới có NAV ≥ 1 tỷ — nên hướng dẫn dùng sản phẩm SHS.</li></ul></div>
       <div class="ins al"><h4>Cần lưu ý</h4><ul><li>71% TK mới vẫn NAV = 0.</li><li>6 TK active nhưng chưa giao dịch.</li></ul></div>
-      <div class="ins rec"><h4>Việc nên làm</h4><ul><li>Gọi TK mở mới chưa có tài sản.<span class="why">Vì sao: mở &gt; 7 ngày, NAV = 0 · rule R-KD-021 · N = 7 cấu hình tại PT03</span><span class="cta">Lọc 27 TK →</span></li><li>Kích hoạt TK active chưa giao dịch.<span class="why">Vì sao: dùng chung logic tiền chờ M08 — cùng 6 TK với tab Nộp rút</span><span class="cta">Mở 6 TK →</span></li></ul></div>
+      <div class="ins rec"><h4>Việc nên làm</h4><ul><li>Gọi TK mở mới chưa có tài sản.<span class="cta">Lọc 27 TK →</span></li><li>Kích hoạt TK active chưa giao dịch.<span class="cta">Mở 6 TK →</span></li></ul></div>
     </div>
-    <div class="drop"><h5>Đối chiếu với bản test</h5><ul><li><b>Bỏ khối "Top tài sản TK mở mới":</b> trùng với bảng Chi tiết TK mở mới vốn đã sắp theo tài sản (bản test cũng đặt tên bảng là "top tài sản"). Giữ một nơi để số không lệch.</li><li><b>Gộp hai vòng tròn</b> "Tỷ lệ Active / Chưa active" và "Tỷ lệ TK đã phát sinh GD" thành một phễu: thấy tệp rơi ở bước nào; không mất số nào của bản test.</li><li><b>Sửa:</b> dòng phụ dưới thẻ Tổng dư nợ (bản test ghi "NAV b/q", có vẻ đặt nhầm); thêm KPI mở mới; thêm cột nộp lần đầu, GD lần đầu, bước vào bảng chi tiết.</li><li><b>Làm thêm:</b> Kết luận; thẻ Tiền nộp của tệp; thẻ Đã giao dịch (tách từ vòng tròn); khối Điểm sáng / Cần lưu ý / Việc nên làm.</li><li><b>Cần chốt:</b> "Active = NAV &gt; 0" (bản test) khác "đã nộp tiền" (đề bài) — NAV &gt; 0 có thể do chuyển chứng khoán về. Wireframe tạm theo bản test.</li></ul></div>
+
   </div>
 </div>
 
@@ -750,7 +721,7 @@
     <span><span class="lbl">Phạm vi</span><span class="sel">Toàn nhánh ▾</span></span>
     <span class="dstat push"><i class="dot full"></i>Dữ liệu đến&nbsp;<b>27/09</b>&nbsp;· cập nhật 28/09 14:21</span>
   </div>
-  
+
   <div class="body">
     <div class="sec"><span class="n">0</span><h2>Kết luận</h2></div>
     <div class="verdict">
@@ -762,7 +733,7 @@
     <div class="kpis" style="grid-template-columns:repeat(5,1fr)">
       <div class="kpi"><div class="lab">Tổng nộp</div><div class="big">17,6<span style="font-size:12px;color:#666;font-weight:400"> / 40 tỷ</span></div><div class="prog"><i style="width:44%"></i></div><div class="pct"><b>44%</b> KPI</div></div>
       <div class="kpi"><div class="lab">Tổng rút</div><div class="big">4,03<span style="font-size:12px;color:#666;font-weight:400"> tỷ</span></div></div>
-      <div class="kpi"><div class="lab">Dòng tiền ròng</div><div class="big">+13,57<span style="font-size:12px;color:#666;font-weight:400"> tỷ</span></div><div class="fx">vào ròng</div></div>
+      <div class="kpi"><div class="lab">Dòng tiền ròng</div><div class="big">+13,57<span style="font-size:12px;color:#666;font-weight:400"> tỷ</span></div></div>
       <div class="kpi"><div class="lab">Số lượt nộp / rút</div><div class="big">61 / 23</div></div>
       <div class="kpi"><div class="lab">Số KH nộp / rút</div><div class="big">38 / 17<span style="font-size:12px;color:#666;font-weight:400"> KH</span></div></div>
     </div>
@@ -771,27 +742,27 @@
       <div class="chart">
         <div class="ct">Tương quan Nộp vs Rút theo thời gian <span class="leg"><span class="tgl"><span class="on">Ngày</span><span>Tuần</span><span>Tháng</span></span></span></div>
         <div style="margin-top:10px"><div class="bars" style="height:118px"><span class="g"><i class="" style="height:30%"></i><i class="l" style="height:10%"></i></span><span class="g"><i class="" style="height:60%"></i><i class="l" style="height:20%"></i></span><span class="g"><i class="" style="height:25%"></i><i class="l" style="height:30%"></i></span><span class="g"><i class="" style="height:90%"></i><i class="l" style="height:15%"></i></span><span class="g"><i class="" style="height:40%"></i><i class="l" style="height:5%"></i></span><span class="g"><i class="" style="height:55%"></i><i class="l" style="height:25%"></i></span><span class="g"><i class="" style="height:20%"></i><i class="l" style="height:10%"></i></span><span class="g"><i class="" style="height:70%"></i><i class="l" style="height:20%"></i></span></div><div class="xl"><span>02/09</span><span>06/09</span><span>10/09</span><span>14/09</span><span>18/09</span><span>22/09</span><span>25/09</span><span>27/09</span></div></div>
-        <div class="caption">■ Nộp ■ Rút (xám)</div>
+        <div class="chart-key">■ Nộp ■ Rút (xám)</div>
       </div>
       <div class="chart">
-        <div class="ct">Dòng tiền ròng luỹ kế <span class="leg"><span><i class="d" style="background:#bbb"></i>Kỳ trước</span><span><i class="d" style="background:#111"></i>Kỳ đang xem</span></span></div><div class="fx" style="margin-top:2px">Nộp − Rút cộng dồn theo thời gian</div>
+        <div class="ct">Dòng tiền ròng luỹ kế <span class="leg"><span><i class="d" style="background:#bbb"></i>Kỳ trước</span><span><i class="d" style="background:#111"></i>Kỳ đang xem</span></span></div>
         <div class="plot"><svg viewBox="0 0 300 150" preserveAspectRatio="none"><polyline points="0,140 50,130 100,118 150,104 200,96 250,88 300,84" fill="none" stroke="#bbb" stroke-width="2" stroke-dasharray="4 3"/>
-          <polyline points="0,142 40,128 80,112 120,80 160,64 200,48 240,34" fill="none" stroke="#111" stroke-width="2.5"/></svg></div><div class="caption">Giữ từ bản test; sửa: thêm đường kỳ trước để biết tháng này vào ròng tốt hay kém hơn.</div>
+          <polyline points="0,142 40,128 80,112 120,80 160,64 200,48 240,34" fill="none" stroke="#111" stroke-width="2.5"/></svg></div>
       </div>
     </div>
-    <div class="sec"><span class="n">3</span><h2>Top KH nộp / rút ròng</h2><span class="q">— giữ hai bảng Top 10 của bản test</span></div>
+    <div class="sec"><span class="n">3</span><h2>Top KH nộp / rút ròng</h2></div>
     <div style="margin-bottom:8px;position:relative"><span class="tgl"><span class="on">Trong 1 ngày (27/09)</span><span>Trong kỳ</span></span>
-      <span class="caption" style="display:inline;margin-left:8px">Sửa: thêm nút chọn cửa sổ — bản test chỉ có "trong 1 ngày"; M08.02 yêu cầu phân biệt rõ ngày và kỳ.</span></div>
+      </div>
     <div class="g2">
-      <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Top 10 KH nộp ròng</div><div class="fx" style="margin:-6px 0 10px">Net nộp cao nhất trong 1 ngày</div>
+      <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Top 10 KH nộp ròng</div>
         <div class="tl wide"><div class="r"><span class="rk">1</span><span>Triệu Hạnh Hiền<span class=ex>Block</span></span><span class="b"><i style="width:100%"></i></span><span class="v">7,92 tỷ</span></div><div class="r"><span class="rk">2</span><span>Phạm Thị Vân<span class=ex>HNW</span></span><span class="b"><i style="width:57%"></i></span><span class="v">4,50 tỷ</span></div><div class="r"><span class="rk">3</span><span>Nguyễn Minh Sang<span class=ex>UHNW</span></span><span class="b"><i style="width:15%"></i></span><span class="v">1,15 tỷ</span></div></div>
       </div>
-      <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Top 10 KH rút ròng</div><div class="fx" style="margin:-6px 0 10px">Net rút cao nhất trong 1 ngày</div>
+      <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Top 10 KH rút ròng</div>
         <div class="tl wide"><div class="r"><span class="rk">1</span><span>Lương Quốc Bảo<span class=ex>Block</span></span><span class="b"><i style="width:100%"></i></span><span class="v">1,62 tỷ</span></div><div class="r"><span class="rk">2</span><span>Phạm Đức Hiền<span class=ex>HNW</span></span><span class="b"><i style="width:65%"></i></span><span class="v">1,05 tỷ</span></div><div class="r"><span class="rk">3</span><span>Phan Văn Sơn<span class=ex>UHNW</span></span><span class="b"><i style="width:54%"></i></span><span class="v">0,88 tỷ</span></div><div class="r"><span class="rk">4</span><span>Ngô Thị Hạnh<span class=ex>HVT</span></span><span class="b"><i style="width:30%"></i></span><span class="v">0,48 tỷ</span></div></div>
       </div>
     </div>
     <div style="margin-top:12px">
-      <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Nộp / Rút ròng theo bộ phận quản lý</div><div class="fx" style="margin:-6px 0 10px">Dương = vào ròng · Âm = ra ròng · giữ con trỏ xem chi tiết</div>
+      <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Nộp / Rút ròng theo bộ phận quản lý</div>
         <div class="div"><span>Trần Phương Anh</span><span class="neg"><i style="width:0%"></i></span><span class="pos"><i style="width:100%"></i></span><span class="v">+8,40 tỷ</span></div><div class="div"><span>Nguyễn Văn Bình</span><span class="neg"><i style="width:0%"></i></span><span class="pos"><i style="width:45%"></i></span><span class="v">+3,80 tỷ</span></div><div class="div"><span>Lê Thu Hà</span><span class="neg"><i style="width:0%"></i></span><span class="pos"><i style="width:22%"></i></span><span class="v">+1,85 tỷ</span></div><div class="div"><span>Đỗ Minh Quân</span><span class="neg"><i style="width:30%"></i></span><span class="pos"><i style="width:0%"></i></span><span class="v">−0,48 tỷ</span></div>
       </div>
     </div>
@@ -801,19 +772,19 @@
         <tr><td>Triệu Hạnh Hiền</td><td>27/09</td><td>Nộp</td><td class="n">5,00 tỷ</td></tr>
         <tr><td>Phạm Thị Vân</td><td>27/09</td><td>Nộp</td><td class="n">4,50 tỷ</td></tr>
         <tr><td>Lương Quốc Bảo</td><td>26/09</td><td>Rút</td><td class="n">1,62 tỷ</td></tr></tbody></table>
-        <div class="caption">Từng giao dịch, khác Top ròng. Đây là căn cứ cho rule "vừa nộp vừa rút lớn" — một KH có thể nộp lớn và rút lớn cùng ngày nhưng chỉ nằm ở một phía của Top ròng.</div>
+
       </div>
-      <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Tỷ lệ KH nộp ròng / rút ròng</div><div class="fx" style="margin:-6px 0 10px">Theo tổng net cả kỳ</div>
+      <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Tỷ lệ KH nộp ròng / rút ròng</div>
         <div class="hbars"><div class="hb"><span>Nộp ròng</span><span class="t"><i style="width:69%"></i></span><span class="v">38 KH · 69%</span></div><div class="hb"><span>Rút ròng</span><span class="t"><i style="width:31%"></i></span><span class="v">17 KH · 31%</span></div></div>
       </div>
     </div>
-    <div class="sec"><span class="n">4</span><h2>KH tiền chờ &amp; bảng tổng hợp</h2><span class="q">— phần làm thêm</span></div>
+    <div class="sec"><span class="n">4</span><h2>KH tiền chờ &amp; bảng tổng hợp</h2></div>
     <div class="g2">
-      <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">6 KH tiền chờ — nộp nhưng chưa GD</div><div class="fx" style="margin:-6px 0 10px">Nộp &gt; 7 ngày, chưa có lệnh khớp · dùng chung với tab Mở mới</div>
+      <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">6 KH tiền chờ — nộp nhưng chưa GD</div>
         <div class="tl wide"><div class="r"><span class="rk">1</span><span>Lê Chí Công<span class=ex>Active</span></span><span class="b"><i style="width:40%"></i></span><span class="v">2,1 tỷ</span></div><div class="r"><span class="rk">2</span><span>Vũ Toàn Thắng<span class=ex>Block</span></span><span class="b"><i style="width:22%"></i></span><span class="v">1,2 tỷ</span></div><div class="r"><span class="rk">3</span><span>Đinh Văn Xuân<span class=ex>Active</span></span><span class="b"><i style="width:10%"></i></span><span class="v">560 tr</span></div></div>
       </div>
       <div class="box"><div class="ct">Hành động</div>
-        <div class="fx" style="font-size:11px;color:#444;line-height:1.5">Mở danh sách để gọi / nhắn qua chức năng SHA hiện có. "Gọi hàng loạt" của mockup gốc cần xác định tích hợp riêng trước khi đưa vào phạm vi.</div>
+
         <span class="cta" style="display:inline-block;margin-top:8px;border:1px solid #111;padding:3px 9px;font-size:10.5px">Mở 6 KH →</span>
       </div>
     </div>
@@ -823,14 +794,14 @@
       <span class="search push">Tìm mã / tên KH, số TK…</span>
     </div>
     <div class="tbl"><table class="wt"><thead><tr><th class="">Mã KH</th><th class="">Tên KH</th><th class="">TK</th><th class="n">Tổng nộp</th><th class="n">Tổng rút</th><th class="n">Net</th><th class="">Phát sinh gần nhất</th><th class="">GD gần nhất</th><th class="opt">TVĐT</th></tr></thead><tbody><tr><td class="">KH0001</td><td class="">Triệu Hạnh Hiền</td><td class="">0001C</td><td class="n">7,92 tỷ</td><td class="n">0</td><td class="n">+7,92 tỷ</td><td class="">27/09</td><td class="">27/09</td><td class="opt">Trần Phương Anh</td></tr><tr><td class="">KH0017</td><td class="">Phạm Thị Vân</td><td class="">0017C</td><td class="n">4,50 tỷ</td><td class="n">0</td><td class="n">+4,50 tỷ</td><td class="">27/09</td><td class="">28/08</td><td class="opt">Trần Phương Anh</td></tr><tr><td class="">KH0452</td><td class="">Lương Quốc Bảo</td><td class="">0452C</td><td class="n">0</td><td class="n">1,62 tỷ</td><td class="n">−1,62 tỷ</td><td class="">26/09</td><td class="">26/09</td><td class="opt">Nguyễn Văn Bình</td></tr></tbody></table>
-      <div class="tfoot"><span>55 KH có phát sinh · Net = tổng nộp − tổng rút, cùng đối tượng và cửa sổ</span><span>Sắp xếp theo mọi cột · 20 dòng/trang · bấm dòng mở hồ sơ KH hiện có</span></div>
+      <div class="tfoot"><span>55 KH có phát sinh</span><span>20 dòng/trang</span></div>
     </div>
     <div class="insights">
       <div class="ins hl"><h4>Điểm sáng</h4><ul><li>Top 3 KH mang về 13,57 tỷ nộp ròng.</li></ul></div>
       <div class="ins al"><h4>Cần lưu ý</h4><ul><li>Rút ròng dồn vào 2 KH (65% tổng rút ròng).</li></ul></div>
-      <div class="ins rec"><h4>Việc nên làm</h4><ul><li>Chăm KH vừa nộp ròng lớn.<span class="why">Vì sao: nộp ròng ≥ 1 tỷ trong ngày 27/09, chưa GD · rule R-DT-002</span><span class="cta">Mở 3 KH →</span></li></ul></div>
+      <div class="ins rec"><h4>Việc nên làm</h4><ul><li>Chăm KH vừa nộp ròng lớn.<span class="cta">Mở 3 KH →</span></li></ul></div>
     </div>
-    <div class="drop"><h5>Đối chiếu với bản test</h5><ul><li><b>Không bỏ khối nào của bản test.</b></li><li><b>Bỏ khỏi wireframe cũ:</b> hai biểu đồ "Tiền nộp lũy kế" và "Tiền rút lũy kế" — thay bằng "Nộp vs Rút theo thời gian" và "Dòng tiền ròng luỹ kế" của bản test (một biểu đồ ròng trả lời được cả hai).</li><li><b>Sửa:</b> KPI tổng nộp; đường kỳ trước cho biểu đồ ròng; nút chọn cửa sổ Ngày / Kỳ cho Top 10.</li><li><b>Làm thêm:</b> Kết luận; KH tiền chờ (M08.03, ưu tiên cao — bản test đã join lệnh khớp ở tab Mở mới nên làm được); bảng tổng hợp KH/TK; Điểm sáng / Cần lưu ý / Việc nên làm.</li><li><b>Cần chốt:</b> có tính điều chuyển nội bộ, chuyển chứng khoán, hạch toán hủy/điều chỉnh vào nộp/rút không; ý nghĩa "Gọi hàng loạt".</li></ul></div>
+
   </div>
 </div>
 
@@ -842,42 +813,41 @@
     <span><span class="lbl">Phạm vi</span><span class="sel">Toàn nhánh ▾</span></span>
     <span class="dstat push"><i class="dot full"></i>Dữ liệu đến&nbsp;<b>27/09</b>&nbsp;· cập nhật 28/09 14:21</span>
   </div>
-  
+
   <div class="body">
     <div class="sec"><span class="n">1</span><h2>So sánh doanh số cổ phiếu giữa các đơn vị</h2></div>
     <div style="display:flex;gap:10px;align-items:center;margin-bottom:8px;flex-wrap:wrap">
       <span class="tgl"><span>Cột</span><span class="on">Heatmap</span></span>
       <span class="sel">Chỉ tiêu (dạng Cột): Phí net CP ▾</span>
-      <span class="caption" style="margin:0">Giữ hai chế độ Cột / Heatmap của bản test; sửa: thêm ô chọn chỉ tiêu cho dạng Cột (bản test cố định phí net CP).</span>
+
     </div>
     <div class="g2">
-      <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Dạng Cột</div><div class="fx" style="margin:-6px 0 10px">Phí net CP trong kỳ đã chọn</div>
+      <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Phí net CP theo TVĐT</div>
         <div class="tl wide"><div class="r"><span class="rk">1</span><span>Trần Phương Anh</span><span class="b"><i style="width:100%"></i></span><span class="v">9,1 tr</span></div><div class="r"><span class="rk">2</span><span>Nguyễn Văn Bình</span><span class="b"><i style="width:62%"></i></span><span class="v">5,6 tr</span></div><div class="r"><span class="rk">3</span><span>Lê Thu Hà</span><span class="b"><i style="width:42%"></i></span><span class="v">3,8 tr</span></div><div class="r"><span class="rk">4</span><span>Đỗ Minh Quân</span><span class="b"><i style="width:21%"></i></span><span class="v">1,9 tr</span></div></div>
       </div>
       <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Dạng Heatmap — nhiều chỉ số × nhân viên</div>
-        <table class="hm"><thead><tr><th>TVĐT</th><th>GTGD %KPI</th><th>Phí net %KPI</th><th>Dư nợ %KPI</th><th>Mở mới %KPI</th><th>Nộp ròng</th><th>% ngủ đông</th></tr></thead><tbody><tr><td>Trần Phương Anh</td><td class="q1">34%</td><td class="q1">51%</td><td class="q1">56%</td><td class="q1">94%</td><td class="q1">+8,4 tỷ</td><td class="q4">41%</td></tr><tr><td>Nguyễn Văn Bình</td><td class="q2">33%</td><td class="q2">40%</td><td class="q2">46%</td><td class="q2">83%</td><td class="q2">+3,8 tỷ</td><td class="q3">36%</td></tr><tr><td>Lê Thu Hà</td><td class="q3">23%</td><td class="q3">32%</td><td class="q3">38%</td><td class="q3">67%</td><td class="q3">+1,9 tỷ</td><td class="q2">30%</td></tr><tr><td>Đỗ Minh Quân</td><td class="q4">22%</td><td class="q4">25%</td><td class="q4">30%</td><td class="q4">50%</td><td class="q4">−0,5 tỷ</td><td class="q1">23%</td></tr></tbody></table><div class="caption">Màu theo nhóm tứ phân vị trong cột (đậm = tốt nhất; cột ngủ đông đảo chiều).</div>
+        <table class="hm"><thead><tr><th>TVĐT</th><th>GTGD %KPI</th><th>Phí net %KPI</th><th>Dư nợ %KPI</th><th>Mở mới %KPI</th><th>Nộp ròng</th><th>% ngủ đông</th></tr></thead><tbody><tr><td>Trần Phương Anh</td><td class="q1">34%</td><td class="q1">51%</td><td class="q1">56%</td><td class="q1">94%</td><td class="q1">+8,4 tỷ</td><td class="q4">41%</td></tr><tr><td>Nguyễn Văn Bình</td><td class="q2">33%</td><td class="q2">40%</td><td class="q2">46%</td><td class="q2">83%</td><td class="q2">+3,8 tỷ</td><td class="q3">36%</td></tr><tr><td>Lê Thu Hà</td><td class="q3">23%</td><td class="q3">32%</td><td class="q3">38%</td><td class="q3">67%</td><td class="q3">+1,9 tỷ</td><td class="q2">30%</td></tr><tr><td>Đỗ Minh Quân</td><td class="q4">22%</td><td class="q4">25%</td><td class="q4">30%</td><td class="q4">50%</td><td class="q4">−0,5 tỷ</td><td class="q1">23%</td></tr></tbody></table>
       </div>
     </div>
-    <div class="warn" style="position:relative"><b>Cần chốt quyền xem:</b> Heatmap và dạng Cột hiện số của từng TVĐT. Đề xuất mặc định: trưởng phòng / nhánh thấy đầy đủ; TVĐT chỉ thấy thẻ "Vị trí của tôi" bên dưới, không thấy số của đồng nghiệp.</div>
+
     <div class="kpis" style="grid-template-columns:repeat(3,1fr);margin-top:12px">
-      <div class="kpi"><div class="lab">Vị trí của tôi · Phí net CP</div><div class="big">#1<span style="font-size:12px;color:#666;font-weight:400"> / 4 TVĐT trong phòng</span></div><div class="fx">hiện khi Phạm vi là một TVĐT</div></div>
+      <div class="kpi"><div class="lab">Vị trí của tôi · Phí net CP</div><div class="big">#1<span style="font-size:12px;color:#666;font-weight:400"> / 4 TVĐT trong phòng</span></div></div>
       <div class="kpi"><div class="lab">Vị trí của tôi · GTGD CP</div><div class="big">#1<span style="font-size:12px;color:#666;font-weight:400"> / 4</span></div></div>
       <div class="kpi"><div class="lab">Vị trí của tôi · Mở mới</div><div class="big">#1<span style="font-size:12px;color:#666;font-weight:400"> / 4</span></div></div>
     </div>
     <div class="sec"><span class="n">2</span><h2>Ranking &amp; xu hướng</h2></div>
     <div class="g2">
-      <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Ranking mã cổ phiếu theo GTGD CP</div><div class="fx" style="margin:-6px 0 10px">Top 6 mã · đã loại toàn bộ trái phiếu</div>
+      <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Ranking mã cổ phiếu theo GTGD CP</div>
         <div class="tl wide"><div class="r"><span class="rk">1</span><span>CEO<span class=ex>HNX</span></span><span class="b"><i style="width:100%"></i></span><span class="v">2,4 tỷ</span></div><div class="r"><span class="rk">2</span><span>NVL<span class=ex>HOSE</span></span><span class="b"><i style="width:58%"></i></span><span class="v">1,4 tỷ</span></div><div class="r"><span class="rk">3</span><span>HOM<span class=ex>HNX</span></span><span class="b"><i style="width:50%"></i></span><span class="v">1,2 tỷ</span></div><div class="r"><span class="rk">4</span><span>APG<span class=ex>HOSE</span></span><span class="b"><i style="width:20%"></i></span><span class="v">478 tr</span></div><div class="r"><span class="rk">5</span><span>VIB<span class=ex>HOSE</span></span><span class="b"><i style="width:14%"></i></span><span class="v">339 tr</span></div><div class="r"><span class="rk">6</span><span>HPG<span class=ex>HOSE</span></span><span class="b"><i style="width:1%"></i></span><span class="v">22 tr</span></div></div>
       </div>
-      <div class="box"><div class="ct" style="padding-right:70px">Phí net CP theo nhánh / đơn vị theo tháng</div><div class="fx" style="margin:-6px 0 10px">Sửa: theo Từ tháng – Đến tháng ở header thay vì cố định 9 tháng</div>
+      <div class="box"><div class="ct">Phí net CP theo nhánh / đơn vị theo tháng</div>
         <div class="bars" style="height:120px"><span class="g"><i class="" style="height:30%"></i></span><span class="g"><i class="" style="height:38%"></i></span><span class="g"><i class="" style="height:45%"></i></span><span class="g"><i class="" style="height:40%"></i></span><span class="g"><i class="" style="height:52%"></i></span><span class="g"><i class="" style="height:48%"></i></span><span class="g"><i class="" style="height:60%"></i></span><span class="g"><i class="" style="height:72%"></i></span><span class="g"><i class="" style="height:58%"></i></span></div><div class="xl"><span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span><span>07</span><span>08</span><span>09</span></div>
       </div>
     </div>
-    <p class="caption">Ranking mã cho thấy dữ liệu giao dịch đã có ở mức từng mã chứng khoán — nên danh sách lịch sử giao dịch theo KH (tab Doanh số) khả thi hơn wireframe cũ đánh giá.</p>
-    <div class="drop"><h5>Đối chiếu với bản test</h5><ul><li><b>Không bỏ khối nào của bản test.</b></li><li><b>Sửa:</b> ô chọn chỉ tiêu cho dạng Cột; biểu đồ theo tháng dùng khoảng tháng ở header.</li><li><b>Làm thêm:</b> thẻ "Vị trí của tôi" cho TVĐT — để TVĐT vẫn biết mình đứng đâu khi không được xem số đồng nghiệp.</li><li><b>Không thêm Kết luận / Việc nên làm</b> cho tab này: đây là màn so sánh để quản lý đọc, hành động đã nằm ở các tab nghiệp vụ.</li><li><b>Cần chốt:</b> quyền xem heatmap và bảng so sánh theo vai trò.</li></ul></div>
+
+
   </div>
 </div>
-
 
 <div class="page" id="doanh-so-phi-hoa-hong" role="tabpanel" aria-labelledby="tab-doanh-so-phi-hoa-hong" tabindex="0" hidden>
   <div class="ctx">
@@ -890,7 +860,7 @@
     <div class="sec"><span class="n">0</span><h2>Kết luận</h2></div>
     <h3 class="merged-subtitle">Doanh số</h3>
     <div class="verdict">
-      <div><div class="v-k">GTGD tháng</div><div class="v-lead">234,2 <span class="u">/ 800 tr</span></div><div class="v-line">Đạt 29,3% KPI — cùng số với thẻ Tổng quan.</div></div>
+      <div><div class="v-k">GTGD tháng</div><div class="v-lead">234,2 <span class="u">/ 800 tr</span></div><div class="v-line">Đạt 29,3% KPI.</div></div>
       <div><div class="v-k">Cảnh báo</div><div class="v-line" style="margin-top:0">GTGD giảm −81,9% so cùng kỳ.</div><div class="v-line">4 KH đóng góp lớn tháng trước chưa GD.</div></div>
       <div><div class="v-k">Việc cần làm</div><div class="v-line" style="margin-top:0">→ Mở 4 KH đóng góp lớn đang ngừng.</div><div class="v-line">→ Xem nhóm GD thấp theo ngưỡng.</div></div>
     </div>
@@ -903,14 +873,14 @@
     <div class="sec"><span class="n">1</span><h2>Chỉ tiêu doanh số, phí net &amp; hoa hồng</h2></div>
     <div class="kpis merged-kpis">
       <div class="kpi"><div class="lab">GTGD trong kỳ</div><div class="big">234,2<span style="font-size:12px;color:#666;font-weight:400"> / 800 tr</span></div><div class="prog"><i style="width:29.3%"></i></div><div class="pct"><b>29,3%</b> KPI chuẩn</div></div>
-      <div class="kpi"><div class="lab">GTGD BQ / ngày GD</div><div class="big">23,4<span style="font-size:12px;color:#666;font-weight:400"> tr</span></div><div class="pct" style="margin-top:31px">— 10 ngày giao dịch hợp lệ</div></div>
-      <div class="kpi"><div class="lab">KH / TK phát sinh GD</div><div class="big">42<span style="font-size:12px;color:#666;font-weight:400"> KH · 47 TK</span></div><div class="pct" style="margin-top:31px">— trong kỳ</div></div>
-      <div class="kpi muted"><div class="lab">GTGD trái phiếu</div><div class="big">109,95<span style="font-size:12px;color:#666;font-weight:400"> tr</span></div><span class="flag">Tính riêng — chưa cộng vào GTGD</span></div>
-    
+      <div class="kpi"><div class="lab">GTGD BQ / ngày GD</div><div class="big">23,4<span style="font-size:12px;color:#666;font-weight:400"> tr</span></div></div>
+      <div class="kpi"><div class="lab">KH / TK phát sinh GD</div><div class="big">42<span style="font-size:12px;color:#666;font-weight:400"> KH · 47 TK</span></div></div>
+      <div class="kpi muted"><div class="lab">GTGD trái phiếu</div><div class="big">109,95<span style="font-size:12px;color:#666;font-weight:400"> tr</span></div></div>
+
       <div class="kpi"><div class="lab">Doanh thu phí net</div><div class="big">10,2<span style="font-size:12px;color:#666;font-weight:400"> / 25,8 tr</span></div><div class="prog"><i style="width:40%"></i></div><div class="pct"><b>40%</b> KPI chuẩn</div></div>
-      <div class="kpi"><div class="lab">Tỷ lệ phí bình quân</div><div class="big">0,09%</div><div class="pct" style="margin-top:31px">— = phí net / GTGD (mẫu số cần chốt)</div></div>
-      <div class="kpi"><div class="lab">Hoa hồng <b>DỰ TÍNH</b></div><div class="big">6,8<span style="font-size:12px;color:#666;font-weight:400"> tr</span></div><div class="pct" style="margin-top:31px">— công thức &amp; tham số PT07</div></div>
-      <div class="kpi muted"><div class="lab">Hoa hồng đã xác nhận</div><div class="big">—</div><span class="flag">nguồn có trạng thái xác nhận?</span></div>
+      <div class="kpi"><div class="lab">Tỷ lệ phí bình quân</div><div class="big">0,09%</div></div>
+      <div class="kpi"><div class="lab">Hoa hồng <b>DỰ TÍNH</b></div><div class="big">6,8<span style="font-size:12px;color:#666;font-weight:400"> tr</span></div></div>
+      <div class="kpi muted"><div class="lab">Hoa hồng đã xác nhận</div><div class="big">—</div></div>
     </div>
     <div class="sec"><span class="n">2</span><h2>Diễn biến doanh số, phí net &amp; hoa hồng</h2></div>
     <div class="merged-charts">
@@ -929,9 +899,9 @@
           <rect x="178" y="104" width="18" height="46" fill="#111"/><rect x="206" y="124" width="18" height="26" fill="#111"/>
           <rect x="234" y="112" width="18" height="38" fill="#111"/><rect x="262" y="120" width="18" height="30" fill="#111"/>
         </svg></div>
-        <div class="caption">Chỉ ngày giao dịch hợp lệ; giao dịch hủy/điều chỉnh xử lý theo ngày hạch toán thống nhất.</div>
+
       </div>
-    
+
       <div class="chart">
         <div class="ct">Phí net lũy kế so cùng kỳ <span class="leg"><span><i class="d" style="background:#bbb"></i>Tháng trước</span><span><i class="d" style="background:#111"></i>Hiện tại</span></span></div>
         <div class="plot"><svg viewBox="0 0 300 150" preserveAspectRatio="none"><polyline points="0,140 60,112 120,80 180,58 240,36 290,18" fill="none" stroke="#bbb" stroke-width="2" stroke-dasharray="4 3"/>
@@ -942,7 +912,7 @@
         <div class="ct">Hoa hồng DỰ TÍNH lũy kế <span class="leg"><span><i class="d" style="background:#111"></i>Dự tính</span></span></div>
         <div class="plot"><svg viewBox="0 0 300 150" preserveAspectRatio="none">
           <polyline points="0,144 50,138 100,131 150,125" fill="none" stroke="#111" stroke-width="2.5"/>
-          <circle cx="150" cy="125" r="3.5" fill="#111"/></svg></div><div class="caption">Nhãn "dự tính" giữ nguyên ở thẻ, biểu đồ và bảng — không phải khoản đã chi trả.</div>
+          <circle cx="150" cy="125" r="3.5" fill="#111"/></svg></div>
       </div>
     </div>
     <div class="sec"><span class="n">3</span><h2>Chi tiết theo khách hàng</h2></div>
@@ -953,9 +923,9 @@
       <span class="search push">Tìm mã / tên KH, số TK…</span>
     </div>
     <div class="tbl"><table class="wt"><thead><tr><th>Mã KH</th><th>Tên KH</th><th>TK</th><th>Nhóm KH</th><th>Sản phẩm</th><th class="n">GTGD mua</th><th class="n">GTGD bán</th><th class="n">Tổng GTGD</th><th>GD gần nhất</th><th class="opt">TVĐT</th></tr></thead><tbody><tr><td>KH0017</td><td>Phạm Thị Vân</td><td>0017C</td><td>HNW</td><td>Cổ phiếu</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td>28/08/2026</td><td class="opt">—</td></tr><tr><td>KH0105</td><td>Hoàng Minh Tâm</td><td>0105C</td><td>Block Deal</td><td>Cổ phiếu</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td>26/08/2026</td><td class="opt">—</td></tr><tr><td>KH0290</td><td>Đặng Minh Khoa</td><td>0290C</td><td>Active trade</td><td>Cổ phiếu</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td>21/08/2026</td><td class="opt">—</td></tr></tbody></table>
-      <div class="tfoot"><span>4 KH khớp · sắp xếp theo mọi cột · 20 dòng/trang · ‹ 1 2 3 … ›</span><span>Tổng = mua + bán, không đếm hai chiều hai lần · Cột xám (TVĐT) chỉ hiện khi xem Đơn vị / cả cây · bấm dòng mở hồ sơ KH hiện có của SHA</span></div>
+      <div class="tfoot"><span>4 KH khớp</span><span>20 dòng/trang · ‹ 1 2 3 … ›</span></div>
     </div>
-    <p class="caption">Chi tiết từng lệnh (ngày, mã CK, chiều, giá trị) chỉ làm khi DWH hoặc màn lịch sử SHA hiện có đáp ứng — không mặc định là sổ lệnh. Không có thao tác đặt lệnh. Cần chốt: sản phẩm gồm những gì và cách quy đổi trước khi cộng.</p>
+
     <h3 class="merged-subtitle">Chi tiết phí &amp; hoa hồng theo KH</h3>
     <div class="fbar">
       <span class="gl">Lọc chung</span><span class="chip">Kỳ 09/2026</span><span class="chip">Nút cây: Nguyễn Văn A</span><span class="chip">Phân khúc: tất cả ▾</span>
@@ -963,16 +933,16 @@
       <span class="search push">Tìm mã / tên KH, số TK…</span>
     </div>
     <div class="tbl"><table class="wt"><thead><tr><th>Mã KH</th><th>Tên KH</th><th>Nhóm KH</th><th class="n">GTGD cơ sở</th><th class="n">Phí gộp</th><th class="n">Phí trả sở</th><th class="n">Phí net</th><th class="n">Tỷ lệ HH</th><th class="n">HH dự tính</th><th>Trạng thái</th></tr></thead><tbody><tr><td>KH0001</td><td>Triệu Hạnh Hiền</td><td>Block Deal</td><td class="n">96,0 tr</td><td class="n">4,8 tr</td><td class="n">0,6 tr</td><td class="n">4,2 tr</td><td class="n">67%</td><td class="n">2,8 tr</td><td><span class="pill">Dự tính</span></td></tr><tr><td>KH0017</td><td>Phạm Thị Vân</td><td>HNW</td><td class="n">52,1 tr</td><td class="n">2,6 tr</td><td class="n">0,3 tr</td><td class="n">2,3 tr</td><td class="n">67%</td><td class="n">1,5 tr</td><td><span class="pill">Dự tính</span></td></tr><tr><td>KH0331</td><td>Vũ Thị Hằng</td><td>HNW</td><td class="n">31,4 tr</td><td class="n">1,6 tr</td><td class="n">0,2 tr</td><td class="n">1,4 tr</td><td class="n">67%</td><td class="n">0,9 tr</td><td><span class="pill">Dự tính</span></td></tr></tbody></table>
-      <div class="tfoot"><span>42 KH phát sinh phí · sắp xếp theo mọi cột · 20 dòng/trang · ‹ 1 2 3 … ›</span><span>Trường chưa có nguồn để trống, không điền 0 · Cột xám (TVĐT) chỉ hiện khi xem Đơn vị / cả cây · bấm dòng mở hồ sơ KH hiện có của SHA</span></div>
+      <div class="tfoot"><span>42 KH phát sinh phí</span><span>20 dòng/trang · ‹ 1 2 3 … ›</span></div>
     </div>
-    <p class="caption">Phí net và hoa hồng tính từ dữ liệu đầu vào Flex theo công thức và chính sách hiện hành, dùng lại bộ tính của tab hiện có. Sửa biểu phí / tỷ lệ hoa hồng chỉ A4 làm tại Portal (PT07). Cần chốt: khoản khấu trừ, bậc/tỷ lệ chia TVĐT–CTV, cách làm tròn, quyền xem theo cây.</p>
+
     <div class="sec"><span class="n">4</span><h2>Điểm sáng · Cần lưu ý · Việc nên làm</h2></div>
     <div class="insights"><div class="ins hl"><h4>Điểm sáng</h4><ul><li>Top 3 KH chiếm 58% GTGD tháng.</li>
 <li>Nhóm Block Deal đóng góp 41% phí net.</li></ul></div>
 <div class="ins al"><h4>Cần lưu ý</h4><ul><li>GTGD giảm −81,9% so cùng kỳ.</li><li>4 KH đóng góp lớn tháng trước chưa GD.</li>
 <li>Phí net giảm −84,4% so cùng kỳ.</li></ul></div>
-<div class="ins rec"><h4>Việc nên làm</h4><ul><li>Mở KH đóng góp lớn đang ngừng GD.<span class="why">Vì sao: GTGD tháng 08 thuộc Top 10, tháng 09 = 0 · rule R-KD-042</span><span class="cta">Lọc 4 KH →</span></li>
-<li>Mở phân tích KH có phí net giảm mạnh.<span class="why">Vì sao: phí net tháng này &lt; 20% cùng kỳ · rule R-KD-051</span><span class="cta">Lọc KH →</span></li></ul></div></div>
+<div class="ins rec"><h4>Việc nên làm</h4><ul><li>Mở KH đóng góp lớn đang ngừng GD.<span class="cta">Lọc 4 KH →</span></li>
+<li>Mở phân tích KH có phí net giảm mạnh.<span class="cta">Lọc KH →</span></li></ul></div></div>
   </div>
 </div>
 
