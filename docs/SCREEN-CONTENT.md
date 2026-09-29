@@ -5,8 +5,6 @@ Trích xuất văn bản và số liệu từ bản HTML sau khi gỡ nhãn. Gi�
 ## tong-quan
 
 ```text
-WIREFRAME · Phase 1 · v2 — lấy bản test (beta) làm nềnTab Tổng quan
-Giữ tối đa những gì bản test đang chạy trên dữ liệu thật, chỉ làm thêm phần còn thiếu. Khối nào của bản test bị bỏ hoặc chuyển đều ghi lý do ở ô "Đối chiếu với bản test" cuối mỗi trang. Số liệu là minh họa, khớp nhau giữa các tab.
 Từ tháng09/2026 ▾
 Đến tháng09/2026 ▾
 Phạm viToàn nhánh ▾
@@ -120,7 +118,6 @@ Tab mới ✚ KH hiện hữu được thêm vào thanh tab. Đặt KPI · Hiệ
 ## doanh-so
 
 ```text
-WIREFRAME · Tab Doanh số (gộp phí)v2 · nền bản test
 Từ tháng09/2026 ▾
 Đến tháng09/2026 ▾
 Phạm viToàn nhánh ▾
@@ -219,7 +216,6 @@ Làm thêm: Kết luận; KPI trên thẻ; số lệnh; hoa hồng dự tính; d
 ## du-no-mon-vay
 
 ```text
-WIREFRAME · Tab Dư nợ & Món vayv2 · nền bản test
 Từ tháng09/2026 ▾
 Đến tháng09/2026 ▾
 Phạm viToàn nhánh ▾
@@ -306,7 +302,6 @@ Còn cần chốt: ngày đến hạn từng món. Bản test không hiện, nê
 ## kh-hien-huu
 
 ```text
-WIREFRAME · Tab ✚ KH hiện hữu (tab mới, gộp NAV)v2 · bản test chưa có tab này
 Từ tháng09/2026 ▾
 Đến tháng09/2026 ▾
 Phạm viToàn nhánh ▾
@@ -388,7 +383,6 @@ Cần chốt: định nghĩa KH active cho tệp hiện hữu (bản test dùng 
 ## mo-moi
 
 ```text
-WIREFRAME · Tab Mở mớiv2 · nền bản test
 Từ tháng09/2026 ▾
 Đến tháng09/2026 ▾
 Phạm viToàn nhánh ▾
@@ -477,7 +471,6 @@ Cần chốt: "Active = NAV > 0" (bản test) khác "đã nộp tiền" (đề b
 ## nop-rut
 
 ```text
-WIREFRAME · Tab Nộp rútv2 · nền bản test
 Từ tháng09/2026 ▾
 Đến tháng09/2026 ▾
 Phạm viToàn nhánh ▾
@@ -582,7 +575,6 @@ Cần chốt: có tính điều chuyển nội bộ, chuyển chứng khoán, h�
 ## so-sanh-ranking
 
 ```text
-WIREFRAME · Tab So sánh & Ranking CPv2 · nền bản test
 Từ tháng09/2026 ▾
 Đến tháng09/2026 ▾
 Phạm viToàn nhánh ▾
@@ -638,7 +630,6 @@ Cần chốt: quyền xem heatmap và bảng so sánh theo vai trò.
 ## doanh-so-phi-hoa-hong
 
 ```text
-WIREFRAME · Doanh số, phí net & hoa hồngv1.2 · nội dung gộp
 Phạm viTổng›TT MG Hà Nội 1›Phòng MG 3›Nguyễn Văn A ▾
 Cá nhânĐơn vị
 KỳTháng 09/2026 ▾

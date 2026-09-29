@@ -129,3 +129,5 @@ Tab v1.2 cuối: Tổng → TT MG Hà Nội 1 → Phòng MG 3 → Nguyễn Văn 
 Đã gỡ 7 bộ chú giải, 128 nhãn `wf-tag` (gồm biến thể ở màn v1.2), 3 pill độc lập và 2 tiền tố trạng thái trong flag. Gỡ CSS/khoảng trống dành riêng cho nhãn. Giữ các lời giải thích nghiệp vụ ở flag, các ghi chú đối chiếu và trạng thái thực như Dự tính, Trong hạn, Ngủ đông, KPI chưa đặt, chưa đồng bộ.
 
 Toàn bộ bảng, SVG, giá trị KPI, nút tab và script đã được đối chiếu trực tiếp với commit nguồn để bảo đảm không thay đổi.
+
+Cập nhật tiếp theo: gỡ toàn bộ 8 dải tiêu đề nền đen giới thiệu wireframe/phiên bản cùng CSS dành riêng cho chúng. Các phần nội dung nghiệp vụ bên dưới được giữ nguyên.

@@ -32,6 +32,7 @@ Không cần cài dependency hay chạy build. Khi import repo vào Vercel, dùn
 ## Phạm vi bản này
 
 - Gỡ chú giải và nhãn đánh dấu triển khai ở cả 8 tab, gồm các biến thể viết tắt và nhãn của màn v1.2.
+- Gỡ dải tiêu đề nền đen giới thiệu wireframe/phiên bản ở cả 8 tab.
 - Bỏ khoảng đệm/CSS chỉ dành cho các nhãn đã gỡ.
 - Giữ số liệu, biểu đồ, bảng, cảnh báo nghiệp vụ, ghi chú đối chiếu, trạng thái dữ liệu và điều hướng.
 - Giữ lịch sử commit gốc; không sửa repo hay deployment Vercel gốc.
