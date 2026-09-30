@@ -40,7 +40,6 @@ Lãi suất vay bình quân
 12,9 %/năm
 Doanh số Trái phiếu
 109,95 tr
-▸ Cơ cấu theo nhóm KH (Block Deal · HNW · UHNW · HVT · Active)mở rộng ▾
 2
 Tình hình kinh doanh
 Doanh số CP lũy kế theo ngày Kỳ trướcKỳ đang xem
