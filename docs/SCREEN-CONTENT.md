@@ -86,8 +86,7 @@ GTGD cổ phiếu
 23,4 / 80 tỷ
 29,3% KPI
 Phí net CP
-20,4 / 51,6 tr
-39,5% KPI
+20,4 tr
 GTGD TP
 109,95 tr
 Hoa hồng dự kiến
