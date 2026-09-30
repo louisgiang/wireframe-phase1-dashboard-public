@@ -6,7 +6,7 @@ Bản sao đã gỡ nhãn đánh dấu triển khai, giữ 8 tab và nội dung 
 
 | Tab | Nội dung chính |
 | --- | --- |
-| Tổng quan | Kết luận, KPI, doanh số và dư nợ theo ngày, cảnh báo và việc nên làm |
+| Tổng quan | 8 chỉ tiêu chính, doanh số và dư nợ theo ngày, cảnh báo và việc nên làm |
 | Doanh số | GTGD, phí net, hoa hồng dự tính, xếp hạng CTV/TVĐT/KH, bảng theo cây môi giới, danh sách KH |
 | Dư nợ & Món vay | Dư nợ, giải ngân, thu nợ, lãi phí, cơ cấu nợ, danh sách KH/TK và món vay |
 | KH hiện hữu | Quy mô KH/TK, active/ngủ đông, NAV, phân bổ, danh sách chăm sóc |
@@ -30,6 +30,10 @@ Sau đó truy cập `http://localhost:8080/wireframe-phase1-v2-tabs.html`.
 Không cần cài dependency hay chạy build. Khi import repo vào Vercel, dùng preset **Other**; `vercel.json` đã ánh xạ `/` đến trang HTML.
 
 ## Phạm vi bản này
+
+- Bỏ toàn bộ phần “0. Kết luận”, bao gồm hai khối kết luận trong tab gộp doanh số, phí và hoa hồng.
+- Tổng quan có 8 chỉ tiêu theo thứ tự: KH quản lý, KH mở mới, GTGD cổ phiếu, Dư nợ, Vòng quay tài sản (lần), Doanh thu phí, Phí net, Hoa hồng dự kiến. Hiển thị 4 cột trên máy tính và 2 cột trên màn hình nhỏ.
+- Chỉ KH mở mới, GTGD cổ phiếu và Dư nợ có thanh tiến độ. Doanh thu phí lấy tổng phí cổ phiếu 24,1 triệu trước phí sàn; phí net là 20,4 triệu. Vòng quay tài sản là 0,4 lần. Giữ đơn vị tài khoản cho số mở mới 38/50 theo dữ liệu nguồn.
 
 - Gỡ chú giải và nhãn đánh dấu triển khai ở cả 8 tab, gồm các biến thể viết tắt và nhãn của màn v1.2.
 - Gỡ dải tiêu đề nền đen giới thiệu wireframe/phiên bản ở cả 8 tab.

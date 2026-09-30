@@ -9,32 +9,27 @@ Từ tháng09/2026 ▾
 Đến tháng09/2026 ▾
 Phạm viToàn nhánh ▾
 Dữ liệu đến 27/09 · cập nhật 28/09 14:21
-0
-Kết luận
-Tiến độ GTGD CP
-29,3% KPI tháng
-Cần thêm 56,6 tỷ để đạt 80 tỷ.
-Cảnh báo
-278/692 TK ngủ đông (40,2%).
-Phí net CP giảm 18% so kỳ trước.
-Việc nên làm
-→ Kích hoạt 278 TK ngủ đông.
-→ Chăm 3 KH vừa nộp ròng 13,57 tỷ.
 1
 Chỉ tiêu chính
-Doanh số CP (GTGD)
+KH quản lý
+500 KH
+692 TK đang quản lý
+KH mở mới
+38 / 50 TK
+76% KPI · 11 Active
+GTGD cổ phiếu
 23,4 / 80 tỷ
 29,3% KPI
-Phí net CP
-20,4 / 51,6 tr
-39,5% KPI
 Dư nợ
 2,34 / 5 tỷ
 46,8% KPI
-Mở mới
-38 TK
-76% KPI · 11 Active
-Hoa hồng dự tính
+Vòng quay tài sản (lần)
+0,4
+Doanh thu phí
+24,1 tr
+Phí net
+20,4 tr
+Hoa hồng dự kiến
 13,7 tr
 Tỷ lệ phí bình quân
 0,09 %
@@ -82,17 +77,6 @@ Từ tháng09/2026 ▾
 Phạm viToàn nhánh ▾
 Dữ liệu đến 27/09 · cập nhật 28/09 14:21
 Net CHUẨNNet THỰC THU
-0
-Kết luận
-Phí net CP tháng
-20,4 / 51,6 tr
-Đạt 39,5% KPI · GTGD đạt 29,3%.
-Cảnh báo
-Phí net giảm 18% so cùng ngày kỳ trước.
-2 TVĐT dưới 35% KPI phí.
-Việc nên làm
-→ Mở KH giao dịch giảm mạnh.
-→ Xem TVĐT dưới ngưỡng ở bảng theo cây.
 1
 Chỉ tiêu doanh số & phí
 Phí net CP chuẩn
@@ -162,17 +146,6 @@ Từ tháng09/2026 ▾
 Đến tháng09/2026 ▾
 Phạm viToàn nhánh ▾
 Dữ liệu đến 27/09 · cập nhật 28/09 14:21
-0
-Kết luận
-Dư nợ ngày 27/09
-2,34 / 5 tỷ
-Giải ngân ròng +350 tr trong kỳ.
-Cảnh báo
-61% dư nợ tập trung ở 3 KH.
-Lãi + phí dồn tích 18,6 tr chưa thu.
-Việc nên làm
-→ Nhắc KH có lãi + phí dồn tích lớn.
-→ Xem hiện trạng sử dụng margin nhóm NAV lớn.
 1
 Chỉ tiêu dư nợ
 Tổng dư nợ
@@ -236,17 +209,6 @@ Từ tháng09/2026 ▾
 Đến tháng09/2026 ▾
 Phạm viToàn nhánh ▾
 Dữ liệu đến 27/09 · cập nhật 28/09 14:21
-0
-Kết luận
-TK đang quản lý
-692 TK · 500 KH
-NAV 283,5 tỷ, giảm 2,6% so đầu kỳ.
-Cảnh báo
-278 TK ngủ đông (40,2%).
-23 KH NAV ≥ 10 tỷ không GD > 30 ngày.
-Việc nên làm
-→ Kích hoạt 278 TK ngủ đông.
-→ Ưu tiên 23 KH NAV lớn đang nằm im.
 1
 Chỉ tiêu tệp hiện hữu
 TK đang quản lý
@@ -301,17 +263,6 @@ Từ tháng09/2026 ▾
 Đến tháng09/2026 ▾
 Phạm viToàn nhánh ▾
 Dữ liệu đến 27/09 · cập nhật 28/09 14:21
-0
-Kết luận
-Mở mới tháng
-38 / 50 TK KPI
-Đạt 76% KPI · 11 TK active.
-Cảnh báo
-27 TK mở > 7 ngày vẫn NAV = 0.
-6 TK active nhưng chưa giao dịch.
-Việc nên làm
-→ Gọi 27 TK chưa có tài sản.
-→ Kích hoạt 6 TK tiền chờ (chung danh sách tab Nộp rút).
 1
 Chỉ tiêu TK mở mới
 Số TK mở mới
@@ -377,17 +328,6 @@ Từ tháng09/2026 ▾
 Đến tháng09/2026 ▾
 Phạm viToàn nhánh ▾
 Dữ liệu đến 27/09 · cập nhật 28/09 14:21
-0
-Kết luận
-Dòng tiền ròng tháng
-+13,57 tỷ vào ròng
-Nộp 17,6 tỷ · rút 4,03 tỷ.
-Cảnh báo
-6 KH đã nộp nhưng chưa giao dịch sau 7 ngày.
-Rút ròng dồn vào 2 KH.
-Việc nên làm
-→ Kích hoạt 6 KH tiền chờ.
-→ Liên hệ nhóm rút lớn.
 1
 Chỉ tiêu nộp rút
 Tổng nộp
@@ -503,28 +443,6 @@ Phạm viTổng›TT MG Hà Nội 1›Phòng MG 3›Nguyễn Văn A ▾
 Cá nhânĐơn vị
 KỳTháng 09/2026 ▾
 Dữ liệu đến 13/09 · cập nhật 06:30 14/09
-0
-Kết luận
-Doanh số
-GTGD tháng
-234,2 / 800 tr
-Đạt 29,3% KPI.
-Cảnh báo
-GTGD giảm −81,9% so cùng kỳ.
-4 KH đóng góp lớn tháng trước chưa GD.
-Việc cần làm
-→ Mở 4 KH đóng góp lớn đang ngừng.
-→ Xem nhóm GD thấp theo ngưỡng.
-Phí net & hoa hồng
-Phí net tháng
-10,2 / 25,8 tr
-Hoa hồng dự tính 6,8 tr.
-Cảnh báo
-Phí net giảm −84,4% so cùng kỳ.
-Tỷ lệ phí BQ thay đổi vượt ngưỡng.
-Việc cần làm
-→ Mở phân tích KH/GTGD giảm mạnh.
-→ Kiểm tra tỷ lệ phí nhóm HNW.
 1
 Chỉ tiêu doanh số, phí net & hoa hồng
 GTGD trong kỳ
