@@ -77,66 +77,63 @@ Chăm KH vừa nộp ròng lớnMở 3 KH · tab Nộp rút →
 
 ## doanh-so
 
+Bộ lọc chung: Kỳ báo cáo và Phạm vi dữ liệu.
+
 ```text
-Kỳ báo cáo
-Từ ngày: ngày 01 tháng hiện tại
-Đến ngày: ngày hiện tại
-Phạm vi dữ liệu
-MG1268 - Trần Phương Anh
-Net CHUẨNNet THỰC THU
 1
 Chỉ tiêu doanh số & phí
-Phí net CP chuẩn
-20,4 / 51,6 tr
-39,5% KPI
-Chênh lệch phí CP
-0
-GTGD CP
+GTGD cổ phiếu
 23,4 / 80 tỷ
 29,3% KPI
+Phí net CP
+20,4 / 51,6 tr
+39,5% KPI
 GTGD TP
 109,95 tr
-Số KH GD CP
-42 KH
-318 lệnh
-Hoa hồng dự tính
+Hoa hồng dự kiến
 13,7 tr
 2
 Diễn biến
-Xu hướng theo ngày Phí net CPChỉ tiêu: Phí net CP ▾
+Doanh thu phí net lũy kế Kỳ trướcKỳ hiện tại
+Giá trị (triệu đồng)
+0102030
+01/0910/0920/0930/09
+Ngày/tháng
 3
 Xếp hạng
-Top CTV theo phí net CP
-1Nguyễn Thị Phong6,2 tr
-2Hoàng Văn Nam3,0 tr
-3Mai Thu Trang1,4 tr
-Top TVĐT / phòng theo phí net CP
-1Trần Phương Anh9,1 tr
-2Nguyễn Văn Bình5,6 tr
-3Lê Thu Hà3,8 tr
-4Đỗ Minh Quân1,9 tr
-Top KH theo phí net CP
+Top TVĐT/CTV
+Top KH
+Top 5 theo phí net CP
+1Trần Phương Anh · TVĐT9,1 tr
+2Nguyễn Thị Phong · CTV6,2 tr
+3Nguyễn Văn Bình · TVĐT5,6 tr
+4Lê Thu Hà · TVĐT3,8 tr
+5Hoàng Văn Nam · CTV3,0 tr
 1Triệu Hạnh Hiền4,2 tr
 2Phạm Thị Vân2,3 tr
 3Vũ Thị Hằng1,4 tr
+4Lương Quốc Bảo1,1 tr
+5Nguyễn Minh Sang0,9 tr
 4
-Bảng doanh số cổ phiếu theo cây môi giới
-| Môi giới / đơn vị | Số KH CP | Số lệnh CP | GTGD CP | Tổng phí CP | Phí sàn CP | Chênh lệch | Phí net CP | HH dự tính | Chỉ tiêu | % đạt
-| Trần Phương Anh (1268) | 18 | 131 | 10,2 tỷ | 10,8 tr | 1,7 tr | 0 | 9,1 tr | 6,1 tr | 18,0 tr | 50,6%
-| Nguyễn Văn Bình (1271) | 12 | 92 | 6,5 tỷ | 6,6 tr | 1,0 tr | 0 | 5,6 tr | 3,8 tr | 14,0 tr | 40,0%
-| Lê Thu Hà (1284) | 8 | 64 | 4,5 tỷ | 4,5 tr | 0,7 tr | 0 | 3,8 tr | 2,5 tr | 12,0 tr | 31,7%
-| Đỗ Minh Quân (1290) | 4 | 31 | 2,2 tỷ | 2,2 tr | 0,3 tr | 0 | 1,9 tr | 1,3 tr | 7,6 tr | 25,0%
-| TỔNG CỘNG | 42 | 318 | 23,4 tỷ | 24,1 tr | 3,7 tr | 0 | 20,4 tr | 13,7 tr | 51,6 tr | 39,5%
-20 dòng/trang
+Bảng doanh số theo môi giới
+Bảng doanh số theo môi giới
+Môi giới | KH quản lý | GTGD cổ phiếu | Doanh thu phí | Phí trả sở | Phí net CP | Hoa hồng dự kiến
+MG1268 - Trần Phương Anh | 180 | 10,2 tỷ | 10,8 tr | 1,7 tr | 9,1 tr | 6,1 tr
+MG1271 - Nguyễn Văn Bình | 150 | 6,5 tỷ | 6,6 tr | 1,0 tr | 5,6 tr | 3,8 tr
+MG1284 - Lê Thu Hà | 100 | 4,5 tỷ | 4,5 tr | 0,7 tr | 3,8 tr | 2,5 tr
+MG1290 - Đỗ Minh Quân | 70 | 2,2 tỷ | 2,2 tr | 0,3 tr | 1,9 tr | 1,3 tr
+TỔNG CỘNG | 500 | 23,4 tỷ | 24,1 tr | 3,7 tr | 20,4 tr | 13,7 tr
 5
 Danh sách theo khách hàng
-LọcSàn ▾Mua / bán ▾Ngừng GD kỳ nàyKhoảng phí net ▾
-Tìm mã / tên KH, số TK…
-| Mã KH | Tên KH | Số lệnh | GTGD CP | Tổng phí | Phí sàn | Phí net | HH dự tính | GD gần nhất | TVĐT
-| KH0017 | Phạm Thị Vân | 0 | 0 | 0 | 0 | 0 | 0 | 28/08/2026 | Trần Phương Anh
-| KH0105 | Hoàng Minh Tâm | 0 | 0 | 0 | 0 | 0 | 0 | 26/08/2026 | Nguyễn Văn Bình
-| KH0290 | Đặng Minh Khoa | 0 | 0 | 0 | 0 | 0 | 0 | 21/08/2026 | Lê Thu Hà
-4 KH khớp20 dòng/trang
+Danh sách theo khách hàng
+STK | Họ tên | NAV | GTGD cổ phiếu | Doanh thu phí | Phí trả sở | Phí net CP | Người quản lý
+069C000001 | Triệu Hạnh Hiền | 14,2 tỷ | 4,8 tỷ | 4,8 tr | 0,6 tr | 4,2 tr | MG1268 - Trần Phương Anh
+069C000017 | Phạm Thị Vân | 12,5 tỷ | 2,6 tỷ | 2,6 tr | 0,3 tr | 2,3 tr | MG1268 - Trần Phương Anh
+069C000331 | Vũ Thị Hằng | 6,8 tỷ | 1,6 tỷ | 1,6 tr | 0,2 tr | 1,4 tr | MG1271 - Nguyễn Văn Bình
+069C000452 | Lương Quốc Bảo | 8,6 tỷ | 1,3 tỷ | 1,3 tr | 0,2 tr | 1,1 tr | MG1284 - Lê Thu Hà
+069C000453 | Nguyễn Minh Sang | 21,4 tỷ | 1,1 tỷ | 1,1 tr | 0,2 tr | 0,9 tr | MG1290 - Đỗ Minh Quân
+069C000105 | Hoàng Minh Tâm | 9,3 tỷ | 0 | 0 | 0 | 0 | MG1271 - Nguyễn Văn Bình
+069C000290 | Đặng Minh Khoa | 5,4 tỷ | 0 | 0 | 0 | 0 | MG1284 - Lê Thu Hà
 Điểm sáng
 Top 3 KH chiếm 39% phí net CP.
 Cần lưu ý

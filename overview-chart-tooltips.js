@@ -16,7 +16,10 @@
       previous: daily([[1,1.3],[4,3.1],[7,8.2],[10,14.1],[13,15.9],[16,18],[19,22.6],[22,25.7],[27,28.9],[31,31.2]])},
     {max: 3,
       current: daily([[1,1.58],[4,1.64],[7,1.7],[10,1.81],[13,1.87],[16,2.05],[19,2.22],[22,2.25],[27,2.34]]),
-      previous: daily([[1,1.79],[4,1.85],[7,1.96],[10,2.09],[13,2.21],[16,2.33],[19,2.39],[22,2.46],[27,2.51],[30,2.63]])}
+      previous: daily([[1,1.79],[4,1.85],[7,1.96],[10,2.09],[13,2.21],[16,2.33],[19,2.39],[22,2.46],[27,2.51],[30,2.63]])},
+    {max:30, unit:'triệu đồng',
+      current:daily([[1,0.4],[4,2.1],[7,4.8],[10,7.8],[13,10.5],[16,12.2],[19,14.2],[22,17.1],[27,20.4]]),
+      previous:daily([[1,0.6],[4,2.8],[7,6.2],[10,10],[13,13.1],[16,15.8],[19,18.8],[22,21.2],[27,24.878],[30,26.2]])}
   ];
   const format = new Intl.NumberFormat('vi-VN', {maximumFractionDigits: 2});
   document.querySelectorAll('.overview-time-chart').forEach((chart, chartIndex) => {
@@ -48,7 +51,7 @@
       tip.querySelector('.tooltip-previous-date').textContent = `Kỳ trước · ${day}/08/2026`;
       [data.current, data.previous].forEach((values, i) => {
         const value = values[index];
-        tip.querySelector(i === 0 ? '.tooltip-current-value' : '.tooltip-previous-value').textContent = value === null ? 'Chưa có dữ liệu' : `${format.format(value)} tỷ đồng`;
+        tip.querySelector(i === 0 ? '.tooltip-current-value' : '.tooltip-previous-value').textContent = value === null ? 'Chưa có dữ liệu' : `${format.format(value)} ${data.unit || 'tỷ đồng'}`;
         dots[i].hidden = value === null;
         dots[i].style.left = `${index / 29 * 100}%`;
         if (value !== null) dots[i].style.top = `${100 - value / data.max * 100}%`;

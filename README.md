@@ -53,3 +53,11 @@ Nguồn: commit `2b9227bf933b7212a4c8014862139c22988f60ef`, kiểm kê ngày 29/
 - Kỳ báo cáo: chọn hoặc nhập Từ ngày và Đến ngày theo định dạng ngày/tháng/năm. Khi tải trang, mặc định từ ngày 01 của tháng hiện tại đến ngày hiện tại theo thiết bị; ví dụ mở ngày 05/10/2026 sẽ là 01/10/2026–05/10/2026. Kiểm tra ngày hợp lệ và ngày bắt đầu không sau ngày kết thúc.
 - Phạm vi dữ liệu: mặc định `MG1268 - Trần Phương Anh`; danh sách dạng cây cho phép chọn Tất cả (bản thân và cấp dưới), bản thân hoặc một người cấp dưới. Các tên và mã lấy từ demo; quan hệ cấp dưới được mô phỏng, không phải dữ liệu tổ chức thật. Không đưa cấp trên vào danh sách.
 - `dashboard-filters.js` quản lý trạng thái dùng chung và cập nhật nhãn lọc ở tab gộp. Bản triển khai thật phải nhận người dùng, cây cấp dưới và quyền truy cập từ máy chủ, rồi tải dữ liệu tương ứng. Danh sách trên giao diện không thay thế phân quyền máy chủ.
+
+## Cập nhật màn Doanh số
+
+- Bốn chỉ tiêu: GTGD cổ phiếu, Phí net CP, GTGD TP, Hoa hồng dự kiến.
+- Biểu đồ Doanh thu phí net lũy kế có hai kỳ, trục ngày/tháng, đơn vị triệu đồng và tooltip dùng chung theo ngày. Số kỳ hiện tại ngày 27 là 20,4 triệu; các điểm còn lại là dữ liệu biểu diễn mẫu.
+- Hai tab Top TVĐT/CTV và Top KH, mỗi tab 5 vị trí, xếp giảm dần theo phí net CP. Tab nhân sự gộp các tư vấn đầu tư và cộng tác viên đã có trong mẫu; số giữa hai nhóm không dùng để cộng thành tổng phí.
+- Bảng môi giới có 7 cột; bảng khách hàng có 8 cột, số tài khoản dạng 069Cxxxxxx. Không có lọc/tìm kiếm riêng hoặc phân trang ở hai bảng này.
+- Bổ sung dữ liệu minh họa cho số khách hàng quản lý (180/150/100/70, tổng 500), số tài khoản, NAV và hai khách hàng xếp hạng thứ 4–5. Danh sách khách hàng là các dòng mẫu, không phải toàn bộ danh mục để cộng thành tổng kỳ. Phí net mỗi dòng bằng doanh thu phí trừ phí trả sở. Các bảng ở tab khác giữ bộ mẫu riêng.
