@@ -42,7 +42,7 @@ Doanh số Trái phiếu
 109,95 tr
 2
 Tình hình kinh doanh
-Doanh số CP lũy kế theo ngày Kỳ trướcKỳ đang xem
+GTGD cổ phiếu lũy kế Kỳ trướcKỳ đang xem
 23,4 tỷĐến 27/0928,9 tỷCùng ngày 2731,2 tỷCuối 08/2026
 Dư nợ tổng theo ngày Kỳ trướcKỳ đang xem
 2,34 tỷĐến 27/092,51 tỷCùng ngày 27
