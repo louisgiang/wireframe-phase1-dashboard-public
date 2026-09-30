@@ -10,7 +10,6 @@ Từ ngày: ngày 01 tháng hiện tại
 Đến ngày: ngày hiện tại
 Phạm vi dữ liệu
 MG1268 - Trần Phương Anh
-Dữ liệu đến 27/09 · cập nhật 28/09 14:21
 1
 Chỉ tiêu chính
 KH quản lý
@@ -81,7 +80,6 @@ Từ ngày: ngày 01 tháng hiện tại
 Đến ngày: ngày hiện tại
 Phạm vi dữ liệu
 MG1268 - Trần Phương Anh
-Dữ liệu đến 27/09 · cập nhật 28/09 14:21
 Net CHUẨNNet THỰC THU
 1
 Chỉ tiêu doanh số & phí
@@ -153,7 +151,6 @@ Từ ngày: ngày 01 tháng hiện tại
 Đến ngày: ngày hiện tại
 Phạm vi dữ liệu
 MG1268 - Trần Phương Anh
-Dữ liệu đến 27/09 · cập nhật 28/09 14:21
 1
 Chỉ tiêu dư nợ
 Tổng dư nợ
@@ -218,7 +215,6 @@ Từ ngày: ngày 01 tháng hiện tại
 Đến ngày: ngày hiện tại
 Phạm vi dữ liệu
 MG1268 - Trần Phương Anh
-Dữ liệu đến 27/09 · cập nhật 28/09 14:21
 1
 Chỉ tiêu tệp hiện hữu
 TK đang quản lý
@@ -274,7 +270,6 @@ Từ ngày: ngày 01 tháng hiện tại
 Đến ngày: ngày hiện tại
 Phạm vi dữ liệu
 MG1268 - Trần Phương Anh
-Dữ liệu đến 27/09 · cập nhật 28/09 14:21
 1
 Chỉ tiêu TK mở mới
 Số TK mở mới
@@ -341,7 +336,6 @@ Từ ngày: ngày 01 tháng hiện tại
 Đến ngày: ngày hiện tại
 Phạm vi dữ liệu
 MG1268 - Trần Phương Anh
-Dữ liệu đến 27/09 · cập nhật 28/09 14:21
 1
 Chỉ tiêu nộp rút
 Tổng nộp
@@ -417,7 +411,6 @@ Từ ngày: ngày 01 tháng hiện tại
 Đến ngày: ngày hiện tại
 Phạm vi dữ liệu
 MG1268 - Trần Phương Anh
-Dữ liệu đến 27/09 · cập nhật 28/09 14:21
 1
 So sánh doanh số cổ phiếu giữa các đơn vị
 CộtHeatmap
@@ -460,7 +453,6 @@ Từ ngày: ngày 01 tháng hiện tại
 Đến ngày: ngày hiện tại
 Phạm vi dữ liệu
 MG1268 - Trần Phương Anh
-Dữ liệu đến 13/09 · cập nhật 06:30 14/09
 1
 Chỉ tiêu doanh số, phí net & hoa hồng
 GTGD trong kỳ

@@ -333,6 +333,7 @@
 
 
   /* Shared reporting period and authorized demo scope. */
+  .report-filters,.report-filters *{box-sizing:border-box}
   .report-header{align-items:flex-end;flex-wrap:wrap;gap:12px}
   .report-filters{display:flex;align-items:flex-start;flex-wrap:wrap;gap:16px 24px;flex:1 1 700px;min-width:0;max-width:100%}
   .report-period{border:0;padding:0;margin:0;min-width:0}
@@ -350,7 +351,8 @@
   .report-error{font-size:11px;color:#b42318;margin-top:6px;max-width:400px}
   .report-scope{width:300px;max-width:100%;min-width:0}
   .scope-dropdown{position:relative}
-  .scope-dropdown summary{display:flex;justify-content:space-between;align-items:center;gap:10px;list-style:none;border:1px solid #777;padding:8px 10px;background:#fff;font-size:12px;cursor:pointer;min-height:36px}
+  .scope-dropdown summary{box-sizing:border-box;display:flex;justify-content:space-between;align-items:center;gap:10px;list-style:none;border:1px solid #777;padding:8px 10px;background:#fff;font-size:12px;cursor:pointer;height:36px}
+  .scope-value{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .scope-dropdown summary::-webkit-details-marker{display:none}
   .scope-dropdown summary:focus-visible,.scope-option:focus-within{outline:2px solid #111;outline-offset:2px}
   .scope-menu{position:absolute;left:0;right:0;top:calc(100% + 4px);z-index:50;background:#fff;border:1.5px solid #111;padding:6px;box-shadow:0 4px 12px #0002;max-height:300px;overflow:auto}
@@ -361,14 +363,12 @@
   .scope-tree ul{margin-left:13px;padding-left:12px;border-left:1px solid #aaa}
   .scope-tree ul li{position:relative}
   .scope-tree ul li:before{content:"";position:absolute;left:-12px;top:18px;width:10px;border-top:1px solid #aaa}
-  .report-header .dstat{font-size:10px;margin:0 0 8px}
   @media(max-width:600px){
     .report-filters{display:grid;grid-template-columns:minmax(0,1fr);width:100%;flex:1 0 100%;gap:14px}
     .report-period,.report-scope{width:100%}
     .report-dates{grid-template-columns:auto minmax(0,1fr);gap:8px}
     .report-date-text{width:100%;flex:1}
     .scope-menu{max-height:260px}
-    .report-header .dstat{margin:0;white-space:normal}
   }
 
 </style>
@@ -399,7 +399,6 @@
 <div class="page" id="tong-quan" role="tabpanel" aria-labelledby="tab-tong-quan" tabindex="0">
   <div class="thead report-header">
     <div class="report-filters"></div>
-    <span class="dstat push"><i class="dot full"></i>Dữ liệu đến&nbsp;<b>27/09</b>&nbsp;· cập nhật 28/09 14:21</span>
   </div>
 <div class="body">
 <div class="sec"><span class="n">1</span><h2>Chỉ tiêu chính</h2></div>
@@ -459,7 +458,6 @@
 <div class="page" id="doanh-so" role="tabpanel" aria-labelledby="tab-doanh-so" tabindex="0" hidden>
   <div class="thead report-header">
     <div class="report-filters"></div>
-    <span class="dstat push"><i class="dot full"></i>Dữ liệu đến&nbsp;<b>27/09</b>&nbsp;· cập nhật 28/09 14:21</span>
   </div>
 
   <div class="body">
@@ -524,7 +522,6 @@
 <div class="page" id="du-no-mon-vay" role="tabpanel" aria-labelledby="tab-du-no-mon-vay" tabindex="0" hidden>
   <div class="thead report-header">
     <div class="report-filters"></div>
-    <span class="dstat push"><i class="dot full"></i>Dữ liệu đến&nbsp;<b>27/09</b>&nbsp;· cập nhật 28/09 14:21</span>
   </div>
 
   <div class="body">
@@ -586,7 +583,6 @@
 <div class="page" id="kh-hien-huu" role="tabpanel" aria-labelledby="tab-kh-hien-huu" tabindex="0" hidden>
   <div class="thead report-header">
     <div class="report-filters"></div>
-    <span class="dstat push"><i class="dot full"></i>Dữ liệu đến&nbsp;<b>27/09</b>&nbsp;· cập nhật 28/09 14:21</span>
   </div>
 
   <div class="body">
@@ -641,7 +637,6 @@
 <div class="page" id="mo-moi" role="tabpanel" aria-labelledby="tab-mo-moi" tabindex="0" hidden>
   <div class="thead report-header">
     <div class="report-filters"></div>
-    <span class="dstat push"><i class="dot full"></i>Dữ liệu đến&nbsp;<b>27/09</b>&nbsp;· cập nhật 28/09 14:21</span>
   </div>
 
   <div class="body">
@@ -704,7 +699,6 @@
 <div class="page" id="nop-rut" role="tabpanel" aria-labelledby="tab-nop-rut" tabindex="0" hidden>
   <div class="thead report-header">
     <div class="report-filters"></div>
-    <span class="dstat push"><i class="dot full"></i>Dữ liệu đến&nbsp;<b>27/09</b>&nbsp;· cập nhật 28/09 14:21</span>
   </div>
 
   <div class="body">
@@ -788,7 +782,6 @@
 <div class="page" id="so-sanh-ranking" role="tabpanel" aria-labelledby="tab-so-sanh-ranking" tabindex="0" hidden>
   <div class="thead report-header">
     <div class="report-filters"></div>
-    <span class="dstat push"><i class="dot full"></i>Dữ liệu đến&nbsp;<b>27/09</b>&nbsp;· cập nhật 28/09 14:21</span>
   </div>
 
   <div class="body">
@@ -829,7 +822,6 @@
 <div class="page" id="doanh-so-phi-hoa-hong" role="tabpanel" aria-labelledby="tab-doanh-so-phi-hoa-hong" tabindex="0" hidden>
   <div class="thead report-header">
     <div class="report-filters"></div>
-    <span class="dstat push"><i class="dot full"></i>Dữ liệu đến&nbsp;<b>13/09</b>&nbsp;· cập nhật 06:30 14/09</span>
   </div>
 
   <div class="body">
