@@ -43,9 +43,15 @@ Doanh số Trái phiếu
 2
 Tình hình kinh doanh
 GTGD cổ phiếu lũy kế Kỳ trướcKỳ đang xem
-23,4 tỷĐến 27/0928,9 tỷCùng ngày 2731,2 tỷCuối 08/2026
+Trục ngang: Ngày/tháng — 01/09, 10/09, 20/09, 30/09
+Trục dọc: Giá trị (tỷ đồng) — 0, 10, 20, 30, 40
+Kỳ đang xem: 23,4 tỷ · 27/09
+Kỳ trước: 28,9 tỷ · 27/08; 31,2 tỷ · 31/08
 Dư nợ tổng theo ngày Kỳ trướcKỳ đang xem
-2,34 tỷĐến 27/092,51 tỷCùng ngày 27
+Trục ngang: Ngày/tháng — 01/09, 10/09, 20/09, 30/09
+Trục dọc: Giá trị (tỷ đồng) — 0, 1, 2, 3
+Kỳ đang xem: 2,34 tỷ · 27/09
+Kỳ trước: 2,51 tỷ · 27/08
 3
 Điểm sáng · Cần lưu ý · Việc nên làm
 Điểm sáng trong kỳ
