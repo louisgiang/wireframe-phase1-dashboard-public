@@ -331,6 +331,46 @@
     #doanh-so-phi-hoa-hong .merged-charts{grid-template-columns:1fr}
   }
 
+
+  /* Shared reporting period and authorized demo scope. */
+  .report-header{align-items:flex-end;flex-wrap:wrap;gap:12px}
+  .report-filters{display:flex;align-items:flex-start;flex-wrap:wrap;gap:16px 24px;flex:1 1 700px;min-width:0;max-width:100%}
+  .report-period{border:0;padding:0;margin:0;min-width:0}
+  .report-period legend,.report-filter-label{display:block;font-size:11px;font-weight:700;color:var(--ink);padding:0;margin:0 0 6px}
+  .report-dates{display:grid;grid-template-columns:auto 148px auto 148px;align-items:center;gap:6px}
+  .report-date-label{font-size:11px;color:var(--mut)}
+  .report-date-control{display:flex;min-width:0;background:#fff;border:1px solid #777;min-height:36px}
+  .report-date-text{font:inherit;font-size:12px;border:0;background:transparent;padding:7px 8px;width:112px;min-width:0}
+  .report-date-picker{width:32px;min-width:32px;border:0;background:transparent;color:transparent;padding:0;font-size:0;cursor:pointer}
+  .report-date-picker::-webkit-datetime-edit{display:none}
+  .report-date-picker::-webkit-calendar-picker-indicator{margin:0;padding:8px;opacity:.7;width:16px;height:16px;cursor:pointer}
+  .report-date-control:focus-within{outline:2px solid #111;outline-offset:2px}
+  .report-date-text:focus,.report-date-picker:focus{outline:none}
+  .report-date-control:has([aria-invalid="true"]){border-color:#b42318}
+  .report-error{font-size:11px;color:#b42318;margin-top:6px;max-width:400px}
+  .report-scope{width:300px;max-width:100%;min-width:0}
+  .scope-dropdown{position:relative}
+  .scope-dropdown summary{display:flex;justify-content:space-between;align-items:center;gap:10px;list-style:none;border:1px solid #777;padding:8px 10px;background:#fff;font-size:12px;cursor:pointer;min-height:36px}
+  .scope-dropdown summary::-webkit-details-marker{display:none}
+  .scope-dropdown summary:focus-visible,.scope-option:focus-within{outline:2px solid #111;outline-offset:2px}
+  .scope-menu{position:absolute;left:0;right:0;top:calc(100% + 4px);z-index:50;background:#fff;border:1.5px solid #111;padding:6px;box-shadow:0 4px 12px #0002;max-height:300px;overflow:auto}
+  .scope-option{display:flex;align-items:center;gap:8px;padding:9px 6px;cursor:pointer;font-size:12px;line-height:1.4}
+  .scope-option:hover,.scope-option:has(:checked){background:#eee}
+  .scope-option input{margin:0;accent-color:#111;flex:none}
+  .scope-tree,.scope-tree ul{list-style:none;padding:0;margin:0}
+  .scope-tree ul{margin-left:13px;padding-left:12px;border-left:1px solid #aaa}
+  .scope-tree ul li{position:relative}
+  .scope-tree ul li:before{content:"";position:absolute;left:-12px;top:18px;width:10px;border-top:1px solid #aaa}
+  .report-header .dstat{font-size:10px;margin:0 0 8px}
+  @media(max-width:600px){
+    .report-filters{display:grid;grid-template-columns:minmax(0,1fr);width:100%;flex:1 0 100%;gap:14px}
+    .report-period,.report-scope{width:100%}
+    .report-dates{grid-template-columns:auto minmax(0,1fr);gap:8px}
+    .report-date-text{width:100%;flex:1}
+    .scope-menu{max-height:260px}
+    .report-header .dstat{margin:0;white-space:normal}
+  }
+
 </style>
 </head>
 <body>
@@ -357,10 +397,8 @@
 
 <!-- ==================== TỔNG QUAN ==================== -->
 <div class="page" id="tong-quan" role="tabpanel" aria-labelledby="tab-tong-quan" tabindex="0">
-  <div class="thead">
-    <span><span class="lbl">Từ tháng</span><span class="sel">09/2026 ▾</span></span>
-    <span><span class="lbl">Đến tháng</span><span class="sel">09/2026 ▾</span></span>
-    <span><span class="lbl">Phạm vi</span><span class="sel">Toàn nhánh ▾</span></span>
+  <div class="thead report-header">
+    <div class="report-filters"></div>
     <span class="dstat push"><i class="dot full"></i>Dữ liệu đến&nbsp;<b>27/09</b>&nbsp;· cập nhật 28/09 14:21</span>
   </div>
 <div class="body">
@@ -370,8 +408,8 @@
       <div class="kpi"><div class="lab">KH mở mới</div><div class="big">38<span style="font-size:12px;color:#666;font-weight:400"> / 50 TK</span></div><div class="prog"><i style="width:76%"></i></div><div class="pct"><b>76%</b> KPI · 11 Active</div></div>
       <div class="kpi"><div class="lab">GTGD cổ phiếu</div><div class="big">23,4<span style="font-size:12px;color:#666;font-weight:400"> / 80 tỷ</span></div><div class="prog"><i style="width:29.3%"></i></div><div class="pct"><b>29,3%</b> KPI</div></div>
       <div class="kpi"><div class="lab">Dư nợ</div><div class="big">2,34<span style="font-size:12px;color:#666;font-weight:400"> / 5 tỷ</span></div><div class="prog"><i style="width:46.8%"></i></div><div class="pct"><b>46,8%</b> KPI</div></div>
-      <div class="kpi"><div class="lab">Vòng quay tài sản (lần)</div><div class="big">0,4</div></div>
-      <div class="kpi"><div class="lab">Doanh thu phí</div><div class="big">24,1<span style="font-size:12px;color:#666;font-weight:400"> tr</span></div></div>
+      <div class="kpi"><div class="lab">Vòng quay tài sản (lần)</div><div class="big">0,4<span style="font-size:12px;color:#666;font-weight:400"> / 1 lần</span></div><div class="prog" role="progressbar" aria-label="Tiến độ vòng quay tài sản" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"><i style="width:40%"></i></div><div class="pct"><b>40%</b> KPI</div></div>
+      <div class="kpi"><div class="lab">Doanh thu phí</div><div class="big">24,1<span style="font-size:12px;color:#666;font-weight:400"> / 60 tr</span></div><div class="prog" role="progressbar" aria-label="Tiến độ doanh thu phí" aria-valuenow="40.2" aria-valuemin="0" aria-valuemax="100"><i style="width:40.2%"></i></div><div class="pct"><b>40,2%</b> KPI</div></div>
       <div class="kpi"><div class="lab">Phí net</div><div class="big">20,4<span style="font-size:12px;color:#666;font-weight:400"> tr</span></div></div>
       <div class="kpi"><div class="lab">Hoa hồng dự kiến</div><div class="big">13,7<span style="font-size:12px;color:#666;font-weight:400"> tr</span></div></div>
     </div>
@@ -419,10 +457,8 @@
 
 <!-- ==================== DOANH SỐ ==================== -->
 <div class="page" id="doanh-so" role="tabpanel" aria-labelledby="tab-doanh-so" tabindex="0" hidden>
-  <div class="thead">
-    <span><span class="lbl">Từ tháng</span><span class="sel">09/2026 ▾</span></span>
-    <span><span class="lbl">Đến tháng</span><span class="sel">09/2026 ▾</span></span>
-    <span><span class="lbl">Phạm vi</span><span class="sel">Toàn nhánh ▾</span></span>
+  <div class="thead report-header">
+    <div class="report-filters"></div>
     <span class="dstat push"><i class="dot full"></i>Dữ liệu đến&nbsp;<b>27/09</b>&nbsp;· cập nhật 28/09 14:21</span>
   </div>
 
@@ -486,10 +522,8 @@
 <!-- ==================== DƯ NỢ & MÓN VAY ==================== -->
 
 <div class="page" id="du-no-mon-vay" role="tabpanel" aria-labelledby="tab-du-no-mon-vay" tabindex="0" hidden>
-  <div class="thead">
-    <span><span class="lbl">Từ tháng</span><span class="sel">09/2026 ▾</span></span>
-    <span><span class="lbl">Đến tháng</span><span class="sel">09/2026 ▾</span></span>
-    <span><span class="lbl">Phạm vi</span><span class="sel">Toàn nhánh ▾</span></span>
+  <div class="thead report-header">
+    <div class="report-filters"></div>
     <span class="dstat push"><i class="dot full"></i>Dữ liệu đến&nbsp;<b>27/09</b>&nbsp;· cập nhật 28/09 14:21</span>
   </div>
 
@@ -550,10 +584,8 @@
 
 <!-- ==================== KH HIỆN HỮU ==================== -->
 <div class="page" id="kh-hien-huu" role="tabpanel" aria-labelledby="tab-kh-hien-huu" tabindex="0" hidden>
-  <div class="thead">
-    <span><span class="lbl">Từ tháng</span><span class="sel">09/2026 ▾</span></span>
-    <span><span class="lbl">Đến tháng</span><span class="sel">09/2026 ▾</span></span>
-    <span><span class="lbl">Phạm vi</span><span class="sel">Toàn nhánh ▾</span></span>
+  <div class="thead report-header">
+    <div class="report-filters"></div>
     <span class="dstat push"><i class="dot full"></i>Dữ liệu đến&nbsp;<b>27/09</b>&nbsp;· cập nhật 28/09 14:21</span>
   </div>
 
@@ -607,10 +639,8 @@
 
 <!-- ==================== MỞ MỚI ==================== -->
 <div class="page" id="mo-moi" role="tabpanel" aria-labelledby="tab-mo-moi" tabindex="0" hidden>
-  <div class="thead">
-    <span><span class="lbl">Từ tháng</span><span class="sel">09/2026 ▾</span></span>
-    <span><span class="lbl">Đến tháng</span><span class="sel">09/2026 ▾</span></span>
-    <span><span class="lbl">Phạm vi</span><span class="sel">Toàn nhánh ▾</span></span>
+  <div class="thead report-header">
+    <div class="report-filters"></div>
     <span class="dstat push"><i class="dot full"></i>Dữ liệu đến&nbsp;<b>27/09</b>&nbsp;· cập nhật 28/09 14:21</span>
   </div>
 
@@ -672,10 +702,8 @@
 
 <!-- ==================== NỘP RÚT ==================== -->
 <div class="page" id="nop-rut" role="tabpanel" aria-labelledby="tab-nop-rut" tabindex="0" hidden>
-  <div class="thead">
-    <span><span class="lbl">Từ tháng</span><span class="sel">09/2026 ▾</span></span>
-    <span><span class="lbl">Đến tháng</span><span class="sel">09/2026 ▾</span></span>
-    <span><span class="lbl">Phạm vi</span><span class="sel">Toàn nhánh ▾</span></span>
+  <div class="thead report-header">
+    <div class="report-filters"></div>
     <span class="dstat push"><i class="dot full"></i>Dữ liệu đến&nbsp;<b>27/09</b>&nbsp;· cập nhật 28/09 14:21</span>
   </div>
 
@@ -758,10 +786,8 @@
 
 <!-- ==================== SO SÁNH & RANKING CP ==================== -->
 <div class="page" id="so-sanh-ranking" role="tabpanel" aria-labelledby="tab-so-sanh-ranking" tabindex="0" hidden>
-  <div class="thead">
-    <span><span class="lbl">Từ tháng</span><span class="sel">09/2026 ▾</span></span>
-    <span><span class="lbl">Đến tháng</span><span class="sel">09/2026 ▾</span></span>
-    <span><span class="lbl">Phạm vi</span><span class="sel">Toàn nhánh ▾</span></span>
+  <div class="thead report-header">
+    <div class="report-filters"></div>
     <span class="dstat push"><i class="dot full"></i>Dữ liệu đến&nbsp;<b>27/09</b>&nbsp;· cập nhật 28/09 14:21</span>
   </div>
 
@@ -801,12 +827,11 @@
 </div>
 
 <div class="page" id="doanh-so-phi-hoa-hong" role="tabpanel" aria-labelledby="tab-doanh-so-phi-hoa-hong" tabindex="0" hidden>
-  <div class="ctx">
-    <span><span class="lbl">Phạm vi</span><span class="crumb"><span>Tổng</span>›<span>TT MG Hà Nội 1</span>›<span>Phòng MG 3</span>›<span class="on">Nguyễn Văn A ▾</span></span></span>
-    <span class="seg"><span class="on">Cá nhân</span><span>Đơn vị</span></span>
-    <span><span class="lbl">Kỳ</span><span class="sel">Tháng 09/2026 ▾</span></span>
+  <div class="thead report-header">
+    <div class="report-filters"></div>
     <span class="dstat push"><i class="dot full"></i>Dữ liệu đến&nbsp;<b>13/09</b>&nbsp;· cập nhật 06:30 14/09</span>
   </div>
+
   <div class="body">
     <div class="sec"><span class="n">1</span><h2>Chỉ tiêu doanh số, phí net &amp; hoa hồng</h2></div>
     <div class="kpis merged-kpis">
@@ -856,7 +881,7 @@
     <div class="sec"><span class="n">3</span><h2>Chi tiết theo khách hàng</h2></div>
     <h3 class="merged-subtitle">Danh sách giao dịch theo KH</h3>
     <div class="fbar">
-      <span class="gl">Lọc chung</span><span class="chip">Kỳ 09/2026</span><span class="chip">Nút cây: Nguyễn Văn A</span><span class="chip">Phân khúc: tất cả ▾</span>
+      <span class="gl">Lọc chung</span><span class="chip report-period-chip"></span><span class="chip report-scope-chip"></span><span class="chip">Phân khúc: tất cả ▾</span>
       <span class="sp"></span><span class="gl">Lọc riêng</span><span class="chip">Sản phẩm: Cổ phiếu ▾</span><span class="chip">Chiều mua / bán ▾</span><span class="chip on">Ngừng GD tháng này</span><span class="chip">Khoảng GTGD ▾</span>
       <span class="search push">Tìm mã / tên KH, số TK…</span>
     </div>
@@ -866,7 +891,7 @@
 
     <h3 class="merged-subtitle">Chi tiết phí &amp; hoa hồng theo KH</h3>
     <div class="fbar">
-      <span class="gl">Lọc chung</span><span class="chip">Kỳ 09/2026</span><span class="chip">Nút cây: Nguyễn Văn A</span><span class="chip">Phân khúc: tất cả ▾</span>
+      <span class="gl">Lọc chung</span><span class="chip report-period-chip"></span><span class="chip report-scope-chip"></span><span class="chip">Phân khúc: tất cả ▾</span>
       <span class="sp"></span><span class="gl">Lọc riêng</span><span class="chip">Sản phẩm ▾</span><span class="chip">Loại khoản phí ▾</span><span class="chip on">Dự tính</span><span class="chip">Đã xác nhận</span>
       <span class="search push">Tìm mã / tên KH, số TK…</span>
     </div>
@@ -884,6 +909,7 @@
   </div>
 </div>
 
+<script src="dashboard-filters.js"></script>
 <script>
 (() => {
   const tabs = [...document.querySelectorAll('.app-tab')];

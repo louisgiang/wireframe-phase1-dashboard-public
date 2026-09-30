@@ -5,9 +5,11 @@ Trích xuất văn bản và số liệu từ giao diện hiện tại đã gỡ
 ## tong-quan
 
 ```text
-Từ tháng09/2026 ▾
-Đến tháng09/2026 ▾
-Phạm viToàn nhánh ▾
+Kỳ báo cáo
+Từ ngày: ngày 01 tháng hiện tại
+Đến ngày: ngày hiện tại
+Phạm vi dữ liệu
+MG1268 - Trần Phương Anh
 Dữ liệu đến 27/09 · cập nhật 28/09 14:21
 1
 Chỉ tiêu chính
@@ -24,9 +26,11 @@ Dư nợ
 2,34 / 5 tỷ
 46,8% KPI
 Vòng quay tài sản (lần)
-0,4
+0,4 / 1 lần
+40% KPI
 Doanh thu phí
-24,1 tr
+24,1 / 60 tr
+40,2% KPI
 Phí net
 20,4 tr
 Hoa hồng dự kiến
@@ -72,9 +76,11 @@ Chăm KH vừa nộp ròng lớnMở 3 KH · tab Nộp rút →
 ## doanh-so
 
 ```text
-Từ tháng09/2026 ▾
-Đến tháng09/2026 ▾
-Phạm viToàn nhánh ▾
+Kỳ báo cáo
+Từ ngày: ngày 01 tháng hiện tại
+Đến ngày: ngày hiện tại
+Phạm vi dữ liệu
+MG1268 - Trần Phương Anh
 Dữ liệu đến 27/09 · cập nhật 28/09 14:21
 Net CHUẨNNet THỰC THU
 1
@@ -142,9 +148,11 @@ Mở KH đóng góp lớn đang ngừng.Lọc 4 KH →
 ## du-no-mon-vay
 
 ```text
-Từ tháng09/2026 ▾
-Đến tháng09/2026 ▾
-Phạm viToàn nhánh ▾
+Kỳ báo cáo
+Từ ngày: ngày 01 tháng hiện tại
+Đến ngày: ngày hiện tại
+Phạm vi dữ liệu
+MG1268 - Trần Phương Anh
 Dữ liệu đến 27/09 · cập nhật 28/09 14:21
 1
 Chỉ tiêu dư nợ
@@ -205,9 +213,11 @@ Nhắc KH có lãi + phí dồn tích lớn.Lọc 3 KH →
 ## kh-hien-huu
 
 ```text
-Từ tháng09/2026 ▾
-Đến tháng09/2026 ▾
-Phạm viToàn nhánh ▾
+Kỳ báo cáo
+Từ ngày: ngày 01 tháng hiện tại
+Đến ngày: ngày hiện tại
+Phạm vi dữ liệu
+MG1268 - Trần Phương Anh
 Dữ liệu đến 27/09 · cập nhật 28/09 14:21
 1
 Chỉ tiêu tệp hiện hữu
@@ -259,9 +269,11 @@ Xem KH giảm NAV mạnh.Lọc 14 KH →
 ## mo-moi
 
 ```text
-Từ tháng09/2026 ▾
-Đến tháng09/2026 ▾
-Phạm viToàn nhánh ▾
+Kỳ báo cáo
+Từ ngày: ngày 01 tháng hiện tại
+Đến ngày: ngày hiện tại
+Phạm vi dữ liệu
+MG1268 - Trần Phương Anh
 Dữ liệu đến 27/09 · cập nhật 28/09 14:21
 1
 Chỉ tiêu TK mở mới
@@ -324,9 +336,11 @@ Kích hoạt TK active chưa giao dịch.Mở 6 TK →
 ## nop-rut
 
 ```text
-Từ tháng09/2026 ▾
-Đến tháng09/2026 ▾
-Phạm viToàn nhánh ▾
+Kỳ báo cáo
+Từ ngày: ngày 01 tháng hiện tại
+Đến ngày: ngày hiện tại
+Phạm vi dữ liệu
+MG1268 - Trần Phương Anh
 Dữ liệu đến 27/09 · cập nhật 28/09 14:21
 1
 Chỉ tiêu nộp rút
@@ -398,9 +412,11 @@ Chăm KH vừa nộp ròng lớn.Mở 3 KH →
 ## so-sanh-ranking
 
 ```text
-Từ tháng09/2026 ▾
-Đến tháng09/2026 ▾
-Phạm viToàn nhánh ▾
+Kỳ báo cáo
+Từ ngày: ngày 01 tháng hiện tại
+Đến ngày: ngày hiện tại
+Phạm vi dữ liệu
+MG1268 - Trần Phương Anh
 Dữ liệu đến 27/09 · cập nhật 28/09 14:21
 1
 So sánh doanh số cổ phiếu giữa các đơn vị
@@ -439,9 +455,11 @@ Phí net CP theo nhánh / đơn vị theo tháng
 ## doanh-so-phi-hoa-hong
 
 ```text
-Phạm viTổng›TT MG Hà Nội 1›Phòng MG 3›Nguyễn Văn A ▾
-Cá nhânĐơn vị
-KỳTháng 09/2026 ▾
+Kỳ báo cáo
+Từ ngày: ngày 01 tháng hiện tại
+Đến ngày: ngày hiện tại
+Phạm vi dữ liệu
+MG1268 - Trần Phương Anh
 Dữ liệu đến 13/09 · cập nhật 06:30 14/09
 1
 Chỉ tiêu doanh số, phí net & hoa hồng
@@ -472,7 +490,7 @@ Hoa hồng DỰ TÍNH lũy kế Dự tính
 3
 Chi tiết theo khách hàng
 Danh sách giao dịch theo KH
-Lọc chungKỳ 09/2026Nút cây: Nguyễn Văn APhân khúc: tất cả ▾
+Lọc chungKỳ báo cáo: khoảng ngày đang chọnPhạm vi dữ liệu: môi giới đang chọnPhân khúc: tất cả ▾
 Lọc riêngSản phẩm: Cổ phiếu ▾Chiều mua / bán ▾Ngừng GD tháng nàyKhoảng GTGD ▾
 Tìm mã / tên KH, số TK…
 | Mã KH | Tên KH | TK | Nhóm KH | Sản phẩm | GTGD mua | GTGD bán | Tổng GTGD | GD gần nhất | TVĐT
@@ -481,7 +499,7 @@ Tìm mã / tên KH, số TK…
 | KH0290 | Đặng Minh Khoa | 0290C | Active trade | Cổ phiếu | 0 | 0 | 0 | 21/08/2026 | —
 4 KH khớp20 dòng/trang · ‹ 1 2 3 … ›
 Chi tiết phí & hoa hồng theo KH
-Lọc chungKỳ 09/2026Nút cây: Nguyễn Văn APhân khúc: tất cả ▾
+Lọc chungKỳ báo cáo: khoảng ngày đang chọnPhạm vi dữ liệu: môi giới đang chọnPhân khúc: tất cả ▾
 Lọc riêngSản phẩm ▾Loại khoản phí ▾Dự tínhĐã xác nhận
 Tìm mã / tên KH, số TK…
 | Mã KH | Tên KH | Nhóm KH | GTGD cơ sở | Phí gộp | Phí trả sở | Phí net | Tỷ lệ HH | HH dự tính | Trạng thái
