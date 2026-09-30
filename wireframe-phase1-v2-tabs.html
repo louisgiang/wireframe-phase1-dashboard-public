@@ -398,23 +398,23 @@
 
   .sales-kpis{grid-template-columns:repeat(4,minmax(0,1fr))}
   .sales-time-chart .plot{height:220px}
-  .sales-ranking-tabs{display:flex;border-bottom:1px solid #ccc;gap:6px}
-  .sales-ranking-tabs button{font:inherit;font-size:12px;font-weight:700;padding:10px 16px;border:0;border-bottom:3px solid transparent;background:#fff;color:#666;cursor:pointer}
-  .sales-ranking-tabs button[aria-selected="true"]{border-bottom-color:#111;color:#111}
-  .sales-ranking-tabs button:focus-visible{outline:2px solid #555;outline-offset:-3px}
-  .ranking-metric{font-size:11px;color:#666;margin:12px 0}
+  .sales-ranking{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  .sales-ranking-chart{min-width:0;margin:0}
+  .sales-ranking-chart h3{font-size:13px;margin:0}
+  .ranking-metric{font-size:11px;color:#666;margin:10px 0}
   .sales-ranking-list{list-style:none;padding:0;margin:0}
-  .sales-ranking-list li{display:grid;grid-template-columns:24px minmax(150px,260px) minmax(60px,1fr) 64px;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid #eee;font-size:12px}
+  .sales-ranking-list li{display:grid;grid-template-columns:22px minmax(0,1fr) 54px;gap:8px 10px;align-items:center;padding:12px 0;border-bottom:1px solid #eee;font-size:12px}
   .sales-ranking-list li:last-child{border-bottom:0}
-  .rank-position{color:#888;text-align:center}
-  .rank-bar{height:9px;background:#eee}
+  .rank-position{grid-column:1;grid-row:1 / 3;color:#888;text-align:center}
+  .rank-name{grid-column:2;grid-row:1;overflow-wrap:anywhere}
+  .rank-bar{grid-column:2 / 4;grid-row:2;height:9px;background:#eee}
   .rank-bar i{display:block;height:100%;background:#111}
-  .sales-ranking-list strong{text-align:right;white-space:nowrap}
+  .sales-ranking-list strong{grid-column:3;grid-row:1;text-align:right;white-space:nowrap}
   .sales-table{min-width:900px}
   .sales-total{font-weight:700}
   .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-  @media(max-width:820px){.sales-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
-  @media(max-width:600px){.sales-ranking-list li{grid-template-columns:18px minmax(0,1fr) 54px;gap:8px}.rank-bar{display:none}.sales-ranking-tabs button{flex:1;padding:10px 8px}.sales-time-chart .plot{height:180px}}
+  @media(max-width:820px){.sales-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.sales-ranking{grid-template-columns:1fr}}
+  @media(max-width:600px){.sales-time-chart .plot{height:180px}}
 
 </style>
 </head>
@@ -545,14 +545,9 @@
       <div class="axis-caption">Ngày/tháng</div>
     </div>
     <div class="sec"><span class="n">3</span><h2>Xếp hạng</h2></div>
-    <div class="box sales-ranking">
-      <div class="sales-ranking-tabs" role="tablist" aria-label="Xếp hạng theo phí net CP">
-        <button type="button" id="sales-rank-staff-tab" role="tab" aria-controls="sales-rank-staff" aria-selected="true" tabindex="0">Top TVĐT/CTV</button>
-        <button type="button" id="sales-rank-customers-tab" role="tab" aria-controls="sales-rank-customers" aria-selected="false" tabindex="-1">Top KH</button>
-      </div>
-      <div class="ranking-metric">Top 5 theo phí net CP</div>
-      <div id="sales-rank-staff" role="tabpanel" aria-labelledby="sales-rank-staff-tab" tabindex="0"><ol class="sales-ranking-list"><li><span class="rank-position">1</span><span class="rank-name">Trần Phương Anh · TVĐT</span><span class="rank-bar" aria-hidden="true"><i style="width:100.00%"></i></span><strong>9,1 tr</strong></li><li><span class="rank-position">2</span><span class="rank-name">Nguyễn Thị Phong · CTV</span><span class="rank-bar" aria-hidden="true"><i style="width:68.13%"></i></span><strong>6,2 tr</strong></li><li><span class="rank-position">3</span><span class="rank-name">Nguyễn Văn Bình · TVĐT</span><span class="rank-bar" aria-hidden="true"><i style="width:61.54%"></i></span><strong>5,6 tr</strong></li><li><span class="rank-position">4</span><span class="rank-name">Lê Thu Hà · TVĐT</span><span class="rank-bar" aria-hidden="true"><i style="width:41.76%"></i></span><strong>3,8 tr</strong></li><li><span class="rank-position">5</span><span class="rank-name">Hoàng Văn Nam · CTV</span><span class="rank-bar" aria-hidden="true"><i style="width:32.97%"></i></span><strong>3,0 tr</strong></li></ol></div>
-      <div id="sales-rank-customers" role="tabpanel" aria-labelledby="sales-rank-customers-tab" tabindex="0" hidden><ol class="sales-ranking-list"><li><span class="rank-position">1</span><span class="rank-name">Triệu Hạnh Hiền</span><span class="rank-bar" aria-hidden="true"><i style="width:100.00%"></i></span><strong>4,2 tr</strong></li><li><span class="rank-position">2</span><span class="rank-name">Phạm Thị Vân</span><span class="rank-bar" aria-hidden="true"><i style="width:54.76%"></i></span><strong>2,3 tr</strong></li><li><span class="rank-position">3</span><span class="rank-name">Vũ Thị Hằng</span><span class="rank-bar" aria-hidden="true"><i style="width:33.33%"></i></span><strong>1,4 tr</strong></li><li><span class="rank-position">4</span><span class="rank-name">Lương Quốc Bảo</span><span class="rank-bar" aria-hidden="true"><i style="width:26.19%"></i></span><strong>1,1 tr</strong></li><li><span class="rank-position">5</span><span class="rank-name">Nguyễn Minh Sang</span><span class="rank-bar" aria-hidden="true"><i style="width:21.43%"></i></span><strong>0,9 tr</strong></li></ol></div>
+    <div class="sales-ranking">
+      <section class="box sales-ranking-chart" aria-labelledby="sales-rank-staff-title"><h3 id="sales-rank-staff-title">Top MG/CTV</h3><div class="ranking-metric">Top 5 theo phí net CP</div><ol class="sales-ranking-list"><li><span class="rank-position">1</span><span class="rank-name">MG1268 - Trần Phương Anh</span><span class="rank-bar" aria-hidden="true"><i style="width:100.00%"></i></span><strong>9,1 tr</strong></li><li><span class="rank-position">2</span><span class="rank-name">RE002 - Nguyễn Thị Phong</span><span class="rank-bar" aria-hidden="true"><i style="width:68.13%"></i></span><strong>6,2 tr</strong></li><li><span class="rank-position">3</span><span class="rank-name">MG1271 - Nguyễn Văn Bình</span><span class="rank-bar" aria-hidden="true"><i style="width:61.54%"></i></span><strong>5,6 tr</strong></li><li><span class="rank-position">4</span><span class="rank-name">MG1284 - Lê Thu Hà</span><span class="rank-bar" aria-hidden="true"><i style="width:41.76%"></i></span><strong>3,8 tr</strong></li><li><span class="rank-position">5</span><span class="rank-name">RE005 - Hoàng Văn Nam</span><span class="rank-bar" aria-hidden="true"><i style="width:32.97%"></i></span><strong>3,0 tr</strong></li></ol></section>
+      <section class="box sales-ranking-chart" aria-labelledby="sales-rank-customers-title"><h3 id="sales-rank-customers-title">Top KH</h3><div class="ranking-metric">Top 5 theo phí net CP</div><ol class="sales-ranking-list"><li><span class="rank-position">1</span><span class="rank-name">069C000001 - Triệu Hạnh Hiền</span><span class="rank-bar" aria-hidden="true"><i style="width:100.00%"></i></span><strong>4,2 tr</strong></li><li><span class="rank-position">2</span><span class="rank-name">069C000017 - Phạm Thị Vân</span><span class="rank-bar" aria-hidden="true"><i style="width:54.76%"></i></span><strong>2,3 tr</strong></li><li><span class="rank-position">3</span><span class="rank-name">069C000331 - Vũ Thị Hằng</span><span class="rank-bar" aria-hidden="true"><i style="width:33.33%"></i></span><strong>1,4 tr</strong></li><li><span class="rank-position">4</span><span class="rank-name">069C000452 - Lương Quốc Bảo</span><span class="rank-bar" aria-hidden="true"><i style="width:26.19%"></i></span><strong>1,1 tr</strong></li><li><span class="rank-position">5</span><span class="rank-name">069C000453 - Nguyễn Minh Sang</span><span class="rank-bar" aria-hidden="true"><i style="width:21.43%"></i></span><strong>0,9 tr</strong></li></ol></section>
     </div>
     <div class="sec"><span class="n">4</span><h2>Bảng doanh số theo môi giới</h2></div>
     <div class="tbl"><table class="wt sales-table"><caption class="sr-only">Bảng doanh số theo môi giới</caption><thead><tr><th scope="col">Môi giới</th><th class="n" scope="col">KH quản lý</th><th class="n" scope="col">GTGD cổ phiếu</th><th class="n" scope="col">Doanh thu phí</th><th class="n" scope="col">Phí trả sở</th><th class="n" scope="col">Phí net CP</th><th class="n" scope="col">Hoa hồng dự kiến</th></tr></thead><tbody><tr><td>MG1268 - Trần Phương Anh</td><td class="n">180</td><td class="n">10,2 tỷ</td><td class="n">10,8 tr</td><td class="n">1,7 tr</td><td class="n">9,1 tr</td><td class="n">6,1 tr</td></tr><tr><td>MG1271 - Nguyễn Văn Bình</td><td class="n">150</td><td class="n">6,5 tỷ</td><td class="n">6,6 tr</td><td class="n">1,0 tr</td><td class="n">5,6 tr</td><td class="n">3,8 tr</td></tr><tr><td>MG1284 - Lê Thu Hà</td><td class="n">100</td><td class="n">4,5 tỷ</td><td class="n">4,5 tr</td><td class="n">0,7 tr</td><td class="n">3,8 tr</td><td class="n">2,5 tr</td></tr><tr><td>MG1290 - Đỗ Minh Quân</td><td class="n">70</td><td class="n">2,2 tỷ</td><td class="n">2,2 tr</td><td class="n">0,3 tr</td><td class="n">1,9 tr</td><td class="n">1,3 tr</td></tr><tr class="picked sales-total"><td>TỔNG CỘNG</td><td class="n">500</td><td class="n">23,4 tỷ</td><td class="n">24,1 tr</td><td class="n">3,7 tr</td><td class="n">20,4 tr</td><td class="n">13,7 tr</td></tr></tbody></table></div>
@@ -954,7 +949,6 @@
 
 <script src="dashboard-filters.js"></script>
 <script src="overview-chart-tooltips.js"></script>
-<script src="sales-ranking.js"></script>
 <script>
 (() => {
   const tabs = [...document.querySelectorAll('.app-tab')];

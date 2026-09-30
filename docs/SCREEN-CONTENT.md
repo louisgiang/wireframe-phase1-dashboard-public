@@ -101,19 +101,20 @@ Giá trị (triệu đồng)
 Ngày/tháng
 3
 Xếp hạng
-Top TVĐT/CTV
+Top MG/CTV
+Top 5 theo phí net CP
+1 MG1268 - Trần Phương Anh | 9,1 tr
+2 RE002 - Nguyễn Thị Phong | 6,2 tr
+3 MG1271 - Nguyễn Văn Bình | 5,6 tr
+4 MG1284 - Lê Thu Hà | 3,8 tr
+5 RE005 - Hoàng Văn Nam | 3,0 tr
 Top KH
 Top 5 theo phí net CP
-1Trần Phương Anh · TVĐT9,1 tr
-2Nguyễn Thị Phong · CTV6,2 tr
-3Nguyễn Văn Bình · TVĐT5,6 tr
-4Lê Thu Hà · TVĐT3,8 tr
-5Hoàng Văn Nam · CTV3,0 tr
-1Triệu Hạnh Hiền4,2 tr
-2Phạm Thị Vân2,3 tr
-3Vũ Thị Hằng1,4 tr
-4Lương Quốc Bảo1,1 tr
-5Nguyễn Minh Sang0,9 tr
+1 069C000001 - Triệu Hạnh Hiền | 4,2 tr
+2 069C000017 - Phạm Thị Vân | 2,3 tr
+3 069C000331 - Vũ Thị Hằng | 1,4 tr
+4 069C000452 - Lương Quốc Bảo | 1,1 tr
+5 069C000453 - Nguyễn Minh Sang | 0,9 tr
 4
 Bảng doanh số theo môi giới
 Bảng doanh số theo môi giới

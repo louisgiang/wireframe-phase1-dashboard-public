@@ -58,6 +58,6 @@ Nguồn: commit `2b9227bf933b7212a4c8014862139c22988f60ef`, kiểm kê ngày 29/
 
 - Bốn chỉ tiêu: GTGD cổ phiếu, Phí net CP, GTGD TP, Hoa hồng dự kiến.
 - Biểu đồ Doanh thu phí net lũy kế có hai kỳ, trục ngày/tháng, đơn vị triệu đồng và tooltip dùng chung theo ngày. Số kỳ hiện tại ngày 27 là 20,4 triệu; các điểm còn lại là dữ liệu biểu diễn mẫu.
-- Hai tab Top TVĐT/CTV và Top KH, mỗi tab 5 vị trí, xếp giảm dần theo phí net CP. Tab nhân sự gộp các tư vấn đầu tư và cộng tác viên đã có trong mẫu; số giữa hai nhóm không dùng để cộng thành tổng phí.
+- Hai biểu đồ Top MG/CTV và Top KH đặt cạnh nhau (xếp dọc trên màn hình nhỏ), mỗi biểu đồ 5 vị trí, xếp giảm dần theo phí net CP. Nhãn nhân sự hiển thị mã MG/RE - họ tên; nhãn khách hàng hiển thị số tài khoản - họ tên, khớp bảng bên dưới. Mã RE002 và RE005 là mã minh họa. Biểu đồ nhân sự gộp các tư vấn đầu tư và cộng tác viên đã có trong mẫu; số giữa hai nhóm không dùng để cộng thành tổng phí.
 - Bảng môi giới có 7 cột; bảng khách hàng có 8 cột, số tài khoản dạng 069Cxxxxxx. Không có lọc/tìm kiếm riêng hoặc phân trang ở hai bảng này.
 - Bổ sung dữ liệu minh họa cho số khách hàng quản lý (180/150/100/70, tổng 500), số tài khoản, NAV và hai khách hàng xếp hạng thứ 4–5. Danh sách khách hàng là các dòng mẫu, không phải toàn bộ danh mục để cộng thành tổng kỳ. Phí net mỗi dòng bằng doanh thu phí trừ phí trả sở. Các bảng ở tab khác giữ bộ mẫu riêng.
