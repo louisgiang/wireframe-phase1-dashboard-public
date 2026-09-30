@@ -42,16 +42,14 @@ Doanh số Trái phiếu
 109,95 tr
 2
 Tình hình kinh doanh
-GTGD cổ phiếu lũy kế Kỳ trướcKỳ đang xem
+GTGD cổ phiếu lũy kế Kỳ trướcKỳ hiện tại
 Trục ngang: Ngày/tháng — 01/09, 10/09, 20/09, 30/09
 Trục dọc: Giá trị (tỷ đồng) — 0, 10, 20, 30, 40
-Kỳ đang xem: 23,4 tỷ · 27/09
-Kỳ trước: 28,9 tỷ · 27/08; 31,2 tỷ · 31/08
-Dư nợ tổng theo ngày Kỳ trướcKỳ đang xem
+Tooltip khi rê vào ngày 27/09/2026: Kỳ hiện tại 27/09/2026: 23,4 tỷ đồng; Kỳ trước 27/08/2026: 28,9 tỷ đồng.
+Dư nợ tổng theo ngày Kỳ trướcKỳ hiện tại
 Trục ngang: Ngày/tháng — 01/09, 10/09, 20/09, 30/09
 Trục dọc: Giá trị (tỷ đồng) — 0, 1, 2, 3
-Kỳ đang xem: 2,34 tỷ · 27/09
-Kỳ trước: 2,51 tỷ · 27/08
+Tooltip khi rê vào ngày 27/09/2026: Kỳ hiện tại 27/09/2026: 2,34 tỷ đồng; Kỳ trước 27/08/2026: 2,51 tỷ đồng.
 3
 Điểm sáng · Cần lưu ý · Việc nên làm
 Điểm sáng trong kỳ
@@ -236,7 +234,7 @@ NAV so đầu kỳ
 2
 Diễn biến & phân bổ
 Tỷ lệ TK ngủ đông theo tháng 01 → 09/2026
-Tổng NAV theo ngày (số dư) Kỳ trướcKỳ đang xem
+Tổng NAV theo ngày (số dư) Kỳ trướcKỳ hiện tại
 Phân bổ NAV theo bậc
 NAV = 0208 TK
 < 10tr84 TK
@@ -359,7 +357,7 @@ Diễn biến
 Tương quan Nộp vs Rút theo thời gian NgàyTuầnTháng
 02/0906/0910/0914/0918/0922/0925/0927/09
 ■ Nộp ■ Rút (xám)
-Dòng tiền ròng luỹ kế Kỳ trướcKỳ đang xem
+Dòng tiền ròng luỹ kế Kỳ trướcKỳ hiện tại
 3
 Top KH nộp / rút ròng
 Trong 1 ngày (27/09)Trong kỳ
