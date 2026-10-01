@@ -313,21 +313,22 @@ Sau ›
 ```text
 1Chỉ tiêu nộp rút
 Tổng nộp
-17,6 / 40 tỷ
-44% KPI
+17,6 tỷ
 Tổng rút
 4,03 tỷ
-Dòng tiền ròng
+Nộp/Rút ròng
 +13,57 tỷ
-Số lượt nộp / rút
-61 / 23
-Số KH nộp / rút
+Số lượng KH nộp/rút
 38 / 17 KH
 2Diễn biến
-Tương quan Nộp vs Rút theo thời gian NgàyTuầnTháng
-02/0906/0910/0914/0918/0922/0925/0927/09
-■ Nộp ■ Rút (xám)
-Dòng tiền ròng luỹ kế Kỳ trướcKỳ hiện tại
+Nộp Rút theo thời gianNộpRút
+Số tiền (tỷ đồng)
+108642002/0906/0910/0914/0918/0922/0925/0927/09
+Ngày/tháng
+Nộp/Rút ròngDươngÂm
+Số tiền (tỷ đồng)
+1086420-202/0906/0910/0914/0918/0922/0925/0927/09
+Ngày/tháng
 3Top KH nộp / rút ròng
 Trong 1 ngày (27/09)Trong kỳ
 Top 10 KH nộp ròng

@@ -85,3 +85,10 @@ Nguồn: commit `2b9227bf933b7212a4c8014862139c22988f60ef`, kiểm kê ngày 29/
 - Phễu: 38 tài khoản mở mới → 11 tài khoản nộp tiền → 5 tài khoản giao dịch. Biểu đồ ngày cộng đủ 38 mở mới/5 active; Top TVĐT là 15/10/8/5 tài khoản.
 - Các bậc NAV trên hai màn: [0; 500 triệu), [500 triệu; 2 tỷ), [2 tỷ; 5 tỷ), [5 tỷ; 10 tỷ), từ 10 tỷ. Phân bổ tài khoản mẫu hiện hữu: 620/48/15/6/3 (tổng 692); mẫu mở mới: 36/2/0/0/0 (tổng 38). Bậc hiện hữu là phân bổ minh họa mới, không thể suy ra chính xác từ các bậc cũ.
 - Chi tiết mở mới có đủ 38 dòng mẫu, 5 Active và 33 Inactive; mặc định Active, 20 bản ghi/trang. Active là có giao dịch khớp trong kỳ; có tiền hoặc NAV dương chưa đủ để active. Các cột gồm số tài khoản, họ tên, ngày mở đầy đủ ngày/tháng/năm, NAV, GTGD CP, người quản lý. Bộ lọc trạng thái hoạt động; bộ lọc chung vẫn chưa tính lại dữ liệu mẫu.
+
+## Nộp Rút
+
+- Bốn chỉ tiêu: Tổng nộp 17,6 tỷ, Tổng rút 4,03 tỷ, Nộp/Rút ròng +13,57 tỷ, Số lượng KH nộp/rút 38/17. Bỏ thanh tiến độ và kế hoạch Tổng nộp, bỏ số lượt nộp/rút.
+- Biểu đồ Nộp Rút theo thời gian: hai cột theo ngày, không có bộ chọn Ngày/Tuần/Tháng. Nộp/Rút ròng: một cột mỗi ngày bằng nộp trừ rút, dương trên đường 0 và âm dưới đường 0; không lũy kế, không so sánh kỳ trước.
+- Các mốc tiền mẫu tạm dùng: 0/2/4/6/8/10 tỷ cho nộp-rút; −2/0/2/4/6/8/10 tỷ cho ròng. Có thể thay mốc khi được chốt. Giữ các nhãn ngày 02, 06, 10, 14, 18, 22, 25, 27 tháng 09.
+- Dữ liệu ngày là minh họa tháng 09/2026; tổng khớp ba thẻ tiền. Ngày 10/09 ròng −0,4 tỷ và 26/09 ròng −1,62 tỷ minh họa âm; ngày 27/09 nộp 9,5 tỷ, rút 0,2 tỷ. Tooltip cho biết ngày, nộp, rút và ròng; dữ liệu vẫn chưa tính lại theo bộ lọc chung.
