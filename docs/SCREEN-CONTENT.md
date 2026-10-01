@@ -1,4 +1,4 @@
-# Nội dung đầy đủ của 8 màn
+# Nội dung đầy đủ của 6 màn
 
 Nội dung và dữ liệu mẫu của giao diện. Bộ lọc chung: Kỳ báo cáo và Phạm vi dữ liệu. Các bảng có phân trang chỉ hiển thị một trang tại một thời điểm.
 
@@ -339,87 +339,4 @@ Nộp/rút ròng theo bộ phận quản lý
 Nộp ròng | Rút ròng
 Nhãn: MGxxx/RExxx - Họ tên MG/CTV; số tiền có dấu + hoặc − bên phải.
 Nội dung xếp hạng cập nhật theo bộ chọn ngày/kỳ từ cashflow-rankings.js.
-```
-
-## so-sanh-ranking
-
-```text
-1So sánh doanh số cổ phiếu giữa các đơn vị
-CộtHeatmap
-Chỉ tiêu (dạng Cột): Phí net CP ▾
-Phí net CP theo TVĐT
-1Trần Phương Anh9,1 tr
-2Nguyễn Văn Bình5,6 tr
-3Lê Thu Hà3,8 tr
-4Đỗ Minh Quân1,9 tr
-Dạng Heatmap — nhiều chỉ số × nhân viên
-TVĐT | GTGD %KPI | Phí net %KPI | Dư nợ %KPI | Mở mới %KPI | Nộp ròng | % ngủ đông |
-Trần Phương Anh | 34% | 51% | 56% | 94% | +8,4 tỷ | 41% |
-Nguyễn Văn Bình | 33% | 40% | 46% | 83% | +3,8 tỷ | 36% |
-Lê Thu Hà | 23% | 32% | 38% | 67% | +1,9 tỷ | 30% |
-Đỗ Minh Quân | 22% | 25% | 30% | 50% | −0,5 tỷ | 23% |
-Vị trí của tôi · Phí net CP
-#1 / 4 TVĐT trong phòng
-Vị trí của tôi · GTGD CP
-#1 / 4
-Vị trí của tôi · Mở mới
-#1 / 4
-2Ranking & xu hướng
-Ranking mã cổ phiếu theo GTGD CP
-1CEOHNX2,4 tỷ
-2NVLHOSE1,4 tỷ
-3HOMHNX1,2 tỷ
-4APGHOSE478 tr
-5VIBHOSE339 tr
-6HPGHOSE22 tr
-Phí net CP theo nhánh / đơn vị theo tháng
-010203040506070809
-```
-
-## doanh-so-phi-hoa-hong
-
-```text
-1Chỉ tiêu doanh số, phí net & hoa hồng
-GTGD trong kỳ
-234,2 / 800 tr
-29,3% KPI chuẩn
-GTGD BQ / ngày GD
-23,4 tr
-KH / TK phát sinh GD
-42 KH · 47 TK
-GTGD trái phiếu
-109,95 tr
-Doanh thu phí net
-10,2 / 25,8 tr
-40% KPI chuẩn
-Tỷ lệ phí bình quân
-0,09%
-Hoa hồng DỰ TÍNH
-6,8 tr
-Hoa hồng đã xác nhận
-—
-2Diễn biến doanh số, phí net & hoa hồng
-GTGD lũy kế so cùng kỳ Tháng trướcHiện tại
-GTGD từng ngày Tháng 09
-Phí net lũy kế so cùng kỳ Tháng trướcHiện tại
-Hoa hồng DỰ TÍNH lũy kế Dự tính
-3Chi tiết theo khách hàng
-Danh sách giao dịch theo KH
-Lọc chungPhân khúc: tất cả ▾
-Lọc riêngSản phẩm: Cổ phiếu ▾Chiều mua / bán ▾Ngừng GD tháng nàyKhoảng GTGD ▾
-Tìm mã / tên KH, số TK…
-Mã KH | Tên KH | TK | Nhóm KH | Sản phẩm | GTGD mua | GTGD bán | Tổng GTGD | GD gần nhất | TVĐT |
-KH0017 | Phạm Thị Vân | 0017C | HNW | Cổ phiếu | 0 | 0 | 0 | 28/08/2026 | — |
-KH0105 | Hoàng Minh Tâm | 0105C | Block Deal | Cổ phiếu | 0 | 0 | 0 | 26/08/2026 | — |
-KH0290 | Đặng Minh Khoa | 0290C | Active trade | Cổ phiếu | 0 | 0 | 0 | 21/08/2026 | — |
-4 KH khớp20 dòng/trang · ‹ 1 2 3 … ›
-Chi tiết phí & hoa hồng theo KH
-Lọc chungPhân khúc: tất cả ▾
-Lọc riêngSản phẩm ▾Loại khoản phí ▾Dự tínhĐã xác nhận
-Tìm mã / tên KH, số TK…
-Mã KH | Tên KH | Nhóm KH | GTGD cơ sở | Phí gộp | Phí trả sở | Phí net | Tỷ lệ HH | HH dự tính | Trạng thái |
-KH0001 | Triệu Hạnh Hiền | Block Deal | 96,0 tr | 4,8 tr | 0,6 tr | 4,2 tr | 67% | 2,8 tr | Dự tính |
-KH0017 | Phạm Thị Vân | HNW | 52,1 tr | 2,6 tr | 0,3 tr | 2,3 tr | 67% | 1,5 tr | Dự tính |
-KH0331 | Vũ Thị Hằng | HNW | 31,4 tr | 1,6 tr | 0,2 tr | 1,4 tr | 67% | 0,9 tr | Dự tính |
-42 KH phát sinh phí20 dòng/trang · ‹ 1 2 3 … ›
 ```
