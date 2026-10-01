@@ -155,7 +155,7 @@ MV-24133 | Margin | 20/06/2026 | 250 tr | 250 tr | 12,5% | 2,1 tr | Trong hạn 
 1Chỉ tiêu tệp hiện hữu
 TK đang quản lý
 692 TK
-KH active
+KH active (chú giải qua tooltip)
 42 KH
 Là KH có ít nhất 1 giao dịch khớp trong kỳ báo cáo.
 TK ngủ đông
@@ -163,15 +163,15 @@ TK ngủ đông
 Tổng NAV
 283,5 tỷ
 Thay đổi NAV so với đầu kỳ
-−7,7 tỷ
++7,7 tỷ
 2Diễn biến & phân bổ
 Tỷ lệ TK KH active trong kỳKỳ hiện tại
 Tỷ lệ (%)
 107,552,5001/0910/0920/0930/09
 Ngày/tháng
-Tăng trưởng NAV trong kỳKỳ trướcKỳ hiện tại
+Tăng trưởng NAV trong kỳKỳ hiện tại
 Thay đổi NAV (tỷ đồng)
-1050-5-1001/0910/0920/0930/09
+107,552,5001/0910/0920/0930/09
 Ngày/tháng
 Chi tiết phân bổ NAV
 NAV = 0208 TK

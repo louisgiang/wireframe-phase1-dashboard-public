@@ -427,6 +427,13 @@
   .customer-list-filter select{font:inherit;min-height:36px;padding:6px 30px 6px 10px;background:#fff;border:1px solid #777}
   .customer-list-filter select:focus-visible{outline:2px solid #111;outline-offset:2px}
   .existing-customer-table{min-width:1100px}
+  .active-label{display:flex;align-items:center;gap:6px}
+  .metric-help{display:inline-flex;align-items:center;justify-content:center;width:22px;height:14px;padding:0;border:0;background:none;color:#666;font:inherit;font-size:14px;cursor:help}
+  .metric-help:focus-visible{outline:2px solid #111;outline-offset:2px}
+  .metric-definition{position:fixed;z-index:1000;width:250px;max-width:calc(100vw - 16px);box-sizing:border-box;padding:10px 12px;background:#fff;border:1px solid #111;box-shadow:0 3px 12px #0002;font-size:12px;line-height:1.5;font-weight:400}
+  .hbars.active-advisor-bars .hb{grid-template-columns:150px minmax(0,1fr) 48px;min-height:30px;margin-bottom:8px;gap:12px}
+  .active-advisor-bars .hb>span:first-child,.active-advisor-bars .v{white-space:nowrap}
+  @media(max-width:600px){.hbars.active-advisor-bars .hb{grid-template-columns:120px minmax(0,1fr) 42px;gap:8px}}
 </style>
 </head>
 <body>
@@ -624,10 +631,10 @@
     <div class="sec"><span class="n">1</span><h2>Chỉ tiêu tệp hiện hữu</h2></div>
     <div class="kpis" style="grid-template-columns:repeat(5,1fr)">
       <div class="kpi"><div class="lab">TK đang quản lý</div><div class="big">692<span style="font-size:12px;color:#666;font-weight:400"> TK</span></div></div>
-      <div class="kpi"><div class="lab">KH active</div><div class="big">42<span style="font-size:12px;color:#666;font-weight:400"> KH</span></div><div class="sub2">Là KH có ít nhất 1 giao dịch khớp trong kỳ báo cáo.</div></div>
+      <div class="kpi"><div class="lab active-label">KH active <button type="button" id="active-help" class="metric-help" aria-label="Giải thích KH active" aria-describedby="active-definition">ⓘ</button></div><div class="big">42<span style="font-size:12px;color:#666;font-weight:400"> KH</span></div><div id="active-definition" class="metric-definition" role="tooltip" hidden>Là KH có ít nhất 1 giao dịch khớp trong kỳ báo cáo.</div></div>
       <div class="kpi"><div class="lab">TK ngủ đông</div><div class="big">278<span style="font-size:12px;color:#666;font-weight:400"> TK</span></div></div>
       <div class="kpi"><div class="lab">Tổng NAV</div><div class="big">283,5<span style="font-size:12px;color:#666;font-weight:400"> tỷ</span></div></div>
-      <div class="kpi"><div class="lab">Thay đổi NAV so với đầu kỳ</div><div class="big">−7,7<span style="font-size:12px;color:#666;font-weight:400"> tỷ</span></div></div>
+      <div class="kpi"><div class="lab">Thay đổi NAV so với đầu kỳ</div><div class="big">+7,7<span style="font-size:12px;color:#666;font-weight:400"> tỷ</span></div></div>
     </div>
     <div class="sec"><span class="n">2</span><h2>Diễn biến &amp; phân bổ</h2></div>
     <div class="g2">
@@ -639,10 +646,10 @@
         </div></div><div class="axis-caption">Ngày/tháng</div>
       </div>
       <div class="chart customer-time-chart" data-customer-chart="nav">
-        <div class="ct">Tăng trưởng NAV trong kỳ<span class="leg"><span><i class="d" style="background:#999"></i>Kỳ trước</span><span><i class="d" style="background:#111"></i>Kỳ hiện tại</span></span></div>
+        <div class="ct">Tăng trưởng NAV trong kỳ<span class="leg"><span><i class="d" style="background:#111"></i>Kỳ hiện tại</span></span></div>
         <div class="axis-unit">Thay đổi NAV (tỷ đồng)</div>
         <div class="axis-frame"><div class="plot" tabindex="0" role="group" aria-label="Tăng trưởng NAV trong kỳ. Trục ngang: ngày tháng. Trục dọc: Thay đổi NAV (tỷ đồng).">
-          <svg viewBox="0 0 300 150" preserveAspectRatio="none" aria-hidden="true"><polyline class="previous" fill="none" stroke="#999" stroke-width="2" stroke-dasharray="4 3"/><polyline class="current" fill="none" stroke="#111" stroke-width="2.5"/></svg><span class="y-tick" style="top:0.0%">10</span><span class="y-tick" style="top:25.0%">5</span><span class="y-tick" style="top:50.0%">0</span><span class="y-tick" style="top:75.0%">-5</span><span class="y-tick" style="top:100.0%">-10</span><span class="x-tick" style="left:0.0%">01/09</span><span class="x-tick" style="left:31.03448275862069%">10/09</span><span class="x-tick" style="left:65.51724137931035%">20/09</span><span class="x-tick" style="left:100.0%">30/09</span>
+          <svg viewBox="0 0 300 150" preserveAspectRatio="none" aria-hidden="true"><polyline class="current" fill="none" stroke="#111" stroke-width="2.5"/></svg><span class="y-tick" style="top:0.0%">10</span><span class="y-tick" style="top:25.0%">7,5</span><span class="y-tick" style="top:50.0%">5</span><span class="y-tick" style="top:75.0%">2,5</span><span class="y-tick" style="top:100.0%">0</span><span class="x-tick" style="left:0.0%">01/09</span><span class="x-tick" style="left:31.03448275862069%">10/09</span><span class="x-tick" style="left:65.51724137931035%">20/09</span><span class="x-tick" style="left:100.0%">30/09</span>
         </div></div><div class="axis-caption">Ngày/tháng</div>
       </div>
     </div>
@@ -651,7 +658,7 @@
         <div class="hbars"><div class="hb"><span>NAV = 0</span><span class="t"><i style="width:30%"></i></span><span class="v">208 TK</span></div><div class="hb"><span>&lt; 10tr</span><span class="t"><i style="width:12%"></i></span><span class="v">84 TK</span></div><div class="hb"><span>10–100tr</span><span class="t"><i style="width:26%"></i></span><span class="v">180 TK</span></div><div class="hb"><span>100tr–1 tỷ</span><span class="t"><i style="width:22%"></i></span><span class="v">152 TK</span></div><div class="hb"><span>≥ 1 tỷ</span><span class="t"><i style="width:10%"></i></span><span class="v">68 TK</span></div></div>
       </div>
       <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Tỷ lệ KH active theo TVĐT</div>
-        <div class="hbars"><div class="hb"><span>Trần Phương Anh</span><span class="t"><i style="width:11.11%"></i></span><span class="v">11,1%</span></div><div class="hb"><span>Nguyễn Văn Bình</span><span class="t"><i style="width:8%"></i></span><span class="v">8%</span></div><div class="hb"><span>Lê Thu Hà</span><span class="t"><i style="width:7%"></i></span><span class="v">7%</span></div><div class="hb"><span>Đỗ Minh Quân</span><span class="t"><i style="width:4.29%"></i></span><span class="v">4,3%</span></div></div>
+        <div class="hbars active-advisor-bars"><div class="hb"><span>Trần Phương Anh</span><span class="t"><i style="width:11.11%"></i></span><span class="v">11,1%</span></div><div class="hb"><span>Nguyễn Văn Bình</span><span class="t"><i style="width:8%"></i></span><span class="v">8%</span></div><div class="hb"><span>Lê Thu Hà</span><span class="t"><i style="width:7%"></i></span><span class="v">7%</span></div><div class="hb"><span>Đỗ Minh Quân</span><span class="t"><i style="width:4.29%"></i></span><span class="v">4,3%</span></div></div>
       </div>
     </div>
     <div class="sec"><span class="n">3</span><h2>Danh sách KH hiện hữu</h2></div>
