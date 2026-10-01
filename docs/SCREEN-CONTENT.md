@@ -329,44 +329,16 @@ Nộp/Rút ròngDươngÂm
 Số tiền (tỷ đồng)
 1086420-202/0906/0910/0914/0918/0922/0925/0927/09
 Ngày/tháng
-3Top KH nộp / rút ròng
-Trong 1 ngày (27/09)Trong kỳ
+3
+Top KH nộp / rút ròng
+Trong ngày (27/09) | Trong kỳ
 Top 10 KH nộp ròng
-1Triệu Hạnh HiềnBlock7,92 tỷ
-2Phạm Thị VânHNW4,50 tỷ
-3Nguyễn Minh SangUHNW1,15 tỷ
 Top 10 KH rút ròng
-1Lương Quốc BảoBlock1,62 tỷ
-2Phạm Đức HiềnHNW1,05 tỷ
-3Phan Văn SơnUHNW0,88 tỷ
-4Ngô Thị HạnhHVT0,48 tỷ
-Nộp / Rút ròng theo bộ phận quản lý
-Trần Phương Anh+8,40 tỷ
-Nguyễn Văn Bình+3,80 tỷ
-Lê Thu Hà+1,85 tỷ
-Đỗ Minh Quân−0,48 tỷ
-Giao dịch nộp/rút lớn nhất
-Khách hàng | Ngày | Loại | Số tiền |
-Triệu Hạnh Hiền | 27/09 | Nộp | 5,00 tỷ |
-Phạm Thị Vân | 27/09 | Nộp | 4,50 tỷ |
-Lương Quốc Bảo | 26/09 | Rút | 1,62 tỷ |
-Tỷ lệ KH nộp ròng / rút ròng
-Nộp ròng38 KH · 69%
-Rút ròng17 KH · 31%
-4KH tiền chờ & bảng tổng hợp
-6 KH tiền chờ — nộp nhưng chưa GD
-1Lê Chí CôngActive2,1 tỷ
-2Vũ Toàn ThắngBlock1,2 tỷ
-3Đinh Văn XuânActive560 tr
-Hành động
-Mở 6 KH →
-LọcNộp ròngRút ròngTiền chờKhoảng giá trị ▾
-Tìm mã / tên KH, số TK…
-Mã KH | Tên KH | TK | Tổng nộp | Tổng rút | Net | Phát sinh gần nhất | GD gần nhất | TVĐT |
-KH0001 | Triệu Hạnh Hiền | 0001C | 7,92 tỷ | 0 | +7,92 tỷ | 27/09 | 27/09 | Trần Phương Anh |
-KH0017 | Phạm Thị Vân | 0017C | 4,50 tỷ | 0 | +4,50 tỷ | 27/09 | 28/08 | Trần Phương Anh |
-KH0452 | Lương Quốc Bảo | 0452C | 0 | 1,62 tỷ | −1,62 tỷ | 26/09 | 26/09 | Nguyễn Văn Bình |
-55 KH có phát sinh20 dòng/trang
+Nhãn: 069Cxxxxxx - Họ tên KH; số tiền bên phải.
+Nộp/rút ròng theo bộ phận quản lý
+Nộp ròng | Rút ròng
+Nhãn: MGxxx/RExxx - Họ tên MG/CTV; số tiền có dấu + hoặc − bên phải.
+Nội dung xếp hạng cập nhật theo bộ chọn ngày/kỳ từ cashflow-rankings.js.
 ```
 
 ## so-sanh-ranking

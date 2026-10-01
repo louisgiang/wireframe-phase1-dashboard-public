@@ -92,3 +92,11 @@ Nguồn: commit `2b9227bf933b7212a4c8014862139c22988f60ef`, kiểm kê ngày 29/
 - Biểu đồ Nộp Rút theo thời gian: hai cột theo ngày, không có bộ chọn Ngày/Tuần/Tháng. Nộp/Rút ròng: một cột mỗi ngày bằng nộp trừ rút, dương trên đường 0 và âm dưới đường 0; không lũy kế, không so sánh kỳ trước.
 - Các mốc tiền mẫu tạm dùng: 0/2/4/6/8/10 tỷ cho nộp-rút; −2/0/2/4/6/8/10 tỷ cho ròng. Có thể thay mốc khi được chốt. Giữ các nhãn ngày 02, 06, 10, 14, 18, 22, 25, 27 tháng 09.
 - Dữ liệu ngày là minh họa tháng 09/2026; tổng khớp ba thẻ tiền. Ngày 10/09 ròng −0,4 tỷ và 26/09 ròng −1,62 tỷ minh họa âm; ngày 27/09 nộp 9,5 tỷ, rút 0,2 tỷ. Tooltip cho biết ngày, nộp, rút và ròng; dữ liệu vẫn chưa tính lại theo bộ lọc chung.
+
+## Xếp hạng Nộp/Rút
+
+- Hai biểu đồ Top 10 KH nộp ròng/rút ròng giữ dạng thanh ngang; bên trái số tài khoản 069Cxxxxxx - họ tên, bên phải số tiền. Mỗi biểu đồ hiển thị tối đa 10 khách hàng thực sự có số ròng cùng dấu; không thêm khách hàng giá trị 0 để đủ 10.
+- Bộ chọn Trong ngày (27/09)/Trong kỳ hoạt động, mặc định trong ngày; áp dụng đồng thời cho bốn biểu đồ xếp hạng. Mẫu trong kỳ có 10 khách hàng mỗi phía; mẫu ngày có 2 khách hàng nộp ròng và 4 khách hàng rút ròng.
+- Phần quản lý chia hai biểu đồ Nộp ròng và Rút ròng. Nhãn MG/RE - họ tên; số tiền mang dấu + hoặc −. Cộng số ròng của khách hàng theo người quản lý, rồi chia nhóm theo dấu; không xếp một người vào cả hai nhóm trong cùng kỳ.
+- Dữ liệu minh họa mới tính bằng triệu đồng: toàn kỳ nộp 17.600, rút 4.030, ròng 13.570; ngày 27/09 nộp 9.500, rút 200, ròng 9.300, khớp biểu đồ diễn biến. Các tài khoản/ràng buộc quản lý bổ sung là mẫu; chưa tính lại theo bộ lọc chung.
+- Bỏ Giao dịch nộp/rút lớn nhất, Tỷ lệ KH nộp ròng/rút ròng và toàn bộ mục 4 KH tiền chờ & bảng tổng hợp.
