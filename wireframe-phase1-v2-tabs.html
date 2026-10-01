@@ -373,17 +373,17 @@
 
 
   /* Overview charts: date axis and value axis in billion VND. */
-  .overview-time-chart .ct{flex-wrap:wrap;gap:8px}
-  .overview-time-chart .axis-unit{font-size:10px;color:var(--mut);margin:14px 0 8px}
-  .overview-time-chart .axis-frame{padding:0 15px 0 30px}
-  .overview-time-chart .plot{height:180px;margin:0 0 27px;overflow:visible}
-  .overview-time-chart .y-tick{position:absolute;right:calc(100% + 8px);transform:translateY(-50%);font-size:10px;color:var(--mut);line-height:1;white-space:nowrap}
-  .overview-time-chart .x-tick{position:absolute;top:calc(100% + 9px);transform:translateX(-50%);font-size:10px;color:var(--mut);line-height:1;white-space:nowrap}
-  .overview-time-chart .axis-caption{font-size:10px;text-align:center;color:var(--mut)}
+  :is(.overview-time-chart,.customer-time-chart) .ct{flex-wrap:wrap;gap:8px}
+  :is(.overview-time-chart,.customer-time-chart) .axis-unit{font-size:10px;color:var(--mut);margin:14px 0 8px}
+  :is(.overview-time-chart,.customer-time-chart) .axis-frame{padding:0 15px 0 30px}
+  :is(.overview-time-chart,.customer-time-chart) .plot{height:180px;margin:0 0 27px;overflow:visible}
+  :is(.overview-time-chart,.customer-time-chart) .y-tick{position:absolute;right:calc(100% + 8px);transform:translateY(-50%);font-size:10px;color:var(--mut);line-height:1;white-space:nowrap}
+  :is(.overview-time-chart,.customer-time-chart) .x-tick{position:absolute;top:calc(100% + 9px);transform:translateX(-50%);font-size:10px;color:var(--mut);line-height:1;white-space:nowrap}
+  :is(.overview-time-chart,.customer-time-chart) .axis-caption{font-size:10px;text-align:center;color:var(--mut)}
 
 
-  .overview-time-chart .plot{cursor:crosshair}
-  .overview-time-chart .plot:focus-visible{outline:2px solid #555;outline-offset:5px}
+  :is(.overview-time-chart,.customer-time-chart) .plot{cursor:crosshair}
+  :is(.overview-time-chart,.customer-time-chart) .plot:focus-visible{outline:2px solid #555;outline-offset:5px}
   .chart-tooltip{position:absolute;z-index:20;pointer-events:none;box-sizing:border-box;max-width:calc(100% - 16px);padding:10px 12px;background:#fff;border:1px solid #111;box-shadow:0 3px 12px #0002;font-size:11px;line-height:1.5}
   .tooltip-day{display:block;margin-bottom:6px}
   .tooltip-row{display:grid;grid-template-columns:8px minmax(0,1fr) auto;gap:7px;align-items:center;margin-top:4px}
@@ -640,31 +640,35 @@
   <div class="body">
     <div class="sec"><span class="n">1</span><h2>Chỉ tiêu tệp hiện hữu</h2></div>
     <div class="kpis" style="grid-template-columns:repeat(5,1fr)">
-      <div class="kpi"><div class="lab">TK đang quản lý</div><div class="big">692<span style="font-size:12px;color:#666;font-weight:400"> TK</span></div><div class="sub2">500 KH</div></div>
-      <div class="kpi"><div class="lab">KH active</div><div class="big">42<span style="font-size:12px;color:#666;font-weight:400"> KH · 8,4%</span></div></div>
-      <div class="kpi"><div class="lab">TK ngủ đông</div><div class="big">278<span style="font-size:12px;color:#666;font-weight:400"> TK · 40,2%</span></div></div>
+      <div class="kpi"><div class="lab">TK đang quản lý</div><div class="big">692<span style="font-size:12px;color:#666;font-weight:400"> TK</span></div></div>
+      <div class="kpi"><div class="lab">KH active</div><div class="big">42<span style="font-size:12px;color:#666;font-weight:400"> KH</span></div><div class="sub2">Là KH có ít nhất 1 giao dịch khớp trong kỳ báo cáo.</div></div>
+      <div class="kpi"><div class="lab">TK ngủ đông</div><div class="big">278<span style="font-size:12px;color:#666;font-weight:400"> TK</span></div></div>
       <div class="kpi"><div class="lab">Tổng NAV</div><div class="big">283,5<span style="font-size:12px;color:#666;font-weight:400"> tỷ</span></div></div>
-      <div class="kpi"><div class="lab">NAV so đầu kỳ</div><div class="big">−7,7<span style="font-size:12px;color:#666;font-weight:400"> tỷ · −2,6%</span></div></div>
+      <div class="kpi"><div class="lab">Thay đổi NAV so với đầu kỳ</div><div class="big">−7,7<span style="font-size:12px;color:#666;font-weight:400"> tỷ</span></div></div>
     </div>
     <div class="sec"><span class="n">2</span><h2>Diễn biến &amp; phân bổ</h2></div>
     <div class="g2">
-      <div class="chart">
-        <div class="ct">Tỷ lệ TK ngủ đông theo tháng <span class="leg"><span><i class="d" style="background:#111"></i>01 → 09/2026</span></span></div>
-        <div class="plot"><svg viewBox="0 0 300 150" preserveAspectRatio="none">
-          <polyline points="0,110 50,100 100,92 150,80 200,66 250,56 300,48" fill="none" stroke="#111" stroke-width="2.5"/></svg></div>
+      <div class="chart customer-time-chart" data-customer-chart="active">
+        <div class="ct">Tỷ lệ TK KH active trong kỳ<span class="leg"><span><i class="d" style="background:#111"></i>Kỳ hiện tại</span></span></div>
+        <div class="axis-unit">Tỷ lệ (%)</div>
+        <div class="axis-frame"><div class="plot" tabindex="0" role="group" aria-label="Tỷ lệ TK KH active trong kỳ. Trục ngang: ngày tháng. Trục dọc: Tỷ lệ (%).">
+          <svg viewBox="0 0 300 150" preserveAspectRatio="none" aria-hidden="true"><polyline class="current" fill="none" stroke="#111" stroke-width="2.5"/></svg><span class="y-tick" style="top:0.0%">10</span><span class="y-tick" style="top:25.0%">7,5</span><span class="y-tick" style="top:50.0%">5</span><span class="y-tick" style="top:75.0%">2,5</span><span class="y-tick" style="top:100.0%">0</span><span class="x-tick" style="left:0.0%">01/09</span><span class="x-tick" style="left:31.03448275862069%">10/09</span><span class="x-tick" style="left:65.51724137931035%">20/09</span><span class="x-tick" style="left:100.0%">30/09</span>
+        </div></div><div class="axis-caption">Ngày/tháng</div>
       </div>
-      <div class="chart">
-        <div class="ct">Tổng NAV theo ngày (số dư) <span class="leg"><span><i class="d" style="background:#bbb"></i>Kỳ trước</span><span><i class="d" style="background:#111"></i>Kỳ hiện tại</span></span></div>
-        <div class="plot"><svg viewBox="0 0 300 150" preserveAspectRatio="none"><polyline points="0,60 60,58 120,56 180,54 240,52 300,50" fill="none" stroke="#bbb" stroke-width="2" stroke-dasharray="4 3"/>
-          <polyline points="0,62 50,64 100,68 150,70 200,72 240,72" fill="none" stroke="#111" stroke-width="2.5"/></svg></div>
+      <div class="chart customer-time-chart" data-customer-chart="nav">
+        <div class="ct">Tăng trưởng NAV trong kỳ<span class="leg"><span><i class="d" style="background:#999"></i>Kỳ trước</span><span><i class="d" style="background:#111"></i>Kỳ hiện tại</span></span></div>
+        <div class="axis-unit">Thay đổi NAV (tỷ đồng)</div>
+        <div class="axis-frame"><div class="plot" tabindex="0" role="group" aria-label="Tăng trưởng NAV trong kỳ. Trục ngang: ngày tháng. Trục dọc: Thay đổi NAV (tỷ đồng).">
+          <svg viewBox="0 0 300 150" preserveAspectRatio="none" aria-hidden="true"><polyline class="previous" fill="none" stroke="#999" stroke-width="2" stroke-dasharray="4 3"/><polyline class="current" fill="none" stroke="#111" stroke-width="2.5"/></svg><span class="y-tick" style="top:0.0%">10</span><span class="y-tick" style="top:25.0%">5</span><span class="y-tick" style="top:50.0%">0</span><span class="y-tick" style="top:75.0%">-5</span><span class="y-tick" style="top:100.0%">-10</span><span class="x-tick" style="left:0.0%">01/09</span><span class="x-tick" style="left:31.03448275862069%">10/09</span><span class="x-tick" style="left:65.51724137931035%">20/09</span><span class="x-tick" style="left:100.0%">30/09</span>
+        </div></div><div class="axis-caption">Ngày/tháng</div>
       </div>
     </div>
     <div class="g2" style="margin-top:12px">
-      <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Phân bổ NAV theo bậc</div>
+      <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Chi tiết phân bổ NAV</div>
         <div class="hbars"><div class="hb"><span>NAV = 0</span><span class="t"><i style="width:30%"></i></span><span class="v">208 TK</span></div><div class="hb"><span>&lt; 10tr</span><span class="t"><i style="width:12%"></i></span><span class="v">84 TK</span></div><div class="hb"><span>10–100tr</span><span class="t"><i style="width:26%"></i></span><span class="v">180 TK</span></div><div class="hb"><span>100tr–1 tỷ</span><span class="t"><i style="width:22%"></i></span><span class="v">152 TK</span></div><div class="hb"><span>≥ 1 tỷ</span><span class="t"><i style="width:10%"></i></span><span class="v">68 TK</span></div></div>
       </div>
-      <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Tỷ lệ TK ngủ đông theo TVĐT</div>
-        <div class="hbars"><div class="hb"><span>Trần Phương Anh</span><span class="t"><i style="width:100%"></i></span><span class="v">41% ngủ đông</span></div><div class="hb"><span>Nguyễn Văn Bình</span><span class="t"><i style="width:88%"></i></span><span class="v">36%</span></div><div class="hb"><span>Lê Thu Hà</span><span class="t"><i style="width:72%"></i></span><span class="v">30%</span></div><div class="hb"><span>Đỗ Minh Quân</span><span class="t"><i style="width:55%"></i></span><span class="v">23%</span></div></div>
+      <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Tỷ lệ KH active theo TVĐT</div>
+        <div class="hbars"><div class="hb"><span>Trần Phương Anh</span><span class="t"><i style="width:11.11%"></i></span><span class="v">11,1%</span></div><div class="hb"><span>Nguyễn Văn Bình</span><span class="t"><i style="width:8%"></i></span><span class="v">8%</span></div><div class="hb"><span>Lê Thu Hà</span><span class="t"><i style="width:7%"></i></span><span class="v">7%</span></div><div class="hb"><span>Đỗ Minh Quân</span><span class="t"><i style="width:4.29%"></i></span><span class="v">4,3%</span></div></div>
       </div>
     </div>
     <div class="sec"><span class="n">3</span><h2>Danh sách KH hiện hữu</h2></div>
@@ -1004,6 +1008,7 @@
 
 <script src="dashboard-filters.js"></script>
 <script src="overview-chart-tooltips.js"></script>
+<script src="customer-charts.js"></script>
 <script>
 (() => {
   const tabs = [...document.querySelectorAll('.app-tab')];

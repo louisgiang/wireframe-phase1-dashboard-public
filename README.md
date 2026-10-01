@@ -63,3 +63,10 @@ Nguồn: commit `2b9227bf933b7212a4c8014862139c22988f60ef`, kiểm kê ngày 29/
 - Bổ sung dữ liệu minh họa cho số khách hàng quản lý (180/150/100/70, tổng 500), số tài khoản, NAV và hai khách hàng xếp hạng thứ 4–5. Danh sách khách hàng là các dòng mẫu, không phải toàn bộ danh mục để cộng thành tổng kỳ. Phí net mỗi dòng bằng doanh thu phí trừ phí trả sở. Các bảng ở tab khác giữ bộ mẫu riêng.
 
 - Xếp hạng Doanh số: mã – tên bên trái, thanh tỷ lệ ở giữa, số tiền bên phải trên cùng hàng. Thanh tỷ lệ giữ mức phí cao nhất của từng nhóm làm mốc 100%.
+
+## Cập nhật khách hàng hiện hữu
+
+- Thẻ chỉ tiêu bỏ dòng 500 KH và các tỷ lệ phụ; KH active là khách hàng có ít nhất một giao dịch khớp trong kỳ báo cáo.
+- Biểu đồ tỷ lệ tài khoản active dùng trục phần trăm theo ngày; số tài khoản có giao dịch khớp từ đầu kỳ đến ngày đang xem chia 692 tài khoản quản lý. Dữ liệu mẫu kết thúc ngày 27/09 với 48 tài khoản (6,94%), thuộc 42 khách hàng active; không đồng nhất số khách hàng với số tài khoản.
+- Tăng trưởng NAV là NAV tại ngày đang xem trừ NAV đầu kỳ của từng kỳ, đơn vị tỷ đồng. Kỳ hiện tại từ 291,2 tỷ đầu kỳ xuống 283,5 tỷ ngày 27/09, thay đổi −7,7 tỷ. Có đường so sánh kỳ trước; các điểm hàng ngày là dữ liệu minh họa, không tính lại theo bộ lọc.
+- Tỷ lệ KH active theo TVĐT dùng mẫu 20/180, 12/150, 7/100 và 3/70, tổng 42/500 khách hàng. Không lấy một trừ tỷ lệ ngủ đông do hai chỉ tiêu khác định nghĩa và đơn vị đếm.

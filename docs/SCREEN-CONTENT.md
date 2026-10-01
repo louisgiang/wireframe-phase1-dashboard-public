@@ -209,56 +209,53 @@ Nhắc KH có lãi + phí dồn tích lớn.Lọc 3 KH →
 
 ## kh-hien-huu
 
+Bộ lọc chung: Kỳ báo cáo và Phạm vi dữ liệu.
+
 ```text
-Kỳ báo cáo
-Từ ngày: ngày 01 tháng hiện tại
-Đến ngày: ngày hiện tại
-Phạm vi dữ liệu
-MG1268 - Trần Phương Anh
-1
-Chỉ tiêu tệp hiện hữu
+1Chỉ tiêu tệp hiện hữu
 TK đang quản lý
 692 TK
-500 KH
 KH active
-42 KH · 8,4%
+42 KH
+Là KH có ít nhất 1 giao dịch khớp trong kỳ báo cáo.
 TK ngủ đông
-278 TK · 40,2%
+278 TK
 Tổng NAV
 283,5 tỷ
-NAV so đầu kỳ
-−7,7 tỷ · −2,6%
-2
-Diễn biến & phân bổ
-Tỷ lệ TK ngủ đông theo tháng 01 → 09/2026
-Tổng NAV theo ngày (số dư) Kỳ trướcKỳ hiện tại
-Phân bổ NAV theo bậc
+Thay đổi NAV so với đầu kỳ
+−7,7 tỷ
+2Diễn biến & phân bổ
+Tỷ lệ TK KH active trong kỳKỳ hiện tại
+Tỷ lệ (%)
+107,552,5001/0910/0920/0930/09
+Ngày/tháng
+Tăng trưởng NAV trong kỳKỳ trướcKỳ hiện tại
+Thay đổi NAV (tỷ đồng)
+1050-5-1001/0910/0920/0930/09
+Ngày/tháng
+Chi tiết phân bổ NAV
 NAV = 0208 TK
 < 10tr84 TK
 10–100tr180 TK
 100tr–1 tỷ152 TK
 ≥ 1 tỷ68 TK
-Tỷ lệ TK ngủ đông theo TVĐT
-Trần Phương Anh41% ngủ đông
-Nguyễn Văn Bình36%
-Lê Thu Hà30%
-Đỗ Minh Quân23%
-3
-Danh sách KH hiện hữu
+Tỷ lệ KH active theo TVĐT
+Trần Phương Anh11,1%
+Nguyễn Văn Bình8%
+Lê Thu Hà7%
+Đỗ Minh Quân4,3%
+3Danh sách KH hiện hữu
 LọcActiveNgủ đông ✕Chưa GD ≥ N ngàyBậc NAV ▾NAV giảm > 10%
 Tìm mã / tên KH, số TK…
-| Mã KH | Tên KH | Số TK | Trạng thái | GD gần nhất | NAV 01/09 | NAV 27/09 | Chênh lệch | GTGD kỳ | TVĐT
-| KH0412 | Lê Văn Hòa | 1 | Ngủ đông | 02/05/2026 | 3,4 tr | 3,1 tr | −0,3 tr | 0 | Trần Phương Anh
-| KH0877 | Trần Thị Mai | 2 | Ngủ đông | 18/04/2026 | 1,4 tr | 1,4 tr | 0 | 0 | Lê Thu Hà
-| KH1033 | Ngô Quốc Bảo | 1 | Ngủ đông | 27/05/2026 | 9,1 tr | 8,9 tr | −0,2 tr | 0 | Nguyễn Văn Bình
+Mã KH | Tên KH | Số TK | Trạng thái | GD gần nhất | NAV 01/09 | NAV 27/09 | Chênh lệch | GTGD kỳ | TVĐT |
+KH0412 | Lê Văn Hòa | 1 | Ngủ đông | 02/05/2026 | 3,4 tr | 3,1 tr | −0,3 tr | 0 | Trần Phương Anh |
+KH0877 | Trần Thị Mai | 2 | Ngủ đông | 18/04/2026 | 1,4 tr | 1,4 tr | 0 | 0 | Lê Thu Hà |
+KH1033 | Ngô Quốc Bảo | 1 | Ngủ đông | 27/05/2026 | 9,1 tr | 8,9 tr | −0,2 tr | 0 | Nguyễn Văn Bình |
 278 TK khớp20 dòng/trang
-Điểm sáng
-31/42 KH active có NAV ≥ 1 tỷ — tệp chất lượng.
-Cần lưu ý
-Tỷ lệ ngủ đông tăng từ 30% lên 40% trong 9 tháng.
+Điểm sáng31/42 KH active có NAV ≥ 1 tỷ — tệp chất lượng.
+Cần lưu ýTỷ lệ ngủ đông tăng từ 30% lên 40% trong 9 tháng.
 14 KH giảm NAV > 10% trong kỳ.
-Việc nên làm
-Chăm KH NAV lớn đang nằm im.Lọc 23 KH →
+Việc nên làmChăm KH NAV lớn đang nằm im.Lọc 23 KH →
 Xem KH giảm NAV mạnh.Lọc 14 KH →
 ```
 
