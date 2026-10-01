@@ -434,6 +434,20 @@
   .hbars.active-advisor-bars .hb{grid-template-columns:150px minmax(0,1fr) 48px;min-height:30px;margin-bottom:8px;gap:12px}
   .active-advisor-bars .hb>span:first-child,.active-advisor-bars .v{white-space:nowrap}
   @media(max-width:600px){.hbars.active-advisor-bars .hb{grid-template-columns:120px minmax(0,1fr) 42px;gap:8px}}
+  .hbars.nav-bands .hb{grid-template-columns:145px minmax(0,1fr) 55px;min-height:26px;gap:10px}
+  .nav-bands .hb>span:first-child{white-space:nowrap}
+  .new-customer-trend .ct{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  .new-trend-scroll{overflow-x:auto;margin-top:18px}
+  .new-trend-grid{display:grid;grid-template-columns:repeat(10,minmax(55px,1fr));gap:24px;min-width:766px}
+  .new-day{text-align:center;font-size:10px;color:var(--mut)}
+  .new-day-bars{height:130px;display:flex;align-items:flex-end;justify-content:center;gap:2px;border-bottom:1px solid #ccc;margin-bottom:8px}
+  .new-day-bars i{display:block;width:12px;flex:none;background:#111}
+  .new-day-bars i.active{background:#bbb}
+  .new-customer-funnel .ct{font-size:12px;font-weight:700;margin-bottom:14px}
+  .new-customer-funnel .fstep{grid-template-columns:85px minmax(0,1fr) 60px}
+  .new-customer-funnel .fr{grid-column:3;text-align:right}
+  .new-customer-table{min-width:850px}
+  @media(max-width:600px){.hbars.nav-bands .hb{grid-template-columns:125px minmax(0,1fr) 45px;gap:8px}}
 </style>
 </head>
 <body>
@@ -450,7 +464,7 @@
 
     <button type="button" class="app-tab" id="tab-du-no-mon-vay" role="tab" aria-controls="du-no-mon-vay" aria-selected="false" tabindex="-1">Dư nợ &amp; Món vay</button>
     <button type="button" class="app-tab" id="tab-kh-hien-huu" role="tab" aria-controls="kh-hien-huu" aria-selected="false" tabindex="-1">KH hiện hữu</button>
-    <button type="button" class="app-tab" id="tab-mo-moi" role="tab" aria-controls="mo-moi" aria-selected="false" tabindex="-1">Mở mới</button>
+    <button type="button" class="app-tab" id="tab-mo-moi" role="tab" aria-controls="mo-moi" aria-selected="false" tabindex="-1">KH mở mới</button>
     <button type="button" class="app-tab" id="tab-nop-rut" role="tab" aria-controls="nop-rut" aria-selected="false" tabindex="-1">Nộp rút</button>
     <button type="button" class="app-tab" id="tab-so-sanh-ranking" role="tab" aria-controls="so-sanh-ranking" aria-selected="false" tabindex="-1">So sánh &amp; Ranking CP</button>
     <button type="button" class="app-tab" id="tab-doanh-so-phi-hoa-hong" role="tab" aria-controls="doanh-so-phi-hoa-hong" aria-selected="false" tabindex="-1">Doanh số, phí net &amp; hoa hồng</button>
@@ -630,12 +644,12 @@
   <div class="body">
     <div class="sec"><span class="n">1</span><h2>Chỉ tiêu tệp hiện hữu</h2></div>
     <div class="kpis" style="grid-template-columns:repeat(5,1fr)">
-      <div class="kpi"><div class="lab">TK đang quản lý</div><div class="big">692<span style="font-size:12px;color:#666;font-weight:400"> TK</span></div></div>
-      <div class="kpi"><div class="lab active-label">KH active <button type="button" id="active-help" class="metric-help" aria-label="Giải thích KH active" aria-describedby="active-definition">ⓘ</button></div><div class="big">42<span style="font-size:12px;color:#666;font-weight:400"> KH</span></div><div id="active-definition" class="metric-definition" role="tooltip" hidden>Là KH có ít nhất 1 giao dịch khớp trong kỳ báo cáo.</div></div>
-      <div class="kpi"><div class="lab">TK ngủ đông</div><div class="big">278<span style="font-size:12px;color:#666;font-weight:400"> TK</span></div></div>
+      <div class="kpi"><div class="lab">Số KH hiện hữu</div><div class="big">500<span style="font-size:12px;color:#666;font-weight:400"> KH</span></div></div>
+      <div class="kpi"><div class="lab active-label">Số KH active <button type="button" id="active-help" class="metric-help" aria-label="Giải thích KH active" aria-describedby="active-definition">ⓘ</button></div><div class="big">42<span style="font-size:12px;color:#666;font-weight:400"> KH</span></div><div id="active-definition" class="metric-definition" role="tooltip" hidden>Là KH có ít nhất 1 giao dịch khớp trong kỳ báo cáo.</div></div>
+
       <div class="kpi"><div class="lab">Tổng NAV</div><div class="big">283,5<span style="font-size:12px;color:#666;font-weight:400"> tỷ</span></div></div>
       <div class="kpi"><div class="lab">Thay đổi NAV so với đầu kỳ</div><div class="big">+7,7<span style="font-size:12px;color:#666;font-weight:400"> tỷ</span></div></div>
-    </div>
+    <div class="kpi"><div class="lab">Dư nợ</div><div class="big">2,34<span style="font-size:12px;color:#666;font-weight:400"> tỷ</span></div></div></div>
     <div class="sec"><span class="n">2</span><h2>Diễn biến &amp; phân bổ</h2></div>
     <div class="g2">
       <div class="chart customer-time-chart" data-customer-chart="active">
@@ -655,7 +669,7 @@
     </div>
     <div class="g2" style="margin-top:12px">
       <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Chi tiết phân bổ NAV</div>
-        <div class="hbars"><div class="hb"><span>NAV = 0</span><span class="t"><i style="width:30%"></i></span><span class="v">208 TK</span></div><div class="hb"><span>&lt; 10tr</span><span class="t"><i style="width:12%"></i></span><span class="v">84 TK</span></div><div class="hb"><span>10–100tr</span><span class="t"><i style="width:26%"></i></span><span class="v">180 TK</span></div><div class="hb"><span>100tr–1 tỷ</span><span class="t"><i style="width:22%"></i></span><span class="v">152 TK</span></div><div class="hb"><span>≥ 1 tỷ</span><span class="t"><i style="width:10%"></i></span><span class="v">68 TK</span></div></div>
+        <div class="hbars nav-bands"><div class="hb"><span>0 đến &lt;500 tr</span><span class="t"><i style="width:89.60%"></i></span><span class="v">620 TK</span></div><div class="hb"><span>500tr đến &lt;2 tỷ</span><span class="t"><i style="width:6.94%"></i></span><span class="v">48 TK</span></div><div class="hb"><span>2 tỷ đến &lt;5 tỷ</span><span class="t"><i style="width:2.17%"></i></span><span class="v">15 TK</span></div><div class="hb"><span>5 tỷ đến &lt;10 tỷ</span><span class="t"><i style="width:0.87%"></i></span><span class="v">6 TK</span></div><div class="hb"><span>10 tỷ trở lên</span><span class="t"><i style="width:0.43%"></i></span><span class="v">3 TK</span></div></div>
       </div>
       <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Tỷ lệ KH active theo TVĐT</div>
         <div class="hbars active-advisor-bars"><div class="hb"><span>Trần Phương Anh</span><span class="t"><i style="width:11.11%"></i></span><span class="v">11,1%</span></div><div class="hb"><span>Nguyễn Văn Bình</span><span class="t"><i style="width:8%"></i></span><span class="v">8%</span></div><div class="hb"><span>Lê Thu Hà</span><span class="t"><i style="width:7%"></i></span><span class="v">7%</span></div><div class="hb"><span>Đỗ Minh Quân</span><span class="t"><i style="width:4.29%"></i></span><span class="v">4,3%</span></div></div>
@@ -702,61 +716,51 @@
 
 <!-- ==================== MỞ MỚI ==================== -->
 <div class="page" id="mo-moi" role="tabpanel" aria-labelledby="tab-mo-moi" tabindex="0" hidden>
-  <div class="thead report-header">
-    <div class="report-filters"></div>
-  </div>
+<div class="thead report-header"><div class="report-filters"></div></div><div class="body">
+<div class="sec"><span class="n">1</span><h2>Chỉ tiêu KH mở mới</h2></div><div class="kpis"><div class="kpi"><div class="lab">Số KH mở mới</div><div class="big">38<span style="font-size:12px;color:#666;font-weight:400"> KH</span></div></div><div class="kpi"><div class="lab">Số KH mở mới active</div><div class="big">5<span style="font-size:12px;color:#666;font-weight:400"> KH</span></div></div><div class="kpi"><div class="lab">Số tài khoản nộp tiền</div><div class="big">11<span style="font-size:12px;color:#666;font-weight:400"> TK</span></div></div><div class="kpi"><div class="lab">Tổng NAV</div><div class="big">3,9<span style="font-size:12px;color:#666;font-weight:400"> tỷ</span></div></div><div class="kpi"><div class="lab">Dư nợ</div><div class="big">0,2<span style="font-size:12px;color:#666;font-weight:400"> tỷ</span></div></div></div>
+<div class="sec"><span class="n">2</span><h2>Diễn biến &amp; chuyển đổi</h2></div><div class="chart new-customer-trend"><div class="ct">Tình trạng mở mới theo thời gian<span class="leg"><span><i class="d" style="background:#111"></i>Mở mới</span><span><i class="d" style="background:#bbb"></i>Active</span></span></div><div class="new-trend-scroll"><div class="new-trend-grid"><div class="new-day"><div class="new-day-bars" role="img" aria-label="02/09/2026: Mở mới 3 khách hàng, Active 1 khách hàng"><i style="height:37.5%" title="Mở mới: 3"></i><i class="active" style="height:12.5%" title="Active: 1"></i></div><span>02/09</span></div><div class="new-day"><div class="new-day-bars" role="img" aria-label="05/09/2026: Mở mới 5 khách hàng, Active 1 khách hàng"><i style="height:62.5%" title="Mở mới: 5"></i><i class="active" style="height:12.5%" title="Active: 1"></i></div><span>05/09</span></div><div class="new-day"><div class="new-day-bars" role="img" aria-label="08/09/2026: Mở mới 2 khách hàng, Active 0 khách hàng"><i style="height:25.0%" title="Mở mới: 2"></i><i class="active" style="height:0.0%" title="Active: 0"></i></div><span>08/09</span></div><div class="new-day"><div class="new-day-bars" role="img" aria-label="11/09/2026: Mở mới 6 khách hàng, Active 1 khách hàng"><i style="height:75.0%" title="Mở mới: 6"></i><i class="active" style="height:12.5%" title="Active: 1"></i></div><span>11/09</span></div><div class="new-day"><div class="new-day-bars" role="img" aria-label="14/09/2026: Mở mới 4 khách hàng, Active 0 khách hàng"><i style="height:50.0%" title="Mở mới: 4"></i><i class="active" style="height:0.0%" title="Active: 0"></i></div><span>14/09</span></div><div class="new-day"><div class="new-day-bars" role="img" aria-label="17/09/2026: Mở mới 7 khách hàng, Active 1 khách hàng"><i style="height:87.5%" title="Mở mới: 7"></i><i class="active" style="height:12.5%" title="Active: 1"></i></div><span>17/09</span></div><div class="new-day"><div class="new-day-bars" role="img" aria-label="20/09/2026: Mở mới 3 khách hàng, Active 0 khách hàng"><i style="height:37.5%" title="Mở mới: 3"></i><i class="active" style="height:0.0%" title="Active: 0"></i></div><span>20/09</span></div><div class="new-day"><div class="new-day-bars" role="img" aria-label="23/09/2026: Mở mới 4 khách hàng, Active 1 khách hàng"><i style="height:50.0%" title="Mở mới: 4"></i><i class="active" style="height:12.5%" title="Active: 1"></i></div><span>23/09</span></div><div class="new-day"><div class="new-day-bars" role="img" aria-label="26/09/2026: Mở mới 2 khách hàng, Active 0 khách hàng"><i style="height:25.0%" title="Mở mới: 2"></i><i class="active" style="height:0.0%" title="Active: 0"></i></div><span>26/09</span></div><div class="new-day"><div class="new-day-bars" role="img" aria-label="27/09/2026: Mở mới 2 khách hàng, Active 0 khách hàng"><i style="height:25.0%" title="Mở mới: 2"></i><i class="active" style="height:0.0%" title="Active: 0"></i></div><span>27/09</span></div></div></div></div>
+<div class="g2" style="margin-top:12px"><div class="funnel new-customer-funnel"><div class="ct">Phễu chuyển đổi</div><div class="fstep"><span>Mở mới</span><span class="fb"><i style="width:100.00%"></i></span><span class="fr"><b>38 TK</b></span></div><div class="fstep"><span>Nộp tiền</span><span class="fb"><i style="width:28.95%"></i></span><span class="fr"><b>11 TK</b></span></div><div class="fstep"><span>Giao dịch</span><span class="fb"><i style="width:13.16%"></i></span><span class="fr"><b>5 TK</b></span></div></div><div class="box"><div class="ct">Phân bổ NAV của TK mở mới</div><div class="hbars nav-bands"><div class="hb"><span>0 đến &lt;500 tr</span><span class="t"><i style="width:94.74%"></i></span><span class="v">36 TK</span></div><div class="hb"><span>500tr đến &lt;2 tỷ</span><span class="t"><i style="width:5.26%"></i></span><span class="v">2 TK</span></div><div class="hb"><span>2 tỷ đến &lt;5 tỷ</span><span class="t"><i style="width:0.00%"></i></span><span class="v">0 TK</span></div><div class="hb"><span>5 tỷ đến &lt;10 tỷ</span><span class="t"><i style="width:0.00%"></i></span><span class="v">0 TK</span></div><div class="hb"><span>10 tỷ trở lên</span><span class="t"><i style="width:0.00%"></i></span><span class="v">0 TK</span></div></div></div></div>
+<div class="box" style="margin-top:12px"><div class="ct">Top TVĐT mở mới</div><div class="hbars active-advisor-bars new-customer-ranking"><div class="hb"><span>Trần Phương Anh</span><span class="t"><i style="width:100.00%"></i></span><span class="v">15 TK</span></div><div class="hb"><span>Nguyễn Văn Bình</span><span class="t"><i style="width:66.67%"></i></span><span class="v">10 TK</span></div><div class="hb"><span>Lê Thu Hà</span><span class="t"><i style="width:53.33%"></i></span><span class="v">8 TK</span></div><div class="hb"><span>Đỗ Minh Quân</span><span class="t"><i style="width:33.33%"></i></span><span class="v">5 TK</span></div></div></div><div class="sec"><span class="n">3</span><h2>Chi tiết TK mở mới</h2></div><div class="fbar customer-list-filter"><label for="new-customer-status">Trạng thái</label><select id="new-customer-status" aria-controls="new-customer-table"><option value="active">Active</option><option value="inactive">Inactive</option></select></div><div class="tbl"><table class="wt new-customer-table" id="new-customer-table"><caption class="sr-only">Chi tiết TK mở mới</caption><thead><tr><th scope="col">STK chứng khoán</th><th scope="col">Họ tên KH</th><th scope="col">Ngày mở</th><th scope="col">NAV</th><th scope="col">GTGD CP</th><th scope="col">Người quản lý</th></tr></thead><tbody>
+<tr data-status="active"><td>069C002201</td><td>Đỗ Văn Sơn</td><td>02/09/2026</td><td class="n">1,5 tỷ</td><td class="n">180 tr</td><td>MG1268 - Trần Phương Anh</td></tr>
+<tr data-status="inactive"><td>069C002202</td><td>Mai Thu Trang</td><td>02/09/2026</td><td class="n">50 tr</td><td class="n">0</td><td>MG1268 - Trần Phương Anh</td></tr>
+<tr data-status="inactive"><td>069C002203</td><td>Cao Đức Huy</td><td>02/09/2026</td><td class="n">50 tr</td><td class="n">0</td><td>MG1268 - Trần Phương Anh</td></tr>
+<tr data-status="active"><td>069C002204</td><td>Nguyễn Thu Hằng</td><td>05/09/2026</td><td class="n">1,2 tỷ</td><td class="n">120 tr</td><td>MG1268 - Trần Phương Anh</td></tr>
+<tr data-status="inactive"><td>069C002205</td><td>Trần Minh Quân</td><td>05/09/2026</td><td class="n">50 tr</td><td class="n">0</td><td>MG1268 - Trần Phương Anh</td></tr>
+<tr data-status="inactive"><td>069C002206</td><td>Lê Ngọc Anh</td><td>05/09/2026</td><td class="n">50 tr</td><td class="n">0</td><td>MG1268 - Trần Phương Anh</td></tr>
+<tr data-status="inactive"><td>069C002207</td><td>Phạm Thanh Hà</td><td>05/09/2026</td><td class="n">50 tr</td><td class="n">0</td><td>MG1268 - Trần Phương Anh</td></tr>
+<tr data-status="inactive"><td>069C002208</td><td>Vũ Đức Nam</td><td>05/09/2026</td><td class="n">50 tr</td><td class="n">0</td><td>MG1268 - Trần Phương Anh</td></tr>
+<tr data-status="inactive"><td>069C002209</td><td>Hoàng Thị Lan</td><td>08/09/2026</td><td class="n">0</td><td class="n">0</td><td>MG1268 - Trần Phương Anh</td></tr>
+<tr data-status="inactive"><td>069C002210</td><td>Đặng Quốc Việt</td><td>08/09/2026</td><td class="n">0</td><td class="n">0</td><td>MG1268 - Trần Phương Anh</td></tr>
+<tr data-status="active"><td>069C002211</td><td>Bùi Minh Tú</td><td>11/09/2026</td><td class="n">400 tr</td><td class="n">80 tr</td><td>MG1268 - Trần Phương Anh</td></tr>
+<tr data-status="inactive"><td>069C002212</td><td>Ngô Thanh Tâm</td><td>11/09/2026</td><td class="n">0</td><td class="n">0</td><td>MG1268 - Trần Phương Anh</td></tr>
+<tr data-status="inactive"><td>069C002213</td><td>Dương Ngọc Linh</td><td>11/09/2026</td><td class="n">0</td><td class="n">0</td><td>MG1268 - Trần Phương Anh</td></tr>
+<tr data-status="inactive"><td>069C002214</td><td>Phan Văn Hưng</td><td>11/09/2026</td><td class="n">0</td><td class="n">0</td><td>MG1268 - Trần Phương Anh</td></tr>
+<tr data-status="inactive"><td>069C002215</td><td>Võ Thị Mai</td><td>11/09/2026</td><td class="n">0</td><td class="n">0</td><td>MG1268 - Trần Phương Anh</td></tr>
+<tr data-status="inactive"><td>069C002216</td><td>Đinh Quang Hải</td><td>11/09/2026</td><td class="n">0</td><td class="n">0</td><td>MG1271 - Nguyễn Văn Bình</td></tr>
+<tr data-status="inactive"><td>069C002217</td><td>Trịnh Minh Khang</td><td>14/09/2026</td><td class="n">0</td><td class="n">0</td><td>MG1271 - Nguyễn Văn Bình</td></tr>
+<tr data-status="inactive"><td>069C002218</td><td>Lý Hoài Thu</td><td>14/09/2026</td><td class="n">0</td><td class="n">0</td><td>MG1271 - Nguyễn Văn Bình</td></tr>
+<tr data-status="inactive"><td>069C002219</td><td>Mai Quốc Bảo</td><td>14/09/2026</td><td class="n">0</td><td class="n">0</td><td>MG1271 - Nguyễn Văn Bình</td></tr>
+<tr data-status="inactive"><td>069C002220</td><td>Tạ Thanh Sơn</td><td>14/09/2026</td><td class="n">0</td><td class="n">0</td><td>MG1271 - Nguyễn Văn Bình</td></tr>
+<tr data-status="active"><td>069C002221</td><td>Cao Ngọc Hân</td><td>17/09/2026</td><td class="n">300 tr</td><td class="n">50 tr</td><td>MG1271 - Nguyễn Văn Bình</td></tr>
+<tr data-status="inactive"><td>069C002222</td><td>Nguyễn Đức Phúc</td><td>17/09/2026</td><td class="n">0</td><td class="n">0</td><td>MG1271 - Nguyễn Văn Bình</td></tr>
+<tr data-status="inactive"><td>069C002223</td><td>Trần Thu Ngân</td><td>17/09/2026</td><td class="n">0</td><td class="n">0</td><td>MG1271 - Nguyễn Văn Bình</td></tr>
+<tr data-status="inactive"><td>069C002224</td><td>Lê Quốc Dũng</td><td>17/09/2026</td><td class="n">0</td><td class="n">0</td><td>MG1271 - Nguyễn Văn Bình</td></tr>
+<tr data-status="inactive"><td>069C002225</td><td>Phạm Minh Châu</td><td>17/09/2026</td><td class="n">0</td><td class="n">0</td><td>MG1271 - Nguyễn Văn Bình</td></tr>
+<tr data-status="inactive"><td>069C002226</td><td>Vũ Thị Hồng</td><td>17/09/2026</td><td class="n">0</td><td class="n">0</td><td>MG1284 - Lê Thu Hà</td></tr>
+<tr data-status="inactive"><td>069C002227</td><td>Hoàng Thanh Bình</td><td>17/09/2026</td><td class="n">0</td><td class="n">0</td><td>MG1284 - Lê Thu Hà</td></tr>
+<tr data-status="inactive"><td>069C002228</td><td>Đặng Ngọc Yến</td><td>20/09/2026</td><td class="n">0</td><td class="n">0</td><td>MG1284 - Lê Thu Hà</td></tr>
+<tr data-status="inactive"><td>069C002229</td><td>Bùi Quốc Huy</td><td>20/09/2026</td><td class="n">0</td><td class="n">0</td><td>MG1284 - Lê Thu Hà</td></tr>
+<tr data-status="inactive"><td>069C002230</td><td>Ngô Thị Thảo</td><td>20/09/2026</td><td class="n">0</td><td class="n">0</td><td>MG1284 - Lê Thu Hà</td></tr>
+<tr data-status="active"><td>069C002231</td><td>Dương Minh Trí</td><td>23/09/2026</td><td class="n">200 tr</td><td class="n">30 tr</td><td>MG1284 - Lê Thu Hà</td></tr>
+<tr data-status="inactive"><td>069C002232</td><td>Phan Ngọc Diệp</td><td>23/09/2026</td><td class="n">0</td><td class="n">0</td><td>MG1284 - Lê Thu Hà</td></tr>
+<tr data-status="inactive"><td>069C002233</td><td>Võ Đức Long</td><td>23/09/2026</td><td class="n">0</td><td class="n">0</td><td>MG1284 - Lê Thu Hà</td></tr>
+<tr data-status="inactive"><td>069C002234</td><td>Đinh Thu Phương</td><td>23/09/2026</td><td class="n">0</td><td class="n">0</td><td>MG1290 - Đỗ Minh Quân</td></tr>
+<tr data-status="inactive"><td>069C002235</td><td>Trịnh Thanh Tùng</td><td>26/09/2026</td><td class="n">0</td><td class="n">0</td><td>MG1290 - Đỗ Minh Quân</td></tr>
+<tr data-status="inactive"><td>069C002236</td><td>Lý Minh Anh</td><td>26/09/2026</td><td class="n">0</td><td class="n">0</td><td>MG1290 - Đỗ Minh Quân</td></tr>
+<tr data-status="inactive"><td>069C002237</td><td>Mai Ngọc Hà</td><td>27/09/2026</td><td class="n">0</td><td class="n">0</td><td>MG1290 - Đỗ Minh Quân</td></tr>
+<tr data-status="inactive"><td>069C002238</td><td>Tạ Quốc Thắng</td><td>27/09/2026</td><td class="n">0</td><td class="n">0</td><td>MG1290 - Đỗ Minh Quân</td></tr>
+</tbody></table></div><nav class="sales-pagination" aria-label="Phân trang chi tiết TK mở mới"><span id="new-customer-page-summary" aria-live="polite" aria-atomic="true"></span><div class="sales-page-controls"><span>20 bản ghi/trang</span><button type="button" id="new-customer-page-prev" aria-controls="new-customer-table">‹ Trước</button><span id="new-customer-page-current"></span><button type="button" id="new-customer-page-next" aria-controls="new-customer-table">Sau ›</button></div></nav></div></div>
 
-  <div class="body">
-    <div class="sec"><span class="n">1</span><h2>Chỉ tiêu TK mở mới</h2></div>
-    <div class="kpis" style="grid-template-columns:repeat(4,1fr)">
-      <div class="kpi"><div class="lab">Số TK mở mới</div><div class="big">38<span style="font-size:12px;color:#666;font-weight:400"> / 50 TK</span></div><div class="prog"><i style="width:76%"></i></div><div class="pct"><b>76%</b> KPI</div></div>
-      <div class="kpi"><div class="lab">Active (NAV&gt;0)</div><div class="big">11<span style="font-size:12px;color:#666;font-weight:400"> TK</span></div></div>
-      <div class="kpi"><div class="lab">Tỷ lệ active</div><div class="big">28,9<span style="font-size:12px;color:#666;font-weight:400"> %</span></div></div>
-      <div class="kpi"><div class="lab">Tổng NAV</div><div class="big">3,9<span style="font-size:12px;color:#666;font-weight:400"> tỷ</span></div></div>
-    </div>
-    <div style="height:10px"></div>
-    <div class="kpis" style="grid-template-columns:repeat(4,1fr)">
-      <div class="kpi"><div class="lab">Tổng tài sản</div><div class="big">4,1<span style="font-size:12px;color:#666;font-weight:400"> tỷ</span></div></div>
-      <div class="kpi"><div class="lab">Tổng dư nợ</div><div class="big">0,2<span style="font-size:12px;color:#666;font-weight:400"> tỷ</span></div></div>
-      <div class="kpi"><div class="lab">Tiền nộp của tệp</div><div class="big">4,2<span style="font-size:12px;color:#666;font-weight:400"> tỷ</span></div><div class="sub2">phí net đóng góp 0,4 tr</div></div>
-      <div class="kpi"><div class="lab">Đã giao dịch</div><div class="big">5<span style="font-size:12px;color:#666;font-weight:400"> TK</span></div></div>
-    </div>
-    <div class="sec"><span class="n">2</span><h2>Diễn biến &amp; chuyển đổi</h2></div>
-    <div class="biz" style="grid-template-columns:1fr">
-      <div class="chart">
-        <div class="ct">Tình trạng mở mới theo thời gian <span class="leg"><span class="tgl"><span class="on">Ngày</span><span>Tuần</span><span>Tháng</span></span><span><i class="d" style="background:#111"></i>Mở mới</span><span><i class="d" style="background:#bbb"></i>Active</span></span></div>
-        <div style="margin-top:10px"><div class="bars" style="height:110px"><span class="g"><i class="" style="height:30%"></i><i class="l" style="height:10%"></i></span><span class="g"><i class="" style="height:50%"></i><i class="l" style="height:20%"></i></span><span class="g"><i class="" style="height:20%"></i><i class="l" style="height:10%"></i></span><span class="g"><i class="" style="height:60%"></i><i class="l" style="height:30%"></i></span><span class="g"><i class="" style="height:40%"></i><i class="l" style="height:10%"></i></span><span class="g"><i class="" style="height:70%"></i><i class="l" style="height:40%"></i></span><span class="g"><i class="" style="height:30%"></i><i class="l" style="height:0%"></i></span><span class="g"><i class="" style="height:50%"></i><i class="l" style="height:20%"></i></span><span class="g"><i class="" style="height:40%"></i><i class="l" style="height:10%"></i></span><span class="g"><i class="" style="height:20%"></i><i class="l" style="height:10%"></i></span></div><div class="xl"><span>02/09</span><span>05/09</span><span>08/09</span><span>11/09</span><span>14/09</span><span>17/09</span><span>20/09</span><span>23/09</span><span>26/09</span><span>27/09</span></div></div>
-      </div>
-    </div>
-    <div class="g2" style="margin-top:12px">
-      <div class="funnel">
-        <div class="ct" style="font-size:12px;font-weight:700;margin-bottom:12px">Chuỗi chuyển đổi TK mở mới</div>
-        <div class="fstep"><span>Mở mới</span><span class="fb"><i style="width:100%"></i></span><span class="fr"><b>38 TK</b></span></div>
-        <div class="fstep"><span>Active (NAV&gt;0)</span><span class="fb"><i style="width:29%"></i></span><span class="fr"><b>11 TK</b> · 28,9% / mở mới</span></div>
-        <div class="fstep"><span>Đã giao dịch</span><span class="fb"><i style="width:13%"></i></span><span class="fr"><b>5 TK</b> · 45,5% / active</span></div>
-
-      </div>
-      <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Phân bổ NAV của TK mở mới</div>
-        <div class="hbars"><div class="hb"><span>NAV = 0</span><span class="t"><i style="width:71%"></i></span><span class="v">27 TK</span></div><div class="hb"><span>&lt; 10tr</span><span class="t"><i style="width:8%"></i></span><span class="v">3 TK</span></div><div class="hb"><span>10–100tr</span><span class="t"><i style="width:11%"></i></span><span class="v">4 TK</span></div><div class="hb"><span>100tr–1 tỷ</span><span class="t"><i style="width:5%"></i></span><span class="v">2 TK</span></div><div class="hb"><span>≥ 1 tỷ</span><span class="t"><i style="width:5%"></i></span><span class="v">2 TK</span></div></div>
-      </div>
-    </div>
-    <div style="margin-top:12px">
-      <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Mở mới theo bộ phận</div>
-        <div class="hbars"><div class="hb"><span>Trần Phương Anh</span><span class="t"><i style="width:100%"></i></span><span class="v">15 TK · 1,8 tỷ</span></div><div class="hb"><span>Nguyễn Văn Bình</span><span class="t"><i style="width:67%"></i></span><span class="v">10 TK · 1,2 tỷ</span></div><div class="hb"><span>Lê Thu Hà</span><span class="t"><i style="width:53%"></i></span><span class="v">8 TK · 0,6 tỷ</span></div><div class="hb"><span>Đỗ Minh Quân</span><span class="t"><i style="width:33%"></i></span><span class="v">5 TK · 0,3 tỷ</span></div></div>
-      </div>
-    </div>
-    <div class="sec"><span class="n">3</span><h2>Chi tiết TK mở mới</h2></div>
-    <div class="fbar">
-      <span class="gl">Lọc</span><span class="chip on">NAV = 0</span><span class="chip">Active chưa GD</span><span class="chip">Đã GD</span><span class="chip">Khoảng ngày mở ▾</span>
-      <span class="search push">Tìm mã / tên KH, số TK…</span>
-    </div>
-    <div class="tbl"><table class="wt"><thead><tr><th class="">Khách hàng</th><th class="">Ngày mở</th><th class="n">NAV</th><th class="n">Tài sản</th><th class="n">Dư nợ</th><th class="">Active</th><th class="">Nộp lần đầu</th><th class="">GD lần đầu</th><th class="">Bước</th><th class="opt">TVĐT</th></tr></thead><tbody><tr><td class="">Đỗ Văn Sơn · 069C2201</td><td class="">02/09</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="">—</td><td class="">—</td><td class="">—</td><td class=""><span class="pill b">NAV = 0 · 25 ngày</span></td><td class="opt">Trần Phương Anh</td></tr><tr><td class="">Mai Thu Trang · 069C2207</td><td class="">04/09</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="">—</td><td class="">—</td><td class="">—</td><td class=""><span class="pill b">NAV = 0 · 23 ngày</span></td><td class="opt">Lê Thu Hà</td></tr><tr><td class="">Cao Đức Huy · 069C2215</td><td class="">05/09</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="">—</td><td class="">—</td><td class="">—</td><td class=""><span class="pill b">NAV = 0 · 22 ngày</span></td><td class="opt">Nguyễn Văn Bình</td></tr></tbody></table>
-      <div class="tfoot"><span>27 TK khớp</span><span>20 dòng/trang</span></div>
-    </div>
-
-
-  </div>
-</div>
 
 <!-- ==================== NỘP RÚT ==================== -->
 <div class="page" id="nop-rut" role="tabpanel" aria-labelledby="tab-nop-rut" tabindex="0" hidden>

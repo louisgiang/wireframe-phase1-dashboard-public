@@ -153,17 +153,17 @@ MV-24133 | Margin | 20/06/2026 | 250 tr | 250 tr | 12,5% | 2,1 tr | Trong hạn 
 
 ```text
 1Chỉ tiêu tệp hiện hữu
-TK đang quản lý
-692 TK
-KH active (chú giải qua tooltip)
+Số KH hiện hữu
+500 KH
+Số KH active ⓘ
 42 KH
 Là KH có ít nhất 1 giao dịch khớp trong kỳ báo cáo.
-TK ngủ đông
-278 TK
 Tổng NAV
 283,5 tỷ
 Thay đổi NAV so với đầu kỳ
 +7,7 tỷ
+Dư nợ
+2,34 tỷ
 2Diễn biến & phân bổ
 Tỷ lệ TK KH active trong kỳKỳ hiện tại
 Tỷ lệ (%)
@@ -174,11 +174,11 @@ Thay đổi NAV (tỷ đồng)
 107,552,5001/0910/0920/0930/09
 Ngày/tháng
 Chi tiết phân bổ NAV
-NAV = 0208 TK
-< 10tr84 TK
-10–100tr180 TK
-100tr–1 tỷ152 TK
-≥ 1 tỷ68 TK
+0 đến <500 tr620 TK
+500tr đến <2 tỷ48 TK
+2 tỷ đến <5 tỷ15 TK
+5 tỷ đến <10 tỷ6 TK
+10 tỷ trở lên3 TK
 Tỷ lệ KH active theo TVĐT
 Trần Phương Anh11,1%
 Nguyễn Văn Bình8%
@@ -223,51 +223,89 @@ Sau ›
 ## mo-moi
 
 ```text
-1Chỉ tiêu TK mở mới
-Số TK mở mới
-38 / 50 TK
-76% KPI
-Active (NAV>0)
+1Chỉ tiêu KH mở mới
+Số KH mở mới
+38 KH
+Số KH mở mới active
+5 KH
+Số tài khoản nộp tiền
 11 TK
-Tỷ lệ active
-28,9 %
 Tổng NAV
 3,9 tỷ
-Tổng tài sản
-4,1 tỷ
-Tổng dư nợ
+Dư nợ
 0,2 tỷ
-Tiền nộp của tệp
-4,2 tỷ
-phí net đóng góp 0,4 tr
-Đã giao dịch
-5 TK
 2Diễn biến & chuyển đổi
-Tình trạng mở mới theo thời gian NgàyTuầnThángMở mớiActive
-02/0905/0908/0911/0914/0917/0920/0923/0926/0927/09
-Chuỗi chuyển đổi TK mở mới
+Tình trạng mở mới theo thời gianMở mớiActive
+02/09
+05/09
+08/09
+11/09
+14/09
+17/09
+20/09
+23/09
+26/09
+27/09
+Phễu chuyển đổi
 Mở mới38 TK
-Active (NAV>0)11 TK · 28,9% / mở mới
-Đã giao dịch5 TK · 45,5% / active
+Nộp tiền11 TK
+Giao dịch5 TK
 Phân bổ NAV của TK mở mới
-NAV = 027 TK
-< 10tr3 TK
-10–100tr4 TK
-100tr–1 tỷ2 TK
-≥ 1 tỷ2 TK
-Mở mới theo bộ phận
-Trần Phương Anh15 TK · 1,8 tỷ
-Nguyễn Văn Bình10 TK · 1,2 tỷ
-Lê Thu Hà8 TK · 0,6 tỷ
-Đỗ Minh Quân5 TK · 0,3 tỷ
+0 đến <500 tr36 TK
+500tr đến <2 tỷ2 TK
+2 tỷ đến <5 tỷ0 TK
+5 tỷ đến <10 tỷ0 TK
+10 tỷ trở lên0 TK
+Top TVĐT mở mới
+Trần Phương Anh15 TK
+Nguyễn Văn Bình10 TK
+Lê Thu Hà8 TK
+Đỗ Minh Quân5 TK
 3Chi tiết TK mở mới
-LọcNAV = 0Active chưa GDĐã GDKhoảng ngày mở ▾
-Tìm mã / tên KH, số TK…
-Khách hàng | Ngày mở | NAV | Tài sản | Dư nợ | Active | Nộp lần đầu | GD lần đầu | Bước | TVĐT |
-Đỗ Văn Sơn · 069C2201 | 02/09 | 0 | 0 | 0 | — | — | — | NAV = 0 · 25 ngày | Trần Phương Anh |
-Mai Thu Trang · 069C2207 | 04/09 | 0 | 0 | 0 | — | — | — | NAV = 0 · 23 ngày | Lê Thu Hà |
-Cao Đức Huy · 069C2215 | 05/09 | 0 | 0 | 0 | — | — | — | NAV = 0 · 22 ngày | Nguyễn Văn Bình |
-27 TK khớp20 dòng/trang
+Trạng thái
+Active
+Inactive
+Chi tiết TK mở mớiSTK chứng khoán | Họ tên KH | Ngày mở | NAV | GTGD CP | Người quản lý |
+069C002201 | Đỗ Văn Sơn | 02/09/2026 | 1,5 tỷ | 180 tr | MG1268 - Trần Phương Anh |
+069C002202 | Mai Thu Trang | 02/09/2026 | 50 tr | 0 | MG1268 - Trần Phương Anh |
+069C002203 | Cao Đức Huy | 02/09/2026 | 50 tr | 0 | MG1268 - Trần Phương Anh |
+069C002204 | Nguyễn Thu Hằng | 05/09/2026 | 1,2 tỷ | 120 tr | MG1268 - Trần Phương Anh |
+069C002205 | Trần Minh Quân | 05/09/2026 | 50 tr | 0 | MG1268 - Trần Phương Anh |
+069C002206 | Lê Ngọc Anh | 05/09/2026 | 50 tr | 0 | MG1268 - Trần Phương Anh |
+069C002207 | Phạm Thanh Hà | 05/09/2026 | 50 tr | 0 | MG1268 - Trần Phương Anh |
+069C002208 | Vũ Đức Nam | 05/09/2026 | 50 tr | 0 | MG1268 - Trần Phương Anh |
+069C002209 | Hoàng Thị Lan | 08/09/2026 | 0 | 0 | MG1268 - Trần Phương Anh |
+069C002210 | Đặng Quốc Việt | 08/09/2026 | 0 | 0 | MG1268 - Trần Phương Anh |
+069C002211 | Bùi Minh Tú | 11/09/2026 | 400 tr | 80 tr | MG1268 - Trần Phương Anh |
+069C002212 | Ngô Thanh Tâm | 11/09/2026 | 0 | 0 | MG1268 - Trần Phương Anh |
+069C002213 | Dương Ngọc Linh | 11/09/2026 | 0 | 0 | MG1268 - Trần Phương Anh |
+069C002214 | Phan Văn Hưng | 11/09/2026 | 0 | 0 | MG1268 - Trần Phương Anh |
+069C002215 | Võ Thị Mai | 11/09/2026 | 0 | 0 | MG1268 - Trần Phương Anh |
+069C002216 | Đinh Quang Hải | 11/09/2026 | 0 | 0 | MG1271 - Nguyễn Văn Bình |
+069C002217 | Trịnh Minh Khang | 14/09/2026 | 0 | 0 | MG1271 - Nguyễn Văn Bình |
+069C002218 | Lý Hoài Thu | 14/09/2026 | 0 | 0 | MG1271 - Nguyễn Văn Bình |
+069C002219 | Mai Quốc Bảo | 14/09/2026 | 0 | 0 | MG1271 - Nguyễn Văn Bình |
+069C002220 | Tạ Thanh Sơn | 14/09/2026 | 0 | 0 | MG1271 - Nguyễn Văn Bình |
+069C002221 | Cao Ngọc Hân | 17/09/2026 | 300 tr | 50 tr | MG1271 - Nguyễn Văn Bình |
+069C002222 | Nguyễn Đức Phúc | 17/09/2026 | 0 | 0 | MG1271 - Nguyễn Văn Bình |
+069C002223 | Trần Thu Ngân | 17/09/2026 | 0 | 0 | MG1271 - Nguyễn Văn Bình |
+069C002224 | Lê Quốc Dũng | 17/09/2026 | 0 | 0 | MG1271 - Nguyễn Văn Bình |
+069C002225 | Phạm Minh Châu | 17/09/2026 | 0 | 0 | MG1271 - Nguyễn Văn Bình |
+069C002226 | Vũ Thị Hồng | 17/09/2026 | 0 | 0 | MG1284 - Lê Thu Hà |
+069C002227 | Hoàng Thanh Bình | 17/09/2026 | 0 | 0 | MG1284 - Lê Thu Hà |
+069C002228 | Đặng Ngọc Yến | 20/09/2026 | 0 | 0 | MG1284 - Lê Thu Hà |
+069C002229 | Bùi Quốc Huy | 20/09/2026 | 0 | 0 | MG1284 - Lê Thu Hà |
+069C002230 | Ngô Thị Thảo | 20/09/2026 | 0 | 0 | MG1284 - Lê Thu Hà |
+069C002231 | Dương Minh Trí | 23/09/2026 | 200 tr | 30 tr | MG1284 - Lê Thu Hà |
+069C002232 | Phan Ngọc Diệp | 23/09/2026 | 0 | 0 | MG1284 - Lê Thu Hà |
+069C002233 | Võ Đức Long | 23/09/2026 | 0 | 0 | MG1284 - Lê Thu Hà |
+069C002234 | Đinh Thu Phương | 23/09/2026 | 0 | 0 | MG1290 - Đỗ Minh Quân |
+069C002235 | Trịnh Thanh Tùng | 26/09/2026 | 0 | 0 | MG1290 - Đỗ Minh Quân |
+069C002236 | Lý Minh Anh | 26/09/2026 | 0 | 0 | MG1290 - Đỗ Minh Quân |
+069C002237 | Mai Ngọc Hà | 27/09/2026 | 0 | 0 | MG1290 - Đỗ Minh Quân |
+069C002238 | Tạ Quốc Thắng | 27/09/2026 | 0 | 0 | MG1290 - Đỗ Minh Quân |
+20 bản ghi/trang‹ Trước
+Sau ›
 ```
 
 ## nop-rut

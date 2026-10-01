@@ -9,8 +9,8 @@ Bản sao đã gỡ nhãn đánh dấu triển khai, giữ 8 tab và nội dung 
 | Tổng quan | 8 chỉ tiêu chính, doanh số và dư nợ theo ngày, cảnh báo và việc nên làm |
 | Doanh số | GTGD, phí net, hoa hồng dự tính, xếp hạng CTV/TVĐT/KH, bảng theo cây môi giới, danh sách KH |
 | Dư nợ & Món vay | Dư nợ, giải ngân, thu nợ, lãi phí, cơ cấu nợ, danh sách KH/TK và món vay |
-| KH hiện hữu | Quy mô KH/TK, active/ngủ đông, NAV, phân bổ, danh sách chăm sóc |
-| Mở mới | KPI mở tài khoản, active, NAV/tài sản, phễu chuyển đổi, chi tiết tài khoản |
+| KH hiện hữu | Số khách hàng, active, NAV, dư nợ, phân bổ NAV, danh sách khách hàng |
+| KH mở mới | Số khách hàng mới, active, tài khoản nộp tiền, NAV, dư nợ, phễu và chi tiết tài khoản |
 | Nộp rút | Dòng tiền, Top KH nộp/rút ròng, tiền chờ, giao dịch lớn, bảng KH/TK |
 | So sánh & Ranking CP | So sánh TVĐT, heatmap, vị trí cá nhân, ranking cổ phiếu, phí net theo tháng |
 | Doanh số, phí net & hoa hồng | Màn gộp v1.2: KPI, diễn biến, giao dịch theo KH, phí và hoa hồng theo KH |
@@ -66,7 +66,7 @@ Nguồn: commit `2b9227bf933b7212a4c8014862139c22988f60ef`, kiểm kê ngày 29/
 
 ## Cập nhật khách hàng hiện hữu
 
-- Thẻ chỉ tiêu bỏ dòng 500 KH và các tỷ lệ phụ; chú giải KH active hiển thị bằng tooltip khi rê chuột, chạm hoặc focus biểu tượng thông tin. KH active là khách hàng có ít nhất một giao dịch khớp trong kỳ báo cáo.
+- Thẻ chỉ tiêu hiển thị số khách hàng hiện hữu, số khách hàng active, NAV, thay đổi NAV và dư nợ; chú giải KH active hiển thị bằng tooltip khi rê chuột, chạm hoặc focus biểu tượng thông tin. KH active là khách hàng có ít nhất một giao dịch khớp trong kỳ báo cáo.
 - Biểu đồ tỷ lệ tài khoản active dùng trục phần trăm theo ngày; số tài khoản có giao dịch khớp từ đầu kỳ đến ngày đang xem chia 692 tài khoản quản lý. Dữ liệu mẫu kết thúc ngày 27/09 với 48 tài khoản (6,94%), thuộc 42 khách hàng active; không đồng nhất số khách hàng với số tài khoản.
 - Tăng trưởng NAV là NAV tại ngày đang xem trừ NAV đầu kỳ của từng kỳ, đơn vị tỷ đồng. Mẫu kỳ hiện tại tăng từ 275,8 tỷ đầu kỳ lên 283,5 tỷ ngày 27/09, thay đổi +7,7 tỷ, đồng bộ thẻ chỉ tiêu. Chỉ hiển thị một đường kỳ hiện tại; các điểm hàng ngày là dữ liệu minh họa, không tính lại theo bộ lọc.
 - Tỷ lệ KH active theo TVĐT dùng mẫu 20/180, 12/150, 7/100 và 3/70, tổng 42/500 khách hàng. Không lấy một trừ tỷ lệ ngủ đông do hai chỉ tiêu khác định nghĩa và đơn vị đếm.
@@ -77,3 +77,11 @@ Nguồn: commit `2b9227bf933b7212a4c8014862139c22988f60ef`, kiểm kê ngày 29/
 - Lọc Active/Inactive, mặc định Active. Active khi tài khoản có ít nhất một lệnh cổ phiếu hoặc trái phiếu khớp trong kỳ; Inactive khi không có lệnh khớp. Số lệnh mẫu trong bảng là số lệnh đã khớp. Không đồng nhất Inactive với trạng thái ngủ đông nhiều tháng.
 - Phân trang 20 bản ghi sau khi lọc; đổi bộ lọc quay về trang 1. Dữ liệu minh họa gồm 24 tài khoản active và 3 inactive, là tập con dùng để thể hiện hai trang; không thay đổi số tổng hợp toàn danh mục. Có tài khoản chỉ giao dịch trái phiếu để minh họa điều kiện active. Số lệnh, tài khoản bổ sung và mã RE là dữ liệu mẫu.
 - Bỏ toàn bộ khối Điểm sáng, Cần lưu ý, Việc nên làm trên tất cả các màn.
+
+## Cấu trúc khách hàng và khách hàng mở mới
+
+- KH hiện hữu: 500 khách hàng, 42 khách hàng active, tổng NAV 283,5 tỷ, thay đổi NAV +7,7 tỷ, dư nợ mẫu 2,34 tỷ. Tổng 692 tài khoản vẫn là mẫu số của biểu đồ tỷ lệ tài khoản active và phân bổ NAV.
+- KH mở mới: 38 khách hàng, 5 khách hàng active theo giao dịch khớp, 11 tài khoản nộp tiền, NAV 3,9 tỷ, dư nợ 0,2 tỷ. Mẫu giả định mỗi khách hàng mới có một tài khoản. Số 11 là dữ liệu nộp tiền minh họa, không suy ra từ NAV trong triển khai thật.
+- Phễu: 38 tài khoản mở mới → 11 tài khoản nộp tiền → 5 tài khoản giao dịch. Biểu đồ ngày cộng đủ 38 mở mới/5 active; Top TVĐT là 15/10/8/5 tài khoản.
+- Các bậc NAV trên hai màn: [0; 500 triệu), [500 triệu; 2 tỷ), [2 tỷ; 5 tỷ), [5 tỷ; 10 tỷ), từ 10 tỷ. Phân bổ tài khoản mẫu hiện hữu: 620/48/15/6/3 (tổng 692); mẫu mở mới: 36/2/0/0/0 (tổng 38). Bậc hiện hữu là phân bổ minh họa mới, không thể suy ra chính xác từ các bậc cũ.
+- Chi tiết mở mới có đủ 38 dòng mẫu, 5 Active và 33 Inactive; mặc định Active, 20 bản ghi/trang. Active là có giao dịch khớp trong kỳ; có tiền hoặc NAV dương chưa đủ để active. Các cột gồm số tài khoản, họ tên, ngày mở đầy đủ ngày/tháng/năm, NAV, GTGD CP, người quản lý. Bộ lọc trạng thái hoạt động; bộ lọc chung vẫn chưa tính lại dữ liệu mẫu.

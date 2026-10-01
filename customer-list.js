@@ -1,9 +1,10 @@
 (() => {
-  const table=document.getElementById('existing-customer-table');
+  [['existing-customer-table','customer'],['new-customer-table','new-customer']].forEach(([tableId,prefix])=>{
+  const table=document.getElementById(tableId);
   if(!table)return;
-  const rows=[...table.tBodies[0].rows], filter=document.getElementById('customer-status');
-  const previous=document.getElementById('customer-page-prev'), next=document.getElementById('customer-page-next');
-  const summary=document.getElementById('customer-page-summary'), current=document.getElementById('customer-page-current');
+  const rows=[...table.tBodies[0].rows], filter=document.getElementById(`${prefix}-status`);
+  const previous=document.getElementById(`${prefix}-page-prev`), next=document.getElementById(`${prefix}-page-next`);
+  const summary=document.getElementById(`${prefix}-page-summary`), current=document.getElementById(`${prefix}-page-current`);
   const pageSize=20;let page=1;
   function render(){
     const matches=rows.filter(row=>row.dataset.status===filter.value);
@@ -20,4 +21,5 @@
   previous.addEventListener('click',()=>{if(!previous.disabled){page--;render();}});
   next.addEventListener('click',()=>{if(!next.disabled){page++;render();}});
   render();
+  });
 })();
