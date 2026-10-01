@@ -42,7 +42,7 @@ Không cần cài dependency hay chạy build. Khi import repo vào Vercel, dùn
 - Giữ các KPI nghiệp vụ, biểu đồ, bảng, cảnh báo, hành động và điều hướng; giữ tên chuỗi dữ liệu để đọc biểu đồ.
 - Giữ lịch sử commit gốc; không sửa repo hay deployment Vercel gốc.
 
-Đây là wireframe với dữ liệu minh họa nhúng trong HTML. Chuyển tab, deep link và bàn phím hoạt động; Bộ lọc kỳ báo cáo và phạm vi dữ liệu có thể thao tác, đồng bộ trên cả 8 tab; phân trang hoạt động ở hai bảng tab Doanh số; tìm kiếm, phân trang các tab khác và các thao tác nghiệp vụ khác chưa được lập trình. Số liệu, biểu đồ và ngày chốt dữ liệu vẫn là dữ liệu minh họa cố định, chưa được tính lại theo bộ lọc. Tab v1.2 cuối cùng dùng phạm vi/ngày/số liệu khác 7 tab v2 đầu tiên.
+Đây là wireframe với dữ liệu minh họa nhúng trong HTML. Chuyển tab, deep link và bàn phím hoạt động; Bộ lọc kỳ báo cáo và phạm vi dữ liệu có thể thao tác, đồng bộ trên cả 8 tab; phân trang hoạt động ở hai bảng tab Doanh số và bảng KH hiện hữu; lọc Active/Inactive hoạt động ở bảng KH hiện hữu; tìm kiếm, phân trang các tab khác và các thao tác nghiệp vụ khác chưa được lập trình. Số liệu, biểu đồ và ngày chốt dữ liệu vẫn là dữ liệu minh họa cố định, chưa được tính lại theo bộ lọc. Tab v1.2 cuối cùng dùng phạm vi/ngày/số liệu khác 7 tab v2 đầu tiên.
 
 Nguồn: commit `2b9227bf933b7212a4c8014862139c22988f60ef`, kiểm kê ngày 29/09/2026. Repo gốc không có tệp LICENSE.
 
@@ -70,3 +70,10 @@ Nguồn: commit `2b9227bf933b7212a4c8014862139c22988f60ef`, kiểm kê ngày 29/
 - Biểu đồ tỷ lệ tài khoản active dùng trục phần trăm theo ngày; số tài khoản có giao dịch khớp từ đầu kỳ đến ngày đang xem chia 692 tài khoản quản lý. Dữ liệu mẫu kết thúc ngày 27/09 với 48 tài khoản (6,94%), thuộc 42 khách hàng active; không đồng nhất số khách hàng với số tài khoản.
 - Tăng trưởng NAV là NAV tại ngày đang xem trừ NAV đầu kỳ của từng kỳ, đơn vị tỷ đồng. Kỳ hiện tại từ 291,2 tỷ đầu kỳ xuống 283,5 tỷ ngày 27/09, thay đổi −7,7 tỷ. Có đường so sánh kỳ trước; các điểm hàng ngày là dữ liệu minh họa, không tính lại theo bộ lọc.
 - Tỷ lệ KH active theo TVĐT dùng mẫu 20/180, 12/150, 7/100 và 3/70, tổng 42/500 khách hàng. Không lấy một trừ tỷ lệ ngủ đông do hai chỉ tiêu khác định nghĩa và đơn vị đếm.
+
+## Danh sách khách hàng hiện hữu
+
+- Chín cột: Số tài khoản, Họ tên KH, NAV cuối kỳ, Số lệnh CP, Số lệnh TP, GTGD CP, GTGD TP, Phí net, Người quản lý. Tài khoản dạng 069Cxxxxxx; người quản lý dạng mã MG/RE - họ tên.
+- Lọc Active/Inactive, mặc định Active. Active khi tài khoản có ít nhất một lệnh cổ phiếu hoặc trái phiếu khớp trong kỳ; Inactive khi không có lệnh khớp. Số lệnh mẫu trong bảng là số lệnh đã khớp. Không đồng nhất Inactive với trạng thái ngủ đông nhiều tháng.
+- Phân trang 20 bản ghi sau khi lọc; đổi bộ lọc quay về trang 1. Dữ liệu minh họa gồm 24 tài khoản active và 3 inactive, là tập con dùng để thể hiện hai trang; không thay đổi số tổng hợp toàn danh mục. Có tài khoản chỉ giao dịch trái phiếu để minh họa điều kiện active. Số lệnh, tài khoản bổ sung và mã RE là dữ liệu mẫu.
+- Bỏ toàn bộ khối Điểm sáng, Cần lưu ý, Việc nên làm trên tất cả các màn.
