@@ -26,7 +26,6 @@
   ];
   const format=new Intl.NumberFormat('vi-VN',{maximumFractionDigits:2});
   const amount=value=>`${value>0?'+':'−'}${format.format(Math.abs(value)>=1000?Math.abs(value)/1000:Math.abs(value))} ${Math.abs(value)>=1000?'tỷ':'tr'}`;
-  const buttons=[...document.querySelectorAll('[data-cash-ranking-period]')];
   function renderList(id,rows,positive,limit=Infinity){
     const selected=rows.filter(row=>positive?row.value>0:row.value<0).sort((a,b)=>Math.abs(b.value)-Math.abs(a.value)||a.label.localeCompare(b.label,'vi')).slice(0,limit);
     const list=document.getElementById(id);list.replaceChildren();
@@ -40,9 +39,8 @@
       item.append(rank,name,bar,value);list.append(item);
     });
   }
-  function render(period){
-    buttons.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.cashRankingPeriod===period)));
-    const index=period==='day'?4:3;
+  function render(){
+    const index=3;
     const rows=customers.map(row=>({label:`${row[0]} - ${row[1]}`,value:row[index]}));
     const totals=Object.fromEntries(Object.keys(managers).map(id=>[id,0]));
     customers.forEach(row=>{totals[row[2]]+=row[index];});
@@ -50,6 +48,5 @@
     renderList('cash-ranking-customers-in',rows,true,10);renderList('cash-ranking-customers-out',rows,false,10);
     renderList('cash-ranking-managers-in',staff,true);renderList('cash-ranking-managers-out',staff,false);
   }
-  buttons.forEach(button=>button.addEventListener('click',()=>render(button.dataset.cashRankingPeriod)));
-  render('day');
+  render();
 })();

@@ -322,32 +322,23 @@ Sau ›
 ## nop-rut
 
 ```text
-1Chỉ tiêu nộp rút
+1
+Chỉ tiêu nộp rút
 Tổng nộp
 17,6 tỷ
 Tổng rút
 4,03 tỷ
 Nộp/Rút ròng
 +13,57 tỷ
-Số lượng KH nộp/rút
-38 / 17 KH
-2Diễn biến
-Nộp Rút theo thời gianNộpRút
-Số tiền (tỷ đồng)
-108642002/0906/0910/0914/0918/0922/0925/0927/09
-Ngày/tháng
-Nộp/Rút ròngDươngÂm
+2
+Diễn biến
+Nộp/Rút ròng
 Số tiền (tỷ đồng)
 1086420-202/0906/0910/0914/0918/0922/0925/0927/09
-Ngày/tháng
 3
-Top KH nộp / rút ròng
-Trong ngày (27/09) | Trong kỳ
-Top 10 KH nộp ròng
-Top 10 KH rút ròng
-Nhãn: 069Cxxxxxx - Họ tên KH; số tiền bên phải.
-Nộp/rút ròng theo bộ phận quản lý
-Nộp ròng | Rút ròng
-Nhãn: MGxxx/RExxx - Họ tên MG/CTV; số tiền có dấu + hoặc − bên phải.
-Nội dung xếp hạng cập nhật theo bộ chọn ngày/kỳ từ cashflow-rankings.js.
+Top nộp/rút ròng
+Top nộp ròng theo khách hàng
+Top rút ròng theo khách hàng
+Top nộp ròng theo người quản lý
+Top rút ròng theo người quản lý
 ```
