@@ -64,8 +64,6 @@
   .kpi{position:relative;border:1.5px solid var(--line);padding:12px 12px 11px;min-height:92px}
   .kpi .lab{font-size:11px;color:var(--mut)}
   .kpi .big{font-size:19px;font-weight:800;margin-top:8px;letter-spacing:-.3px}
-  .kpi .prog{height:6px;border:1px solid var(--line);margin-top:9px;background:var(--fill2)}
-  .kpi .prog i{display:block;height:100%;background:var(--ink)}
   .kpi .pct{font-size:11px;color:var(--mut);margin-top:5px}
   .kpi .pct b{color:var(--ink);font-weight:700}
 
@@ -326,18 +324,9 @@
   .report-header{align-items:flex-end;flex-wrap:wrap;gap:12px}
   .report-filters{display:flex;align-items:flex-start;flex-wrap:wrap;gap:16px 24px;flex:1 1 700px;min-width:0;max-width:100%}
   .report-period{border:0;padding:0;margin:0;min-width:0}
-  .report-period legend,.report-filter-label{display:block;font-size:11px;font-weight:700;color:var(--ink);padding:0;margin:0 0 6px}
-  .report-dates{display:grid;grid-template-columns:auto 148px auto 148px;align-items:center;gap:6px}
-  .report-date-label{font-size:11px;color:var(--mut)}
-  .report-date-control{display:flex;min-width:0;background:#fff;border:1px solid #777;min-height:36px}
-  .report-date-text{font:inherit;font-size:12px;border:0;background:transparent;padding:7px 8px;width:112px;min-width:0}
-  .report-date-picker{width:32px;min-width:32px;border:0;background:transparent;color:transparent;padding:0;font-size:0;cursor:pointer}
-  .report-date-picker::-webkit-datetime-edit{display:none}
-  .report-date-picker::-webkit-calendar-picker-indicator{margin:0;padding:8px;opacity:.7;width:16px;height:16px;cursor:pointer}
-  .report-date-control:focus-within{outline:2px solid #111;outline-offset:2px}
-  .report-date-text:focus,.report-date-picker:focus{outline:none}
-  .report-date-control:has([aria-invalid="true"]){border-color:#b42318}
-  .report-error{font-size:11px;color:#b42318;margin-top:6px;max-width:400px}
+  .report-filter-label{display:block;font-size:11px;font-weight:700;color:var(--ink);padding:0;margin:0 0 6px}
+  .report-month{font:inherit;font-size:12px;width:220px;max-width:100%;height:36px;border:1px solid #777;background:#fff;color:var(--ink);padding:7px 10px;cursor:pointer}
+  .report-month:focus-visible{outline:2px solid #111;outline-offset:2px}
   .report-scope{width:300px;max-width:100%;min-width:0}
   .scope-dropdown{position:relative}
   .scope-dropdown summary{box-sizing:border-box;display:flex;justify-content:space-between;align-items:center;gap:10px;list-style:none;border:1px solid #777;padding:8px 10px;background:#fff;font-size:12px;cursor:pointer;height:36px}
@@ -355,8 +344,7 @@
   @media(max-width:600px){
     .report-filters{display:grid;grid-template-columns:minmax(0,1fr);width:100%;flex:1 0 100%;gap:14px}
     .report-period,.report-scope{width:100%}
-    .report-dates{grid-template-columns:auto minmax(0,1fr);gap:8px}
-    .report-date-text{width:100%;flex:1}
+    .report-month{width:100%}
     .scope-menu{max-height:260px}
   }
 
@@ -491,11 +479,11 @@
 <div class="sec"><span class="n">1</span><h2>Chỉ tiêu chính</h2></div>
     <div class="kpis overview-kpis">
       <div class="kpi"><div class="lab">KH quản lý</div><div class="big">500<span style="font-size:12px;color:#666;font-weight:400"> KH</span></div><div class="sub2">692 TK đang quản lý</div></div>
-      <div class="kpi"><div class="lab">KH mở mới</div><div class="big">38<span style="font-size:12px;color:#666;font-weight:400"> / 50 TK</span></div><div class="prog"><i style="width:76%"></i></div><div class="pct"><b>76%</b> KPI · 11 Active</div></div>
-      <div class="kpi"><div class="lab">GTGD cổ phiếu</div><div class="big">23,4<span style="font-size:12px;color:#666;font-weight:400"> / 80 tỷ</span></div><div class="prog"><i style="width:29.3%"></i></div><div class="pct"><b>29,3%</b> KPI</div></div>
-      <div class="kpi"><div class="lab">Dư nợ</div><div class="big">2,34<span style="font-size:12px;color:#666;font-weight:400"> / 5 tỷ</span></div><div class="prog"><i style="width:46.8%"></i></div><div class="pct"><b>46,8%</b> KPI</div></div>
-      <div class="kpi"><div class="lab">Vòng quay tài sản (lần)</div><div class="big">0,4<span style="font-size:12px;color:#666;font-weight:400"> / 1 lần</span></div><div class="prog" role="progressbar" aria-label="Tiến độ vòng quay tài sản" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"><i style="width:40%"></i></div><div class="pct"><b>40%</b> KPI</div></div>
-      <div class="kpi"><div class="lab">Doanh thu phí</div><div class="big">24,1<span style="font-size:12px;color:#666;font-weight:400"> / 60 tr</span></div><div class="prog" role="progressbar" aria-label="Tiến độ doanh thu phí" aria-valuenow="40.2" aria-valuemin="0" aria-valuemax="100"><i style="width:40.2%"></i></div><div class="pct"><b>40,2%</b> KPI</div></div>
+      <div class="kpi"><div class="lab">KH mở mới</div><div class="big">38<span style="font-size:12px;color:#666;font-weight:400"> / 50 TK</span></div><div class="pct"><b>76%</b> KPI · 11 Active</div></div>
+      <div class="kpi"><div class="lab">GTGD cổ phiếu</div><div class="big">23,4<span style="font-size:12px;color:#666;font-weight:400"> / 80 tỷ</span></div><div class="pct"><b>29,3%</b> KPI</div></div>
+      <div class="kpi"><div class="lab">Dư nợ</div><div class="big">2,34<span style="font-size:12px;color:#666;font-weight:400"> / 5 tỷ</span></div><div class="pct"><b>46,8%</b> KPI</div></div>
+      <div class="kpi"><div class="lab">Vòng quay tài sản (lần)</div><div class="big">0,4<span style="font-size:12px;color:#666;font-weight:400"> / 1 lần</span></div><div class="pct"><b>40%</b> KPI</div></div>
+      <div class="kpi"><div class="lab">Doanh thu phí</div><div class="big">24,1<span style="font-size:12px;color:#666;font-weight:400"> / 60 tr</span></div><div class="pct"><b>40,2%</b> KPI</div></div>
       <div class="kpi"><div class="lab">Phí net</div><div class="big">20,4<span style="font-size:12px;color:#666;font-weight:400"> tr</span></div></div>
       <div class="kpi"><div class="lab">Hoa hồng dự kiến</div><div class="big">13,7<span style="font-size:12px;color:#666;font-weight:400"> tr</span></div></div>
     </div>
@@ -552,7 +540,7 @@
   <div class="body">
     <div class="sec"><span class="n">1</span><h2>Chỉ tiêu doanh số &amp; phí</h2></div>
     <div class="kpis sales-kpis">
-      <div class="kpi"><div class="lab">GTGD cổ phiếu</div><div class="big">23,4<span style="font-size:12px;color:#666;font-weight:400"> / 80 tỷ</span></div><div class="prog"><i style="width:29.3%"></i></div><div class="pct"><b>29,3%</b> KPI</div></div>
+      <div class="kpi"><div class="lab">GTGD cổ phiếu</div><div class="big">23,4<span style="font-size:12px;color:#666;font-weight:400"> / 80 tỷ</span></div><div class="pct"><b>29,3%</b> KPI</div></div>
       <div class="kpi"><div class="lab">Phí net CP</div><div class="big">20,4<span style="font-size:12px;color:#666;font-weight:400"> tr</span></div></div>
       <div class="kpi"><div class="lab">GTGD TP</div><div class="big">109,95<span style="font-size:12px;color:#666;font-weight:400"> tr</span></div></div>
       <div class="kpi"><div class="lab">Hoa hồng dự kiến</div><div class="big">13,7<span style="font-size:12px;color:#666;font-weight:400"> tr</span></div></div>
@@ -597,7 +585,7 @@
   <div class="body">
     <div class="sec"><span class="n">1</span><h2>Chỉ tiêu dư nợ</h2></div>
     <div class="kpis" style="grid-template-columns:repeat(6,1fr)">
-      <div class="kpi"><div class="lab">Tổng dư nợ</div><div class="big">2,34<span style="font-size:12px;color:#666;font-weight:400"> / 5 tỷ</span></div><div class="sub2">31 KH có dư nợ</div><div class="prog"><i style="width:46.8%"></i></div><div class="pct"><b>46,8%</b> KPI</div></div>
+      <div class="kpi"><div class="lab">Tổng dư nợ</div><div class="big">2,34<span style="font-size:12px;color:#666;font-weight:400"> / 5 tỷ</span></div><div class="sub2">31 KH có dư nợ</div><div class="pct"><b>46,8%</b> KPI</div></div>
       <div class="kpi"><div class="lab">Giải ngân trong kỳ</div><div class="big">1,20<span style="font-size:12px;color:#666;font-weight:400"> tỷ</span></div></div>
       <div class="kpi"><div class="lab">Thu nợ gốc trong kỳ</div><div class="big">0,85<span style="font-size:12px;color:#666;font-weight:400"> tỷ</span></div></div>
       <div class="kpi"><div class="lab">Giải ngân ròng</div><div class="big">+0,35<span style="font-size:12px;color:#666;font-weight:400"> tỷ</span></div></div>

@@ -32,7 +32,7 @@ Không cần cài dependency hay chạy build. Khi import repo vào Vercel, dùn
 - Bỏ toàn bộ phần “0. Kết luận”.
 - Bỏ hai tab “So sánh & Ranking CP” và “Doanh số, phí net & hoa hồng”, gồm cả nội dung và nút điều hướng.
 - Tổng quan có 8 chỉ tiêu theo thứ tự: KH quản lý, KH mở mới, GTGD cổ phiếu, Dư nợ, Vòng quay tài sản (lần), Doanh thu phí, Phí net, Hoa hồng dự kiến. Hiển thị 4 cột trên máy tính và 2 cột trên màn hình nhỏ.
-- KH mở mới, GTGD cổ phiếu, Dư nợ, Vòng quay tài sản và Doanh thu phí có thanh tiến độ. Hai mức kế hoạch mẫu được chọn cho demo là 1 lần và 60 triệu đồng, tương ứng 40% và 40,2%. Doanh thu phí lấy tổng phí cổ phiếu 24,1 triệu trước phí sàn; phí net là 20,4 triệu. Vòng quay tài sản là 0,4 lần. Giữ đơn vị tài khoản cho số mở mới 38/50 theo dữ liệu nguồn.
+- Bỏ toàn bộ thanh tiến độ KPI trên 6 tab; giữ số thực hiện, kế hoạch và tỷ lệ hoàn thành dạng chữ. Hai mức kế hoạch mẫu được chọn cho demo là 1 lần và 60 triệu đồng, tương ứng 40% và 40,2%. Doanh thu phí lấy tổng phí cổ phiếu 24,1 triệu trước phí sàn; phí net là 20,4 triệu. Vòng quay tài sản là 0,4 lần. Giữ đơn vị tài khoản cho số mở mới 38/50 theo dữ liệu nguồn.
 
 - Gỡ chú giải và nhãn đánh dấu triển khai ở cả 6 tab, gồm các biến thể viết tắt và nhãn của màn v1.2.
 - Gỡ dải tiêu đề nền đen giới thiệu wireframe/phiên bản ở cả 6 tab.
@@ -47,11 +47,11 @@ Nguồn: commit `2b9227bf933b7212a4c8014862139c22988f60ef`, kiểm kê ngày 29/
 
 ## Bộ lọc chung
 
-- Gỡ dòng thời điểm dữ liệu/cập nhật khỏi cả 6 tab; ô ngày và ô phạm vi dùng cùng chiều cao 36 pixel và căn cùng hàng trên máy tính.
+- Gỡ dòng thời điểm dữ liệu/cập nhật khỏi cả 6 tab; ô chọn tháng và ô phạm vi dùng cùng chiều cao 36 pixel và căn cùng hàng trên máy tính.
 
-- Kỳ báo cáo: chọn hoặc nhập Từ ngày và Đến ngày theo định dạng ngày/tháng/năm. Khi tải trang, mặc định từ ngày 01 của tháng hiện tại đến ngày hiện tại theo thiết bị; ví dụ mở ngày 05/10/2026 sẽ là 01/10/2026–05/10/2026. Kiểm tra ngày hợp lệ và ngày bắt đầu không sau ngày kết thúc.
+- Kỳ báo cáo dùng danh sách chọn tháng/năm, mặc định tháng hiện tại theo ngày của thiết bị. Có 24 tháng gần nhất (gồm tháng hiện tại), xếp từ mới đến cũ. Chọn tháng ở một tab sẽ đồng bộ cả 6 tab.
 - Phạm vi dữ liệu: mặc định `MG1268 - Trần Phương Anh`; danh sách dạng cây cho phép chọn Tất cả (bản thân và cấp dưới), bản thân hoặc một người cấp dưới. Các tên và mã lấy từ demo; quan hệ cấp dưới được mô phỏng, không phải dữ liệu tổ chức thật. Không đưa cấp trên vào danh sách.
-- `dashboard-filters.js` quản lý trạng thái dùng chung và cập nhật nhãn lọc ở tab gộp. Bản triển khai thật phải nhận người dùng, cây cấp dưới và quyền truy cập từ máy chủ, rồi tải dữ liệu tương ứng. Danh sách trên giao diện không thay thế phân quyền máy chủ.
+- `dashboard-filters.js` quản lý trạng thái bộ lọc dùng chung trên cả 6 tab. Bản triển khai thật phải nhận người dùng, cây cấp dưới và quyền truy cập từ máy chủ, rồi tải dữ liệu tương ứng. Danh sách trên giao diện không thay thế phân quyền máy chủ.
 
 ## Cập nhật màn Doanh số
 

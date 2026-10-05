@@ -8,28 +8,22 @@
   ]};
   const people = [broker, ...broker.children];
   const pad = value => String(value).padStart(2, '0');
-  const isoDate = date => `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
-  const displayDate = value => value.split('-').reverse().join('/');
+  const monthValue = date => `${date.getFullYear()}-${pad(date.getMonth() + 1)}`;
+  const monthLabel = value => `Tháng ${Number(value.slice(5))}/${value.slice(0, 4)}`;
   const today = new Date();
+  const months = Array.from({length: 24}, (_, offset) => monthValue(new Date(today.getFullYear(), today.getMonth() - offset, 1)));
   const state = {
-    from: isoDate(new Date(today.getFullYear(), today.getMonth(), 1)),
-    to: isoDate(today), scope: broker.id
+    month: monthValue(today), scope: broker.id
   };
   const scopeLabel = () => state.scope === 'all' ? 'Tất cả' : (() => {
     const person = people.find(person => person.id === state.scope);
     return `${person.id} - ${person.name}`;
   })();
   const bars = [...document.querySelectorAll('.report-filters')];
-  const dateField = (index, key, label) => `<label class="report-date-label" for="report-${index}-${key}">${label}</label>
-    <div class="report-date-control">
-      <input id="report-${index}-${key}" class="report-date-text" data-date="${key}" type="text" inputmode="numeric" maxlength="10" placeholder="dd/mm/yyyy" autocomplete="off" aria-describedby="report-error-${index}">
-      <input class="report-date-picker" data-picker="${key}" type="date" aria-label="Chọn ${label.toLowerCase()} trên lịch" tabindex="0">
-    </div>`;
   bars.forEach((bar, index) => {
     const option = person => `<label class="scope-option"><input type="radio" name="scope-${index}" value="${person.id}"><span>${person.id} - ${person.name}</span></label>`;
-    bar.innerHTML = `<fieldset class="report-period"><legend>Kỳ báo cáo</legend><div class="report-dates">
-      ${dateField(index, 'from', 'Từ ngày')}${dateField(index, 'to', 'Đến ngày')}
-      </div><div class="report-error" id="report-error-${index}" role="alert" hidden></div></fieldset>
+    bar.innerHTML = `<div class="report-period"><label class="report-filter-label" for="report-month-${index}">Kỳ báo cáo</label>
+      <select id="report-month-${index}" class="report-month" data-report-month>${months.map(month => `<option value="${month}">${monthLabel(month)}</option>`).join('')}</select></div>
       <div class="report-scope"><span id="scope-label-${index}" class="report-filter-label">Phạm vi dữ liệu</span>
         <details class="scope-dropdown"><summary aria-labelledby="scope-label-${index} scope-value-${index}"><span id="scope-value-${index}" class="scope-value"></span><span aria-hidden="true">▾</span></summary>
           <div class="scope-menu" role="group" aria-label="Chọn phạm vi dữ liệu">
@@ -41,55 +35,20 @@
   });
   function sync() {
     bars.forEach(bar => {
-      bar.querySelectorAll('[data-date]').forEach(input => {
-        input.value = displayDate(state[input.dataset.date]);
-        input.removeAttribute('aria-invalid');
-      });
-      bar.querySelectorAll('[data-picker]').forEach(input => { input.value = state[input.dataset.picker]; });
-      bar.querySelector('.report-error').hidden = true;
+      bar.querySelector('[data-report-month]').value = state.month;
       bar.querySelector('.scope-value').textContent = scopeLabel();
       bar.querySelectorAll('input[type="radio"]').forEach(input => { input.checked = input.value === state.scope; });
     });
     document.querySelectorAll('.report-period-chip').forEach(chip => {
-      chip.textContent = `Kỳ báo cáo: ${displayDate(state.from)} – ${displayDate(state.to)}`;
+      chip.textContent = `Kỳ báo cáo: ${monthLabel(state.month)}`;
     });
     document.querySelectorAll('.report-scope-chip').forEach(chip => { chip.textContent = `Phạm vi dữ liệu: ${scopeLabel()}`; });
   }
-  function parseDate(value) {
-    const match = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/.exec(value.trim());
-    if (!match) return null;
-    const [, day, month, year] = match.map(Number);
-    if (year < 1000) return null;
-    const date = new Date(year, month - 1, day);
-    return date.getFullYear() === year && date.getMonth() === month - 1 && date.getDate() === day ? isoDate(date) : null;
-  }
-  function setDate(bar, input, key, value) {
-    const error = bar.querySelector('.report-error');
-    const from = key === 'from' ? value : state.from;
-    const to = key === 'to' ? value : state.to;
-    if (!value || from > to) {
-      error.textContent = !value ? 'Nhập ngày hợp lệ theo định dạng dd/mm/yyyy.' : 'Từ ngày phải nhỏ hơn hoặc bằng Đến ngày.';
-      error.hidden = false;
-      input.setAttribute('aria-invalid', 'true');
-      return;
-    }
-    state[key] = value;
-    sync();
-  }
   bars.forEach(bar => {
-    bar.querySelectorAll('[data-date]').forEach(input => {
-      const commit = () => setDate(bar, input, input.dataset.date, parseDate(input.value));
-      input.addEventListener('change', commit);
-      input.addEventListener('blur', commit);
-      input.addEventListener('input', () => {
-        if (input.value.length === 10) commit();
-      });
-      input.addEventListener('keydown', event => {
-        if (event.key === 'Enter') { event.preventDefault(); input.blur(); }
-      });
-    });
-    bar.querySelectorAll('[data-picker]').forEach(input => {
-      input.addEventListener('change', () => setDate(bar, input, input.dataset.picker, input.value));
+    bar.querySelector('[data-report-month]').addEventListener('change', event => {
+      if (!months.includes(event.target.value)) return;
+      state.month = event.target.value;
+      sync();
     });
     const dropdown = bar.querySelector('.scope-dropdown');
     dropdown.addEventListener('toggle', () => {
