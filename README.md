@@ -8,7 +8,7 @@ Bản sao đã gỡ nhãn đánh dấu triển khai, hiện có 6 tab nội dung
 | --- | --- |
 | Tổng quan | 8 chỉ tiêu chính, doanh số và dư nợ theo ngày |
 | Doanh số | GTGD, phí net, hoa hồng dự tính, xếp hạng CTV/TVĐT/KH, bảng theo cây môi giới, danh sách KH |
-| Dư nợ & Món vay | Dư nợ, giải ngân, thu nợ, lãi phí, cơ cấu nợ, danh sách KH/TK và món vay |
+| Dư nợ & Món vay | Dư nợ, giải ngân, thu nợ, lãi phí, cơ cấu nợ, tăng trưởng dư nợ, phân bổ theo team, top dư nợ, danh sách KH/TK |
 | KH hiện hữu | Số khách hàng, active, NAV, dư nợ, phân bổ NAV, danh sách khách hàng |
 | KH mở mới | Số khách hàng mới, active, tài khoản nộp tiền, NAV, dư nợ, phễu và chi tiết tài khoản |
 | Nộp rút | Dòng tiền, Top KH nộp/rút ròng, nộp/rút ròng theo người quản lý |
@@ -55,10 +55,13 @@ Nguồn: commit `2b9227bf933b7212a4c8014862139c22988f60ef`, kiểm kê ngày 29/
 
 ## Cập nhật màn Dư nợ và Món vay
 
-- Bộ lọc riêng chỉ còn Trạng thái với hai lựa chọn Trong hạn (mặc định) và Quá hạn; áp dụng đồng thời cho bảng khách hàng và bảng món vay. Bỏ tìm kiếm, loại nợ, khoảng dư nợ, lãi/phí lớn, đến hạn trong 7 ngày và nút chọn Ngày/Tháng của biểu đồ.
-- Bộ chọn Kỳ báo cáo và Phạm vi dữ liệu dùng chung vẫn căn phải; không có thanh tiến độ KPI.
+- Thẻ Tổng dư nợ chỉ hiện dư nợ trên chỉ tiêu (2,34 / 5 tỷ); bỏ dòng số KH có dư nợ và % KPI.
+- Biểu đồ Giải ngân vs Thu nợ gốc không còn nút chọn Theo tháng / Theo ngày.
+- Thêm biểu đồ Tăng trưởng dư nợ: dư nợ cuối tháng T05–T10 và mức tăng so với tháng trước (+0,35 tỷ, khớp chỉ tiêu Giải ngân ròng).
+- Thêm bảng Phân bổ dư nợ theo team (trưởng team, số KH, dư nợ, tỷ trọng, quá hạn) và bảng xếp hạng Top 5 KH theo dư nợ. Cơ cấu team là dữ liệu mô phỏng, cộng khớp với tổng 31 KH và 2,34 tỷ.
+- Phần Chi tiết chỉ còn bảng tổng hợp theo KH/TK với bộ lọc Trạng thái: Trong hạn (mặc định) và Quá hạn; bỏ nút chuyển sang Chi tiết món vay và bỏ bảng món vay của một khách hàng.
 - Số tài khoản dùng dạng 069Cxxxxxx; người quản lý dùng mã MG - họ tên. Số bản ghi dưới bảng phản ánh các dòng mẫu thực tế đang hiển thị, không phải tổng toàn danh mục.
-- Dữ liệu mẫu gồm 3 khách hàng và 2 món vay trong hạn; chọn Quá hạn hiển thị thông báo không có dữ liệu, phù hợp với chỉ tiêu vay quá hạn bằng 0.
+- Dữ liệu mẫu chỉ có khách hàng trong hạn; chọn Quá hạn hiển thị thông báo không có dữ liệu, phù hợp với chỉ tiêu vay quá hạn bằng 0.
 
 ## Cập nhật màn Doanh số
 

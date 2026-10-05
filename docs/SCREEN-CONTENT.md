@@ -106,8 +106,6 @@ Danh sách theo khách hàngSTK | Họ tên | NAV | GTGD cổ phiếu | Doanh th
 Chỉ tiêu dư nợ
 Tổng dư nợ
 2,34 / 5 tỷ
-31 KH có dư nợ
-46,8% KPI
 Giải ngân trong kỳ
 1,20 tỷ
 Thu nợ gốc trong kỳ
@@ -122,6 +120,9 @@ Vay quá hạn
 Diễn biến & cơ cấu
 Giải ngân vs Thu nợ gốc theo thời gian Giải ngânThu nợ gốc
 010203040506070809
+Tăng trưởng dư nợ +0,35 tỷ (+17,6%) so với tháng trước
+T05T06T07T08T09T10
+1,621,711,801,881,992,34
 Tỷ trọng loại nợ
 Margin1,68 tỷ
 Ứng trước0,47 tỷ
@@ -135,9 +136,20 @@ MG1268 - Trần Phương Anh1,12 tỷ
 MG1271 - Nguyễn Văn Bình0,65 tỷ
 MG1284 - Lê Thu Hà0,38 tỷ
 MG1290 - Đỗ Minh Quân0,19 tỷ
+Phân bổ dư nợ theo team
+| Team | Trưởng team | Số KH | Dư nợ | Tỷ trọng | Quá hạn
+| Team Trần Phương Anh | MG1268 - Trần Phương Anh | 19 | 1,77 tỷ | 75,6% | 0
+| Team Lê Thu Hà | MG1284 - Lê Thu Hà | 12 | 0,57 tỷ | 24,4% | 0
+| Tổng | | 31 | 2,34 tỷ | 100% | 0
+Top dư nợ
+Top 5 KH theo dư nợ
+1069C000001 - Triệu Hạnh Hiền964 tr
+2069C000017 - Phạm Thị Vân280 tr
+3069C000105 - Hoàng Minh Tâm185 tr
+4069C000331 - Vũ Thị Hằng142 tr
+5069C000452 - Lương Quốc Bảo118 tr
 3
 Chi tiết
-Tổng hợp theo KH/TKChi tiết món vay
 Trạng thái
 Trong hạn
 Quá hạn
@@ -146,11 +158,6 @@ Quá hạn
 | KH0017 | Phạm Thị Vân | 069C000017 | Margin | 280 tr | 2,1 tr | 0 | — | MG1268 - Trần Phương Anh
 | KH0105 | Hoàng Minh Tâm | 069C000105 | Ứng trước | 185 tr | 1,4 tr | 0 | — | MG1271 - Nguyễn Văn Bình
 3 bản ghi
-Món vay của Triệu Hạnh Hiền · TK 069C000001
-| Mã món | Loại nợ | Giải ngân | Giá trị giải ngân | Dư nợ còn | Lãi suất | Lãi + phí dồn tích | Trạng thái
-| MV-24091 | Margin | 18/06/2026 | 300 tr | 300 tr | 12,5% | 2,6 tr | Trong hạn
-| MV-24133 | Margin | 20/06/2026 | 250 tr | 250 tr | 12,5% | 2,1 tr | Trong hạn
-2 bản ghi
 ```
 
 ## kh-hien-huu
