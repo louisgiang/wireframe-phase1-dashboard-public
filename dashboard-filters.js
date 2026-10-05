@@ -7,13 +7,10 @@
     {id: 'MG1290', name: 'Đỗ Minh Quân'}
   ]};
   const people = [broker, ...broker.children];
-  const pad = value => String(value).padStart(2, '0');
-  const monthValue = date => `${date.getFullYear()}-${pad(date.getMonth() + 1)}`;
   const monthLabel = value => `Tháng ${Number(value.slice(5))}/${value.slice(0, 4)}`;
-  const today = new Date();
-  const months = Array.from({length: 24}, (_, offset) => monthValue(new Date(today.getFullYear(), today.getMonth() - offset, 1)));
+  const months = ['2026-10', '2026-09'];
   const state = {
-    month: monthValue(today), scope: broker.id
+    month: months[0], scope: broker.id
   };
   const scopeLabel = () => state.scope === 'all' ? 'Tất cả' : (() => {
     const person = people.find(person => person.id === state.scope);

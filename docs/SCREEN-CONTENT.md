@@ -1,6 +1,6 @@
 # Nội dung đầy đủ của 6 màn
 
-Nội dung và dữ liệu mẫu của giao diện. Bộ lọc chung: Kỳ báo cáo (danh sách tháng/năm, mặc định tháng hiện tại, 24 tháng gần nhất) và Phạm vi dữ liệu. Tháng đã chọn đồng bộ trên cả 6 tab. Không còn thanh tiến độ KPI; số thực hiện, kế hoạch và tỷ lệ hoàn thành vẫn hiển thị dạng chữ. Các bảng có phân trang chỉ hiển thị một trang tại một thời điểm.
+Nội dung và dữ liệu mẫu của giao diện. Bộ lọc chung: Kỳ báo cáo (Tháng 10/2026 mặc định và Tháng 9/2026) và Phạm vi dữ liệu, căn phải trên máy tính. Tháng đã chọn đồng bộ trên cả 6 tab. Không còn thanh tiến độ KPI; số thực hiện, kế hoạch và tỷ lệ hoàn thành vẫn hiển thị dạng chữ. Các bảng có phân trang chỉ hiển thị một trang tại một thời điểm.
 
 ## tong-quan
 

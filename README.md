@@ -49,7 +49,7 @@ Nguồn: commit `2b9227bf933b7212a4c8014862139c22988f60ef`, kiểm kê ngày 29/
 
 - Gỡ dòng thời điểm dữ liệu/cập nhật khỏi cả 6 tab; ô chọn tháng và ô phạm vi dùng cùng chiều cao 36 pixel và căn cùng hàng trên máy tính.
 
-- Kỳ báo cáo dùng danh sách chọn tháng/năm, mặc định tháng hiện tại theo ngày của thiết bị. Có 24 tháng gần nhất (gồm tháng hiện tại), xếp từ mới đến cũ. Chọn tháng ở một tab sẽ đồng bộ cả 6 tab.
+- Kỳ báo cáo chỉ gồm Tháng 10/2026 (mặc định) và Tháng 9/2026. Chọn tháng ở một tab sẽ đồng bộ cả 6 tab. Bộ chọn tháng và Phạm vi dữ liệu căn phải trên máy tính; xếp dọc toàn chiều rộng trên điện thoại.
 - Phạm vi dữ liệu: mặc định `MG1268 - Trần Phương Anh`; danh sách dạng cây cho phép chọn Tất cả (bản thân và cấp dưới), bản thân hoặc một người cấp dưới. Các tên và mã lấy từ demo; quan hệ cấp dưới được mô phỏng, không phải dữ liệu tổ chức thật. Không đưa cấp trên vào danh sách.
 - `dashboard-filters.js` quản lý trạng thái bộ lọc dùng chung trên cả 6 tab. Bản triển khai thật phải nhận người dùng, cây cấp dưới và quyền truy cập từ máy chủ, rồi tải dữ liệu tương ứng. Danh sách trên giao diện không thay thế phân quyền máy chủ.
 
