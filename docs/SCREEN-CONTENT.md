@@ -102,7 +102,8 @@ Danh sách theo khách hàngSTK | Họ tên | NAV | GTGD cổ phiếu | Doanh th
 ## du-no-mon-vay
 
 ```text
-1Chỉ tiêu dư nợ
+1
+Chỉ tiêu dư nợ
 Tổng dư nợ
 2,34 / 5 tỷ
 31 KH có dư nợ
@@ -117,8 +118,9 @@ Lãi + phí dồn tích
 18,6 tr
 Vay quá hạn
 0
-2Diễn biến & cơ cấu
-Giải ngân vs Thu nợ gốc theo thời gian Theo thángTheo ngàyGiải ngânThu nợ gốc
+2
+Diễn biến & cơ cấu
+Giải ngân vs Thu nợ gốc theo thời gian Giải ngânThu nợ gốc
 010203040506070809
 Tỷ trọng loại nợ
 Margin1,68 tỷ
@@ -129,24 +131,26 @@ Trong hạn2,34 tỷ
 Quá hạn0
 Quy mô dư nợ theo đơn vị
 ■ Margin ■ Ứng trước □ Khác
-Trần Phương Anh (1268)1,12 tỷ
-Nguyễn Văn Bình (1271)0,65 tỷ
-Lê Thu Hà (1284)0,38 tỷ
-Đỗ Minh Quân (1290)0,19 tỷ
-3Chi tiết
+MG1268 - Trần Phương Anh1,12 tỷ
+MG1271 - Nguyễn Văn Bình0,65 tỷ
+MG1284 - Lê Thu Hà0,38 tỷ
+MG1290 - Đỗ Minh Quân0,19 tỷ
+3
+Chi tiết
 Tổng hợp theo KH/TKChi tiết món vay
-LọcLoại nợ ▾Trong hạn / quá hạn ▾Khoảng dư nợ ▾Lãi + phí dồn tích lớnĐến hạn ≤ 7 ngày
-Tìm mã / tên KH, số TK…
-Mã KH | Tên KH | TK | Loại nợ chính | Dư nợ | Lãi + phí dồn tích | Quá hạn | Đến hạn gần nhất | TVĐT |
-KH0001 | Triệu Hạnh Hiền | 0001C | Margin | 964 tr | 7,2 tr | 0 | — | Trần Phương Anh |
-KH0017 | Phạm Thị Vân | 0017C | Margin | 280 tr | 2,1 tr | 0 | — | Trần Phương Anh |
-KH0105 | Hoàng Minh Tâm | 0105C | Ứng trước | 185 tr | 1,4 tr | 0 | — | Nguyễn Văn Bình |
-31 KH có dư nợ20 dòng/trang
-Món vay của Triệu Hạnh Hiền · TK 0001C
-Mã món | Loại nợ | Giải ngân | Giá trị giải ngân | Dư nợ còn | Lãi suất | Lãi + phí dồn tích | Trạng thái |
-MV-24091 | Margin | 18/06/2026 | 300 tr | 300 tr | 12,5% | 2,6 tr | Trong hạn |
-MV-24133 | Margin | 20/06/2026 | 250 tr | 250 tr | 12,5% | 2,1 tr | Trong hạn |
-12 món20 dòng/trang
+Trạng thái
+Trong hạn
+Quá hạn
+| Mã KH | Tên KH | Số tài khoản | Loại nợ chính | Dư nợ | Lãi + phí dồn tích | Quá hạn | Đến hạn gần nhất | Người quản lý
+| KH0001 | Triệu Hạnh Hiền | 069C000001 | Margin | 964 tr | 7,2 tr | 0 | — | MG1268 - Trần Phương Anh
+| KH0017 | Phạm Thị Vân | 069C000017 | Margin | 280 tr | 2,1 tr | 0 | — | MG1268 - Trần Phương Anh
+| KH0105 | Hoàng Minh Tâm | 069C000105 | Ứng trước | 185 tr | 1,4 tr | 0 | — | MG1271 - Nguyễn Văn Bình
+3 bản ghi
+Món vay của Triệu Hạnh Hiền · TK 069C000001
+| Mã món | Loại nợ | Giải ngân | Giá trị giải ngân | Dư nợ còn | Lãi suất | Lãi + phí dồn tích | Trạng thái
+| MV-24091 | Margin | 18/06/2026 | 300 tr | 300 tr | 12,5% | 2,6 tr | Trong hạn
+| MV-24133 | Margin | 20/06/2026 | 250 tr | 250 tr | 12,5% | 2,1 tr | Trong hạn
+2 bản ghi
 ```
 
 ## kh-hien-huu

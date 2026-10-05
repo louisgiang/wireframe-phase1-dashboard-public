@@ -596,7 +596,7 @@
     <div class="sec"><span class="n">2</span><h2>Diễn biến &amp; cơ cấu</h2></div>
     <div class="biz" style="grid-template-columns:1fr">
       <div class="chart">
-        <div class="ct">Giải ngân vs Thu nợ gốc theo thời gian <span class="leg"><span class="tgl"><span class="on">Theo tháng</span><span>Theo ngày</span></span><span><i class="d" style="background:#111"></i>Giải ngân</span><span><i class="d" style="background:#bbb"></i>Thu nợ gốc</span></span></div>
+        <div class="ct">Giải ngân vs Thu nợ gốc theo thời gian <span class="leg"><span><i class="d" style="background:#111"></i>Giải ngân</span><span><i class="d" style="background:#bbb"></i>Thu nợ gốc</span></span></div>
         <div style="margin-top:10px"><div class="bars" style="height:130px"><span class="g"><i class="" style="height:40%"></i><i class="l" style="height:30%"></i></span><span class="g"><i class="" style="height:55%"></i><i class="l" style="height:45%"></i></span><span class="g"><i class="" style="height:35%"></i><i class="l" style="height:50%"></i></span><span class="g"><i class="" style="height:70%"></i><i class="l" style="height:40%"></i></span><span class="g"><i class="" style="height:50%"></i><i class="l" style="height:60%"></i></span><span class="g"><i class="" style="height:45%"></i><i class="l" style="height:35%"></i></span><span class="g"><i class="" style="height:60%"></i><i class="l" style="height:55%"></i></span><span class="g"><i class="" style="height:80%"></i><i class="l" style="height:50%"></i></span><span class="g"><i class="" style="height:65%"></i><i class="l" style="height:48%"></i></span></div><div class="xl"><span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span><span>07</span><span>08</span><span>09</span></div></div>
       </div>
     </div>
@@ -610,22 +610,25 @@
     </div>
     <div style="margin-top:12px">
       <div class="box"><div class="ct" style="display:flex;justify-content:space-between;gap:10px">Quy mô dư nợ theo đơn vị</div><div class="chart-key">■ Margin ■ Ứng trước □ Khác</div>
-        <div class="stack"><span>Trần Phương Anh (1268)</span><span class="s" style="width:100%"><i style="width:72%;background:#111"></i><i style="width:20%;background:#888"></i><i style="width:8%;background:#ddd"></i></span><span class="v" style="text-align:right;font-weight:700">1,12 tỷ</span></div><div class="stack"><span>Nguyễn Văn Bình (1271)</span><span class="s" style="width:58%"><i style="width:72%;background:#111"></i><i style="width:20%;background:#888"></i><i style="width:8%;background:#ddd"></i></span><span class="v" style="text-align:right;font-weight:700">0,65 tỷ</span></div><div class="stack"><span>Lê Thu Hà (1284)</span><span class="s" style="width:34%"><i style="width:72%;background:#111"></i><i style="width:20%;background:#888"></i><i style="width:8%;background:#ddd"></i></span><span class="v" style="text-align:right;font-weight:700">0,38 tỷ</span></div><div class="stack"><span>Đỗ Minh Quân (1290)</span><span class="s" style="width:17%"><i style="width:72%;background:#111"></i><i style="width:20%;background:#888"></i><i style="width:8%;background:#ddd"></i></span><span class="v" style="text-align:right;font-weight:700">0,19 tỷ</span></div>
+        <div class="stack"><span>MG1268 - Trần Phương Anh</span><span class="s" style="width:100%"><i style="width:72%;background:#111"></i><i style="width:20%;background:#888"></i><i style="width:8%;background:#ddd"></i></span><span class="v" style="text-align:right;font-weight:700">1,12 tỷ</span></div><div class="stack"><span>MG1271 - Nguyễn Văn Bình</span><span class="s" style="width:58%"><i style="width:72%;background:#111"></i><i style="width:20%;background:#888"></i><i style="width:8%;background:#ddd"></i></span><span class="v" style="text-align:right;font-weight:700">0,65 tỷ</span></div><div class="stack"><span>MG1284 - Lê Thu Hà</span><span class="s" style="width:34%"><i style="width:72%;background:#111"></i><i style="width:20%;background:#888"></i><i style="width:8%;background:#ddd"></i></span><span class="v" style="text-align:right;font-weight:700">0,38 tỷ</span></div><div class="stack"><span>MG1290 - Đỗ Minh Quân</span><span class="s" style="width:17%"><i style="width:72%;background:#111"></i><i style="width:20%;background:#888"></i><i style="width:8%;background:#ddd"></i></span><span class="v" style="text-align:right;font-weight:700">0,19 tỷ</span></div>
       </div>
     </div>
     <div class="sec"><span class="n">3</span><h2>Chi tiết</h2></div>
     <div style="margin-bottom:8px"><span class="seg"><span class="on">Tổng hợp theo KH/TK</span><span>Chi tiết món vay</span></span></div>
-    <div class="fbar">
-      <span class="gl">Lọc</span><span class="chip">Loại nợ ▾</span><span class="chip">Trong hạn / quá hạn ▾</span><span class="chip">Khoảng dư nợ ▾</span><span class="chip on">Lãi + phí dồn tích lớn</span><span class="chip">Đến hạn ≤ 7 ngày </span>
-      <span class="search push">Tìm mã / tên KH, số TK…</span>
+    <div class="fbar customer-list-filter">
+      <label for="debt-status">Trạng thái</label>
+      <select id="debt-status" aria-controls="debt-customer-table debt-loan-table">
+        <option value="current">Trong hạn</option>
+        <option value="overdue">Quá hạn</option>
+      </select>
     </div>
-    <div class="tbl"><table class="wt"><thead><tr><th class="">Mã KH</th><th class="">Tên KH</th><th class="">TK</th><th class="">Loại nợ chính</th><th class="n">Dư nợ</th><th class="n">Lãi + phí dồn tích</th><th class="n">Quá hạn</th><th class="">Đến hạn gần nhất</th><th class="opt">TVĐT</th></tr></thead><tbody><tr class="picked"><td class="">KH0001</td><td class="">Triệu Hạnh Hiền</td><td class="">0001C</td><td class="">Margin</td><td class="n">964 tr</td><td class="n">7,2 tr</td><td class="n">0</td><td class="">—</td><td class="opt">Trần Phương Anh</td></tr><tr><td class="">KH0017</td><td class="">Phạm Thị Vân</td><td class="">0017C</td><td class="">Margin</td><td class="n">280 tr</td><td class="n">2,1 tr</td><td class="n">0</td><td class="">—</td><td class="opt">Trần Phương Anh</td></tr><tr><td class="">KH0105</td><td class="">Hoàng Minh Tâm</td><td class="">0105C</td><td class="">Ứng trước</td><td class="n">185 tr</td><td class="n">1,4 tr</td><td class="n">0</td><td class="">—</td><td class="opt">Nguyễn Văn Bình</td></tr></tbody></table>
-      <div class="tfoot"><span>31 KH có dư nợ</span><span>20 dòng/trang</span></div>
+    <div class="tbl"><table class="wt" id="debt-customer-table"><thead><tr><th class="">Mã KH</th><th class="">Tên KH</th><th class="">Số tài khoản</th><th class="">Loại nợ chính</th><th class="n">Dư nợ</th><th class="n">Lãi + phí dồn tích</th><th class="n">Quá hạn</th><th class="">Đến hạn gần nhất</th><th class="opt">Người quản lý</th></tr></thead><tbody><tr class="picked" data-debt-status="current"><td class="">KH0001</td><td class="">Triệu Hạnh Hiền</td><td class="">069C000001</td><td class="">Margin</td><td class="n">964 tr</td><td class="n">7,2 tr</td><td class="n">0</td><td class="">—</td><td class="opt">MG1268 - Trần Phương Anh</td></tr><tr data-debt-status="current"><td class="">KH0017</td><td class="">Phạm Thị Vân</td><td class="">069C000017</td><td class="">Margin</td><td class="n">280 tr</td><td class="n">2,1 tr</td><td class="n">0</td><td class="">—</td><td class="opt">MG1268 - Trần Phương Anh</td></tr><tr data-debt-status="current"><td class="">KH0105</td><td class="">Hoàng Minh Tâm</td><td class="">069C000105</td><td class="">Ứng trước</td><td class="n">185 tr</td><td class="n">1,4 tr</td><td class="n">0</td><td class="">—</td><td class="opt">MG1271 - Nguyễn Văn Bình</td></tr></tbody></table>
+      <div class="tfoot"><span id="debt-customer-count" aria-live="polite">3 bản ghi</span></div>
     </div>
 
-    <h3 style="font-size:12px;margin:16px 0 8px">Món vay của Triệu Hạnh Hiền · TK 0001C</h3>
-    <div class="tbl"><table class="wt"><thead><tr><th class="">Mã món</th><th class="">Loại nợ</th><th class="">Giải ngân</th><th class="n">Giá trị giải ngân</th><th class="n">Dư nợ còn</th><th class="n">Lãi suất</th><th class="n">Lãi + phí dồn tích</th><th class="">Trạng thái</th></tr></thead><tbody><tr><td class="">MV-24091</td><td class="">Margin</td><td class="">18/06/2026</td><td class="n">300 tr</td><td class="n">300 tr</td><td class="n">12,5%</td><td class="n">2,6 tr</td><td class=""><span class="pill">Trong hạn</span></td></tr><tr><td class="">MV-24133</td><td class="">Margin</td><td class="">20/06/2026</td><td class="n">250 tr</td><td class="n">250 tr</td><td class="n">12,5%</td><td class="n">2,1 tr</td><td class=""><span class="pill">Trong hạn</span></td></tr></tbody></table>
-      <div class="tfoot"><span>12 món</span><span>20 dòng/trang</span></div>
+    <h3 style="font-size:12px;margin:16px 0 8px">Món vay của Triệu Hạnh Hiền · TK 069C000001</h3>
+    <div class="tbl"><table class="wt" id="debt-loan-table"><thead><tr><th class="">Mã món</th><th class="">Loại nợ</th><th class="">Giải ngân</th><th class="n">Giá trị giải ngân</th><th class="n">Dư nợ còn</th><th class="n">Lãi suất</th><th class="n">Lãi + phí dồn tích</th><th class="">Trạng thái</th></tr></thead><tbody><tr data-debt-status="current"><td class="">MV-24091</td><td class="">Margin</td><td class="">18/06/2026</td><td class="n">300 tr</td><td class="n">300 tr</td><td class="n">12,5%</td><td class="n">2,6 tr</td><td class=""><span class="pill">Trong hạn</span></td></tr><tr data-debt-status="current"><td class="">MV-24133</td><td class="">Margin</td><td class="">20/06/2026</td><td class="n">250 tr</td><td class="n">250 tr</td><td class="n">12,5%</td><td class="n">2,1 tr</td><td class=""><span class="pill">Trong hạn</span></td></tr></tbody></table>
+      <div class="tfoot"><span id="debt-loan-count" aria-live="polite">2 bản ghi</span></div>
     </div>
 
 
@@ -837,6 +840,7 @@
 <script src="overview-chart-tooltips.js"></script>
 <script src="customer-charts.js"></script>
 <script src="customer-list.js"></script>
+<script src="debt-filters.js"></script>
 <script src="cashflow-charts.js"></script>
 <script src="cashflow-rankings.js"></script>
 <script>

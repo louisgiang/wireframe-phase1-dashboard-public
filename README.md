@@ -53,6 +53,13 @@ Nguồn: commit `2b9227bf933b7212a4c8014862139c22988f60ef`, kiểm kê ngày 29/
 - Phạm vi dữ liệu: mặc định `MG1268 - Trần Phương Anh`; danh sách dạng cây cho phép chọn Tất cả (bản thân và cấp dưới), bản thân hoặc một người cấp dưới. Các tên và mã lấy từ demo; quan hệ cấp dưới được mô phỏng, không phải dữ liệu tổ chức thật. Không đưa cấp trên vào danh sách.
 - `dashboard-filters.js` quản lý trạng thái bộ lọc dùng chung trên cả 6 tab. Bản triển khai thật phải nhận người dùng, cây cấp dưới và quyền truy cập từ máy chủ, rồi tải dữ liệu tương ứng. Danh sách trên giao diện không thay thế phân quyền máy chủ.
 
+## Cập nhật màn Dư nợ và Món vay
+
+- Bộ lọc riêng chỉ còn Trạng thái với hai lựa chọn Trong hạn (mặc định) và Quá hạn; áp dụng đồng thời cho bảng khách hàng và bảng món vay. Bỏ tìm kiếm, loại nợ, khoảng dư nợ, lãi/phí lớn, đến hạn trong 7 ngày và nút chọn Ngày/Tháng của biểu đồ.
+- Bộ chọn Kỳ báo cáo và Phạm vi dữ liệu dùng chung vẫn căn phải; không có thanh tiến độ KPI.
+- Số tài khoản dùng dạng 069Cxxxxxx; người quản lý dùng mã MG - họ tên. Số bản ghi dưới bảng phản ánh các dòng mẫu thực tế đang hiển thị, không phải tổng toàn danh mục.
+- Dữ liệu mẫu gồm 3 khách hàng và 2 món vay trong hạn; chọn Quá hạn hiển thị thông báo không có dữ liệu, phù hợp với chỉ tiêu vay quá hạn bằng 0.
+
 ## Cập nhật màn Doanh số
 
 - Bốn chỉ tiêu: GTGD cổ phiếu, Phí net CP, GTGD TP, Hoa hồng dự kiến.
