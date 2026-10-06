@@ -7,7 +7,7 @@ Bản sao đã gỡ nhãn đánh dấu triển khai, hiện có 6 tab nội dung
 | Tab | Nội dung chính |
 | --- | --- |
 | Tổng quan | 8 chỉ tiêu chính, doanh số và dư nợ theo ngày |
-| Doanh số | GTGD, phí net, hoa hồng dự tính, xếp hạng CTV/TVĐT/KH, bảng theo cây môi giới, danh sách KH |
+| Doanh số | GTGD, phí net, xếp hạng CTV/TVĐT/KH, bảng theo cây môi giới, danh sách KH |
 | Dư nợ & Món vay | Dư nợ, giải ngân, thu nợ, lãi phí, cơ cấu nợ, tăng trưởng dư nợ, phân bổ theo team, top dư nợ, danh sách KH/TK |
 | KH hiện hữu | Số khách hàng, active, NAV, dư nợ, phân bổ NAV, danh sách khách hàng |
 | KH mở mới | Số khách hàng mới, active, tài khoản nộp tiền, NAV, dư nợ, phễu và chi tiết tài khoản |
@@ -65,10 +65,10 @@ Nguồn: commit `2b9227bf933b7212a4c8014862139c22988f60ef`, kiểm kê ngày 29/
 
 ## Cập nhật màn Doanh số
 
-- Bốn chỉ tiêu: GTGD cổ phiếu, Phí net CP, GTGD TP, Hoa hồng dự kiến.
+- Ba chỉ tiêu: GTGD cổ phiếu, Phí net CP, GTGD TP. Bỏ chỉ tiêu và cột Hoa hồng dự kiến khỏi màn Doanh số.
 - Biểu đồ Doanh thu phí net lũy kế có hai kỳ, trục ngày/tháng, đơn vị triệu đồng và tooltip dùng chung theo ngày. Số kỳ hiện tại ngày 27 là 20,4 triệu; các điểm còn lại là dữ liệu biểu diễn mẫu.
 - Hai biểu đồ Top MG/CTV và Top KH đặt cạnh nhau (xếp dọc trên màn hình nhỏ), mỗi biểu đồ 5 vị trí, xếp giảm dần theo phí net CP. Nhãn nhân sự hiển thị mã MG/RE - họ tên; nhãn khách hàng hiển thị số tài khoản - họ tên, khớp bảng bên dưới. Mã RE002 và RE005 là mã minh họa. Biểu đồ nhân sự gộp các tư vấn đầu tư và cộng tác viên đã có trong mẫu; số giữa hai nhóm không dùng để cộng thành tổng phí.
-- Bảng môi giới có 7 cột; bảng khách hàng có 8 cột, số tài khoản dạng 069Cxxxxxx. Bảng mục 4 phân trang 10 bản ghi/trang, bảng mục 5 phân trang 20 bản ghi/trang, với nút Trước/Sau và thông tin số bản ghi. Dòng tổng cộng môi giới luôn hiển thị, không tính vào số bản ghi mỗi trang. Dữ liệu mẫu hiện có 4 môi giới và 7 khách hàng nên mỗi bảng chỉ có một trang. Không có lọc/tìm kiếm riêng.
+- Bảng môi giới có 6 cột; bảng khách hàng có 8 cột, số tài khoản dạng 069Cxxxxxx. Bảng mục 4 phân trang 10 bản ghi/trang, bảng mục 5 phân trang 20 bản ghi/trang, với nút Trước/Sau và thông tin số bản ghi. Dòng tổng cộng môi giới luôn hiển thị, không tính vào số bản ghi mỗi trang. Dữ liệu mẫu hiện có 4 môi giới và 7 khách hàng nên mỗi bảng chỉ có một trang. Không có lọc/tìm kiếm riêng.
 - Bổ sung dữ liệu minh họa cho số khách hàng quản lý (180/150/100/70, tổng 500), số tài khoản, NAV và hai khách hàng xếp hạng thứ 4–5. Danh sách khách hàng là các dòng mẫu, không phải toàn bộ danh mục để cộng thành tổng kỳ. Phí net mỗi dòng bằng doanh thu phí trừ phí trả sở. Các bảng ở tab khác giữ bộ mẫu riêng.
 
 - Xếp hạng Doanh số: mã – tên bên trái, thanh tỷ lệ ở giữa, số tiền bên phải trên cùng hàng. Thanh tỷ lệ giữ mức phí cao nhất của từng nhóm làm mốc 100%.
