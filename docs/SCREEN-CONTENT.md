@@ -54,7 +54,6 @@ Ngày/tháng
 Chỉ tiêu doanh số & phí
 GTGD cổ phiếu
 23,4 / 80 tỷ
-29,3% KPI
 Phí net CP
 20,4 tr
 GTGD TP
