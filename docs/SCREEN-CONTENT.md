@@ -1,6 +1,6 @@
 # Nội dung đầy đủ của 6 màn
 
-Nội dung và dữ liệu mẫu của giao diện. Bộ lọc chung: Kỳ báo cáo (Tháng 10/2026 mặc định và Tháng 9/2026) và Phạm vi dữ liệu, căn phải trên máy tính. Tháng đã chọn đồng bộ trên cả 6 tab. Không còn thanh tiến độ KPI; số thực hiện, kế hoạch và tỷ lệ hoàn thành vẫn hiển thị dạng chữ. Các bảng có phân trang chỉ hiển thị một trang tại một thời điểm.
+Nội dung và dữ liệu mẫu của giao diện. Bộ lọc chung: Kỳ báo cáo (Tháng 10/2026 mặc định và Tháng 9/2026) và Phạm vi dữ liệu, căn phải trên máy tính. Tháng đã chọn đồng bộ trên cả 6 tab. Không còn thanh tiến độ KPI; số thực hiện, kế hoạch và tỷ lệ hoàn thành vẫn hiển thị dạng chữ. Cả 6 bảng dữ liệu mặc định 15 bản ghi/trang. Các dòng tổng hiện có nằm riêng dưới tiêu đề mục và phía trên bảng chi tiết, không tính vào phân trang.
 
 ## tong-quan
 
@@ -85,13 +85,18 @@ Top 5 theo phí net CP
 5069C000453 - Nguyễn Minh Sang0,9 tr
 4
 Bảng doanh số theo môi giới
+Tổng cộng
+KH quản lý500
+GTGD cổ phiếu23,4 tỷ
+Doanh thu phí24,1 tr
+Phí trả sở3,7 tr
+Phí net CP20,4 tr
 Bảng doanh số theo môi giới
 | Môi giới | KH quản lý | GTGD cổ phiếu | Doanh thu phí | Phí trả sở | Phí net CP
 | MG1268 - Trần Phương Anh | 180 | 10,2 tỷ | 10,8 tr | 1,7 tr | 9,1 tr
 | MG1271 - Nguyễn Văn Bình | 150 | 6,5 tỷ | 6,6 tr | 1,0 tr | 5,6 tr
 | MG1284 - Lê Thu Hà | 100 | 4,5 tỷ | 4,5 tr | 0,7 tr | 3,8 tr
 | MG1290 - Đỗ Minh Quân | 70 | 2,2 tỷ | 2,2 tr | 0,3 tr | 1,9 tr
-| TỔNG CỘNG | 500 | 23,4 tỷ | 24,1 tr | 3,7 tr | 20,4 tr
 5
 Danh sách theo khách hàng
 Danh sách theo khách hàng
@@ -143,10 +148,14 @@ MG1271 - Nguyễn Văn Bình0,65 tỷ
 MG1284 - Lê Thu Hà0,38 tỷ
 MG1290 - Đỗ Minh Quân0,19 tỷ
 Phân bổ dư nợ theo team
+Tổng cộng
+Số KH31
+Dư nợ2,34 tỷ
+Tỷ trọng100%
+Quá hạn0
 | Team | Trưởng team | Số KH | Dư nợ | Tỷ trọng | Quá hạn
 | Team Trần Phương Anh | MG1268 - Trần Phương Anh | 19 | 1,77 tỷ | 75,6% | 0
 | Team Lê Thu Hà | MG1284 - Lê Thu Hà | 12 | 0,57 tỷ | 24,4% | 0
-| Tổng | | 31 | 2,34 tỷ | 100% | 0
 Top dư nợ
 Top 5 KH theo dư nợ
 1069C000001 - Triệu Hạnh Hiền964 tr
@@ -163,7 +172,6 @@ Quá hạn
 | 069C000001 | Triệu Hạnh Hiền | 069C000001 | Margin | 964 tr | 7,2 tr | 0 | — | MG1268 - Trần Phương Anh
 | 069C000017 | Phạm Thị Vân | 069C000017 | Margin | 280 tr | 2,1 tr | 0 | — | MG1268 - Trần Phương Anh
 | 069C000105 | Hoàng Minh Tâm | 069C000105 | Ứng trước | 185 tr | 1,4 tr | 0 | — | MG1271 - Nguyễn Văn Bình
-3 bản ghi
 ```
 
 ## kh-hien-huu
@@ -233,7 +241,7 @@ Danh sách KH hiện hữuSố tài khoản | Họ tên KH | NAV cuối kỳ | S
 069C000412 | Lê Văn Hòa | 3,1 tr | 0 | 0 | 0 | 0 | 0 | MG1268 - Trần Phương Anh |
 069C000877 | Trần Thị Mai | 1,4 tr | 0 | 0 | 0 | 0 | 0 | MG1284 - Lê Thu Hà |
 069C001033 | Ngô Quốc Bảo | 8,9 tr | 0 | 0 | 0 | 0 | 0 | MG1271 - Nguyễn Văn Bình |
-20 bản ghi/trang‹ Trước
+15 bản ghi/trang‹ Trước
 Sau ›
 ```
 
@@ -321,7 +329,7 @@ Chi tiết TK mở mớiSTK chứng khoán | Họ tên KH | Ngày mở | NAV | G
 069C002236 | Lý Minh Anh | 26/09/2026 | 0 | 0 | MG1290 - Đỗ Minh Quân |
 069C002237 | Mai Ngọc Hà | 27/09/2026 | 0 | 0 | MG1290 - Đỗ Minh Quân |
 069C002238 | Tạ Quốc Thắng | 27/09/2026 | 0 | 0 | MG1290 - Đỗ Minh Quân |
-20 bản ghi/trang‹ Trước
+15 bản ghi/trang‹ Trước
 Sau ›
 ```
 

@@ -41,7 +41,7 @@ Không cần cài dependency hay chạy build. Khi import repo vào Vercel, dùn
 - Giữ các KPI nghiệp vụ, biểu đồ, bảng, cảnh báo, hành động và điều hướng; giữ tên chuỗi dữ liệu để đọc biểu đồ.
 - Giữ lịch sử commit gốc; không sửa repo hay deployment Vercel gốc.
 
-Đây là wireframe với dữ liệu minh họa nhúng trong HTML. Chuyển tab, deep link và bàn phím hoạt động; Bộ lọc kỳ báo cáo và phạm vi dữ liệu có thể thao tác, đồng bộ trên cả 6 tab; phân trang hoạt động ở hai bảng tab Doanh số và bảng KH hiện hữu; lọc Active/Inactive hoạt động ở bảng KH hiện hữu; tìm kiếm, phân trang các tab khác và các thao tác nghiệp vụ khác chưa được lập trình. Số liệu, biểu đồ và ngày chốt dữ liệu vẫn là dữ liệu minh họa cố định, chưa được tính lại theo bộ lọc.
+Đây là wireframe với dữ liệu minh họa nhúng trong HTML. Chuyển tab, deep link và bàn phím hoạt động; Bộ lọc kỳ báo cáo và phạm vi dữ liệu có thể thao tác, đồng bộ trên cả 6 tab; phân trang hoạt động ở cả 6 bảng dữ liệu với 15 bản ghi/trang; lọc Active/Inactive hoạt động ở hai bảng khách hàng và Trong hạn/Quá hạn ở bảng dư nợ. Các thao tác nghiệp vụ khác chưa được lập trình. Số liệu, biểu đồ và ngày chốt dữ liệu vẫn là dữ liệu minh họa cố định, chưa được tính lại theo bộ lọc.
 
 Nguồn: commit `2b9227bf933b7212a4c8014862139c22988f60ef`, kiểm kê ngày 29/09/2026. Repo gốc không có tệp LICENSE.
 
@@ -68,7 +68,7 @@ Nguồn: commit `2b9227bf933b7212a4c8014862139c22988f60ef`, kiểm kê ngày 29/
 - Bốn chỉ tiêu theo thứ tự: GTGD cổ phiếu, Doanh thu phí CP, Phí net CP, GTGD TP. Doanh thu phí CP là 24,1 triệu đồng, khớp tổng doanh thu phí trước phí trả sở ở bảng môi giới. Bỏ chỉ tiêu và cột Hoa hồng dự kiến khỏi màn Doanh số. Bỏ dòng phần trăm KPI dưới chỉ tiêu GTGD cổ phiếu.
 - Biểu đồ Doanh thu phí net lũy kế có hai kỳ, trục ngày/tháng, đơn vị triệu đồng và tooltip dùng chung theo ngày. Số kỳ hiện tại ngày 27 là 20,4 triệu; các điểm còn lại là dữ liệu biểu diễn mẫu.
 - Hai biểu đồ Top MG/CTV và Top KH đặt cạnh nhau (xếp dọc trên màn hình nhỏ), mỗi biểu đồ 5 vị trí, xếp giảm dần theo phí net CP. Nhãn nhân sự hiển thị mã MG/RE - họ tên; nhãn khách hàng hiển thị số tài khoản - họ tên, khớp bảng bên dưới. Mã RE002 và RE005 là mã minh họa. Biểu đồ nhân sự gộp các tư vấn đầu tư và cộng tác viên đã có trong mẫu; số giữa hai nhóm không dùng để cộng thành tổng phí.
-- Bảng môi giới có 6 cột; bảng khách hàng có 8 cột, số tài khoản dạng 069Cxxxxxx. Bảng mục 4 phân trang 10 bản ghi/trang, bảng mục 5 phân trang 20 bản ghi/trang, với nút Trước/Sau và thông tin số bản ghi. Dòng tổng cộng môi giới luôn hiển thị, không tính vào số bản ghi mỗi trang. Dữ liệu mẫu hiện có 4 môi giới và 7 khách hàng nên mỗi bảng chỉ có một trang. Không có lọc/tìm kiếm riêng.
+- Bảng môi giới có 6 cột; bảng khách hàng có 8 cột, số tài khoản dạng 069Cxxxxxx. Cả hai bảng phân trang 15 bản ghi/trang, với nút Trước/Sau và thông tin số bản ghi. Tổng cộng môi giới nằm riêng ngay dưới tiêu đề mục, phía trên bảng chi tiết và không tính vào số bản ghi mỗi trang. Dữ liệu mẫu hiện có 4 môi giới và 7 khách hàng nên mỗi bảng chỉ có một trang. Không có lọc/tìm kiếm riêng.
 - Bổ sung dữ liệu minh họa cho số khách hàng quản lý (180/150/100/70, tổng 500), số tài khoản, NAV và hai khách hàng xếp hạng thứ 4–5. Danh sách khách hàng là các dòng mẫu, không phải toàn bộ danh mục để cộng thành tổng kỳ. Phí net mỗi dòng bằng doanh thu phí trừ phí trả sở. Các bảng ở tab khác giữ bộ mẫu riêng.
 
 - Xếp hạng Doanh số: mã – tên bên trái, thanh tỷ lệ ở giữa, số tiền bên phải trên cùng hàng. Thanh tỷ lệ giữ mức phí cao nhất của từng nhóm làm mốc 100%.
@@ -84,7 +84,7 @@ Nguồn: commit `2b9227bf933b7212a4c8014862139c22988f60ef`, kiểm kê ngày 29/
 
 - Chín cột: Số tài khoản, Họ tên KH, NAV cuối kỳ, Số lệnh CP, Số lệnh TP, GTGD CP, GTGD TP, Phí net, Người quản lý. Tài khoản dạng 069Cxxxxxx; người quản lý dạng mã MG/RE - họ tên.
 - Lọc Active/Inactive, mặc định Active. Active khi tài khoản có ít nhất một lệnh cổ phiếu hoặc trái phiếu khớp trong kỳ; Inactive khi không có lệnh khớp. Số lệnh mẫu trong bảng là số lệnh đã khớp. Không đồng nhất Inactive với trạng thái ngủ đông nhiều tháng.
-- Phân trang 20 bản ghi sau khi lọc; đổi bộ lọc quay về trang 1. Dữ liệu minh họa gồm 24 tài khoản active và 3 inactive, là tập con dùng để thể hiện hai trang; không thay đổi số tổng hợp toàn danh mục. Có tài khoản chỉ giao dịch trái phiếu để minh họa điều kiện active. Số lệnh, tài khoản bổ sung và mã RE là dữ liệu mẫu.
+- Phân trang 15 bản ghi sau khi lọc; đổi bộ lọc quay về trang 1. Dữ liệu minh họa gồm 24 tài khoản active và 3 inactive, là tập con dùng để thể hiện hai trang; không thay đổi số tổng hợp toàn danh mục. Có tài khoản chỉ giao dịch trái phiếu để minh họa điều kiện active. Số lệnh, tài khoản bổ sung và mã RE là dữ liệu mẫu.
 - Bỏ toàn bộ khối Điểm sáng, Cần lưu ý, Việc nên làm trên tất cả các màn.
 
 ## Cấu trúc khách hàng và khách hàng mở mới
@@ -93,7 +93,7 @@ Nguồn: commit `2b9227bf933b7212a4c8014862139c22988f60ef`, kiểm kê ngày 29/
 - KH mở mới: 38 khách hàng, 5 khách hàng active theo giao dịch khớp, 11 tài khoản nộp tiền, NAV 3,9 tỷ, dư nợ 0,2 tỷ. Mẫu giả định mỗi khách hàng mới có một tài khoản. Số 11 là dữ liệu nộp tiền minh họa, không suy ra từ NAV trong triển khai thật.
 - Phễu: 38 tài khoản mở mới → 11 tài khoản nộp tiền → 5 tài khoản giao dịch. Biểu đồ ngày cộng đủ 38 mở mới/5 active; Top TVĐT là 15/10/8/5 tài khoản.
 - Các bậc NAV trên hai màn: [0; 500 triệu), [500 triệu; 2 tỷ), [2 tỷ; 5 tỷ), [5 tỷ; 10 tỷ), từ 10 tỷ. Phân bổ tài khoản mẫu hiện hữu: 620/48/15/6/3 (tổng 692); mẫu mở mới: 36/2/0/0/0 (tổng 38). Bậc hiện hữu là phân bổ minh họa mới, không thể suy ra chính xác từ các bậc cũ.
-- Chi tiết mở mới có đủ 38 dòng mẫu, 5 Active và 33 Inactive; mặc định Active, 20 bản ghi/trang. Active là có giao dịch khớp trong kỳ; có tiền hoặc NAV dương chưa đủ để active. Các cột gồm số tài khoản, họ tên, ngày mở đầy đủ ngày/tháng/năm, NAV, GTGD CP, người quản lý. Bộ lọc trạng thái hoạt động; bộ lọc chung vẫn chưa tính lại dữ liệu mẫu.
+- Chi tiết mở mới có đủ 38 dòng mẫu, 5 Active và 33 Inactive; mặc định Active, 15 bản ghi/trang. Active là có giao dịch khớp trong kỳ; có tiền hoặc NAV dương chưa đủ để active. Các cột gồm số tài khoản, họ tên, ngày mở đầy đủ ngày/tháng/năm, NAV, GTGD CP, người quản lý. Bộ lọc trạng thái hoạt động; bộ lọc chung vẫn chưa tính lại dữ liệu mẫu.
 
 ## Nộp Rút
 
@@ -109,3 +109,9 @@ Nguồn: commit `2b9227bf933b7212a4c8014862139c22988f60ef`, kiểm kê ngày 29/
 - Phần quản lý chia hai biểu đồ Nộp ròng và Rút ròng. Nhãn MG/RE - họ tên; số tiền mang dấu + hoặc −. Cộng số ròng của khách hàng theo người quản lý, rồi chia nhóm theo dấu; không xếp một người vào cả hai nhóm trong cùng kỳ.
 - Dữ liệu minh họa mới tính bằng triệu đồng: toàn kỳ nộp 17.600, rút 4.030, ròng 13.570; ngày 27/09 nộp 9.500, rút 200, ròng 9.300, khớp biểu đồ diễn biến. Các tài khoản/ràng buộc quản lý bổ sung là mẫu; chưa tính lại theo bộ lọc chung.
 - Bỏ Giao dịch nộp/rút lớn nhất, Tỷ lệ KH nộp ròng/rút ròng và toàn bộ mục 4 KH tiền chờ & bảng tổng hợp.
+
+## Tổng cộng và phân trang bảng dữ liệu
+
+- Hai dòng tổng hiện có (doanh số theo môi giới và phân bổ dư nợ theo team) được tách thành khối riêng ngay dưới tiêu đề mục, phía trên bảng chi tiết. Giữ nguyên số tổng toàn danh mục, không tính lại theo trang hiện tại.
+- Cả 6 bảng dữ liệu dùng `table-pagination.js`, mặc định 15 bản ghi/trang; bảng ít hơn 15 dòng hiển thị một trang. Đổi bộ lọc quay về trang 1; khi không có dữ liệu hiển thị thông báo rỗng và vô hiệu hóa nút chuyển trang.
+- Các biểu đồ xếp hạng Top giữ giới hạn hiện có, không phải bảng dữ liệu phân trang.
