@@ -160,9 +160,9 @@ Trạng thái
 Trong hạn
 Quá hạn
 | Mã KH | Tên KH | Số tài khoản | Loại nợ chính | Dư nợ | Lãi + phí dồn tích | Quá hạn | Đến hạn gần nhất | Người quản lý
-| KH0001 | Triệu Hạnh Hiền | 069C000001 | Margin | 964 tr | 7,2 tr | 0 | — | MG1268 - Trần Phương Anh
-| KH0017 | Phạm Thị Vân | 069C000017 | Margin | 280 tr | 2,1 tr | 0 | — | MG1268 - Trần Phương Anh
-| KH0105 | Hoàng Minh Tâm | 069C000105 | Ứng trước | 185 tr | 1,4 tr | 0 | — | MG1271 - Nguyễn Văn Bình
+| 069C000001 | Triệu Hạnh Hiền | 069C000001 | Margin | 964 tr | 7,2 tr | 0 | — | MG1268 - Trần Phương Anh
+| 069C000017 | Phạm Thị Vân | 069C000017 | Margin | 280 tr | 2,1 tr | 0 | — | MG1268 - Trần Phương Anh
+| 069C000105 | Hoàng Minh Tâm | 069C000105 | Ứng trước | 185 tr | 1,4 tr | 0 | — | MG1271 - Nguyễn Văn Bình
 3 bản ghi
 ```
 
