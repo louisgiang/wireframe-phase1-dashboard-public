@@ -128,6 +128,30 @@ Diễn biến & cơ cấu
 Giải ngân vs Thu nợ gốc theo thời gian Giải ngânThu nợ gốc
 010203040506070809
 Tăng trưởng dư nợ
+Tỷ trọng loại nợ
+
+- Tổng: 2,34 tỷ.
+- C. Nguồn công ty: 2,20 tỷ (94,0%).
+- O. Nguồn bên thứ 3: 0,14 tỷ (6,0%).
+
+Tỷ trọng trong hạn / quá hạn
+
+- Tổng: 2,34 tỷ.
+- Trong hạn: 2,18 tỷ (93,2%).
+- Quá hạn: 0,16 tỷ (6,8%).
+
+Quy mô dư nợ theo đơn vị
+
+| Đơn vị | Nguồn công ty (triệu đồng) | Nguồn bên thứ 3 (triệu đồng) | Tổng |
+| --- | ---: | ---: | ---: |
+| MG1268 - Trần Phương Anh | 1.080 | 40 | 1,12 tỷ |
+| MG1271 - Nguyễn Văn Bình | 630 | 20 | 0,65 tỷ |
+| MG1284 - Lê Thu Hà | 320 | 60 | 0,38 tỷ |
+| MG1290 - Đỗ Minh Quân | 100 | 20 | 0,12 tỷ |
+| RE002 - Nguyễn Thị Phong | 70 | 0 | 0,07 tỷ |
+
+Phân bổ theo nguồn là dữ liệu minh họa bổ sung; tổng theo người quản lý khớp bảng hiện có. Hover hoặc focus từng đoạn thanh hiển thị chi tiết hai nguồn.
+
 Quy mô dư nợ theo người quản lý
 | Người quản lý | Số KH quản lý | Dư nợ gốc | Dư nợ trong hạn | Dư nợ quá hạn | Dư nợ còn lại | Lãi + phí dồn tích | Tổng nợ + lãi + phí
 | MG1268 - Trần Phương Anh | 12 | 1.400 tr | 1.060 tr | 60 tr | 1.120 tr | 8,9 tr | 1.128,9 tr
