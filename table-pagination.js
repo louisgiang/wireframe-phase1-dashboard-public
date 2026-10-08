@@ -3,7 +3,7 @@
   const configs = [
     ['sales-staff-table', 'Bảng doanh số theo môi giới'],
     ['debt-manager-table', 'Quy mô dư nợ theo người quản lý'],
-    ['debt-customer-table', 'Chi tiết dư nợ', 'debt-status', 'debtStatus'],
+    ['debt-customer-table', 'Quy mô dư nợ theo khách hàng'],
     ['existing-customer-table', 'Danh sách KH hiện hữu', 'customer-status', 'status'],
     ['new-customer-table', 'Chi tiết TK mở mới', 'new-customer-status', 'status']
   ];
@@ -48,9 +48,7 @@
       rows.forEach(row => { row.hidden = true; });
       matches.slice(start, end).forEach(row => { row.hidden = false; });
       empty.hidden = matches.length > 0;
-      emptyCell.textContent = filterId === 'debt-status'
-        ? (filter.value === 'overdue' ? 'Không có dữ liệu quá hạn.' : 'Không có dữ liệu trong hạn.')
-        : 'Không có dữ liệu phù hợp.';
+      emptyCell.textContent = 'Không có dữ liệu phù hợp.';
       summary.textContent = matches.length ? `${start + 1}–${end} / ${matches.length} bản ghi` : '0 bản ghi';
       current.textContent = `Trang ${page} / ${pages}`;
       previous.disabled = page === 1;

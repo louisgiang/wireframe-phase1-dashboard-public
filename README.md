@@ -41,7 +41,7 @@ Không cần cài dependency hay chạy build. Khi import repo vào Vercel, dùn
 - Giữ các KPI nghiệp vụ, biểu đồ, bảng, cảnh báo, hành động và điều hướng; giữ tên chuỗi dữ liệu để đọc biểu đồ.
 - Giữ lịch sử commit gốc; không sửa repo hay deployment Vercel gốc.
 
-Đây là wireframe với dữ liệu minh họa nhúng trong HTML. Chuyển tab, deep link và bàn phím hoạt động; Bộ lọc kỳ báo cáo và phạm vi dữ liệu có thể thao tác, đồng bộ trên cả 6 tab; phân trang hoạt động ở cả 5 bảng dữ liệu với 15 bản ghi/trang; lọc Active/Inactive hoạt động ở hai bảng khách hàng và Trong hạn/Quá hạn ở bảng dư nợ. Các thao tác nghiệp vụ khác chưa được lập trình. Số liệu, biểu đồ và ngày chốt dữ liệu vẫn là dữ liệu minh họa cố định, chưa được tính lại theo bộ lọc.
+Đây là wireframe với dữ liệu minh họa nhúng trong HTML. Chuyển tab, deep link và bàn phím hoạt động; Bộ lọc kỳ báo cáo và phạm vi dữ liệu có thể thao tác, đồng bộ trên cả 6 tab; phân trang hoạt động ở cả 5 bảng dữ liệu với 15 bản ghi/trang; lọc Active/Inactive hoạt động ở hai bảng khách hàng. Các thao tác nghiệp vụ khác chưa được lập trình. Số liệu, biểu đồ và ngày chốt dữ liệu vẫn là dữ liệu minh họa cố định, chưa được tính lại theo bộ lọc.
 
 Nguồn: commit `2b9227bf933b7212a4c8014862139c22988f60ef`, kiểm kê ngày 29/09/2026. Repo gốc không có tệp LICENSE.
 
@@ -59,11 +59,10 @@ Nguồn: commit `2b9227bf933b7212a4c8014862139c22988f60ef`, kiểm kê ngày 29/
 - Biểu đồ Giải ngân vs Thu nợ gốc không còn nút chọn Theo tháng / Theo ngày.
 - Thêm biểu đồ Tăng trưởng dư nợ: dư nợ cuối tháng T05–T10 và mức tăng so với tháng trước (+0,35 tỷ, khớp chỉ tiêu Giải ngân ròng).
 - Bỏ Tỷ trọng loại nợ, Tỷ trọng trong hạn / quá hạn, biểu đồ Quy mô dư nợ theo đơn vị, Phân bổ dư nợ theo team và Top dư nợ.
-- Thêm bảng Quy mô dư nợ theo người quản lý: Người quản lý (mã - họ tên), Số KH quản lý, Tổng dư nợ, Dư nợ trong hạn, Dư nợ quá hạn và cột Tỷ trọng trong hạn / quá hạn là một thanh liền (phần đậm trong hạn nối phần nhạt quá hạn) kèm nhãn dạng (94,6%/5,4%). 5 người quản lý, cộng khớp 31 KH và 2,34 tỷ.
-- Phần Chi tiết chỉ còn bảng khách hàng với bộ lọc Trạng thái: Trong hạn (mặc định) và Quá hạn. Cột: Số TK, Tên KH, Dư nợ trong hạn, Dư nợ quá hạn, Lãi + phí dồn tích, Người quản lý (chữ đậm như các cột khác).
-- Cả bảng theo người quản lý và bảng khách hàng phân trang 15 bản ghi/trang qua `table-pagination.js`.
-- Số tài khoản dùng dạng 069Cxxxxxx; người quản lý dùng mã MG - họ tên. Số bản ghi dưới bảng phản ánh các dòng mẫu thực tế đang hiển thị, không phải tổng toàn danh mục.
-- Dữ liệu mẫu có dư nợ quá hạn 0,16 tỷ (thẻ Vay quá hạn), chia cho 4 người quản lý; tổng dư nợ vẫn 2,34 tỷ. Bảng khách hàng có 19 KH: 15 trong hạn (hiện đủ 15 dòng ở bộ lọc mặc định), 4 có dư nợ quá hạn; số dư từng KH không vượt tổng dư nợ của người quản lý tương ứng.
+- Bảng Quy mô dư nợ theo người quản lý: Người quản lý (mã - họ tên), Số KH quản lý, Dư nợ gốc, Dư nợ trong hạn, Dư nợ quá hạn, Dư nợ còn lại, Lãi + phí dồn tích, Tổng nợ + lãi + phí. 5 người quản lý, cộng khớp 31 KH, dư nợ còn lại 2,34 tỷ, quá hạn 0,16 tỷ và lãi + phí 18,6 tr.
+- Phần 3 đổi tên thành Quy mô dư nợ theo khách hàng, bỏ bộ lọc Trạng thái. Cột: Tên KH (069Cxxxxxx - họ tên), Dư nợ gốc, Dư nợ trong hạn, Dư nợ quá hạn, Dư nợ còn lại, Lãi + phí dồn tích, Tổng nợ + lãi + phí, Người quản lý (mã - họ tên). 15 KH mẫu, trong đó 4 KH có dư nợ quá hạn; số liệu từng KH không vượt tổng của người quản lý tương ứng.
+- Quy ước: Dư nợ gốc là số tiền gốc đã giải ngân; Dư nợ còn lại = trong hạn + quá hạn; Tổng nợ + lãi + phí = dư nợ còn lại + lãi + phí dồn tích. Hai bảng dùng đơn vị triệu đồng.
+- Cả hai bảng phân trang 15 bản ghi/trang qua `table-pagination.js`.
 
 ## Cập nhật màn Doanh số
 
