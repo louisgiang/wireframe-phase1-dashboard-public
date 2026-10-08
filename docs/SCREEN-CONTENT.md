@@ -124,11 +124,11 @@ T05T06T07T08T09T10
 Quy mô dư nợ theo người quản lý
 ■ Trong hạn ■ Quá hạn
 | Người quản lý | Số KH quản lý | Tổng dư nợ | Dư nợ trong hạn | Dư nợ quá hạn | Tỷ trọng trong hạn / quá hạn
-| MG1268 - Trần Phương Anh | 12 | 1,12 tỷ | 1,12 tỷ | 0 | 100% 0%
-| MG1271 - Nguyễn Văn Bình | 7 | 0,65 tỷ | 0,65 tỷ | 0 | 100% 0%
-| MG1284 - Lê Thu Hà | 6 | 0,38 tỷ | 0,38 tỷ | 0 | 100% 0%
-| MG1290 - Đỗ Minh Quân | 4 | 0,12 tỷ | 0,12 tỷ | 0 | 100% 0%
-| RE002 - Nguyễn Thị Phong | 2 | 0,07 tỷ | 0,07 tỷ | 0 | 100% 0%
+| MG1268 - Trần Phương Anh | 12 | 1,12 tỷ | 1,12 tỷ | 0 | (100%/0%)
+| MG1271 - Nguyễn Văn Bình | 7 | 0,65 tỷ | 0,65 tỷ | 0 | (100%/0%)
+| MG1284 - Lê Thu Hà | 6 | 0,38 tỷ | 0,38 tỷ | 0 | (100%/0%)
+| MG1290 - Đỗ Minh Quân | 4 | 0,12 tỷ | 0,12 tỷ | 0 | (100%/0%)
+| RE002 - Nguyễn Thị Phong | 2 | 0,07 tỷ | 0,07 tỷ | 0 | (100%/0%)
 3
 Chi tiết
 Trạng thái
