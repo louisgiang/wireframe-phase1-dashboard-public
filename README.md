@@ -115,3 +115,5 @@ Nguồn: commit `2b9227bf933b7212a4c8014862139c22988f60ef`, kiểm kê ngày 29/
 - Hai dòng tổng hiện có (doanh số theo môi giới và phân bổ dư nợ theo team) được tách thành khối riêng ngay dưới tiêu đề mục, phía trên bảng chi tiết. Giữ nguyên số tổng toàn danh mục, không tính lại theo trang hiện tại.
 - Cả 6 bảng dữ liệu dùng `table-pagination.js`, mặc định 15 bản ghi/trang; bảng ít hơn 15 dòng hiển thị một trang. Đổi bộ lọc quay về trang 1; khi không có dữ liệu hiển thị thông báo rỗng và vô hiệu hóa nút chuyển trang.
 - Các biểu đồ xếp hạng Top giữ giới hạn hiện có, không phải bảng dữ liệu phân trang.
+
+- Phân bổ dư nợ theo team bỏ cột Quá hạn và số quá hạn trong khối tổng; khung bảng cao bằng khung Top dư nợ khi đặt cạnh nhau.

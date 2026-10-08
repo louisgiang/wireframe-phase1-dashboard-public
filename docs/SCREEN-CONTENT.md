@@ -152,10 +152,9 @@ Tổng cộng
 Số KH31
 Dư nợ2,34 tỷ
 Tỷ trọng100%
-Quá hạn0
-| Team | Trưởng team | Số KH | Dư nợ | Tỷ trọng | Quá hạn
-| Team Trần Phương Anh | MG1268 - Trần Phương Anh | 19 | 1,77 tỷ | 75,6% | 0
-| Team Lê Thu Hà | MG1284 - Lê Thu Hà | 12 | 0,57 tỷ | 24,4% | 0
+| Team | Trưởng team | Số KH | Dư nợ | Tỷ trọng
+| Team Trần Phương Anh | MG1268 - Trần Phương Anh | 19 | 1,77 tỷ | 75,6%
+| Team Lê Thu Hà | MG1284 - Lê Thu Hà | 12 | 0,57 tỷ | 24,4%
 Top dư nợ
 Top 5 KH theo dư nợ
 1069C000001 - Triệu Hạnh Hiền964 tr
