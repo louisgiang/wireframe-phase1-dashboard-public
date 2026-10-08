@@ -1,29 +1,24 @@
 # Nội dung đầy đủ của 6 màn
 
-Nội dung và dữ liệu mẫu của giao diện. Bộ lọc chung: Kỳ báo cáo (Tháng 10/2026 mặc định và Tháng 9/2026) và Phạm vi dữ liệu, căn phải trên máy tính. Tháng đã chọn đồng bộ trên cả 6 tab. Không còn thanh tiến độ KPI. Tổng quan hiển thị số thực hiện, kế hoạch và phần trăm KPI. Cả 6 bảng dữ liệu mặc định 15 bản ghi/trang. Tổng cộng doanh số môi giới nằm riêng dưới tiêu đề mục và phía trên bảng chi tiết, không tính vào phân trang.
+Nội dung và dữ liệu mẫu của giao diện. Bộ lọc chung: Kỳ báo cáo (Tháng 10/2026 mặc định và Tháng 9/2026) và Phạm vi dữ liệu, căn phải trên máy tính. Tháng đã chọn đồng bộ trên cả 6 tab. Không còn thanh tiến độ KPI. Tổng quan hiển thị số thực hiện và kế hoạch, bỏ dòng phần trăm KPI. Cả 6 bảng dữ liệu mặc định 15 bản ghi/trang. Tổng cộng doanh số môi giới nằm riêng dưới tiêu đề mục và phía trên bảng chi tiết, không tính vào phân trang.
 
 ## tong-quan
 
 ```text
-1Chỉ tiêu chính
+1
+Chỉ tiêu chính
 KH quản lý
 500 KH
-692 TK đang quản lý
 KH mở mới
 38 / 50 TK
-76% KPI · 11 Active
 GTGD cổ phiếu
 23,4 / 80 tỷ
-29,3% KPI
 Dư nợ
 2,34 / 5 tỷ
-46,8% KPI
 Vòng quay tài sản (lần)
 0,4 / 1 lần
-40% KPI
 Doanh thu phí
 24,1 / 60 tr
-40,2% KPI
 Phí net
 20,4 tr
 Hoa hồng dự kiến
@@ -34,7 +29,8 @@ Lãi suất vay bình quân
 12,9 %/năm
 Doanh số Trái phiếu
 109,95 tr
-2Tình hình kinh doanh
+2
+Tình hình kinh doanh
 GTGD cổ phiếu lũy kế Kỳ trướcKỳ hiện tại
 Giá trị (tỷ đồng)
 010203040
@@ -53,7 +49,7 @@ Ngày/tháng
 1
 Chỉ tiêu doanh số & phí
 GTGD cổ phiếu
-23,4 / 80 tỷ
+23,4 tỷ
 Doanh thu phí CP
 24,1 tr
 Phí net CP
@@ -131,9 +127,7 @@ Vay quá hạn
 Diễn biến & cơ cấu
 Giải ngân vs Thu nợ gốc theo thời gian Giải ngânThu nợ gốc
 010203040506070809
-Tăng trưởng dư nợ +0,35 tỷ (+17,6%) so với tháng trước
-T05T06T07T08T09T10
-1,621,711,801,881,992,34
+Tăng trưởng dư nợ
 Quy mô dư nợ theo người quản lý
 | Người quản lý | Số KH quản lý | Dư nợ gốc | Dư nợ trong hạn | Dư nợ quá hạn | Dư nợ còn lại | Lãi + phí dồn tích | Tổng nợ + lãi + phí
 | MG1268 - Trần Phương Anh | 12 | 1.400 tr | 1.060 tr | 60 tr | 1.120 tr | 8,9 tr | 1.128,9 tr

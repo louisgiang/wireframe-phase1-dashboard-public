@@ -57,7 +57,7 @@ Nguồn: commit `2b9227bf933b7212a4c8014862139c22988f60ef`, kiểm kê ngày 29/
 
 - Thẻ Tổng dư nợ chỉ hiện dư nợ trên chỉ tiêu (2,34 / 5 tỷ); bỏ dòng số KH có dư nợ và % KPI.
 - Biểu đồ Giải ngân vs Thu nợ gốc không còn nút chọn Theo tháng / Theo ngày.
-- Thêm biểu đồ Tăng trưởng dư nợ: dư nợ cuối tháng T05–T10 và mức tăng so với tháng trước (+0,35 tỷ, khớp chỉ tiêu Giải ngân ròng).
+- Tăng trưởng dư nợ dùng biểu đồ đường với dư nợ cuối tháng T05–T10 (1,62; 1,71; 1,80; 1,88; 1,99; 2,34 tỷ đồng), có mốc tháng và trục giá trị. Bỏ dòng so sánh tháng trước.
 - Bỏ Tỷ trọng loại nợ, Tỷ trọng trong hạn / quá hạn, biểu đồ Quy mô dư nợ theo đơn vị, Phân bổ dư nợ theo team và Top dư nợ.
 - Bảng Quy mô dư nợ theo người quản lý: Người quản lý (mã - họ tên), Số KH quản lý, Dư nợ gốc, Dư nợ trong hạn, Dư nợ quá hạn, Dư nợ còn lại, Lãi + phí dồn tích, Tổng nợ + lãi + phí. 5 người quản lý, cộng khớp 31 KH, dư nợ còn lại 2,34 tỷ, quá hạn 0,16 tỷ và lãi + phí 18,6 tr.
 - Phần 3 đổi tên thành Quy mô dư nợ theo khách hàng, bỏ bộ lọc Trạng thái. Cột: Tên KH (069Cxxxxxx - họ tên), Dư nợ gốc, Dư nợ trong hạn, Dư nợ quá hạn, Dư nợ còn lại, Lãi + phí dồn tích, Tổng nợ + lãi + phí, Người quản lý (mã - họ tên). 15 KH mẫu, trong đó 4 KH có dư nợ quá hạn; số liệu từng KH không vượt tổng của người quản lý tương ứng.
@@ -118,3 +118,5 @@ Nguồn: commit `2b9227bf933b7212a4c8014862139c22988f60ef`, kiểm kê ngày 29/
 - Các biểu đồ xếp hạng Top giữ giới hạn hiện có, không phải bảng dữ liệu phân trang.
 
 - Phân bổ team mẫu mới: 12/7/6/4/2 khách hàng; dư nợ 1,12/0,65/0,38/0,12/0,07 tỷ; tỷ trọng 47,9/27,8/16,2/5,1/3,0%. Đây là dữ liệu minh họa, không phải tổ chức thực tế.
+
+- Tổng quan bỏ toàn bộ dòng phần trăm KPI và dòng 692 TK đang quản lý; các mức kế hoạch cạnh số thực hiện vẫn giữ. Màn Doanh số bỏ / 80 tỷ, chỉ hiện GTGD cổ phiếu 23,4 tỷ.
