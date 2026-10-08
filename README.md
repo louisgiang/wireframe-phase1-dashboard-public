@@ -7,7 +7,7 @@ Bản sao đã gỡ nhãn đánh dấu triển khai, hiện có 6 tab nội dung
 | Tab | Nội dung chính |
 | --- | --- |
 | Tổng quan | 8 chỉ tiêu chính, doanh số và dư nợ theo ngày |
-| Doanh số | GTGD, phí net, xếp hạng CTV/TVĐT/KH, bảng theo cây môi giới, danh sách KH |
+| Doanh số | GTGD, phí net, xếp hạng CTV/TVĐT/KH, bảng theo cây môi giới |
 | Dư nợ & Món vay | Dư nợ, giải ngân, thu nợ, lãi phí, cơ cấu nợ, tăng trưởng dư nợ, phân bổ theo team, top dư nợ, danh sách KH/TK |
 | KH hiện hữu | Số khách hàng, active, NAV, dư nợ, phân bổ NAV, danh sách khách hàng |
 | KH mở mới | Số khách hàng mới, active, tài khoản nộp tiền, NAV, dư nợ, phễu và chi tiết tài khoản |
@@ -32,7 +32,7 @@ Không cần cài dependency hay chạy build. Khi import repo vào Vercel, dùn
 - Bỏ toàn bộ phần “0. Kết luận”.
 - Bỏ hai tab “So sánh & Ranking CP” và “Doanh số, phí net & hoa hồng”, gồm cả nội dung và nút điều hướng.
 - Tổng quan có 8 chỉ tiêu theo thứ tự: KH quản lý, KH mở mới, GTGD cổ phiếu, Dư nợ, Vòng quay tài sản (lần), Doanh thu phí, Phí net, Hoa hồng dự kiến. Hiển thị 4 cột trên máy tính và 2 cột trên màn hình nhỏ.
-- Bỏ toàn bộ thanh tiến độ KPI trên 6 tab; giữ số thực hiện, kế hoạch và tỷ lệ hoàn thành dạng chữ. Hai mức kế hoạch mẫu được chọn cho demo là 1 lần và 60 triệu đồng, tương ứng 40% và 40,2%. Doanh thu phí lấy tổng phí cổ phiếu 24,1 triệu trước phí sàn; phí net là 20,4 triệu. Vòng quay tài sản là 0,4 lần. Giữ đơn vị tài khoản cho số mở mới 38/50 theo dữ liệu nguồn.
+- Bỏ toàn bộ thanh tiến độ KPI trên 6 tab. Màn Tổng quan bỏ mức kế hoạch và phần trăm so sánh KPI, chỉ hiện số thực tế cùng đơn vị; giữ số Active và các tỷ lệ nghiệp vụ. Doanh thu phí 24,1 triệu, phí net 20,4 triệu, vòng quay tài sản 0,4 lần.
 
 - Gỡ chú giải và nhãn đánh dấu triển khai ở cả 6 tab, gồm các biến thể viết tắt và nhãn của màn v1.2.
 - Gỡ dải tiêu đề nền đen giới thiệu wireframe/phiên bản ở cả 6 tab.
@@ -41,7 +41,7 @@ Không cần cài dependency hay chạy build. Khi import repo vào Vercel, dùn
 - Giữ các KPI nghiệp vụ, biểu đồ, bảng, cảnh báo, hành động và điều hướng; giữ tên chuỗi dữ liệu để đọc biểu đồ.
 - Giữ lịch sử commit gốc; không sửa repo hay deployment Vercel gốc.
 
-Đây là wireframe với dữ liệu minh họa nhúng trong HTML. Chuyển tab, deep link và bàn phím hoạt động; Bộ lọc kỳ báo cáo và phạm vi dữ liệu có thể thao tác, đồng bộ trên cả 6 tab; phân trang hoạt động ở cả 6 bảng dữ liệu với 15 bản ghi/trang; lọc Active/Inactive hoạt động ở hai bảng khách hàng và Trong hạn/Quá hạn ở bảng dư nợ. Các thao tác nghiệp vụ khác chưa được lập trình. Số liệu, biểu đồ và ngày chốt dữ liệu vẫn là dữ liệu minh họa cố định, chưa được tính lại theo bộ lọc.
+Đây là wireframe với dữ liệu minh họa nhúng trong HTML. Chuyển tab, deep link và bàn phím hoạt động; Bộ lọc kỳ báo cáo và phạm vi dữ liệu có thể thao tác, đồng bộ trên cả 6 tab; phân trang hoạt động ở cả 5 bảng dữ liệu với 15 bản ghi/trang; lọc Active/Inactive hoạt động ở hai bảng khách hàng và Trong hạn/Quá hạn ở bảng dư nợ. Các thao tác nghiệp vụ khác chưa được lập trình. Số liệu, biểu đồ và ngày chốt dữ liệu vẫn là dữ liệu minh họa cố định, chưa được tính lại theo bộ lọc.
 
 Nguồn: commit `2b9227bf933b7212a4c8014862139c22988f60ef`, kiểm kê ngày 29/09/2026. Repo gốc không có tệp LICENSE.
 
@@ -55,10 +55,10 @@ Nguồn: commit `2b9227bf933b7212a4c8014862139c22988f60ef`, kiểm kê ngày 29/
 
 ## Cập nhật màn Dư nợ và Món vay
 
-- Thẻ Tổng dư nợ chỉ hiện dư nợ trên chỉ tiêu (2,34 / 5 tỷ); bỏ dòng số KH có dư nợ và % KPI.
+- Thẻ Tổng dư nợ chỉ hiện 2,34 tỷ; bỏ mức kế hoạch / 5 tỷ.
 - Biểu đồ Giải ngân vs Thu nợ gốc không còn nút chọn Theo tháng / Theo ngày.
 - Thêm biểu đồ Tăng trưởng dư nợ: dư nợ cuối tháng T05–T10 và mức tăng so với tháng trước (+0,35 tỷ, khớp chỉ tiêu Giải ngân ròng).
-- Thêm bảng Phân bổ dư nợ theo team (trưởng team, số KH, dư nợ, tỷ trọng, quá hạn) và bảng xếp hạng Top 5 KH theo dư nợ. Cơ cấu team là dữ liệu mô phỏng, cộng khớp với tổng 31 KH và 2,34 tỷ.
+- Phân bổ dư nợ theo team có 5 dòng minh họa, không có Tổng cộng và cột Quá hạn. Phân bổ lại 31 khách hàng và 2,34 tỷ cho 5 team; tỷ trọng cộng 100%. Khung cao bằng Top dư nợ bên cạnh.
 - Phần Chi tiết chỉ còn bảng tổng hợp theo KH/TK với bộ lọc Trạng thái: Trong hạn (mặc định) và Quá hạn; bỏ nút chuyển sang Chi tiết món vay và bỏ bảng món vay của một khách hàng.
 - Số tài khoản dùng dạng 069Cxxxxxx; người quản lý dùng mã MG - họ tên. Số bản ghi dưới bảng phản ánh các dòng mẫu thực tế đang hiển thị, không phải tổng toàn danh mục.
 - Dữ liệu mẫu chỉ có khách hàng trong hạn; chọn Quá hạn hiển thị thông báo không có dữ liệu, phù hợp với chỉ tiêu vay quá hạn bằng 0.
@@ -67,9 +67,9 @@ Nguồn: commit `2b9227bf933b7212a4c8014862139c22988f60ef`, kiểm kê ngày 29/
 
 - Bốn chỉ tiêu theo thứ tự: GTGD cổ phiếu, Doanh thu phí CP, Phí net CP, GTGD TP. Doanh thu phí CP là 24,1 triệu đồng, khớp tổng doanh thu phí trước phí trả sở ở bảng môi giới. Bỏ chỉ tiêu và cột Hoa hồng dự kiến khỏi màn Doanh số. Bỏ dòng phần trăm KPI dưới chỉ tiêu GTGD cổ phiếu.
 - Biểu đồ Doanh thu phí net lũy kế có hai kỳ, trục ngày/tháng, đơn vị triệu đồng và tooltip dùng chung theo ngày. Số kỳ hiện tại ngày 27 là 20,4 triệu; các điểm còn lại là dữ liệu biểu diễn mẫu.
-- Hai biểu đồ Top MG/CTV và Top KH đặt cạnh nhau (xếp dọc trên màn hình nhỏ), mỗi biểu đồ 5 vị trí, xếp giảm dần theo phí net CP. Nhãn nhân sự hiển thị mã MG/RE - họ tên; nhãn khách hàng hiển thị số tài khoản - họ tên, khớp bảng bên dưới. Mã RE002 và RE005 là mã minh họa. Biểu đồ nhân sự gộp các tư vấn đầu tư và cộng tác viên đã có trong mẫu; số giữa hai nhóm không dùng để cộng thành tổng phí.
-- Bảng môi giới có 6 cột; bảng khách hàng có 8 cột, số tài khoản dạng 069Cxxxxxx. Cả hai bảng phân trang 15 bản ghi/trang, với nút Trước/Sau và thông tin số bản ghi. Tổng cộng môi giới nằm riêng ngay dưới tiêu đề mục, phía trên bảng chi tiết và không tính vào số bản ghi mỗi trang. Dữ liệu mẫu hiện có 4 môi giới và 7 khách hàng nên mỗi bảng chỉ có một trang. Không có lọc/tìm kiếm riêng.
-- Bổ sung dữ liệu minh họa cho số khách hàng quản lý (180/150/100/70, tổng 500), số tài khoản, NAV và hai khách hàng xếp hạng thứ 4–5. Danh sách khách hàng là các dòng mẫu, không phải toàn bộ danh mục để cộng thành tổng kỳ. Phí net mỗi dòng bằng doanh thu phí trừ phí trả sở. Các bảng ở tab khác giữ bộ mẫu riêng.
+- Hai biểu đồ Top MG/CTV và Top KH đặt cạnh nhau (xếp dọc trên màn hình nhỏ), mỗi biểu đồ 5 vị trí, xếp giảm dần theo phí net CP. Nhãn nhân sự hiển thị mã MG/RE - họ tên; nhãn khách hàng hiển thị số tài khoản - họ tên, theo dữ liệu mẫu. Mã RE002 và RE005 là mã minh họa. Biểu đồ nhân sự gộp các tư vấn đầu tư và cộng tác viên đã có trong mẫu; số giữa hai nhóm không dùng để cộng thành tổng phí.
+- Bảng môi giới có 6 cột, 4 dòng mẫu, phân trang 15 bản ghi/trang. Tổng cộng nằm riêng dưới tiêu đề và phía trên bảng. Bỏ toàn bộ mục Danh sách theo khách hàng trên màn Doanh số.
+- Số khách hàng quản lý của 4 môi giới là 180/150/100/70, tổng 500. Phí net mỗi dòng bằng doanh thu phí trừ phí trả sở.
 
 - Xếp hạng Doanh số: mã – tên bên trái, thanh tỷ lệ ở giữa, số tiền bên phải trên cùng hàng. Thanh tỷ lệ giữ mức phí cao nhất của từng nhóm làm mốc 100%.
 
@@ -112,8 +112,8 @@ Nguồn: commit `2b9227bf933b7212a4c8014862139c22988f60ef`, kiểm kê ngày 29/
 
 ## Tổng cộng và phân trang bảng dữ liệu
 
-- Hai dòng tổng hiện có (doanh số theo môi giới và phân bổ dư nợ theo team) được tách thành khối riêng ngay dưới tiêu đề mục, phía trên bảng chi tiết. Giữ nguyên số tổng toàn danh mục, không tính lại theo trang hiện tại.
-- Cả 6 bảng dữ liệu dùng `table-pagination.js`, mặc định 15 bản ghi/trang; bảng ít hơn 15 dòng hiển thị một trang. Đổi bộ lọc quay về trang 1; khi không có dữ liệu hiển thị thông báo rỗng và vô hiệu hóa nút chuyển trang.
+- Tổng cộng doanh số theo môi giới nằm riêng dưới tiêu đề mục và trên bảng chi tiết, không đổi theo trang hiện tại. Bảng team không có Tổng cộng.
+- Cả 5 bảng dữ liệu dùng `table-pagination.js`, mặc định 15 bản ghi/trang; bảng ít hơn 15 dòng hiển thị một trang. Đổi bộ lọc quay về trang 1; khi không có dữ liệu hiển thị thông báo rỗng và vô hiệu hóa nút chuyển trang.
 - Các biểu đồ xếp hạng Top giữ giới hạn hiện có, không phải bảng dữ liệu phân trang.
 
-- Phân bổ dư nợ theo team bỏ cột Quá hạn và số quá hạn trong khối tổng; khung bảng cao bằng khung Top dư nợ khi đặt cạnh nhau.
+- Phân bổ team mẫu mới: 12/7/6/4/2 khách hàng; dư nợ 1,12/0,65/0,38/0,12/0,07 tỷ; tỷ trọng 47,9/27,8/16,2/5,1/3,0%. Đây là dữ liệu minh họa, không phải tổ chức thực tế.

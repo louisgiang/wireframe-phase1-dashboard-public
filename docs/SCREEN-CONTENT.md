@@ -1,29 +1,26 @@
 # Nội dung đầy đủ của 6 màn
 
-Nội dung và dữ liệu mẫu của giao diện. Bộ lọc chung: Kỳ báo cáo (Tháng 10/2026 mặc định và Tháng 9/2026) và Phạm vi dữ liệu, căn phải trên máy tính. Tháng đã chọn đồng bộ trên cả 6 tab. Không còn thanh tiến độ KPI; số thực hiện, kế hoạch và tỷ lệ hoàn thành vẫn hiển thị dạng chữ. Cả 6 bảng dữ liệu mặc định 15 bản ghi/trang. Các dòng tổng hiện có nằm riêng dưới tiêu đề mục và phía trên bảng chi tiết, không tính vào phân trang.
+Nội dung và dữ liệu mẫu của giao diện. Bộ lọc chung: Kỳ báo cáo (Tháng 10/2026 mặc định và Tháng 9/2026) và Phạm vi dữ liệu, căn phải trên máy tính. Tháng đã chọn đồng bộ trên cả 6 tab. Không còn thanh tiến độ KPI. Tổng quan chỉ hiện số thực tế, bỏ so sánh kế hoạch. Cả 5 bảng dữ liệu mặc định 15 bản ghi/trang. Tổng cộng doanh số môi giới nằm riêng dưới tiêu đề mục và phía trên bảng chi tiết, không tính vào phân trang.
 
 ## tong-quan
 
 ```text
-1Chỉ tiêu chính
+1
+Chỉ tiêu chính
 KH quản lý
 500 KH
 692 TK đang quản lý
 KH mở mới
-38 / 50 TK
-76% KPI · 11 Active
+38 TK
+11 Active
 GTGD cổ phiếu
-23,4 / 80 tỷ
-29,3% KPI
+23,4 tỷ
 Dư nợ
-2,34 / 5 tỷ
-46,8% KPI
+2,34 tỷ
 Vòng quay tài sản (lần)
-0,4 / 1 lần
-40% KPI
+0,4 lần
 Doanh thu phí
-24,1 / 60 tr
-40,2% KPI
+24,1 tr
 Phí net
 20,4 tr
 Hoa hồng dự kiến
@@ -34,7 +31,8 @@ Lãi suất vay bình quân
 12,9 %/năm
 Doanh số Trái phiếu
 109,95 tr
-2Tình hình kinh doanh
+2
+Tình hình kinh doanh
 GTGD cổ phiếu lũy kế Kỳ trướcKỳ hiện tại
 Giá trị (tỷ đồng)
 010203040
@@ -97,17 +95,6 @@ Bảng doanh số theo môi giới
 | MG1271 - Nguyễn Văn Bình | 150 | 6,5 tỷ | 6,6 tr | 1,0 tr | 5,6 tr
 | MG1284 - Lê Thu Hà | 100 | 4,5 tỷ | 4,5 tr | 0,7 tr | 3,8 tr
 | MG1290 - Đỗ Minh Quân | 70 | 2,2 tỷ | 2,2 tr | 0,3 tr | 1,9 tr
-5
-Danh sách theo khách hàng
-Danh sách theo khách hàng
-| STK | Họ tên | NAV | GTGD cổ phiếu | Doanh thu phí | Phí trả sở | Phí net CP | Người quản lý
-| 069C000001 | Triệu Hạnh Hiền | 14,2 tỷ | 4,8 tỷ | 4,8 tr | 0,6 tr | 4,2 tr | MG1268 - Trần Phương Anh
-| 069C000017 | Phạm Thị Vân | 12,5 tỷ | 2,6 tỷ | 2,6 tr | 0,3 tr | 2,3 tr | MG1268 - Trần Phương Anh
-| 069C000331 | Vũ Thị Hằng | 6,8 tỷ | 1,6 tỷ | 1,6 tr | 0,2 tr | 1,4 tr | MG1271 - Nguyễn Văn Bình
-| 069C000452 | Lương Quốc Bảo | 8,6 tỷ | 1,3 tỷ | 1,3 tr | 0,2 tr | 1,1 tr | MG1284 - Lê Thu Hà
-| 069C000453 | Nguyễn Minh Sang | 21,4 tỷ | 1,1 tỷ | 1,1 tr | 0,2 tr | 0,9 tr | MG1290 - Đỗ Minh Quân
-| 069C000105 | Hoàng Minh Tâm | 9,3 tỷ | 0 | 0 | 0 | 0 | MG1271 - Nguyễn Văn Bình
-| 069C000290 | Đặng Minh Khoa | 5,4 tỷ | 0 | 0 | 0 | 0 | MG1284 - Lê Thu Hà
 ```
 
 ## du-no-mon-vay
@@ -116,7 +103,7 @@ Danh sách theo khách hàng
 1
 Chỉ tiêu dư nợ
 Tổng dư nợ
-2,34 / 5 tỷ
+2,34 tỷ
 Giải ngân trong kỳ
 1,20 tỷ
 Thu nợ gốc trong kỳ
@@ -148,13 +135,12 @@ MG1271 - Nguyễn Văn Bình0,65 tỷ
 MG1284 - Lê Thu Hà0,38 tỷ
 MG1290 - Đỗ Minh Quân0,19 tỷ
 Phân bổ dư nợ theo team
-Tổng cộng
-Số KH31
-Dư nợ2,34 tỷ
-Tỷ trọng100%
 | Team | Trưởng team | Số KH | Dư nợ | Tỷ trọng
-| Team Trần Phương Anh | MG1268 - Trần Phương Anh | 19 | 1,77 tỷ | 75,6%
-| Team Lê Thu Hà | MG1284 - Lê Thu Hà | 12 | 0,57 tỷ | 24,4%
+| Team Trần Phương Anh | MG1268 - Trần Phương Anh | 12 | 1,12 tỷ | 47,9%
+| Team Nguyễn Văn Bình | MG1271 - Nguyễn Văn Bình | 7 | 0,65 tỷ | 27,8%
+| Team Lê Thu Hà | MG1284 - Lê Thu Hà | 6 | 0,38 tỷ | 16,2%
+| Team Đỗ Minh Quân | MG1290 - Đỗ Minh Quân | 4 | 0,12 tỷ | 5,1%
+| Team Nguyễn Thị Phong | RE002 - Nguyễn Thị Phong | 2 | 0,07 tỷ | 3,0%
 Top dư nợ
 Top 5 KH theo dư nợ
 1069C000001 - Triệu Hạnh Hiền964 tr
