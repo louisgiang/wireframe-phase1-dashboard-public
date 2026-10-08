@@ -113,7 +113,7 @@ Giải ngân ròng
 Lãi + phí dồn tích
 18,6 tr
 Vay quá hạn
-0
+0,16 tỷ
 2
 Diễn biến & cơ cấu
 Giải ngân vs Thu nợ gốc theo thời gian Giải ngânThu nợ gốc
@@ -124,20 +124,36 @@ T05T06T07T08T09T10
 Quy mô dư nợ theo người quản lý
 ■ Trong hạn ■ Quá hạn
 | Người quản lý | Số KH quản lý | Tổng dư nợ | Dư nợ trong hạn | Dư nợ quá hạn | Tỷ trọng trong hạn / quá hạn
-| MG1268 - Trần Phương Anh | 12 | 1,12 tỷ | 1,12 tỷ | 0 | (100%/0%)
-| MG1271 - Nguyễn Văn Bình | 7 | 0,65 tỷ | 0,65 tỷ | 0 | (100%/0%)
-| MG1284 - Lê Thu Hà | 6 | 0,38 tỷ | 0,38 tỷ | 0 | (100%/0%)
+| MG1268 - Trần Phương Anh | 12 | 1,12 tỷ | 1,06 tỷ | 0,06 tỷ | (94,6%/5,4%)
+| MG1271 - Nguyễn Văn Bình | 7 | 0,65 tỷ | 0,60 tỷ | 0,05 tỷ | (92,3%/7,7%)
+| MG1284 - Lê Thu Hà | 6 | 0,38 tỷ | 0,35 tỷ | 0,03 tỷ | (92,1%/7,9%)
 | MG1290 - Đỗ Minh Quân | 4 | 0,12 tỷ | 0,12 tỷ | 0 | (100%/0%)
-| RE002 - Nguyễn Thị Phong | 2 | 0,07 tỷ | 0,07 tỷ | 0 | (100%/0%)
+| RE002 - Nguyễn Thị Phong | 2 | 0,07 tỷ | 0,05 tỷ | 0,02 tỷ | (71,4%/28,6%)
 3
 Chi tiết
 Trạng thái
 Trong hạn
 Quá hạn
 | Số TK | Tên KH | Dư nợ trong hạn | Dư nợ quá hạn | Lãi + phí dồn tích | Người quản lý
-| 069C000001 | Triệu Hạnh Hiền | 964 tr | 0 | 7,2 tr | MG1268 - Trần Phương Anh
-| 069C000017 | Phạm Thị Vân | 280 tr | 0 | 2,1 tr | MG1268 - Trần Phương Anh
+| 069C000001 | Triệu Hạnh Hiền | 420 tr | 0 | 3,2 tr | MG1268 - Trần Phương Anh
+| 069C000017 | Phạm Thị Vân | 210 tr | 0 | 1,6 tr | MG1268 - Trần Phương Anh
 | 069C000105 | Hoàng Minh Tâm | 185 tr | 0 | 1,4 tr | MG1271 - Nguyễn Văn Bình
+| 069C000331 | Vũ Thị Hằng | 142 tr | 0 | 1,1 tr | MG1271 - Nguyễn Văn Bình
+| 069C000452 | Lương Quốc Bảo | 118 tr | 0 | 0,9 tr | MG1284 - Lê Thu Hà
+| 069C000188 | Bùi Quang Huy | 40 tr | 60 tr | 1,3 tr | MG1268 - Trần Phương Anh
+| 069C000453 | Nguyễn Minh Sang | 96 tr | 0 | 0,7 tr | MG1268 - Trần Phương Anh
+| 069C000633 | Hồ Thanh Tùng | 90 tr | 0 | 0,7 tr | MG1284 - Lê Thu Hà
+| 069C000647 | Tạ Ngọc Ánh | 70 tr | 0 | 0,5 tr | MG1284 - Lê Thu Hà
+| 069C000302 | Ngô Thị Lan | 58 tr | 0 | 0,4 tr | MG1290 - Đỗ Minh Quân
+| 069C000377 | Phan Đức Mạnh | 25 tr | 30 tr | 0,6 tr | MG1284 - Lê Thu Hà
+| 069C000267 | Trịnh Văn Lâm | 0 | 50 tr | 0,9 tr | MG1271 - Nguyễn Văn Bình
+| 069C000521 | Đinh Thị Hoa | 50 tr | 0 | 0,3 tr | RE002 - Nguyễn Thị Phong
+| 069C000415 | Lý Hoàng Yến | 47 tr | 0 | 0,3 tr | MG1284 - Lê Thu Hà
+| 069C000610 | Đặng Thu Trang | 36 tr | 0 | 0,3 tr | MG1290 - Đỗ Minh Quân
+| 069C000560 | Mai Văn Tú | 31 tr | 0 | 0,2 tr | MG1271 - Nguyễn Văn Bình
+| 069C000498 | Cao Minh Khoa | 0 | 20 tr | 0,4 tr | RE002 - Nguyễn Thị Phong
+| 069C000702 | Lâm Gia Bảo | 15 tr | 0 | 0,1 tr | MG1290 - Đỗ Minh Quân
+| 069C000715 | Kiều Thị Mai | 11 tr | 0 | 0,1 tr | MG1290 - Đỗ Minh Quân
 ```
 
 ## kh-hien-huu

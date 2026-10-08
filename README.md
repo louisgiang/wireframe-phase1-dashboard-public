@@ -59,11 +59,11 @@ Nguồn: commit `2b9227bf933b7212a4c8014862139c22988f60ef`, kiểm kê ngày 29/
 - Biểu đồ Giải ngân vs Thu nợ gốc không còn nút chọn Theo tháng / Theo ngày.
 - Thêm biểu đồ Tăng trưởng dư nợ: dư nợ cuối tháng T05–T10 và mức tăng so với tháng trước (+0,35 tỷ, khớp chỉ tiêu Giải ngân ròng).
 - Bỏ Tỷ trọng loại nợ, Tỷ trọng trong hạn / quá hạn, biểu đồ Quy mô dư nợ theo đơn vị, Phân bổ dư nợ theo team và Top dư nợ.
-- Thêm bảng Quy mô dư nợ theo người quản lý: Người quản lý (mã - họ tên), Số KH quản lý, Tổng dư nợ, Dư nợ trong hạn, Dư nợ quá hạn và cột Tỷ trọng trong hạn / quá hạn là một thanh liền (phần đậm trong hạn nối phần nhạt quá hạn) kèm nhãn dạng (100%/0%). 5 người quản lý, cộng khớp 31 KH và 2,34 tỷ.
+- Thêm bảng Quy mô dư nợ theo người quản lý: Người quản lý (mã - họ tên), Số KH quản lý, Tổng dư nợ, Dư nợ trong hạn, Dư nợ quá hạn và cột Tỷ trọng trong hạn / quá hạn là một thanh liền (phần đậm trong hạn nối phần nhạt quá hạn) kèm nhãn dạng (94,6%/5,4%). 5 người quản lý, cộng khớp 31 KH và 2,34 tỷ.
 - Phần Chi tiết chỉ còn bảng khách hàng với bộ lọc Trạng thái: Trong hạn (mặc định) và Quá hạn. Cột: Số TK, Tên KH, Dư nợ trong hạn, Dư nợ quá hạn, Lãi + phí dồn tích, Người quản lý (chữ đậm như các cột khác).
 - Cả bảng theo người quản lý và bảng khách hàng phân trang 15 bản ghi/trang qua `table-pagination.js`.
 - Số tài khoản dùng dạng 069Cxxxxxx; người quản lý dùng mã MG - họ tên. Số bản ghi dưới bảng phản ánh các dòng mẫu thực tế đang hiển thị, không phải tổng toàn danh mục.
-- Dữ liệu mẫu chỉ có khách hàng trong hạn; chọn Quá hạn hiển thị thông báo không có dữ liệu, phù hợp với chỉ tiêu vay quá hạn bằng 0.
+- Dữ liệu mẫu có dư nợ quá hạn 0,16 tỷ (thẻ Vay quá hạn), chia cho 4 người quản lý; tổng dư nợ vẫn 2,34 tỷ. Bảng khách hàng có 19 KH: 15 trong hạn (hiện đủ 15 dòng ở bộ lọc mặc định), 4 có dư nợ quá hạn; số dư từng KH không vượt tổng dư nợ của người quản lý tương ứng.
 
 ## Cập nhật màn Doanh số
 
