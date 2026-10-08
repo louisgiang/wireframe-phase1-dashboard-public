@@ -152,32 +152,29 @@ Quy mô dư nợ theo đơn vị
 
 Phân bổ theo nguồn là dữ liệu minh họa bổ sung; tổng theo người quản lý khớp bảng hiện có. Hover hoặc focus từng đoạn thanh hiển thị chi tiết hai nguồn.
 
-Quy mô dư nợ theo người quản lý
-| Người quản lý | Số KH quản lý | Dư nợ gốc | Dư nợ trong hạn | Dư nợ quá hạn | Dư nợ còn lại | Lãi + phí dồn tích | Tổng nợ + lãi + phí
-| MG1268 - Trần Phương Anh | 12 | 1.400 tr | 1.060 tr | 60 tr | 1.120 tr | 8,9 tr | 1.128,9 tr
-| MG1271 - Nguyễn Văn Bình | 7 | 820 tr | 600 tr | 50 tr | 650 tr | 5,1 tr | 655,1 tr
-| MG1284 - Lê Thu Hà | 6 | 450 tr | 350 tr | 30 tr | 380 tr | 2,9 tr | 382,9 tr
-| MG1290 - Đỗ Minh Quân | 4 | 150 tr | 120 tr | 0 | 120 tr | 1 tr | 121 tr
-| RE002 - Nguyễn Thị Phong | 2 | 90 tr | 50 tr | 20 tr | 70 tr | 0,7 tr | 70,7 tr
-3
-Quy mô dư nợ theo khách hàng
-| Tên KH | Dư nợ gốc | Dư nợ trong hạn | Dư nợ quá hạn | Dư nợ còn lại | Lãi + phí dồn tích | Tổng nợ + lãi + phí | Người quản lý
-| 069C000001 - Triệu Hạnh Hiền | 525 tr | 420 tr | 0 | 420 tr | 3,2 tr | 423,2 tr | MG1268 - Trần Phương Anh
-| 069C000017 - Phạm Thị Vân | 260 tr | 210 tr | 0 | 210 tr | 1,6 tr | 211,6 tr | MG1268 - Trần Phương Anh
-| 069C000105 - Hoàng Minh Tâm | 230 tr | 185 tr | 0 | 185 tr | 1,4 tr | 186,4 tr | MG1271 - Nguyễn Văn Bình
-| 069C000331 - Vũ Thị Hằng | 180 tr | 142 tr | 0 | 142 tr | 1,1 tr | 143,1 tr | MG1271 - Nguyễn Văn Bình
-| 069C000452 - Lương Quốc Bảo | 150 tr | 118 tr | 0 | 118 tr | 0,9 tr | 118,9 tr | MG1284 - Lê Thu Hà
-| 069C000188 - Bùi Quang Huy | 125 tr | 40 tr | 60 tr | 100 tr | 1,3 tr | 101,3 tr | MG1268 - Trần Phương Anh
-| 069C000453 - Nguyễn Minh Sang | 120 tr | 96 tr | 0 | 96 tr | 0,7 tr | 96,7 tr | MG1268 - Trần Phương Anh
-| 069C000302 - Ngô Thị Lan | 72 tr | 58 tr | 0 | 58 tr | 0,4 tr | 58,4 tr | MG1290 - Đỗ Minh Quân
-| 069C000377 - Phan Đức Mạnh | 70 tr | 25 tr | 30 tr | 55 tr | 0,6 tr | 55,6 tr | MG1284 - Lê Thu Hà
-| 069C000267 - Trịnh Văn Lâm | 65 tr | 0 | 50 tr | 50 tr | 0,9 tr | 50,9 tr | MG1271 - Nguyễn Văn Bình
-| 069C000521 - Đinh Thị Hoa | 62 tr | 50 tr | 0 | 50 tr | 0,3 tr | 50,3 tr | RE002 - Nguyễn Thị Phong
-| 069C000415 - Lý Hoàng Yến | 60 tr | 47 tr | 0 | 47 tr | 0,3 tr | 47,3 tr | MG1284 - Lê Thu Hà
-| 069C000610 - Đặng Thu Trang | 45 tr | 36 tr | 0 | 36 tr | 0,3 tr | 36,3 tr | MG1290 - Đỗ Minh Quân
-| 069C000560 - Mai Văn Tú | 40 tr | 31 tr | 0 | 31 tr | 0,2 tr | 31,2 tr | MG1271 - Nguyễn Văn Bình
-| 069C000498 - Cao Minh Khoa | 28 tr | 0 | 20 tr | 20 tr | 0,4 tr | 20,4 tr | RE002 - Nguyễn Thị Phong
-```
+### 3. Xếp hạng dư nợ
+
+Hai biểu đồ thanh ngang cạnh nhau trên máy tính, xếp dọc trên điện thoại. Lấy Top 5 và sắp xếp giảm dần theo dư nợ còn lại; không phân trang. Mỗi biểu đồ chuẩn hóa độ dài thanh theo giá trị lớn nhất trong nhóm.
+
+Top 5 người quản lý
+
+| Mã - Họ tên | Dư nợ còn lại (triệu đồng) |
+| --- | ---: |
+| MG1268 - Trần Phương Anh | 1.120 |
+| MG1271 - Nguyễn Văn Bình | 650 |
+| MG1284 - Lê Thu Hà | 380 |
+| MG1290 - Đỗ Minh Quân | 120 |
+| RE002 - Nguyễn Thị Phong | 70 |
+
+Top 5 khách hàng
+
+| Mã - Họ tên | Dư nợ còn lại (triệu đồng) |
+| --- | ---: |
+| 069C000001 - Triệu Hạnh Hiền | 420 |
+| 069C000017 - Phạm Thị Vân | 210 |
+| 069C000105 - Hoàng Minh Tâm | 185 |
+| 069C000331 - Vũ Thị Hằng | 142 |
+| 069C000452 - Lương Quốc Bảo | 118 |
 
 ## kh-hien-huu
 

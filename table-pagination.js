@@ -3,8 +3,6 @@
   const configs = [
     ['sales-staff-table', 'Bảng doanh số theo môi giới'],
     ['sales-customers-table', 'Danh sách theo khách hàng'],
-    ['debt-manager-table', 'Quy mô dư nợ theo người quản lý'],
-    ['debt-customer-table', 'Quy mô dư nợ theo khách hàng'],
     ['existing-customer-table', 'Danh sách KH hiện hữu', 'customer-status', 'status'],
     ['new-customer-table', 'Chi tiết TK mở mới', 'new-customer-status', 'status']
   ];

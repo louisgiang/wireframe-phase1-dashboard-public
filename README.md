@@ -41,7 +41,7 @@ Không cần cài dependency hay chạy build. Khi import repo vào Vercel, dùn
 - Giữ các KPI nghiệp vụ, biểu đồ, bảng, cảnh báo, hành động và điều hướng; giữ tên chuỗi dữ liệu để đọc biểu đồ.
 - Giữ lịch sử commit gốc; không sửa repo hay deployment Vercel gốc.
 
-Đây là wireframe với dữ liệu minh họa nhúng trong HTML. Chuyển tab, deep link và bàn phím hoạt động; Bộ lọc kỳ báo cáo và phạm vi dữ liệu có thể thao tác, đồng bộ trên cả 6 tab; phân trang hoạt động ở cả 6 bảng dữ liệu với 15 bản ghi/trang; lọc Active/Inactive hoạt động ở hai bảng khách hàng. Các thao tác nghiệp vụ khác chưa được lập trình. Số liệu, biểu đồ và ngày chốt dữ liệu vẫn là dữ liệu minh họa cố định, chưa được tính lại theo bộ lọc.
+Đây là wireframe với dữ liệu minh họa nhúng trong HTML. Chuyển tab, deep link và bàn phím hoạt động; Bộ lọc kỳ báo cáo và phạm vi dữ liệu có thể thao tác, đồng bộ trên cả 6 tab; phân trang hoạt động ở 4 bảng dữ liệu với 15 bản ghi/trang; lọc Active/Inactive hoạt động ở hai bảng khách hàng. Các thao tác nghiệp vụ khác chưa được lập trình. Số liệu, biểu đồ và ngày chốt dữ liệu vẫn là dữ liệu minh họa cố định, chưa được tính lại theo bộ lọc.
 
 Nguồn: commit `2b9227bf933b7212a4c8014862139c22988f60ef`, kiểm kê ngày 29/09/2026. Repo gốc không có tệp LICENSE.
 
@@ -58,11 +58,9 @@ Nguồn: commit `2b9227bf933b7212a4c8014862139c22988f60ef`, kiểm kê ngày 29/
 - Thẻ Tổng dư nợ chỉ hiện dư nợ trên chỉ tiêu (2,34 / 5 tỷ); bỏ dòng số KH có dư nợ và % KPI.
 - Biểu đồ Giải ngân vs Thu nợ gốc không còn nút chọn Theo tháng / Theo ngày.
 - Tăng trưởng dư nợ dùng biểu đồ đường với dư nợ cuối tháng T05–T10 (1,62; 1,71; 1,80; 1,88; 1,99; 2,34 tỷ đồng), có mốc tháng và trục giá trị. Bỏ dòng so sánh tháng trước.
-- Bổ sung hai biểu đồ vòng tròn Tỷ trọng loại nợ và Tỷ trọng trong hạn / quá hạn, cùng biểu đồ thanh xếp chồng Quy mô dư nợ theo đơn vị, theo mẫu đen trắng. Tổng 2,34 tỷ khớp bảng người quản lý: trong hạn 2,18 tỷ (93,2%), quá hạn 0,16 tỷ (6,8%). Phân bổ nguồn vay là dữ liệu minh họa bổ sung: công ty 2,20 tỷ (94,0%), bên thứ ba 0,14 tỷ (6,0%). Năm đơn vị dùng người quản lý hiện có; phần nguồn công ty/bên thứ ba lần lượt là 1.080/40, 630/20, 320/60, 100/20, 70/0 triệu đồng. Hover hoặc focus thanh hiển thị chi tiết hai nguồn. Giữ các bảng bên dưới; không khôi phục Phân bổ dư nợ theo team và Top dư nợ.
-- Bảng Quy mô dư nợ theo người quản lý: Người quản lý (mã - họ tên), Số KH quản lý, Dư nợ gốc, Dư nợ trong hạn, Dư nợ quá hạn, Dư nợ còn lại, Lãi + phí dồn tích, Tổng nợ + lãi + phí. 5 người quản lý, cộng khớp 31 KH, dư nợ còn lại 2,34 tỷ, quá hạn 0,16 tỷ và lãi + phí 18,6 tr.
-- Phần 3 đổi tên thành Quy mô dư nợ theo khách hàng, bỏ bộ lọc Trạng thái. Cột: Tên KH (069Cxxxxxx - họ tên), Dư nợ gốc, Dư nợ trong hạn, Dư nợ quá hạn, Dư nợ còn lại, Lãi + phí dồn tích, Tổng nợ + lãi + phí, Người quản lý (mã - họ tên). 15 KH mẫu, trong đó 4 KH có dư nợ quá hạn; số liệu từng KH không vượt tổng của người quản lý tương ứng.
-- Quy ước: Dư nợ gốc là số tiền gốc đã giải ngân; Dư nợ còn lại = trong hạn + quá hạn; Tổng nợ + lãi + phí = dư nợ còn lại + lãi + phí dồn tích. Hai bảng dùng đơn vị triệu đồng.
-- Cả hai bảng phân trang 15 bản ghi/trang qua `table-pagination.js`.
+- Bổ sung hai biểu đồ vòng tròn Tỷ trọng loại nợ và Tỷ trọng trong hạn / quá hạn, cùng biểu đồ thanh xếp chồng Quy mô dư nợ theo đơn vị, theo mẫu đen trắng. Tổng 2,34 tỷ khớp dữ liệu người quản lý: trong hạn 2,18 tỷ (93,2%), quá hạn 0,16 tỷ (6,8%). Phân bổ nguồn vay là dữ liệu minh họa bổ sung: công ty 2,20 tỷ (94,0%), bên thứ ba 0,14 tỷ (6,0%). Năm đơn vị dùng người quản lý hiện có; phần nguồn công ty/bên thứ ba lần lượt là 1.080/40, 630/20, 320/60, 100/20, 70/0 triệu đồng. Hover hoặc focus thanh hiển thị chi tiết hai nguồn. Không khôi phục bảng Phân bổ dư nợ theo team.
+- Phần 3 Xếp hạng dư nợ thay hai bảng bằng hai biểu đồ thanh ngang đen trắng cạnh nhau: Top 5 người quản lý và Top 5 khách hàng. Sắp xếp giảm dần theo dư nợ còn lại; nhãn mã - họ tên bên trái, số dư nợ bên phải (triệu đồng); không phân trang. Độ dài thanh chuẩn hóa theo giá trị lớn nhất của từng biểu đồ.
+- Top người quản lý: 1.120; 650; 380; 120; 70 triệu đồng. Top khách hàng: 420; 210; 185; 142; 118 triệu đồng. Dữ liệu được lấy từ hai bảng trước khi chuyển đổi, không dùng dư nợ gốc hay tổng nợ kèm lãi phí.
 
 ## Cập nhật màn Doanh số
 
@@ -114,7 +112,7 @@ Nguồn: commit `2b9227bf933b7212a4c8014862139c22988f60ef`, kiểm kê ngày 29/
 ## Tổng cộng và phân trang bảng dữ liệu
 
 - Tổng cộng doanh số theo môi giới nằm riêng dưới tiêu đề mục và trên bảng chi tiết, không đổi theo trang hiện tại. Bảng team không có Tổng cộng.
-- Cả 6 bảng dữ liệu dùng `table-pagination.js`, mặc định 15 bản ghi/trang; bảng ít hơn 15 dòng hiển thị một trang. Đổi bộ lọc quay về trang 1; khi không có dữ liệu hiển thị thông báo rỗng và vô hiệu hóa nút chuyển trang.
+- Bốn bảng dữ liệu còn lại dùng `table-pagination.js`, mặc định 15 bản ghi/trang; bảng ít hơn 15 dòng hiển thị một trang. Đổi bộ lọc quay về trang 1; khi không có dữ liệu hiển thị thông báo rỗng và vô hiệu hóa nút chuyển trang. Hai bảng dư nợ đã chuyển thành biểu đồ Top 5, không phân trang.
 - Các biểu đồ xếp hạng Top giữ giới hạn hiện có, không phải bảng dữ liệu phân trang.
 
 - Phân bổ team mẫu mới: 12/7/6/4/2 khách hàng; dư nợ 1,12/0,65/0,38/0,12/0,07 tỷ; tỷ trọng 47,9/27,8/16,2/5,1/3,0%. Đây là dữ liệu minh họa, không phải tổ chức thực tế.
