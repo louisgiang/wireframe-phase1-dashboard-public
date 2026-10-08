@@ -8,7 +8,7 @@ Bản sao đã gỡ nhãn đánh dấu triển khai, hiện có 6 tab nội dung
 | --- | --- |
 | Tổng quan | 8 chỉ tiêu chính, doanh số và dư nợ theo ngày |
 | Doanh số | GTGD, phí net, xếp hạng CTV/TVĐT/KH, bảng theo cây môi giới |
-| Dư nợ & Món vay | Dư nợ, giải ngân, thu nợ, lãi phí, cơ cấu nợ, tăng trưởng dư nợ, phân bổ theo team, top dư nợ, danh sách KH/TK |
+| Dư nợ & Món vay | Dư nợ, giải ngân, thu nợ, lãi phí, tăng trưởng dư nợ, quy mô dư nợ theo người quản lý, danh sách khách hàng |
 | KH hiện hữu | Số khách hàng, active, NAV, dư nợ, phân bổ NAV, danh sách khách hàng |
 | KH mở mới | Số khách hàng mới, active, tài khoản nộp tiền, NAV, dư nợ, phễu và chi tiết tài khoản |
 | Nộp rút | Dòng tiền, Top KH nộp/rút ròng, nộp/rút ròng theo người quản lý |
@@ -58,8 +58,10 @@ Nguồn: commit `2b9227bf933b7212a4c8014862139c22988f60ef`, kiểm kê ngày 29/
 - Thẻ Tổng dư nợ chỉ hiện 2,34 tỷ; bỏ mức kế hoạch / 5 tỷ.
 - Biểu đồ Giải ngân vs Thu nợ gốc không còn nút chọn Theo tháng / Theo ngày.
 - Thêm biểu đồ Tăng trưởng dư nợ: dư nợ cuối tháng T05–T10 và mức tăng so với tháng trước (+0,35 tỷ, khớp chỉ tiêu Giải ngân ròng).
-- Phân bổ dư nợ theo team có 5 dòng minh họa, không có Tổng cộng và cột Quá hạn. Phân bổ lại 31 khách hàng và 2,34 tỷ cho 5 team; tỷ trọng cộng 100%. Khung cao bằng Top dư nợ bên cạnh.
-- Phần Chi tiết chỉ còn bảng tổng hợp theo KH/TK với bộ lọc Trạng thái: Trong hạn (mặc định) và Quá hạn; bỏ nút chuyển sang Chi tiết món vay và bỏ bảng món vay của một khách hàng.
+- Bỏ Tỷ trọng loại nợ, Tỷ trọng trong hạn / quá hạn, biểu đồ Quy mô dư nợ theo đơn vị, Phân bổ dư nợ theo team và Top dư nợ.
+- Thêm bảng Quy mô dư nợ theo người quản lý: Người quản lý (mã - họ tên), Số KH quản lý, Tổng dư nợ, Dư nợ trong hạn, Dư nợ quá hạn và cột Tỷ trọng trong hạn / quá hạn gồm hai thanh nhỏ cạnh nhau kèm %. 5 người quản lý, cộng khớp 31 KH và 2,34 tỷ.
+- Phần Chi tiết chỉ còn bảng khách hàng với bộ lọc Trạng thái: Trong hạn (mặc định) và Quá hạn. Cột: Số TK, Tên KH, Dư nợ trong hạn, Dư nợ quá hạn, Lãi + phí dồn tích, Người quản lý (chữ đậm như các cột khác).
+- Cả bảng theo người quản lý và bảng khách hàng phân trang 15 bản ghi/trang qua `table-pagination.js`.
 - Số tài khoản dùng dạng 069Cxxxxxx; người quản lý dùng mã MG - họ tên. Số bản ghi dưới bảng phản ánh các dòng mẫu thực tế đang hiển thị, không phải tổng toàn danh mục.
 - Dữ liệu mẫu chỉ có khách hàng trong hạn; chọn Quá hạn hiển thị thông báo không có dữ liệu, phù hợp với chỉ tiêu vay quá hạn bằng 0.
 

@@ -121,42 +121,23 @@ Giải ngân vs Thu nợ gốc theo thời gian Giải ngânThu nợ gốc
 Tăng trưởng dư nợ +0,35 tỷ (+17,6%) so với tháng trước
 T05T06T07T08T09T10
 1,621,711,801,881,992,34
-Tỷ trọng loại nợ
-Margin1,68 tỷ
-Ứng trước0,47 tỷ
-Khác0,19 tỷ
-Tỷ trọng trong hạn / quá hạn
-Trong hạn2,34 tỷ
-Quá hạn0
-Quy mô dư nợ theo đơn vị
-■ Margin ■ Ứng trước □ Khác
-MG1268 - Trần Phương Anh1,12 tỷ
-MG1271 - Nguyễn Văn Bình0,65 tỷ
-MG1284 - Lê Thu Hà0,38 tỷ
-MG1290 - Đỗ Minh Quân0,19 tỷ
-Phân bổ dư nợ theo team
-| Team | Trưởng team | Số KH | Dư nợ | Tỷ trọng
-| Team Trần Phương Anh | MG1268 - Trần Phương Anh | 12 | 1,12 tỷ | 47,9%
-| Team Nguyễn Văn Bình | MG1271 - Nguyễn Văn Bình | 7 | 0,65 tỷ | 27,8%
-| Team Lê Thu Hà | MG1284 - Lê Thu Hà | 6 | 0,38 tỷ | 16,2%
-| Team Đỗ Minh Quân | MG1290 - Đỗ Minh Quân | 4 | 0,12 tỷ | 5,1%
-| Team Nguyễn Thị Phong | RE002 - Nguyễn Thị Phong | 2 | 0,07 tỷ | 3,0%
-Top dư nợ
-Top 5 KH theo dư nợ
-1069C000001 - Triệu Hạnh Hiền964 tr
-2069C000017 - Phạm Thị Vân280 tr
-3069C000105 - Hoàng Minh Tâm185 tr
-4069C000331 - Vũ Thị Hằng142 tr
-5069C000452 - Lương Quốc Bảo118 tr
+Quy mô dư nợ theo người quản lý
+■ Trong hạn ■ Quá hạn
+| Người quản lý | Số KH quản lý | Tổng dư nợ | Dư nợ trong hạn | Dư nợ quá hạn | Tỷ trọng trong hạn / quá hạn
+| MG1268 - Trần Phương Anh | 12 | 1,12 tỷ | 1,12 tỷ | 0 | 100% 0%
+| MG1271 - Nguyễn Văn Bình | 7 | 0,65 tỷ | 0,65 tỷ | 0 | 100% 0%
+| MG1284 - Lê Thu Hà | 6 | 0,38 tỷ | 0,38 tỷ | 0 | 100% 0%
+| MG1290 - Đỗ Minh Quân | 4 | 0,12 tỷ | 0,12 tỷ | 0 | 100% 0%
+| RE002 - Nguyễn Thị Phong | 2 | 0,07 tỷ | 0,07 tỷ | 0 | 100% 0%
 3
 Chi tiết
 Trạng thái
 Trong hạn
 Quá hạn
-| Mã KH | Tên KH | Số tài khoản | Loại nợ chính | Dư nợ | Lãi + phí dồn tích | Quá hạn | Đến hạn gần nhất | Người quản lý
-| 069C000001 | Triệu Hạnh Hiền | 069C000001 | Margin | 964 tr | 7,2 tr | 0 | — | MG1268 - Trần Phương Anh
-| 069C000017 | Phạm Thị Vân | 069C000017 | Margin | 280 tr | 2,1 tr | 0 | — | MG1268 - Trần Phương Anh
-| 069C000105 | Hoàng Minh Tâm | 069C000105 | Ứng trước | 185 tr | 1,4 tr | 0 | — | MG1271 - Nguyễn Văn Bình
+| Số TK | Tên KH | Dư nợ trong hạn | Dư nợ quá hạn | Lãi + phí dồn tích | Người quản lý
+| 069C000001 | Triệu Hạnh Hiền | 964 tr | 0 | 7,2 tr | MG1268 - Trần Phương Anh
+| 069C000017 | Phạm Thị Vân | 280 tr | 0 | 2,1 tr | MG1268 - Trần Phương Anh
+| 069C000105 | Hoàng Minh Tâm | 185 tr | 0 | 1,4 tr | MG1271 - Nguyễn Văn Bình
 ```
 
 ## kh-hien-huu

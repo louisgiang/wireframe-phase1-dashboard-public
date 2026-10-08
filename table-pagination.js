@@ -2,7 +2,7 @@
   const pageSize = 15;
   const configs = [
     ['sales-staff-table', 'Bảng doanh số theo môi giới'],
-    ['debt-team-table', 'Phân bổ dư nợ theo team'],
+    ['debt-manager-table', 'Quy mô dư nợ theo người quản lý'],
     ['debt-customer-table', 'Chi tiết dư nợ', 'debt-status', 'debtStatus'],
     ['existing-customer-table', 'Danh sách KH hiện hữu', 'customer-status', 'status'],
     ['new-customer-table', 'Chi tiết TK mở mới', 'new-customer-status', 'status']
