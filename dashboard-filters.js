@@ -1,12 +1,21 @@
 (() => {
-  // Demo hierarchy only. Production must supply the signed-in broker and
-  // authorized descendants from the server; no ancestor is a selectable scope.
-  const broker = {id: 'MG1268', name: 'Trần Phương Anh', children: [
-    {id: 'MG1271', name: 'Nguyễn Văn Bình'},
-    {id: 'MG1284', name: 'Lê Thu Hà'},
-    {id: 'MG1290', name: 'Đỗ Minh Quân'}
+  // Demo hierarchy only. Production must supply the signed-in broker's
+  // authorized tree from the server and enforce the same scope server-side.
+  // Cấp cha TP001 có 2 nhánh con ngang hàng: MG1268 (người đăng nhập, kèm 3
+  // cấp dưới) và RE002 (kèm 1 cấp dưới).
+  const hierarchy = {id: 'TP001', name: 'Phạm Quốc Hùng', children: [
+    {id: 'MG1268', name: 'Trần Phương Anh', children: [
+      {id: 'MG1271', name: 'Nguyễn Văn Bình'},
+      {id: 'MG1284', name: 'Lê Thu Hà'},
+      {id: 'MG1290', name: 'Đỗ Minh Quân'}
+    ]},
+    {id: 'RE002', name: 'Nguyễn Thị Phong', children: [
+      {id: 'RE005', name: 'Hoàng Văn Nam'}
+    ]}
   ]};
-  const people = [broker, ...broker.children];
+  const broker = hierarchy.children[0];
+  const flatten = person => [person, ...(person.children || []).flatMap(flatten)];
+  const people = flatten(hierarchy);
   const monthLabel = value => `Tháng ${Number(value.slice(5))}/${value.slice(0, 4)}`;
   const months = ['2026-10', '2026-09'];
   const state = {
@@ -17,12 +26,14 @@
     return `${person.id} - ${person.name}`;
   })();
   // Cây chọn phạm vi theo kiểu TreeSelect (Ant Design): "Tất cả" là nút lá,
-  // người đăng nhập là nút cha mở sẵn, cấp dưới là nút con.
-  const nodes = [
-    {key: 'all', title: 'Tất cả'},
-    {key: broker.id, title: `${broker.id} - ${broker.name}`, children: broker.children.map(person => ({key: person.id, title: `${person.id} - ${person.name}`}))}
-  ];
-  const defaultExpanded = [broker.id];
+  // cấp cha và nhánh của người đăng nhập mở sẵn, nhánh ngang hàng thu gọn.
+  const toNode = person => ({
+    key: person.id,
+    title: `${person.id} - ${person.name}`,
+    children: person.children ? person.children.map(toNode) : undefined
+  });
+  const nodes = [{key: 'all', title: 'Tất cả'}, toNode(hierarchy)];
+  const defaultExpanded = [hierarchy.id, broker.id];
   const chevron = '<svg viewBox="0 0 1024 1024" width="10" height="10" aria-hidden="true" focusable="false"><path fill="currentColor" d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"/></svg>';
   const caret = '<svg viewBox="0 0 1024 1024" width="10" height="10" aria-hidden="true" focusable="false"><path fill="currentColor" d="M840.4 300H183.6c-19.7 0-30.7 20.8-18.5 35l328.4 380.8c9.4 10.9 27.5 10.9 37 0L858.9 335c12.2-14.2 1.2-35-18.5-35z"/></svg>';
   function renderNodes(list, index, level) {

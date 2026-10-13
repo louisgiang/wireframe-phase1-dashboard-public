@@ -339,7 +339,9 @@
   .tree-select-dropdown{position:absolute;left:0;right:0;top:calc(100% + 4px);z-index:50;background:#fff;border-radius:8px;padding:4px;max-height:300px;overflow:auto;box-shadow:0 6px 16px 0 #00000014,0 3px 6px -4px #0000001f,0 9px 28px 8px #0000000d}
   .tree,.tree ul{list-style:none;padding:0;margin:0}
   .tree-node{display:flex;align-items:center;min-height:30px;padding:0 4px;border-radius:4px;font-size:12px;cursor:pointer;outline:0}
-  .tree-children .tree-node{padding-left:28px}
+  .tree-node[aria-level="2"]{padding-left:28px}
+  .tree-node[aria-level="3"]{padding-left:52px}
+  .tree-node[aria-level="4"]{padding-left:76px}
   .tree-node:hover{background:#0000000a}
   .tree-node[aria-selected="true"]{background:#e8e8e8;font-weight:700}
   .tree-node:focus-visible{box-shadow:inset 0 0 0 2px #111}
@@ -825,7 +827,7 @@
 
 
 
-<script src="dashboard-filters.js?v=20261013-tree"></script>
+<script src="dashboard-filters.js?v=20261013-tree2"></script>
 <script src="overview-chart-tooltips.js"></script>
 <script src="customer-charts.js"></script>
 <script src="table-pagination.js?v=20261008-debt-top5-debt2"></script>
