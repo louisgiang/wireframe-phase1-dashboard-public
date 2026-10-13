@@ -1,15 +1,15 @@
 (() => {
   // Demo hierarchy only. Production must supply the signed-in broker's
   // authorized tree from the server and enforce the same scope server-side.
-  // Cấp cha TP001 có 2 nhánh con ngang hàng: MG1268 (người đăng nhập, kèm 3
-  // cấp dưới) và RE002 (kèm 1 cấp dưới).
-  const hierarchy = {id: 'TP001', name: 'Phạm Quốc Hùng', children: [
+  // Cấp cha MG001 có 2 nhánh con ngang hàng: MG1268 (người đăng nhập, kèm 3
+  // cấp dưới) và MG002 (kèm 1 cấp dưới).
+  const hierarchy = {id: 'MG001', name: 'Phạm Quốc Hùng', children: [
     {id: 'MG1268', name: 'Trần Phương Anh', children: [
       {id: 'MG1271', name: 'Nguyễn Văn Bình'},
       {id: 'MG1284', name: 'Lê Thu Hà'},
       {id: 'MG1290', name: 'Đỗ Minh Quân'}
     ]},
-    {id: 'RE002', name: 'Nguyễn Thị Phong', children: [
+    {id: 'MG002', name: 'Nguyễn Thị Phong', children: [
       {id: 'RE005', name: 'Hoàng Văn Nam'}
     ]}
   ]};

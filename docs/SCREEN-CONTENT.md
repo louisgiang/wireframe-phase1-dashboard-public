@@ -68,7 +68,7 @@ Xếp hạng
 Top MG/CTV
 Top 5 theo phí net CP
 1MG1268 - Trần Phương Anh9,1 tr
-2RE002 - Nguyễn Thị Phong6,2 tr
+2MG002 - Nguyễn Thị Phong6,2 tr
 3MG1271 - Nguyễn Văn Bình5,6 tr
 4MG1284 - Lê Thu Hà3,8 tr
 5RE005 - Hoàng Văn Nam3,0 tr
@@ -148,7 +148,7 @@ Quy mô dư nợ theo đơn vị
 | MG1271 - Nguyễn Văn Bình | 630 | 20 | 0,65 tỷ |
 | MG1284 - Lê Thu Hà | 320 | 60 | 0,38 tỷ |
 | MG1290 - Đỗ Minh Quân | 100 | 20 | 0,12 tỷ |
-| RE002 - Nguyễn Thị Phong | 70 | 0 | 0,07 tỷ |
+| MG002 - Nguyễn Thị Phong | 70 | 0 | 0,07 tỷ |
 
 Phân bổ theo nguồn là dữ liệu minh họa bổ sung; tổng theo người quản lý khớp bảng hiện có. Hover hoặc focus từng đoạn thanh hiển thị chi tiết hai nguồn.
 
@@ -164,7 +164,7 @@ Top 5 người quản lý
 | MG1271 - Nguyễn Văn Bình | 650 |
 | MG1284 - Lê Thu Hà | 380 |
 | MG1290 - Đỗ Minh Quân | 120 |
-| RE002 - Nguyễn Thị Phong | 70 |
+| MG002 - Nguyễn Thị Phong | 70 |
 
 Top 5 khách hàng
 
@@ -225,19 +225,19 @@ Danh sách KH hiện hữuSố tài khoản | Họ tên KH | NAV cuối kỳ | S
 069C000601 | Trần Ngọc Lan | 155 tr | 3 | 0 | 40 tr | 0 | 33 nghìn | MG1271 - Nguyễn Văn Bình |
 069C000602 | Phạm Quốc Huy | 190 tr | 4 | 0 | 50 tr | 0 | 41 nghìn | MG1284 - Lê Thu Hà |
 069C000603 | Lê Minh Đức | 225 tr | 5 | 0 | 60 tr | 0 | 49 nghìn | MG1290 - Đỗ Minh Quân |
-069C000604 | Đỗ Thị Hương | 260 tr | 6 | 0 | 70 tr | 0 | 57 nghìn | RE002 - Nguyễn Thị Phong |
+069C000604 | Đỗ Thị Hương | 260 tr | 6 | 0 | 70 tr | 0 | 57 nghìn | MG002 - Nguyễn Thị Phong |
 069C000605 | Hoàng Anh Tuấn | 295 tr | 7 | 0 | 80 tr | 0 | 65 nghìn | RE005 - Hoàng Văn Nam |
 069C000606 | Vũ Ngọc Mai | 330 tr | 8 | 0 | 90 tr | 0 | 73 nghìn | MG1268 - Trần Phương Anh |
 069C000607 | Bùi Quang Minh | 365 tr | 2 | 0 | 100 tr | 0 | 81 nghìn | MG1271 - Nguyễn Văn Bình |
 069C000608 | Đặng Thu Trang | 400 tr | 3 | 0 | 110 tr | 0 | 89 nghìn | MG1284 - Lê Thu Hà |
 069C000609 | Ngô Văn Sơn | 435 tr | 4 | 0 | 120 tr | 0 | 97 nghìn | MG1290 - Đỗ Minh Quân |
-069C000610 | Đinh Thị Hoa | 470 tr | 5 | 0 | 130 tr | 0 | 105 nghìn | RE002 - Nguyễn Thị Phong |
+069C000610 | Đinh Thị Hoa | 470 tr | 5 | 0 | 130 tr | 0 | 105 nghìn | MG002 - Nguyễn Thị Phong |
 069C000611 | Dương Quốc Khánh | 505 tr | 6 | 0 | 140 tr | 0 | 113 nghìn | RE005 - Hoàng Văn Nam |
 069C000612 | Phan Minh Châu | 540 tr | 7 | 0 | 150 tr | 0 | 121 nghìn | MG1268 - Trần Phương Anh |
 069C000613 | Võ Thanh Bình | 575 tr | 8 | 0 | 160 tr | 0 | 129 nghìn | MG1271 - Nguyễn Văn Bình |
 069C000614 | Lý Hoài An | 610 tr | 2 | 0 | 170 tr | 0 | 137 nghìn | MG1284 - Lê Thu Hà |
 069C000615 | Mai Đức Thành | 645 tr | 3 | 0 | 180 tr | 0 | 145 nghìn | MG1290 - Đỗ Minh Quân |
-069C000616 | Tạ Ngọc Ánh | 680 tr | 4 | 0 | 190 tr | 0 | 153 nghìn | RE002 - Nguyễn Thị Phong |
+069C000616 | Tạ Ngọc Ánh | 680 tr | 4 | 0 | 190 tr | 0 | 153 nghìn | MG002 - Nguyễn Thị Phong |
 069C000617 | Trịnh Minh Phúc | 715 tr | 5 | 0 | 200 tr | 0 | 161 nghìn | RE005 - Hoàng Văn Nam |
 069C000618 | Cao Thu Hà | 750 tr | 0 | 1 | 0 | 5 tr | 169 nghìn | MG1268 - Trần Phương Anh |
 069C000412 | Lê Văn Hòa | 3,1 tr | 0 | 0 | 0 | 0 | 0 | MG1268 - Trần Phương Anh |
