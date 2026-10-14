@@ -336,7 +336,7 @@
   .tree-select-value{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .tree-select-arrow{display:inline-flex;color:#00000040;transition:transform .2s}
   .tree-select.open .tree-select-arrow{transform:rotate(180deg)}
-  .tree-select-dropdown{position:absolute;left:0;right:0;top:calc(100% + 4px);z-index:50;background:#fff;border-radius:8px;padding:4px;max-height:320px;overflow:auto;box-shadow:0 6px 16px 0 #00000014,0 3px 6px -4px #0000001f,0 9px 28px 8px #0000000d}
+  .tree-select-dropdown{position:absolute;right:0;top:calc(100% + 4px);z-index:50;min-width:100%;width:max-content;max-width:calc(100vw - 32px);background:#fff;border-radius:8px;padding:4px;max-height:440px;overflow:auto;box-shadow:0 6px 16px 0 #00000014,0 3px 6px -4px #0000001f,0 9px 28px 8px #0000000d}
   .tree,.tree ul{list-style:none;padding:0;margin:0}
   .tree-node{display:flex;align-items:center;min-height:30px;padding:0 4px;border-radius:4px;font-size:12px;cursor:pointer;outline:0}
   .tree-node[aria-level="2"]{padding-left:28px}
@@ -827,7 +827,7 @@
 
 
 
-<script src="dashboard-filters.js?v=20261013-tt"></script>
+<script src="dashboard-filters.js?v=20261014-ctv"></script>
 <script src="overview-chart-tooltips.js"></script>
 <script src="customer-charts.js"></script>
 <script src="table-pagination.js?v=20261008-debt-top5-debt2"></script>

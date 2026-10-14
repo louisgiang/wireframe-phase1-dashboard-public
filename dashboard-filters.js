@@ -2,14 +2,23 @@
   // Demo hierarchy only. Production must supply the signed-in broker's
   // authorized tree from the server and enforce the same scope server-side.
   // Gốc là trung tâm; dưới trung tâm có giám đốc và 2 phòng ngang hàng,
-  // mỗi phòng gồm trưởng phòng và nhân viên.
+  // mỗi phòng gồm trưởng phòng và nhân viên. Môi giới có CTV được tách thành
+  // nút "toàn nhánh" (môi giới + CTV), bên dưới là riêng môi giới và từng CTV.
+  const withCtv = (person, ctv) => ({
+    id: `${person.id}-ALL`,
+    title: `${person.id} - ${person.name} - toàn nhánh`,
+    children: [person, ...ctv]
+  });
   const hierarchy = {id: 'TT-DN', title: 'TT TVĐT Đà Nẵng', children: [
     {id: 'MG001', name: 'Phạm Quốc Hùng'},
     {id: 'PHONG-1', title: 'Phòng TVĐT 1', children: [
       {id: 'MG1268', name: 'Trần Phương Anh'},
       {id: 'MG1271', name: 'Nguyễn Văn Bình'},
       {id: 'MG1284', name: 'Lê Thu Hà'},
-      {id: 'MG1290', name: 'Đỗ Minh Quân'}
+      withCtv({id: 'MG1290', name: 'Đỗ Minh Quân'}, [
+        {id: 'RE011', name: 'Phan Thanh Tâm'},
+        {id: 'RE012', name: 'Võ Thị Ngọc'}
+      ])
     ]},
     {id: 'PHONG-2', title: 'Phòng TVĐT 2', children: [
       {id: 'MG002', name: 'Nguyễn Thị Phong'},
@@ -25,8 +34,8 @@
     month: months[0], scope: 'MG1268'
   };
   const scopeLabel = () => titleOf(scopes.find(item => item.id === state.scope));
-  // Cây chọn phạm vi theo kiểu TreeSelect (Ant Design): trung tâm và các
-  // phòng là nút cha mở sẵn; giám đốc, trưởng phòng, nhân viên là nút lá.
+  // Cây chọn phạm vi theo kiểu TreeSelect (Ant Design): trung tâm, các phòng
+  // và nhánh môi giới có CTV là nút cha mở sẵn; từng người là nút lá.
   const toNode = item => ({
     key: item.id,
     title: titleOf(item),
